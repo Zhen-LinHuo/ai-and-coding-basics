@@ -23,27 +23,18 @@ guix time-machine -C .guix/channels.scm -- shell -m .guix/manifest.scm -- make c
 
 ## 发版
 
-PDF 默认本地构建；CI 只在打 tag 时构建一次发版 PDF（`release.yml`）。冷拉取约 5 GB，
-大头是 pandoc 的 Haskell 闭包（TeX 已瘦身为逐包最小集），一次十几分钟，发版频率低，可接受：
-
-1. 本地跑通 `check`；
-2. 打签名 tag：`git tag -s vX.Y.Z`（SemVer，必须高于已有最大 tag）；
-3. `gh release create vX.Y.Z build/out/ai-and-coding-basics.pdf --verify-tag`；
-4. **回读校验**：从 Release 下载资产，SHA256 与本地比对一致才算发完。
-   第 4 步不能省——不核对回读，等于不知道发出去的是什么。
-
-查环境能不能拉起来而不真去下载，用
+PDF 一律本地构建，CI 只做 lint。理由不是懒：公网冷拉取 Guix 工具链实测 40 分钟以上，
+本地 25 秒。
 
 ```sh
-guix time-machine -C .guix/channels.scm -- build -m .guix/manifest.scm --dry-run
+guix time-machine -C .guix/channels.scm -- shell -m .guix/manifest.scm -- \
+  scripts/release.sh vX.Y.Z
 ```
 
-它会把结果分成 "would be downloaded"（有替代品，快）和 "would be built"（要从源码编，
-先怀疑频道钉错或缓存未同步）。texlive-scheme-full 体积数 GB，首次拉取慢属正常。
+`scripts/release.sh` 依次做五件事，其中第 5 步不可省：
 
-**构建只发生在 `guix shell` 里，宿主环境不参与。** 宿主的工具链即使碰巧能用，也是
-不可复现的：它依赖本机 profile 的内容和 `GUIX_LOCPATH` 这类只在 profile 里才有的变量
-（缺了它 lualatex 会报 `Unable to read locale data` 直接退出，看起来像工具链坏了）。
+1. 检查工作区干净；2. `make check`；3. 签名 tag（已存在则核对签名）；4. 上传 Release；
+5. **把资产下载回来比对 SHA256**——不核对回读，等于不知道发出去的是什么。
 
 ## 硬规则
 
