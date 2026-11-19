@@ -1,0 +1,11 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: ai-and-coding-basics
+Source: https://github.com/zhen-linhuo/ai-and-coding-basics
+
+Files: content/* figures/* OUTLINE.md README.md AGENTS.md AGENTS.local.md
+Copyright: 2026 Zhen-Lin Huo
+License: CC-BY-SA-4.0
+
+Files: scripts/* Makefile build/* .guix/* .github/*
+Copyright: 2026 Zhen-Lin Huo
+License: Apache-2.0

@@ -1,0 +1,78 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/lint_emoji.py
+      - run: python scripts/lint_sections.py
+      - run: python scripts/lint_bib.py
+
+  pdf:
+    runs-on: ubuntu-latest
+    container:
+      # 公开镜像，匿名拉取。它只提供 guix 二进制与基础 userland；
+      # TeX、pandoc、librsvg 全部由 .guix/manifest.scm 解析。
+      image: ghcr.io/zhen-linhuo/reproducible-executors/executor-guixsd:v0.2.2
+      options: --privileged
+    steps:
+      - name: put the system profile on PATH (must precede checkout)
+        # 镜像的 /run/current-system/profile/bin 不在 PATH 上；不先加，checkout 找不到
+        # git，会静默退回 REST 下载，结果是没有 .git 的工作区。
+        run: echo "/run/current-system/profile/bin" >> "$GITHUB_PATH"
+
+      - uses: actions/checkout@v4
+
+      - name: TLS trust + workspace ownership
+        run: |
+          {
+            echo "SSL_CERT_FILE=/run/current-system/profile/etc/ssl/certs/ca-certificates.crt"
+            echo "SSL_CERT_DIR=/run/current-system/profile/etc/ssl/certs"
+            echo "CURL_CA_BUNDLE=/run/current-system/profile/etc/ssl/certs/ca-certificates.crt"
+            echo "GIT_SSL_CAINFO=/run/current-system/profile/etc/ssl/certs/ca-certificates.crt"
+            echo "GIT_CONFIG_COUNT=1"
+            echo "GIT_CONFIG_KEY_0=safe.directory"
+            echo "GIT_CONFIG_VALUE_0=*"
+          } >> "$GITHUB_ENV"
+
+      - name: start guix-daemon
+        # 容器里没有 shepherd，socket 不会自己出现。就绪判据只用 socket + pid：
+        # `guix gc --list-roots` 在没有 daemon 时也会返回 0，不能用来判活。
+        run: |
+          /run/current-system/profile/bin/guix-daemon \
+            --build-users-group=guixbuild \
+            --substitute-urls="https://bordeaux.guix.gnu.org https://ci.guix.gnu.org" \
+            </dev/null >/var/log/guix-daemon.log 2>&1 &
+          pid=$!
+          for _ in $(seq 1 60); do
+            kill -0 "$pid" 2>/dev/null || { echo "daemon died"; tail -40 /var/log/guix-daemon.log; exit 1; }
+            [ -S /var/guix/daemon-socket/socket ] && break
+            sleep 1
+          done
+          [ -S /var/guix/daemon-socket/socket ] || { echo "no socket"; tail -40 /var/log/guix-daemon.log; exit 1; }
+          echo "guix-daemon up (pid $pid)"
+
+      - name: build PDF
+        run: |
+          guix time-machine -C .guix/channels.scm -- \
+            shell -m .guix/manifest.scm -- make pdf
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: book-pdf
+          path: build/out/*.pdf
+          if-no-files-found: error

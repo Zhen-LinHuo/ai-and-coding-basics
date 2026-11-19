@@ -1,0 +1,291 @@
+%%% Astra Doc Style v2.5.0 — Light, modern, CJK-capable, Godot-inspired
+%%% Fonts: Noto Serif + Noto Sans + FiraMono (English), FandolSong + FandolHei (CJK)
+%%%        All faces resolve through kpathsea from TeX Live — no system font needed.
+%%% Usage: pandoc input.md -o output.pdf --pdf-engine=lualatex --listings \
+%%%          --lua-filter=emoji-filter.lua --lua-filter=inline-code-bg.lua \
+%%%          --lua-filter=admonitions.lua \
+%%%          -H astra-doc-style.sty -V title="…" -V toc=true -V toc-title="目录"
+%%%
+%%% Filter contract (admonitions.lua) — these names are relied on; do not rename:
+%%%   !!! info    -> \begin{note}      \admonitiontitle{noteborder}{…}
+%%%   !!! tip     -> \begin{tip}       \admonitiontitle{tipborder}{…}
+%%%   !!! warning -> \begin{warning}   \admonitiontitle{warnborder}{…}
+%%%   !!! danger  -> \begin{dangerbox} \admonitiontitle{dangerborder}{…}
+%%%
+%%% v2.5.0 — the four callout environments and \admonitiontitle the filters emit
+%%% now exist (v2.4.1 defined only notebox/tipbox/warnbox, which nothing called);
+%%% emoji degrade to a warning instead of a hard failure when NotoColorEmoji is
+%%% absent; \icode wraps at line ends; figures are numbered per section and placed
+%%% in place. No document-specific string is baked in: the running head is \title.
+
+\makeatletter   % this file is a pandoc -H header, not a package: @ is not a letter here
+
+\usepackage[table]{xcolor}
+\usepackage[bf,sf]{titlesec}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{luatexja-fontspec}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{mdframed}
+\usepackage{environ}
+\usepackage[a4paper, margin=2.5cm, headheight=14pt]{geometry}
+
+%%% English fonts — Noto (TeX Live `noto` package)
+\setmainfont{NotoSerif}
+\setsansfont{NotoSans}
+\setmonofont{FiraMono}[Scale=MatchLowercase]
+
+%%% CJK fonts — Fandol (built into TeX Live, no system fonts needed)
+\setmainjfont{FandolSong}
+\setsansjfont{FandolHei}
+\setmonojfont{FandolHei}
+
+%%% Emoji support (lualatex only) — optional, a host without the font still builds
+\IfFileExists{emoji.sty}{%
+  \usepackage{emoji}%
+  \IfFontExistsTF{NotoColorEmoji}{%
+    \setemojifont{NotoColorEmoji}%
+  }{%
+    \PackageWarning{astra-doc-style}{NotoColorEmoji not found — emoji glyphs will not render}%
+  }%
+}{}
+
+%%% Color palette — indigo accent, light gray borders
+\definecolor{primary}{HTML}{1A1A2E}
+\definecolor{accent}{HTML}{4C5B8A}
+\definecolor{accentlight}{HTML}{DEE5F2}
+\definecolor{linkcolor}{HTML}{4C5B8A}
+\definecolor{textmain}{HTML}{1A1A2E}
+\definecolor{textsec}{HTML}{555570}
+\definecolor{textmuted}{HTML}{8888A0}
+\definecolor{bordercolor}{HTML}{D0D0DA}
+\definecolor{codebg}{HTML}{E4E4E4}
+\definecolor{codeframe}{HTML}{E2E2EA}
+\definecolor{infobg}{HTML}{E8EFF8}
+
+%%% Callout palette — the four *border names are part of the filter contract
+\definecolor{notebg}{HTML}{E8EFF8}
+\definecolor{noteborder}{HTML}{4C5B8A}
+\definecolor{tipbg}{HTML}{E6F5E6}
+\definecolor{tipborder}{HTML}{3C8C3C}
+\definecolor{warnbg}{HTML}{FFF3CD}
+\definecolor{warnborder}{HTML}{C87F0A}
+\definecolor{dangerbg}{HTML}{FDEDEC}
+\definecolor{dangerborder}{HTML}{C0392B}
+
+%%% Page and leading (geometry loaded with its options above)
+\setstretch{1.1}
+
+%%% Subtitle support for the cover — pandoc emits \subtitle when the metadata
+%%% carries one, and the article class does not define it.
+\makeatletter
+\providecommand{\@subtitle}{}
+\providecommand{\subtitle}[1]{\gdef\@subtitle{#1}}
+
+%%% Cover page — standalone
+\pretitle{%
+  \thispagestyle{empty}
+  \begin{center}\vspace*{4cm}
+  \sffamily\huge\bfseries\color{primary}
+}
+\posttitle{\par\end{center}\vspace{1cm}
+  \begin{center}\large\sffamily\color{accent}\@subtitle\end{center}
+  \vfill
+  \begin{center}\sffamily\color{accent}\@date\end{center}
+  \newpage
+}
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+
+%%% Body page numbering stays arabic whatever pandoc's front matter does
+\AtBeginDocument{\AfterEndPreamble{\gdef\thepage{\arabic{page}}}}
+
+%%% Part page (volume divider) — standalone centred page
+\titleformat{\part}[display]
+  {\newpage\thispagestyle{empty}\null\vfill\begin{center}}
+  {}
+  {0pt}
+  {\sffamily\Huge\bfseries\color{primary}}
+  [\end{center}\vfill\clearpage]
+\titlespacing*{\part}{0pt}{0pt}{0pt}
+
+%%% Section numbering — pandoc's template switches numbering off, and figures are
+%%% numbered per section (\thesection-\arabic{figure}), which needs the counter to
+%%% step. Keep this at 2: with numbering off, every figure would print as 图 0-1.
+\setcounter{secnumdepth}{2}
+
+%%% Section headings — a top-level section starts on a new page (guide convention).
+%%% Set \astra@sectionbreakfalse in the document to keep the flow continuous.
+\newif\ifastra@sectionbreak \astra@sectionbreaktrue
+\titleformat{\section}
+  {\sffamily\Large\bfseries\color{primary}}{}{0pt}{%
+  \ifastra@sectionbreak\clearpage\fi}
+\titlespacing*{\section}{0pt}{1.5em}{0.5em}
+
+\titleformat{\subsection}{\sffamily\large\bfseries\color{accent}}{}{0pt}{}
+\titleformat{\subsubsection}{\sffamily\normalsize\bfseries\color{primary}}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{1em}{0.3em}
+\titlespacing*{\subsubsection}{0pt}{0.8em}{0.2em}
+
+%%% TOC — sans-serif, Chinese heading
+\renewcommand{\contentsname}{目录}
+\usepackage{tocloft}
+\renewcommand{\cfttoctitlefont}{\sffamily\Large\bfseries\color{primary}\hfill}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftsecfont}{\sffamily\color{primary}}
+\renewcommand{\cftsubsecfont}{\sffamily\color{accent}}
+\renewcommand{\cftsecpagefont}{\sffamily}
+\renewcommand{\cftsubsecpagefont}{\sffamily}
+\setlength{\cftsecindent}{0pt}
+\setlength{\cftsubsecindent}{1.5em}
+
+%%% Hyperlinks — loaded here so a -H build works regardless of pandoc's template
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=linkcolor, urlcolor=linkcolor}
+
+%%% Code listings — CJK-safe; extendedchars=false is required for Chinese in lstlisting
+\lstset{
+  language=bash,
+  basicstyle=\ttfamily\small,
+  columns=flexible,
+  keepspaces=true,
+  backgroundcolor=\color{codebg},
+  frame=single,
+  framesep=6pt,
+  rulecolor=\color{bordercolor},
+  numbers=left,
+  numberstyle=\tiny\color{textmuted},
+  numbersep=8pt,
+  tabsize=2,
+  breaklines=true,
+  breakatwhitespace=false,
+  breakautoindent=false,
+  extendedchars=false,
+  showstringspaces=false,
+  xleftmargin=2em,
+  framexleftmargin=1.5em,
+  keywordstyle=\color{blue!60!black},
+  stringstyle=\color{green!50!black},
+  commentstyle=\color{textmuted},
+}
+
+%%% Callouts — driven by admonitions.lua; the title line comes from \admonitiontitle
+\newenvironment{note}%
+  {\begin{mdframed}[backgroundcolor=notebg, linecolor=noteborder, linewidth=1.5pt,
+     leftline=true, rightline=true, topline=true, bottomline=true,
+     innertopmargin=8pt, innerbottommargin=8pt,
+     innerleftmargin=12pt, innerrightmargin=8pt,
+     skipabove=10pt, skipbelow=10pt]\small}%
+  {\end{mdframed}}
+
+\newenvironment{tip}%
+  {\begin{mdframed}[backgroundcolor=tipbg, linecolor=tipborder, linewidth=1.5pt,
+     leftline=true, rightline=true, topline=true, bottomline=true,
+     innertopmargin=8pt, innerbottommargin=8pt,
+     innerleftmargin=12pt, innerrightmargin=8pt,
+     skipabove=10pt, skipbelow=10pt]\small}%
+  {\end{mdframed}}
+
+\newenvironment{warning}%
+  {\begin{mdframed}[backgroundcolor=warnbg, linecolor=warnborder, linewidth=1.5pt,
+     leftline=true, rightline=true, topline=true, bottomline=true,
+     innertopmargin=8pt, innerbottommargin=8pt,
+     innerleftmargin=12pt, innerrightmargin=8pt,
+     skipabove=10pt, skipbelow=10pt]\small}%
+  {\end{mdframed}}
+
+\newenvironment{dangerbox}%
+  {\begin{mdframed}[backgroundcolor=dangerbg, linecolor=dangerborder, linewidth=1.5pt,
+     leftline=true, rightline=true, topline=true, bottomline=true,
+     innertopmargin=8pt, innerbottommargin=8pt,
+     innerleftmargin=12pt, innerrightmargin=8pt,
+     skipabove=10pt, skipbelow=10pt]\small}%
+  {\end{mdframed}}
+
+%%% Callout title — #1 is a colour name emitted by the filter, #2 the title text
+\providecommand{\admonitiontitle}[2]{%
+  {\sffamily\bfseries\color{white}\colorbox{#1}{#2}}\par\vspace{2pt}%
+}
+
+%%% Backwards compatibility: v2.4 exposed notebox/tipbox/warnbox and nothing
+%%% called them; keep them as thin aliases so a hand-written document survives.
+\newenvironment{notebox}{\begin{note}}{\end{note}}
+\newenvironment{tipbox}{\begin{tip}}{\end{tip}}
+\newenvironment{warnbox}{\begin{warning}}{\end{warning}}
+
+%%% Inline code — lua-ul gives a background that wraps across line breaks.
+%%% Applied by inline-code-bg.lua. lua-ul ships with TeX Live; a fallback is not
+%%% worth the #-in-argument complexity it costs here.
+\usepackage{luacolor}
+\usepackage{lua-ul}
+\newcommand{\icode}[1]{{\ttfamily\highLight[codebg]{#1}}}
+
+%%% Blockquotes → indigo callout boxes
+\let\oldquote\quote
+\let\endoldquote\endquote
+\RenewEnviron{quote}{%
+  \medskip\par\noindent
+  \begin{mdframed}[backgroundcolor=accentlight, linecolor=accent, linewidth=0.6pt,
+    leftline=true, rightline=false, topline=false, bottomline=false,
+    innerleftmargin=10pt, innerrightmargin=6pt,
+    innertopmargin=6pt, innerbottommargin=6pt,
+    skipabove=6pt, skipbelow=6pt]
+  \sffamily\small\BODY
+  \end{mdframed}
+  \medskip
+}
+
+%%% Figures — placed in place, numbered per section (图 2-1)
+\numberwithin{figure}{section}
+\renewcommand{\thefigure}{\thesection-\arabic{figure}}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\captionsetup{font=small, labelsep=space}
+\setlength{\textfloatsep}{8pt}
+\setlength{\intextsep}{8pt}
+
+%%% Tables — modern, light, alternating rows, auto-shrunk against overflow
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{5pt}
+\setlength{\abovetopsep}{2pt}
+\setlength{\belowbottomsep}{2pt}
+\rowcolors{2}{accentlight}{white}
+\arrayrulecolor{bordercolor}
+\setlength{\heavyrulewidth}{0.6pt}
+\setlength{\lightrulewidth}{0.3pt}
+\setlength{\cmidrulewidth}{0.4pt}
+
+\AtBeginEnvironment{longtable}{%
+  \footnotesize\setlength{\tabcolsep}{3pt}%
+  \rowcolors{2}{accentlight}{white}%
+}
+\AtBeginEnvironment{tabular}{%
+  \footnotesize\setlength{\tabcolsep}{3pt}%
+  \rowcolors{2}{accentlight}{white}%
+}
+\AtBeginEnvironment{tabularx}{\footnotesize\rowcolors{2}{accentlight}{white}}
+
+%%% Lists — compact
+\setlist{nosep, leftmargin=1.8em}
+
+%%% Running head — from \@title only; nothing document-specific lives here
+\makeatletter
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\sffamily\small\color{primary}\@title}
+\fancyhead[R]{\sffamily\small\color{primary}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{bordercolor}\leaders\hrule height 0.4pt\hfill}}
+\fancyfoot{}
+\makeatother

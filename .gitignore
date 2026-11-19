@@ -1,0 +1,10 @@
+build/out/
+figures/pdf/
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+__pycache__/
+.DS_Store
