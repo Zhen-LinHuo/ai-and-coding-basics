@@ -12,13 +12,10 @@
 
 ## 为什么签名键写指纹而不写名字
 
-本机有两把私钥的 UID 都含 `Zhen-Lin Huo`：
-
-- `B0F3115E…` — `Zhen-Lin Huo <zhen-lin.huo@gmx.com>`（本仓库用这把）
-- `D61A6367…` — `Zhen-Lin Huo <alrcatraz@outlook.com>`
-
-`gpg --local-user "Zhen-Lin Huo"` 会因两个 UID 都能匹配而报 ambiguous，所以
-`user.signingkey` 必须写完整指纹。
+本机有两把私钥的 UID 都含 `Zhen-Lin Huo`（另一把属于作者在别处使用的身份，
+与本仓库无关，此处不写其邮箱——公开仓库不承担身份关联的义务）。
+`gpg --local-user "Zhen-Lin Huo"` 会因两个 UID 都能匹配而报 ambiguous，
+所以 `user.signingkey` 必须写完整指纹。
 
 ## 远端
 
