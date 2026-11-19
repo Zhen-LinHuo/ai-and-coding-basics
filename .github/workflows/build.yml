@@ -30,7 +30,7 @@ jobs:
       image: ghcr.io/zhen-linhuo/reproducible-executors/executor-guixsd:v0.2.2
       options: --privileged
     steps:
-      - name: TLS trust + workspace ownership (must precede checkout: values are static paths)
+      - name: TLS trust and workspace ownership (must precede checkout)
         run: |
           {
             echo "SSL_CERT_FILE=/run/current-system/profile/etc/ssl/certs/ca-certificates.crt"
