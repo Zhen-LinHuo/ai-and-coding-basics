@@ -20,10 +20,12 @@ PFLAGS := \
   --toc --toc-depth=2 \
   --citeproc \
   --bibliography=bib/refs.bib \
-  --csl=$(BUILD)/ieee.csl \
+  --csl=$(BUILD)/gb-t-7714-2015-numeric.csl \
   --lua-filter=$(BUILD)/admonitions.lua \
   --lua-filter=$(BUILD)/inline-code-bg.lua \
   -H $(BUILD)/astra-doc-style.sty \
+  --include-in-header=$(BUILD)/floats.tex \
+  -H $(BUILD)/floats.tex \
   --metadata-file=$(BUILD)/metadata.yaml \
   -V colorlinks=true \
   -V papersize=a4 \
@@ -45,7 +47,7 @@ html: $(HTML)
 $(HTML): $(SRC) bib/refs.bib $(BUILD)/metadata.yaml
 	@mkdir -p $(OUT)
 	$(PANDOC) $(SRC) --standalone --toc --toc-depth=2 --number-sections \
-	  --citeproc --bibliography=bib/refs.bib --csl=$(BUILD)/ieee.csl \
+	  --citeproc --bibliography=bib/refs.bib --csl=$(BUILD)/gb-t-7714-2015-numeric.csl \
 	  --metadata-file=$(BUILD)/metadata.yaml \
 	  --lua-filter=$(BUILD)/admonitions.lua \
 	  --css=site.css -o $@

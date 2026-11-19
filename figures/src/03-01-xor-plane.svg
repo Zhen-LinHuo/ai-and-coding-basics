@@ -1,35 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="690" height="370" viewBox="0 0 690 370">
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="370" viewBox="0 0 700 370">
 <defs>
-<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-<path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
-<marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-<path d="M 0 0 L 10 5 L 0 10 z" fill="#0072B2"/></marker>
-<marker id="arrv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-<path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/></marker>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#009E73"/></marker>
+<marker id="arrv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/></marker>
+<marker id="arrp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#CC79A7"/></marker>
 </defs>
-
-<text x="20" y="32" font-size="17" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">异或（XOR）：一条直线切不开的四个点</text>
-<rect x="120" y="80" width="300" height="240" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
-<line x1="120" y1="200" x2="420" y2="200" stroke="#000000" stroke-width="1"/><line x1="270" y1="80" x2="270" y2="320" stroke="#000000" stroke-width="1"/>
-<text x="270" y="344" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">输入 1</text>
-<text x="98" y="204" font-size="14" text-anchor="end" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">输入 2</text>
-<text x="140" y="308" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">0</text><text x="362" y="308" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">1</text>
-<text x="132" y="120" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">1</text><text x="132" y="300" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">0</text>
-<line x1="132" y1="96" x2="408" y2="204" stroke="#E69F00" stroke-width="2.5" stroke-dasharray="8 5"/>
-<text x="300" y="96" font-size="14" fill="#E69F00" font-family="Noto Sans CJK SC, sans-serif">切法一：右下两类</text>
-<line x1="132" y1="304" x2="408" y2="196" stroke="#D55E00" stroke-width="2.5" stroke-dasharray="8 5"/>
-<text x="300" y="322" font-size="14" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">切法二：左上两类</text>
-<circle cx="150" cy="290" r="14" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
-<circle cx="370" cy="290" r="14" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
-<path d="M 150 95 L 164 121 L 136 121 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
-<path d="M 370 95 L 384 121 L 356 121 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
-
+<text x="20" y="32" font-size="17" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">异或（XOR）：同类落在对角线上，一条直线切不开</text>
+<rect x="150" y="80" width="300" height="240" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<line x1="150" y1="200.0" x2="450" y2="200.0" stroke="#000000" stroke-width="1"/>
+<line x1="300.0" y1="80" x2="300.0" y2="320" stroke="#000000" stroke-width="1"/>
+<text x="300.0" y="344" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">输入 1</text>
+<text x="128" y="205.0" font-size="14" text-anchor="end" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">输入 2</text>
+<text x="166" y="310" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">0</text><text x="434" y="310" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">1</text>
+<text x="166" y="120" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">1</text><text x="166" y="310" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">0</text>
+<!-- 横切：橙 虚线 -->
+<line x1="140" y1="200.0" x2="460" y2="200.0" stroke="#E69F00" stroke-width="2.5" stroke-dasharray="8 5"/>
+<!-- 竖切：朱 虚线 -->
+<line x1="300.0" y1="70" x2="300.0" y2="330" stroke="#D55E00" stroke-width="2.5" stroke-dasharray="8 5"/>
+<!-- 斜切：紫 虚线，沿 (0,0)-(1,1) 对角，穿过两个圆 -->
+<line x1="136" y1="334" x2="464" y2="66" stroke="#CC79A7" stroke-width="2.5" stroke-dasharray="8 5"/>
+<circle cx="150" cy="320" r="14" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><circle cx="450" cy="80" r="14" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><path d="M 150 65 L 164 91 L 136 91 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/><path d="M 450 305 L 464 331 L 436 331 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
-<circle cx="480" cy="120" r="12" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><text x="500" y="125">同色 → 输出 0</text>
-<path d="M 480 197 L 492 219 L 468 219 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/><text x="500" y="215">三角 → 输出 1</text>
-<text x="480" y="268" fill="#000000">两条候选线各自都把"同类"</text>
-<text x="480" y="290" fill="#000000">切到了两边：单层感知机</text>
-<text x="480" y="312" fill="#000000">对这个任务无解。</text>
+<text x="500" y="110" fill="#E69F00">横切：两类各混一半</text>
+<text x="500" y="160" fill="#D55E00">竖切：两类各混一半</text>
+<text x="500" y="210" fill="#CC79A7">斜切：正好压在圆上，</text>
+<text x="500" y="230" fill="#CC79A7">圆被切成两边</text>
+<circle cx="502" cy="272" r="12" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><text x="522" y="277">圆 → 输出 0</text>
+<path d="M 502 296 L 514 316 L 490 316 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/><text x="522" y="312">三角 → 输出 1</text>
 </g>
 
 </svg>

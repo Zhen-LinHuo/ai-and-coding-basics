@@ -1,51 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="850" height="350" viewBox="0 0 850 350">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="340" viewBox="0 0 900 340">
 <defs>
-<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-<path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
-<marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-<path d="M 0 0 L 10 5 L 0 10 z" fill="#0072B2"/></marker>
-<marker id="arrv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-<path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/></marker>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#009E73"/></marker>
+<marker id="arrv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/></marker>
+<marker id="arrp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#CC79A7"/></marker>
 </defs>
-
 <text x="20" y="30" font-size="17" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">生物神经元</text>
-<text x="450" y="30" font-size="17" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">人工神经元</text>
-<!-- 生物：胞体 -->
-<circle cx="180" cy="180" r="38" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/>
-<text x="180" y="186" font-size="15" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">胞体</text>
-<!-- 树突 -->
-<path d="M 150 152 L 96 112 M 168 146 L 140 88 M 196 146 L 200 86 M 214 158 L 268 108"
-      stroke="#000000" stroke-width="1.5" fill="none"/>
-<text x="70" y="92" font-size="14" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">树突</text>
-<!-- 轴突 -->
-<path d="M 218 190 L 350 200" stroke="#000000" stroke-width="2.5" fill="none"/>
-<path d="M 350 200 L 392 184 M 350 200 L 392 216" stroke="#000000" stroke-width="1.5" fill="none"/>
-<text x="300" y="232" font-size="14" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">轴突</text>
-<text x="388" y="248" font-size="14" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">末梢</text>
-<!-- 人工：输入 -->
-<g font-family="Noto Sans CJK SC, sans-serif" font-size="16" fill="#000000">
-<circle cx="530" cy="110" r="17" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><text x="530" y="116" text-anchor="middle">x₁</text>
-<circle cx="530" cy="180" r="17" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><text x="530" y="186" text-anchor="middle">x₂</text>
-<circle cx="530" cy="250" r="17" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><text x="530" y="256" text-anchor="middle">x₃</text>
-<text x="498" y="72" font-size="14">输入</text>
+<text x="660" y="30" font-size="17" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">人工神经元</text>
+<!-- 生物：树突橙、胞体天蓝、轴突绿 -->
+<path d="M 142 142 L 92 106 M 158 136 L 132 92 M 186 134 L 188 92 M 198 144 L 250 104" stroke="#E69F00" stroke-width="2.5" fill="none"/>
+<circle cx="170" cy="170" r="38" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/>
+<text x="170" y="176" font-size="15" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">胞体</text>
+<path d="M 208 176 L 330 176" stroke="#009E73" stroke-width="3" fill="none"/>
+<path d="M 330 176 L 366 162 M 330 176 L 366 190" stroke="#009E73" stroke-width="2.5" fill="none"/>
+<text x="58" y="86" font-size="14" fill="#E69F00" font-family="Noto Sans CJK SC, sans-serif">树突</text>
+<text x="248" y="206" font-size="14" fill="#009E73" font-family="Noto Sans CJK SC, sans-serif">轴突</text>
+<text x="352" y="222" font-size="14" fill="#009E73" font-family="Noto Sans CJK SC, sans-serif">末梢</text>
+<!-- 中栏映射 -->
+<g font-size="15" fill="#CC79A7" font-family="Noto Sans CJK SC, sans-serif">
+<path d="M 430 120 L 580 120" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
+<text x="436" y="104">树突 收信号</text>
+<path d="M 430 180 L 580 180" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
+<text x="436" y="164">胞体 汇总</text>
+<path d="M 430 240 L 580 240" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
+<text x="436" y="224">轴突 传出</text>
 </g>
-<!-- 权重与求和 -->
-<path d="M 547 110 L 628 168 M 547 180 L 622 180 M 547 250 L 628 196"
-      stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="576" y="136" font-size="15" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">w₁</text>
-<text x="584" y="172" font-size="15" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">w₂</text>
-<text x="576" y="236" font-size="15" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">w₃</text>
-<circle cx="660" cy="180" r="34" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/>
-<text x="660" y="187" font-size="17" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Σ</text>
-<path d="M 694 180 L 736 180" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
-<rect x="738" y="152" width="46" height="56" rx="8" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
-<text x="761" y="188" font-size="17" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">f</text>
-<path d="M 784 180 L 806 180" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="812" y="186" font-size="16" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">y</text>
-<!-- 对应虚线 -->
-<path d="M 240 96 C 330 40 420 40 494 96" stroke="#CC79A7" stroke-width="2.5" stroke-dasharray="7 5" fill="none" marker-end="url(#arrv)"/>
-<path d="M 222 180 C 340 300 440 300 508 250" stroke="#CC79A7" stroke-width="2.5" stroke-dasharray="7 5" fill="none" marker-end="url(#arrv)"/>
-<path d="M 300 210 C 380 340 560 330 660 224" stroke="#CC79A7" stroke-width="2.5" stroke-dasharray="7 5" fill="none" marker-end="url(#arrv)"/>
-<text x="330" y="322" font-size="14" fill="#CC79A7" font-family="Noto Sans CJK SC, sans-serif">树突→输入　胞体→加权求和　轴突→输出</text>
+<!-- 人工：输入橙、Σ天蓝、输出绿 -->
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="16" fill="#000000">
+<circle cx="690" cy="110" r="17" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><text x="690" y="116" text-anchor="middle">x₁</text>
+<circle cx="690" cy="180" r="17" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><text x="690" y="186" text-anchor="middle">x₂</text>
+<circle cx="690" cy="250" r="17" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><text x="690" y="256" text-anchor="middle">x₃</text>
+<text x="652" y="72" font-size="14">输入</text>
+</g>
+<path d="M 707 112 L 768 158 M 707 180 L 768 180 M 707 248 L 768 202" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="726" y="128" font-size="14" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">w₁</text>
+<text x="726" y="172" font-size="14" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">w₂</text>
+<text x="726" y="244" font-size="14" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">w₃</text>
+<circle cx="800" cy="180" r="30" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/>
+<text x="800" y="186" font-size="17" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Σ</text>
+<path d="M 830 180 L 856 180" stroke="#009E73" stroke-width="3" marker-end="url(#arr)"/>
+<text x="862" y="186" font-size="16" fill="#009E73" font-family="Noto Sans CJK SC, sans-serif">y</text>
+<text x="660" y="316" font-size="14" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">同色即同职：收信号的部件橙、汇总的部件天蓝、送出结果的部件绿。</text>
 
 </svg>
