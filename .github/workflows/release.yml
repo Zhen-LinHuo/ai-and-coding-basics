@@ -14,14 +14,7 @@ jobs:
       image: ghcr.io/zhen-linhuo/reproducible-executors/executor-guixsd:v0.2.2
       options: --privileged
     steps:
-      - name: put the system profile on PATH (must precede checkout)
-        # 镜像的 /run/current-system/profile/bin 不在 PATH 上；不先加，checkout 找不到
-        # git，会静默退回 REST 下载，结果是没有 .git 的工作区。
-        run: echo "/run/current-system/profile/bin" >> "$GITHUB_PATH"
-
-      - uses: actions/checkout@v4
-
-      - name: TLS trust + workspace ownership
+      - name: TLS trust + workspace ownership (must precede checkout: values are static paths)
         run: |
           {
             echo "SSL_CERT_FILE=/run/current-system/profile/etc/ssl/certs/ca-certificates.crt"
@@ -32,6 +25,13 @@ jobs:
             echo "GIT_CONFIG_KEY_0=safe.directory"
             echo "GIT_CONFIG_VALUE_0=*"
           } >> "$GITHUB_ENV"
+
+      - name: put the system profile on PATH (must precede checkout)
+        # 镜像的 /run/current-system/profile/bin 不在 PATH 上；不先加，checkout 找不到
+        # git，会静默退回 REST 下载，结果是没有 .git 的工作区。
+        run: echo "/run/current-system/profile/bin" >> "$GITHUB_PATH"
+
+      - uses: actions/checkout@v4
 
       - name: start guix-daemon
         # 容器里没有 shepherd，socket 不会自己出现。就绪判据只用 socket + pid：
