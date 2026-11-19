@@ -21,6 +21,16 @@ guix time-machine -C .guix/channels.scm -- shell -m .guix/manifest.scm -- make c
 
 目标：`doctor`（查工具）、`lint`、`pdf`、`html`、`check`（lint + pdf）、`clean`。
 
+## 发版
+
+PDF 一律本地构建，CI 不参与（CI 只做 lint，理由见 `.github/workflows/build.yml` 头注）：
+
+1. 本地跑通 `check`；
+2. 打签名 tag：`git tag -s vX.Y.Z`（SemVer，必须高于已有最大 tag）；
+3. `gh release create vX.Y.Z build/out/ai-and-coding-basics.pdf --verify-tag`；
+4. **回读校验**：从 Release 下载资产，SHA256 与本地比对一致才算发完。
+   第 4 步不能省——不核对回读，等于不知道发出去的是什么。
+
 查环境能不能拉起来而不真去下载，用
 
 ```sh
