@@ -23,7 +23,8 @@ guix time-machine -C .guix/channels.scm -- shell -m .guix/manifest.scm -- make c
 
 ## 发版
 
-PDF 一律本地构建，CI 不参与（CI 只做 lint，理由见 `.github/workflows/build.yml` 头注）：
+PDF 默认本地构建；CI 只在打 tag 时构建一次发版 PDF（`release.yml`）。冷拉取约 5 GB，
+大头是 pandoc 的 Haskell 闭包（TeX 已瘦身为逐包最小集），一次十几分钟，发版频率低，可接受：
 
 1. 本地跑通 `check`；
 2. 打签名 tag：`git tag -s vX.Y.Z`（SemVer，必须高于已有最大 tag）；
