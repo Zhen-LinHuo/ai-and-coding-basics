@@ -7,12 +7,12 @@
 <line x1="120" y1="330" x2="120" y2="60" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
 <text x="806" y="350" font-size="14" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">对人越容易</text>
 <text x="66" y="56" font-size="14" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">对机器越难</text>
-<circle cx="240" cy="96" r="12" fill="#D55E00"/><text x="240" y="76" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">婴儿走路</text>
-<circle cx="380" cy="120" r="12" fill="#D55E00"/><text x="380" y="100" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">听出语气</text>
-<circle cx="520" cy="150" r="12" fill="#D55E00"/><text x="520" y="130" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">认出猫脸</text>
-<circle cx="300" cy="290" r="12" fill="#009E73"/><text x="300" y="318" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">下棋</text>
-<circle cx="470" cy="270" r="12" fill="#009E73"/><text x="470" y="298" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">算万位数乘法</text>
-<circle cx="660" cy="252" r="12" fill="#009E73"/><text x="660" y="280" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">查全库对账</text>
+<circle cx="700" cy="96" r="12" fill="#D55E00"/><text x="700" y="76" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">婴儿走路</text>
+<circle cx="620" cy="120" r="12" fill="#D55E00"/><text x="620" y="100" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">听出语气</text>
+<circle cx="540" cy="150" r="12" fill="#D55E00"/><text x="540" y="130" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">认出猫脸</text>
+<circle cx="230" cy="292" r="12" fill="#009E73"/><text x="230" y="320" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">下棋</text>
+<circle cx="150" cy="266" r="12" fill="#009E73"/><text x="150" y="294" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">算万位数乘法</text>
+<circle cx="330" cy="262" r="12" fill="#009E73"/><text x="330" y="290" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">查全库对账</text>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
 <text x="150" y="378">红色：进化练了几亿年的本能，人觉得毫不费力，机器偏偏最难。</text>
 <text x="150" y="402">绿色：文明只发明了几千年的符号运算，人觉得费劲，机器轻松碾压。</text>
