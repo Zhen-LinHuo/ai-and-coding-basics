@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="410" viewBox="0 0 940 410">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">四个词的包含关系</text>
+<circle cx="260" cy="215" r="170" fill="#56B4E9" fill-opacity="0.25" stroke="#0072B2" stroke-width="1.5"/>
+<circle cx="300" cy="235" r="120" fill="#E69F00" fill-opacity="0.3" stroke="#D55E00" stroke-width="1.5"/>
+<circle cx="330" cy="255" r="70" fill="#009E73" fill-opacity="0.35" stroke="#009E73" stroke-width="1.5"/>
+<text x="330" y="262" font-size="15" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">大语言模型</text>
+<text x="300" y="150" font-size="15" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">深度学习</text>
+<text x="255" y="105" font-size="15" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">机器学习</text>
+<text x="130" y="60" font-size="15" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">人工智能</text>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="480" y="80" fill="#0072B2">人工智能：让机器做"需要智能的事"这个目标本身</text>
+<text x="480" y="116" fill="#D55E00">机器学习：达成它的手段之一——从数据里调参数</text>
+<text x="480" y="152" fill="#009E73">深度学习：机器学习的一种，用很多层的神经网络</text>
+<text x="480" y="188" fill="#000000">大语言模型：深度学习的一种产物，预测下一个词</text>
+<text x="480" y="236" fill="#999999">读法：每往里一层，范围缩小一圈，</text>
+<text x="480" y="260" fill="#999999">但今天新闻里的"AI"几乎都住在最里层。</text>
+<text x="480" y="300" fill="#000000">同心圆的用处是定位：听到任何一个新词，</text>
+<text x="480" y="324" fill="#000000">先问它在哪一层，再问它和邻层是什么关系。</text>
+</g>
+
+</svg>

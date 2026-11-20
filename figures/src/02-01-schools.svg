@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">三个流派 = 对"智能从哪来"的三种回答</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="60" width="260" height="240" rx="10" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="56" y="88" font-size="15" font-weight="bold" fill="#D55E00">符号主义</text>
+<text x="56" y="114">回答：智能来自推理，</text>
+<text x="56" y="134">而推理是对符号的操作。</text>
+<text x="56" y="166">知识表示：一条条写清楚的</text>
+<text x="56" y="186">规则与事实（"鸟会飞"）。</text>
+<text x="56" y="218">代表：逻辑、专家系统、</text>
+<text x="56" y="238">国际象棋程序。</text>
+<text x="56" y="274" fill="#999999">口号：智能 = 符号运算。</text>
+<rect x="330" y="60" width="260" height="240" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
+<text x="346" y="88" font-size="15" font-weight="bold" fill="#0072B2">连接主义</text>
+<text x="346" y="114">回答：智能来自许多简单</text>
+<text x="346" y="134">单元的连接，像大脑那样。</text>
+<text x="346" y="166">知识表示：分散在连接的</text>
+<text x="346" y="186">权重里，没人能逐条读出。</text>
+<text x="346" y="218">代表：感知机、深度学习、</text>
+<text x="346" y="238">大语言模型。</text>
+<text x="346" y="274" fill="#999999">口号：智能 = 从数据中涌现。</text>
+<rect x="620" y="60" width="260" height="240" rx="10" fill="#ffffff" stroke="#009E73" stroke-width="2"/>
+<text x="636" y="88" font-size="15" font-weight="bold" fill="#009E73">行为主义</text>
+<text x="636" y="114">回答：智能来自与环境的</text>
+<text x="636" y="134">交互——行动、吃反馈、改进。</text>
+<text x="636" y="166">知识表示：不存在"库存"式的</text>
+<text x="636" y="186">知识，只有一套行动策略。</text>
+<text x="636" y="218">代表：控制论、机器人、</text>
+<text x="636" y="238">强化学习。</text>
+<text x="636" y="274" fill="#999999">口号：智能 = 试出来的。</text>
+</g>
+<text x="40" y="336" font-size="14" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">三个回答互斥吗？不。今天的强系统往往三个都占一点——见本章结尾。</text>
+
+</svg>
