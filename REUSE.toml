@@ -1,0 +1,15 @@
+version = 1
+SPDX-PackageName = "ai-and-coding-basics"
+SPDX-PackageDownloadLocation = "https://github.com/Zhen-LinHuo/ai-and-coding-basics"
+
+[[annotations]]
+path = ["content/**", "content/**/**", "figures/**", "figures/**/**", "OUTLINE.md", "README.md", "AGENTS.md", "AGENTS.local.md", "bib/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Zhen-Lin Huo"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+[[annotations]]
+path = ["scripts/**", "Makefile", "build/**", "build/**/**", ".guix/**", ".github/**", ".github/**/**", ".gitignore"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Zhen-Lin Huo"
+SPDX-License-Identifier = "Apache-2.0"

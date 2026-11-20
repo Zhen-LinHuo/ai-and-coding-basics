@@ -1,18 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="420" viewBox="0 0 700 420">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="340" viewBox="0 0 880 340">
 <defs>
 <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
-<marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0072B2"/></marker>
-<marker id="arrv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/></marker>
 </defs>
-<text x="20" y="32" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">异或（XOR）：三条候选直线，每条都至少混进一个异类</text>
-<rect x="150" y="80" width="300" height="240" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
-<line x1="150" y1="200.0" x2="450" y2="200.0" stroke="#E69F00" stroke-width="2.5" stroke-dasharray="8 5"/>
-<line x1="300.0" y1="80" x2="300.0" y2="320" stroke="#D55E00" stroke-width="2.5" stroke-dasharray="8 5"/>
-<line x1="150" y1="248" x2="360" y2="80" stroke="#CC79A7" stroke-width="2.5" stroke-dasharray="8 5"/>
-<circle cx="150" cy="320" r="14" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><circle cx="450" cy="80" r="14" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><path d="M 150 65 L 164 91 L 136 91 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/><path d="M 450 305 L 464 331 L 436 331 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
-<text x="462" y="205" font-size="14" fill="#E69F00" font-family="Noto Sans CJK SC, sans-serif">横切</text>
-<text x="300" y="70" font-size="14" text-anchor="middle" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">竖切</text>
-<text x="368" y="74" font-size="14" fill="#CC79A7" font-family="Noto Sans CJK SC, sans-serif">斜切</text>
-<text x="150" y="346" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">横轴：输入 1　　纵轴：输入 2</text>
-<text x="60" y="392" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">圆 = 输出 0，三角 = 输出 1。三条线怎么摆都分不干净——这就是单层感知机的天花板。横切、竖切各混进一圆一三角；斜切挤出三个圆、只留住一个三角。</text>
+<text x="20" y="28" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">异或（XOR）：三条候选直线，红叉标出各自判错的点</text>
+<rect x="30" y="46" width="200" height="140" fill="#ffffff" stroke="#000000" stroke-width="1.3"/><line x1="30" y1="116.0" x2="230" y2="116.0" stroke="#CC79A7" stroke-width="2.2" stroke-dasharray="7 4"/><circle cx="30" cy="186" r="11" fill="#E69F00" stroke="#000000" stroke-width="1.3"/><path d="M 23 179 L 37 193 M 37 179 L 23 193" stroke="#D55E00" stroke-width="2.5"/><path d="M 230 172 L 241 195 L 219 195 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/><path d="M 30 32 L 41 55 L 19 55 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/><circle cx="230" cy="46" r="11" fill="#E69F00" stroke="#000000" stroke-width="1.3"/><path d="M 223 39 L 237 53 M 237 39 L 223 53" stroke="#D55E00" stroke-width="2.5"/><text x="130.0" y="36" font-size="13" text-anchor="middle" fill="#E69F00" font-family="Noto Sans CJK SC, sans-serif">横切</text>
+<rect x="330" y="46" width="200" height="140" fill="#ffffff" stroke="#000000" stroke-width="1.3"/><line x1="430.0" y1="46" x2="430.0" y2="186" stroke="#CC79A7" stroke-width="2.2" stroke-dasharray="7 4"/><circle cx="330" cy="186" r="11" fill="#E69F00" stroke="#000000" stroke-width="1.3"/><path d="M 530 172 L 541 195 L 519 195 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/><path d="M 523 179 L 537 193 M 537 179 L 523 193" stroke="#D55E00" stroke-width="2.5"/><path d="M 330 32 L 341 55 L 319 55 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/><path d="M 323 39 L 337 53 M 337 39 L 323 53" stroke="#D55E00" stroke-width="2.5"/><circle cx="530" cy="46" r="11" fill="#E69F00" stroke="#000000" stroke-width="1.3"/><text x="430.0" y="36" font-size="13" text-anchor="middle" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">竖切</text>
+<rect x="630" y="46" width="200" height="140" fill="#ffffff" stroke="#000000" stroke-width="1.3"/><line x1="630" y1="141.2" x2="754.0" y2="46" stroke="#CC79A7" stroke-width="2.2" stroke-dasharray="7 4"/><circle cx="630" cy="186" r="11" fill="#E69F00" stroke="#000000" stroke-width="1.3"/><path d="M 623 179 L 637 193 M 637 179 L 623 193" stroke="#D55E00" stroke-width="2.5"/><path d="M 830 172 L 841 195 L 819 195 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/><path d="M 823 179 L 837 193 M 837 179 L 823 193" stroke="#D55E00" stroke-width="2.5"/><path d="M 630 32 L 641 55 L 619 55 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/><circle cx="830" cy="46" r="11" fill="#E69F00" stroke="#000000" stroke-width="1.3"/><path d="M 823 39 L 837 53 M 837 39 L 823 53" stroke="#D55E00" stroke-width="2.5"/><text x="730.0" y="36" font-size="13" text-anchor="middle" fill="#CC79A7" font-family="Noto Sans CJK SC, sans-serif">斜切</text>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="30" y="240" fill="#E69F00">横切：上、下两侧都是一圆一三角，混了。</text>
+<text x="330" y="240" fill="#D55E00">竖切：左、右两侧都是一圆一三角，混了。</text>
+<text x="630" y="240" fill="#CC79A7">斜切：三个点被挤到同侧，还是混。</text>
+<text x="30" y="286">圆 = 输出 0，三角 = 输出 1。红叉 = 这条线判错的点。怎么摆都至少错一个——单层感知机的天花板。</text>
+<text x="30" y="312" fill="#999999">要想不错，边界就得拐弯；一条直线拐不了弯，这就是需要"多层"的全部理由（第 1.4.1 节）。</text>
+</g>
 </svg>
