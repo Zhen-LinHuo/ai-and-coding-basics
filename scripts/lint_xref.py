@@ -11,7 +11,8 @@ import re, sys, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DEF_RE = re.compile(r"\{#((?:fig|sec|eq|tab):[\w-]+)\}")
-REF_RE = re.compile(r"(?<![\w])@((?:fig|sec|eq|tab):[\w-]+)")
+# 引用写法：指向锚点的普通链接 [文字](#fig:id)
+REF_RE = re.compile(r"\]\(#((?:fig|sec|eq|tab):[\w-]+)\)")
 
 def main():
     defined, used = {}, {}

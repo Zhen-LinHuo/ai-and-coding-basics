@@ -18,12 +18,15 @@
 <text x="352" y="222" font-size="14" fill="#009E73" font-family="Noto Sans CJK SC, sans-serif">末梢</text>
 <!-- 中栏映射 -->
 <g font-size="15" fill="#CC79A7" font-family="Noto Sans CJK SC, sans-serif">
-<path d="M 430 120 L 580 120" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
-<text x="436" y="104">树突 收信号</text>
-<path d="M 430 180 L 580 180" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
-<text x="436" y="164">胞体 汇总</text>
-<path d="M 430 240 L 580 240" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
-<text x="436" y="224">轴突 传出</text>
+<text x="410" y="125" text-anchor="end">树突 收信号</text>
+<path d="M 420 120 L 560 120" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
+<text x="570" y="125" fill="#000000">输入 x</text>
+<text x="410" y="185" text-anchor="end">胞体 汇总</text>
+<path d="M 420 180 L 560 180" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
+<text x="570" y="185" fill="#000000">加权求和 Σ</text>
+<text x="410" y="245" text-anchor="end">轴突 传出</text>
+<path d="M 420 240 L 560 240" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
+<text x="570" y="245" fill="#000000">输出 y</text>
 </g>
 <!-- 人工：输入橙、Σ天蓝、输出绿 -->
 <g font-family="Noto Sans CJK SC, sans-serif" font-size="16" fill="#000000">
@@ -40,6 +43,6 @@
 <text x="800" y="186" font-size="17" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Σ</text>
 <path d="M 830 180 L 856 180" stroke="#009E73" stroke-width="3" marker-end="url(#arr)"/>
 <text x="862" y="186" font-size="16" fill="#009E73" font-family="Noto Sans CJK SC, sans-serif">y</text>
-<text x="660" y="316" font-size="14" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">同色即同职：收信号的部件橙、汇总的部件天蓝、送出结果的部件绿。</text>
+<text x="20" y="316" font-size="14" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">同色即同职：收信号的部件橙、汇总的部件天蓝、送出结果的部件绿。</text>
 
 </svg>

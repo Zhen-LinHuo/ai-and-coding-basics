@@ -16,14 +16,14 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKIP_PREFIX = ("00-front", "90-back")
 HEADING_RE = re.compile(r"^#{1,3} \S")
 MANUAL_NUM = re.compile(r"^#{1,3} [0-9]+(\.[0-9]+)*\s")
-RULES = [
-    ("常见误解", "缺少「常见误解」段落（这一节必须点出读者最容易搞错的地方）"),
-    ("小结", "缺少「小结与自检」"),
-]
+RULES = [("小结", "缺少「小结与自检」")]
+# 「常见误解」是第五拍的默认呈现方式；若误解已在正文里辟清可省略，只提示不拦截
+SOFT_RULES = [("常见误解", "没有「常见误解」callout（若误解已在正文辟清可忽略）")]
 
 
 def main():
     problems = 0
+    hints = 0
     checked = 0
     for p in sorted((ROOT / "content").rglob("*.md")):
         rel = p.relative_to(ROOT / "content")
@@ -47,10 +47,14 @@ def main():
             if needle not in text:
                 problems += 1
                 print(f"{rel}: {msg}")
+        for needle, msg in SOFT_RULES:
+            if needle not in text:
+                hints += 1
+                print(f"WARN  {rel}: {msg}")
     if problems:
         print(f"\n{problems} 处结构问题（共检查 {checked} 节）。规格见 OUTLINE.md 第三节。")
         return 1
-    print(f"lint_sections: ok ({checked} 节)")
+    print(f"lint_sections: ok ({checked} 节, {hints} 条提示)")
     return 0
 
 
