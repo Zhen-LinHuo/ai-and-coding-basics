@@ -23,6 +23,7 @@
 \makeatother
 \titleformat{\paragraph}[block]{\normalsize\bfseries}{\theparagraph}{0.6em}{}
 \titlespacing*{\paragraph}{0pt}{2.6ex plus 1ex minus .2ex}{1ex plus .2ex}
+\usepackage{indentfirst}  % LaTeX 默认"标题后首段不缩进"，中文排版要求缩进——补上
 \AtBeginDocument{\setlength{\parindent}{2em}}  % 中文段首缩进两字
 \captionsetup{labelsep=quad}        % "图 1　标题"，全角距离代替冒号
 \AtBeginDocument{\renewcommand{\figurename}{图}}
