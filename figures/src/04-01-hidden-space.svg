@@ -1,12 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="920" height="470" viewBox="0 0 920 470">
 <defs>
 <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0072B2"/></marker>
 </defs>
-<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">同一张分界面，两种空间里的样子</text>
-<rect x="70" y="80" width="300" height="240" fill="#ffffff" stroke="#000000" stroke-width="1.3"/><path d="M 60 330 C 190 300, 250 140, 380 70" stroke="#0072B2" stroke-width="3" fill="none"/><circle cx="70" cy="320" r="12" fill="#E69F00" stroke="#000000" stroke-width="1.3"/><path d="M 370 306 L 382 330 L 358 330 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/><path d="M 70 66 L 82 90 L 58 90 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/><circle cx="370" cy="80" r="12" fill="#E69F00" stroke="#000000" stroke-width="1.3"/><text x="220.0" y="344" font-size="13" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">低维输入空间：同一张分界面的投影</text><rect x="560" y="80" width="360" height="240" fill="#ffffff" stroke="#000000" stroke-width="1.3"/><line x1="580" y1="310" x2="900" y2="100" stroke="#D55E00" stroke-width="3"/><path d="M 600 96 L 612 120 L 588 120 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/><path d="M 680 116 L 692 140 L 668 140 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/><circle cx="780" cy="280" r="12" fill="#E69F00" stroke="#000000" stroke-width="1.3"/><circle cx="840" cy="250" r="12" fill="#E69F00" stroke="#000000" stroke-width="1.3"/><text x="740" y="344" font-size="13" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">高维特征空间：同一张分界面是平直的一张</text>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">同一条分界线：高维里是直线，低维里是双曲线</text>
+<!-- 左：高维特征空间 (u,v) 直线 -->
+<text x="250" y="56" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">高维特征空间：一条直线</text>
+<rect x="80" y="80" width="340" height="220" fill="#ffffff" stroke="#000000" stroke-width="1.3"/>
+<line x1="80" y1="300" x2="420" y2="300" stroke="#999999" stroke-width="0.8"/>
+<line x1="80" y1="300" x2="80" y2="80" stroke="#999999" stroke-width="0.8"/>
+<text x="430" y="304" font-size="12" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">u = x+y</text>
+<text x="60" y="76" font-size="12" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">v = x·y</text>
+<line x1="80" y1="292" x2="420" y2="154" stroke="#D55E00" stroke-width="3"/>
+<circle cx="80.0" cy="268.57142857142856" r="12" fill="#E69F00" stroke="#000000" stroke-width="1.3"/>
+<circle cx="389.09090909090907" cy="111.42857142857142" r="12" fill="#E69F00" stroke="#000000" stroke-width="1.3"/>
+<path d="M 234.54545454545453 254.57142857142856 L 246.54545454545453 278.57142857142856 L 222.54545454545453 278.57142857142856 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/>
+<path d="M 234.54545454545453 254.57142857142856 L 246.54545454545453 278.57142857142856 L 222.54545454545453 278.57142857142856 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/>
+<text x="250" y="265" font-size="12" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">两个三角在此重合</text>
+<text x="250" y="322" font-size="12" text-anchor="middle" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">直线：圆在上、三角在下</text>
+<!-- 右：低维输入空间 双曲线 -->
+<text x="710" y="56" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">低维输入空间：双曲线</text>
+<rect x="560" y="100" width="300" height="240" fill="#ffffff" stroke="#000000" stroke-width="1.3"/>
+<line x1="560" y1="220" x2="860" y2="220" stroke="#999999" stroke-width="0.8"/>
+<line x1="710" y1="100" x2="710" y2="340" stroke="#999999" stroke-width="0.8"/>
+<polyline points="560,250 575,251 590,254 605,260 620,272 635,300 672,340" fill="none" stroke="#0072B2" stroke-width="3"/>
+<polyline points="685,100 710,160 740,187 770,193 805,196 860,199" fill="none" stroke="#0072B2" stroke-width="3"/>
+<circle cx="560" cy="340" r="12" fill="#E69F00" stroke="#000000" stroke-width="1.3"/>
+<circle cx="860" cy="100" r="12" fill="#E69F00" stroke="#000000" stroke-width="1.3"/>
+<path d="M 560 86 L 572 110 L 548 110 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/>
+<path d="M 860 326 L 872 350 L 848 350 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/>
+<text x="710" y="364" font-size="12" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">横轴：输入 1　　纵轴：输入 2</text>
+<text x="748" y="130" font-size="12" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">双曲线的两支，</text>
+<text x="748" y="148" font-size="12" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">分别切过两个圆的角落</text>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
-<text x="40" y="392">左：同一个 MLP 的分界面，投影回二维就变成折线——"复杂"是投影的产物，不是网络本身在拐弯。</text>
-<text x="40" y="418">右：同一批点在新坐标（每颗隐藏神经元的"是/否"）下，同一张分界面就是一条平直的直线。</text>
-<text x="40" y="444">同一条线，高维里是直的，低维里看着复杂——XOR 的墙就是这么翻过去的。</text>
+<text x="40" y="412">左：在隐藏层造出的 (u, v) 坐标里，分界是一条直线——圆在上、三角在下。</text>
+<text x="40" y="438">右：同一条直线投影回输入平面，变成一条双曲线（两支）——照样把两类分开。</text>
+<text x="40" y="464" fill="#999999">高维的直，低维的弯：形状随空间而变，分类能力不变。</text>
 </g>
 </svg>
