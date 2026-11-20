@@ -29,6 +29,8 @@ def main():
         rel = p.relative_to(ROOT / "content")
         if rel.parts and rel.parts[0] in SKIP_PREFIX:
             continue
+        if rel.name.startswith("00-") or "-00-" in rel.name:  # 章首导语：不是完整的"节"，不受六拍约束
+            continue
         text = p.read_text(encoding="utf-8")
         checked += 1
         lines = [ln for ln in text.splitlines() if ln.strip() and not ln.lstrip().startswith("<!--")]

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="470" viewBox="0 0 920 470">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0072B2"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">同一条"直线"，在哪个空间里画？</text>
+<rect x="40" y="60" width="380" height="300" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<text x="230" y="86" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">输入空间（你看到的 2D 平面）</text>
+<line x1="40" y1="210" x2="420" y2="210" stroke="#999999" stroke-width="0.8"/>
+<line x1="230" y1="60" x2="230" y2="360" stroke="#999999" stroke-width="0.8"/>
+<path d="M 100 340 C 190 300 230 210 230 210 C 230 210 280 130 380 100" stroke="#0072B2" stroke-width="3" fill="none"/>
+<circle cx="150" cy="300" r="13" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<circle cx="330" cy="320" r="13" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<circle cx="120" cy="110" r="13" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<path d="M 310 110 L 324 134 L 296 134 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
+<path d="M 180 130 L 194 154 L 166 154 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
+<text x="230" y="336" font-size="13" text-anchor="middle" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">MLP 的边界：一条弯的线</text>
+<rect x="500" y="60" width="380" height="300" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<text x="690" y="86" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">隐藏层造出的新空间（每颗隐藏神经元一个坐标轴）</text>
+<line x1="500" y1="210" x2="880" y2="210" stroke="#999999" stroke-width="0.8"/>
+<line x1="690" y1="60" x2="690" y2="360" stroke="#999999" stroke-width="0.8"/>
+<line x1="540" y1="330" x2="850" y2="90" stroke="#D55E00" stroke-width="3"/>
+<path d="M 600 107 L 614 133 L 586 133 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
+<path d="M 680 77 L 694 103 L 666 103 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
+<circle cx="770" cy="300" r="13" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<circle cx="820" cy="270" r="13" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><circle cx="755" cy="322" r="13" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<text x="690" y="336" font-size="13" text-anchor="middle" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">在新空间里，一条真正的直线分开两类</text>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="40" y="396">左：在原始输入的平面上，圆和三角只能靠弯线分开（单层感知机画不出弯线，这就是 XOR 之墙）。</text>
+<text x="40" y="422">右：隐藏层的几颗神经元各自画一条线、给出各自的"是/否"，这几个答案拼成新坐标——</text>
+<text x="40" y="448">在新坐标里，同样的两类恰好落在一条直线的两侧。弯线在新空间里是直线。</text>
+</g>
+</svg>
