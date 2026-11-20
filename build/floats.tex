@@ -1,6 +1,15 @@
 % 图的排版策略：随文走 + 图题交给 \caption
 \usepackage{float}
+\usepackage{titlesec}
+\newcommand{\subsectionbreak}{\clearpage}      % 每个一级小节（x.y）独立起页
 \floatplacement{figure}{H}          % 图出现在它被书写的位置
-\setcounter{secnumdepth}{3}   % 三级标题也要编号：交叉引用要落到 x.y.z
+\setcounter{secnumdepth}{4}   % 四级也编号：每一"拍"都有 x.y.z.w 的门牌号
+\counterwithin*{paragraph}{subsubsection}
+\usepackage{titlesec}
+% pandoc 把 H4 映射为 \paragraph（默认是"把标题吞进段落首行"的 run-in 样式），
+% 改成独立成行的块级标题，否则标题和正文挤在一行。
+\titleformat{\paragraph}[block]{\normalsize\bfseries}{\theparagraph}{0.6em}{}
+\titlespacing*{\paragraph}{0pt}{2.6ex plus 1ex minus .2ex}{1ex plus .2ex}
+\AtBeginDocument{\setlength{\parindent}{2em}}  % 中文段首缩进两字
 \captionsetup{labelsep=quad}        % "图 1　标题"，全角距离代替冒号
 \AtBeginDocument{\renewcommand{\figurename}{图}}

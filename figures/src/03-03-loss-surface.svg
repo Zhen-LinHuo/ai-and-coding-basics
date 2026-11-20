@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0072B2"/></marker>
+<marker id="arrv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">损失 = 一个能读出"错得多离谱"的数</text>
+<polyline points="120,216 125,215 130,215 135,215 140,215 145,216 151,219 156,222 161,226 166,230 171,236 176,242 181,248 186,255 191,262 196,268 201,273 206,277 212,281 217,283 222,283 227,282 232,279 237,274 242,267 247,259 252,249 257,238 262,226 267,214 273,200 278,187 283,173 288,159 293,146 298,134 303,122 308,112 313,102 318,93 323,85 328,78 334,71 339,65 344,58 349,52 354,45 359,37 364,29 369,19 374,8 379,-5 384,-19 389,-36 395,-54 400,-73 405,-94 410,-117 415,-141 420,-166 " fill="none" stroke="#0072B2" stroke-width="3"/>
+<circle cx="306" cy="116" r="9" fill="#D55E00"/>
+<path d="M 306 116 L 348 142" stroke="#D55E00" stroke-width="2.5" marker-end="url(#arrv)"/>
+<text x="356" y="150" font-size="13" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">最陡下坡方向</text>
+<line x1="120" y1="340" x2="440" y2="340" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="446" y="344" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">参数 w 的取值</text>
+<line x1="120" y1="340" x2="120" y2="70" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="60" y="66" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">损失</text>
+<text x="120" y="368" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">左：只看一个参数时，损失是一条曲线；小球往低处滚。</text>
+<g>
+<text x="560" y="100" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">两个参数时，"地形"长这样（透视）：</text>
+<ellipse cx="700" cy="330" rx="200" ry="66" fill="#56B4E9" fill-opacity="0.12" stroke="#999999" stroke-width="1"/>
+<ellipse cx="700" cy="308" rx="165" ry="54" fill="none" stroke="#999999" stroke-width="1"/>
+<ellipse cx="700" cy="288" rx="128" ry="42" fill="none" stroke="#999999" stroke-width="1"/>
+<ellipse cx="700" cy="270" rx="90" ry="30" fill="none" stroke="#999999" stroke-width="1"/>
+<ellipse cx="700" cy="256" rx="52" ry="18" fill="none" stroke="#999999" stroke-width="1"/>
+<ellipse cx="700" cy="248" rx="22" ry="8" fill="#009E73"/>
+<circle cx="806" cy="242" r="9" fill="#D55E00"/>
+<path d="M 800 250 C 770 268 730 288 706 296" stroke="#D55E00" stroke-width="2.5" fill="none" marker-end="url(#arrv)"/>
+<text x="822" y="238" font-size="13" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">当前参数</text>
+<text x="700" y="426" font-size="13" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">绿点：损失最低的参数组合（谷底）</text>
+<text x="560" y="140" font-size="13" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">横轴：参数 w1　纵深：参数 w2　竖直方向：损失</text>
+<text x="560" y="166" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">梯度下降 = 让球沿坡面滚到谷底。</text>
+<text x="560" y="196" font-size="13" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">真实网络有几亿根轴，但"量高度、找下坡"的动作一模一样。</text>
+</g>
+</svg>

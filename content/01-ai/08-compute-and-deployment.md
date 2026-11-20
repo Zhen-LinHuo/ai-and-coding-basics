@@ -1,4 +1,4 @@
-## 部署模型会遇到的：同构、异构、精度与 KV 缓存
+## 部署模型会遇到的：同构、异构、精度与 KV 缓存 {#sec:compute-and-deployment}
 
 <!-- stub -->
 

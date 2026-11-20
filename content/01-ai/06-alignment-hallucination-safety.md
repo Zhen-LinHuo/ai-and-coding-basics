@@ -1,4 +1,4 @@
-## 让它听话：对齐、幻觉与安全
+## 让它听话：对齐、幻觉与安全 {#sec:alignment-hallucination-safety}
 
 <!-- stub -->
 

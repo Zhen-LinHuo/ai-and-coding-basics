@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="480" viewBox="0 0 1180 480">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0072B2"/></marker>
+<marker id="arrv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">两个参数的"网络"：一条会拐弯的线</text>
+<line x1="500" y1="330" x2="850" y2="330" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="520" y1="350" x2="520" y2="60" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="856" y="350" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">输入 x</text>
+<text x="498" y="56" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">输出 y</text>
+<path d="M 520 54 L 528 71 L 535 87 L 543 103 L 551 118 L 558 132 L 566 146 L 574 159 L 582 172 L 589 184 L 597 195 L 605 205 L 612 215 L 620 225 L 628 233 L 635 241 L 643 249 L 651 256 L 658 262 L 666 267 L 674 272 L 682 277 L 689 280 L 697 283 L 705 286 L 712 288 L 720 289 L 728 289 L 735 289 L 743 288 L 751 287 L 758 285 L 766 282 L 774 279 L 782 275 L 789 270 L 797 265 L 805 260 L 812 253 L 820 246" stroke="#0072B2" stroke-width="3" fill="none"/>
+<circle cx="535" cy="96" r="5" fill="#E69F00" fill-opacity="0.85"/><circle cx="560" cy="153" r="5" fill="#E69F00" fill-opacity="0.85"/><circle cx="584" cy="168" r="5" fill="#E69F00" fill-opacity="0.85"/><circle cx="609" cy="234" r="5" fill="#E69F00" fill-opacity="0.85"/><circle cx="633" cy="237" r="5" fill="#E69F00" fill-opacity="0.85"/><circle cx="658" cy="269" r="5" fill="#E69F00" fill-opacity="0.85"/><circle cx="682" cy="301" r="5" fill="#E69F00" fill-opacity="0.85"/><circle cx="707" cy="286" r="5" fill="#E69F00" fill-opacity="0.85"/><circle cx="731" cy="314" r="5" fill="#E69F00" fill-opacity="0.85"/><circle cx="756" cy="289" r="5" fill="#E69F00" fill-opacity="0.85"/><circle cx="780" cy="299" r="5" fill="#E69F00" fill-opacity="0.85"/><circle cx="805" cy="281" r="5" fill="#E69F00" fill-opacity="0.85"/>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="60" y="90">这条曲线的数学身份：</text>
+<text x="60" y="122" fill="#0072B2">y = w2·x^2 + w1·x + b</text>
+<text x="60" y="160">三个权重就是三个系数：</text>
+<text x="60" y="192" fill="#0072B2">w2 决定弯不弯、往哪边弯</text>
+<text x="60" y="224" fill="#0072B2">w1 决定倾斜方向</text>
+<text x="60" y="256" fill="#0072B2">b 决定整体高低</text>
+<text x="60" y="300">拧这三个旋钮，就是改这条线的形状，让它贴住橙色的点。</text>
+<text x="60" y="384" fill="#999999">神经网络的"学习"，把这个游戏搬进了亿万维：</text>
+<text x="60" y="416" fill="#999999">旋钮更多，线能拐的弯也更自由。</text>
+</g>
+<!-- 迷你网络：公式如何落在一颗神经元上 -->
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="900" y="70" font-size="15" font-weight="bold" fill="#000000">这条线住在一颗神经元里：</text>
+<circle cx="920" cy="150" r="20" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<text x="920" y="155" text-anchor="middle">x</text>
+<circle cx="920" cy="240" r="24" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<text x="920" y="245" text-anchor="middle">x²</text>
+<text x="920" y="120" text-anchor="middle" fill="#999999">两个输入</text>
+<path d="M 941 150 L 1010 190" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 945 235 L 1012 205" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="960" y="162" fill="#D55E00">w₁</text>
+<text x="962" y="232" fill="#D55E00">w₂</text>
+<circle cx="1040" cy="196" r="26" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/>
+<text x="1040" y="202" text-anchor="middle">Σ</text>
+<path d="M 1040 240 L 1040 224" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="1048" y="252" fill="#D55E00">b</text>
+<path d="M 1067 196 L 1100 196" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="1110" y="202" fill="#000000">y</text>
+<text x="900" y="300">公式里的三个系数，就是这颗</text>
+<text x="900" y="324">神经元的三个参数，一一对应。</text>
+<text x="900" y="356" fill="#999999">此时 f 退化为直通；真网络的 f</text>
+<text x="900" y="380" fill="#999999">是非线性的——那是第 1.4 节的主角。</text>
+</g>
+</svg>

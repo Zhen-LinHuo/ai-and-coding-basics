@@ -37,7 +37,9 @@ all: pdf
 
 pdf: $(PDF)
 
-$(PDF): $(SRC) bib/refs.bib $(BUILD)/metadata.yaml $(BUILD)/astra-doc-style.sty
+FIGS := $(wildcard figures/src/*.svg)
+
+$(PDF): $(SRC) $(FIGS) bib/refs.bib $(BUILD)/metadata.yaml $(BUILD)/astra-doc-style.sty
 	@mkdir -p $(OUT)
 	$(PANDOC) $(SRC) $(PFLAGS) -o $@
 	@printf '%s: %s pages\n' "$@" "$$(pdfinfo $@ 2>/dev/null | awk '/^Pages:/{print $$2}')"

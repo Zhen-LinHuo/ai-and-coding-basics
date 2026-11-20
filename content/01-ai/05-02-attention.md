@@ -1,4 +1,4 @@
-### 注意力机制：Attention is all you need
+### 注意力机制：Attention is all you need {#sec:attention}
 
 <!-- stub -->
 
