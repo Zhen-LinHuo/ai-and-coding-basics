@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">三种学习信号：答案、结构、分数</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="58" width="270" height="290" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
+<text x="56" y="86" font-size="15" font-weight="bold" fill="#0072B2">监督学习</text>
+<text x="56" y="112">信号：每个样例都带标准答案</text>
+<text x="56" y="136">（这封邮件是"垃圾/正常"）</text>
+<text x="56" y="170">问法：给新样例，答案是什么？</text>
+<text x="56" y="204">典型：分类、预测、翻译</text>
+<text x="56" y="238" fill="#999999">代价：标注要人、要钱、要时间</text>
+<text x="56" y="272" fill="#D55E00">短板：只会答"答案里出现过的"</text>
+<text x="56" y="296" fill="#D55E00">那类问题，遇到新情况容易翻车</text>
+<rect x="335" y="58" width="270" height="290" rx="10" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
+<text x="351" y="86" font-size="15" font-weight="bold" fill="#E69F00">无监督学习</text>
+<text x="351" y="112">信号：没有答案，只有数据本身</text>
+<text x="351" y="136">（一万封邮件，谁也没标过）</text>
+<text x="351" y="170">问法：数据自己长什么样？</text>
+<text x="351" y="204">典型：聚类、降维、找异常</text>
+<text x="351" y="238" fill="#999999">代价：结果好不好，很难打分</text>
+<text x="351" y="272" fill="#D55E00">短板：它找到的"结构"未必是</text>
+<text x="351" y="296" fill="#D55E00">你想要的那个结构</text>
+<rect x="630" y="58" width="270" height="290" rx="10" fill="#ffffff" stroke="#009E73" stroke-width="2"/>
+<text x="646" y="86" font-size="15" font-weight="bold" fill="#009E73">强化学习</text>
+<text x="646" y="112">信号：没有答案，只有分数</text>
+<text x="646" y="136">（这步棋走完，整局输赢几分）</text>
+<text x="646" y="170">问法：接下来该做什么动作？</text>
+<text x="646" y="204">典型：下棋、机器人、调度</text>
+<text x="646" y="238" fill="#999999">代价：试错要真环境、真代价</text>
+<text x="646" y="272" fill="#D55E00">短板：分数来得晚、来得稀，</text>
+<text x="646" y="296" fill="#D55E00">"这一步是好是坏"很难归因</text>
+</g>
+<text x="40" y="382" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">一把尺子：问"学习时手里有什么"——答案（监督）、只有数据（无监督）、只有分数（强化）。</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="330" viewBox="0 0 940 330">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">强化学习最难的地方：分数来得又晚又稀</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<text x="60" y="74">一局棋的 120 步：</text>
+<circle cx="60" cy="110" r="16" fill="#ffffff" stroke="#999999" stroke-width="1.5"/><text x="60" y="115" text-anchor="middle" font-size="11">第10步</text><circle cx="122" cy="110" r="16" fill="#ffffff" stroke="#999999" stroke-width="1.5"/><text x="122" y="115" text-anchor="middle" font-size="11">第20步</text><circle cx="184" cy="110" r="16" fill="#ffffff" stroke="#999999" stroke-width="1.5"/><text x="184" y="115" text-anchor="middle" font-size="11">第30步</text><circle cx="246" cy="110" r="16" fill="#ffffff" stroke="#999999" stroke-width="1.5"/><text x="246" y="115" text-anchor="middle" font-size="11">第40步</text><circle cx="308" cy="110" r="16" fill="#ffffff" stroke="#999999" stroke-width="1.5"/><text x="308" y="115" text-anchor="middle" font-size="11">第50步</text><circle cx="370" cy="110" r="16" fill="#ffffff" stroke="#999999" stroke-width="1.5"/><text x="370" y="115" text-anchor="middle" font-size="11">第60步</text><circle cx="432" cy="110" r="16" fill="#ffffff" stroke="#999999" stroke-width="1.5"/><text x="432" y="115" text-anchor="middle" font-size="11">第70步</text><circle cx="494" cy="110" r="16" fill="#ffffff" stroke="#999999" stroke-width="1.5"/><text x="494" y="115" text-anchor="middle" font-size="11">第80步</text><circle cx="556" cy="110" r="16" fill="#ffffff" stroke="#999999" stroke-width="1.5"/><text x="556" y="115" text-anchor="middle" font-size="11">第90步</text><circle cx="618" cy="110" r="16" fill="#ffffff" stroke="#999999" stroke-width="1.5"/><text x="618" y="115" text-anchor="middle" font-size="11">第100步</text><circle cx="680" cy="110" r="16" fill="#ffffff" stroke="#999999" stroke-width="1.5"/><text x="680" y="115" text-anchor="middle" font-size="11">第110步</text><circle cx="742" cy="110" r="16" fill="#ffffff" stroke="#999999" stroke-width="1.5"/><text x="742" y="115" text-anchor="middle" font-size="11">第120步</text>
+<path d="M 60 146 L 760 146" stroke="#999999" stroke-width="1"/>
+<path d="M 745 110 L 762 110" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<text x="778" y="114" font-size="13" fill="#000000">结局</text>
+<text x="745" y="84" font-size="14" fill="#D55E00">+1（赢了）</text>
+<text x="60" y="196" fill="#D55E00">整个回合只在这一个瞬间给了一个分数。</text>
+<text x="60" y="222">问题：第 3 步和第 97 步，各自该为这个"赢"记多少功？</text>
+<text x="60" y="256" fill="#0072B2">这就是"信用分配"：分数要沿时间倒着摊回每一步——和反向传播把误差摊回每个权重，是同一类脑力活。</text>
+<text x="60" y="300" fill="#999999">分数越晚、越稀，学习越慢；所以很多任务要给"过程奖励"（吃到一个豆子也加分），但设计过程奖励又容易教坏它（刷分）。</text>
+</g>
+</svg>
