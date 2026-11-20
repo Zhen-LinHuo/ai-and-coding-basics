@@ -17,23 +17,18 @@
 <ellipse cx="250" cy="262" rx="30" ry="18" fill="none" stroke="#999999" stroke-width="1.2" stroke-dasharray="4 3"/>
 <path d="M 238 246 L 250 266 L 226 266 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/>
 <path d="M 256 252 L 268 272 L 244 272 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/>
-<text x="286" y="268" font-size="11" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">两个三角重合</text>
-<text x="250" y="265" font-size="12" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">两个三角在此重合</text>
-<text x="250" y="322" font-size="12" text-anchor="middle" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">直线：圆在上、三角在下</text>
 <!-- 右：低维输入空间 双曲线 -->
 <text x="710" y="56" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">低维输入空间：双曲线</text>
 <rect x="560" y="100" width="300" height="240" fill="#ffffff" stroke="#000000" stroke-width="1.3"/>
 <line x1="560" y1="220" x2="860" y2="220" stroke="#999999" stroke-width="0.8"/>
 <line x1="710" y1="100" x2="710" y2="340" stroke="#999999" stroke-width="0.8"/>
-<polyline points="564,250 569,250 574,251 578,251 582,251 587,252 592,252 596,253 600,253 605,254 610,254 614,255 618,256 623,257 628,258 632,259 636,261 641,262 646,265 650,268 654,272 659,278 664,288 668,304" fill="none" stroke="#0072B2" stroke-width="3"/>
+<polyline points="560,250 565,250 569,251 574,251 579,251 583,251 588,252 593,252 598,253 602,253 607,254 612,255 616,255 621,256 626,257 630,258 635,260 640,262 644,264 649,267 654,271 658,277 663,287 668,303 672,340" fill="none" stroke="#0072B2" stroke-width="3"/>
 <polyline points="686,124 694,191 701,210 709,219 717,224 724,228 732,230 739,232 747,233 755,234 762,235 770,236 778,237 785,237 793,238 801,238 808,238 816,239 823,239 831,239 839,239 846,240 854,240" fill="none" stroke="#0072B2" stroke-width="3"/>
 <circle cx="560" cy="340" r="12" fill="#E69F00" stroke="#000000" stroke-width="1.3"/>
 <circle cx="860" cy="100" r="12" fill="#E69F00" stroke="#000000" stroke-width="1.3"/>
 <path d="M 560 86 L 572 110 L 548 110 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/>
 <path d="M 860 326 L 872 350 L 848 350 Z" fill="#009E73" stroke="#000000" stroke-width="1.3"/>
 <text x="710" y="364" font-size="12" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">横轴：输入 1　　纵轴：输入 2</text>
-<text x="748" y="130" font-size="12" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">双曲线的两支，</text>
-<text x="748" y="148" font-size="12" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">分别切过两个圆的角落</text>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
 <text x="40" y="412">左：在隐藏层造出的 (u, v) 坐标里，分界是一条直线——圆在上、三角在下。</text>
 <text x="40" y="438">右：同一条直线投影回输入平面，变成一条双曲线（两支）——照样把两类分开。</text>
