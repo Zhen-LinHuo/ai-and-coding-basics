@@ -24,7 +24,7 @@ PFLAGS := \
   --lua-filter=$(BUILD)/xref.lua \
   --lua-filter=$(BUILD)/admonitions.lua \
   --lua-filter=$(BUILD)/inline-code-bg.lua \
-  -H $(BUILD)/astra-doc-style.sty \
+  -H $(BUILD)/book-style.sty \
   --include-in-header=$(BUILD)/floats.tex \
   --metadata-file=$(BUILD)/metadata.yaml \
   -V colorlinks=true \
@@ -39,7 +39,7 @@ pdf: $(PDF)
 
 FIGS := $(wildcard figures/src/*.svg)
 
-$(PDF): $(SRC) $(FIGS) bib/refs.bib $(BUILD)/metadata.yaml $(BUILD)/astra-doc-style.sty
+$(PDF): $(SRC) $(FIGS) bib/refs.bib $(BUILD)/metadata.yaml $(BUILD)/book-style.sty
 	@mkdir -p $(OUT)
 	$(PANDOC) $(SRC) $(PFLAGS) -o $@
 	@printf '%s: %s pages\n' "$@" "$$(pdfinfo $@ 2>/dev/null | awk '/^Pages:/{print $$2}')"

@@ -1,10 +1,11 @@
-%%% Astra Doc Style v2.5.0 — Light, modern, CJK-capable, Godot-inspired
+%%% Book house style — light, modern, CJK-capable (vendored snapshot, MIT;
+%%% see build/VENDOR.md for provenance and sync rules)
 %%% Fonts: Noto Serif + Noto Sans + FiraMono (English), FandolSong + FandolHei (CJK)
 %%%        All faces resolve through kpathsea from TeX Live — no system font needed.
 %%% Usage: pandoc input.md -o output.pdf --pdf-engine=lualatex --listings \
 %%%          --lua-filter=emoji-filter.lua --lua-filter=inline-code-bg.lua \
 %%%          --lua-filter=admonitions.lua \
-%%%          -H astra-doc-style.sty -V title="…" -V toc=true -V toc-title="目录"
+%%%          -H book-style.sty -V title="…" -V toc=true -V toc-title="目录"
 %%%
 %%% Filter contract (admonitions.lua) — these names are relied on; do not rename:
 %%%   !!! info    -> \begin{note}      \admonitiontitle{noteborder}{…}
@@ -55,7 +56,7 @@
   \IfFontExistsTF{NotoColorEmoji}{%
     \setemojifont{NotoColorEmoji}%
   }{%
-    \PackageWarning{astra-doc-style}{NotoColorEmoji not found — emoji glyphs will not render}%
+    \PackageWarning{book-style}{NotoColorEmoji not found — emoji glyphs will not render}%
   }%
 }{}
 
@@ -126,11 +127,11 @@
 \setcounter{secnumdepth}{2}
 
 %%% Section headings — a top-level section starts on a new page (guide convention).
-%%% Set \astra@sectionbreakfalse in the document to keep the flow continuous.
-\newif\ifastra@sectionbreak \astra@sectionbreaktrue
+%%% Set \book@sectionbreakfalse in the document to keep the flow continuous.
+\newif\ifbook@sectionbreak \book@sectionbreaktrue
 \titleformat{\section}
   {\sffamily\Large\bfseries\color{primary}}{}{0pt}{%
-  \ifastra@sectionbreak\clearpage\fi}
+  \ifbook@sectionbreak\clearpage\fi}
 \titlespacing*{\section}{0pt}{1.5em}{0.5em}
 
 \titleformat{\subsection}{\sffamily\large\bfseries\color{accent}}{}{0pt}{}

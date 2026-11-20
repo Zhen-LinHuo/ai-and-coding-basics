@@ -73,7 +73,7 @@ guix time-machine -C .guix/channels.scm -- shell -m .guix/manifest.scm -- \
 ## 变更
 
 - 增删章节、改动编号：先改 `OUTLINE.md`，再动 `content/`。两者不一致时以 `OUTLINE.md` 为准。
-- `OUTLINE.md`、`.guix/`、`build/astra-doc-style.sty` 属于受保护文件，修改前须所有者批准。
+- `OUTLINE.md`、`.guix/`、`build/book-style.sty` 属于受保护文件，修改前须所有者批准。
 - 提交信息用中文，标题写"做了什么"，不写"改了哪几个文件"。
 
 ## Git

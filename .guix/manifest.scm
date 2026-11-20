@@ -1,7 +1,7 @@
 ;; 构建环境清单。镜像只提供 guix 二进制，TeX 由这里提供。
 ;;
 ;; TeX 用的是逐包最小集（替代 texlive-scheme-full 的数 GB）。
-;; 新增依赖时：astra-doc-style.sty 里每出现一个 \usepackage，
+;; 新增依赖时：book-style.sty 里每出现一个 \usepackage，
 ;; 就要在下面补对应包；缺了会在构建时报 "File not found"，按名字补即可。
 (specifications->manifest
  (list "pandoc"                 ; Markdown -> PDF/HTML

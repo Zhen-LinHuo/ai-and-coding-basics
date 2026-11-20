@@ -13,7 +13,7 @@
 --   v1 (2026-06-04): Initial version — basic escaping with \textasciitilde,
 --     \{/\} via set pattern, \textbackslash, \textasciicircum.
 --
--- Part of the Astra Doc system for Hermes Agent tutorials.
+-- Inline-code background filter (vendored snapshot; see build/VENDOR.md).
 
 function Code(elem)
   local text = elem.text
