@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="420" viewBox="0 0 850 420">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0072B2"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">一次前向：从 prompt 到回答的一个字</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="90" width="150" height="120" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<text x="115" y="118" text-anchor="middle" font-weight="bold">你的输入</text>
+<text x="115" y="146" text-anchor="middle">"写一首关于</text>
+<text x="115" y="170" text-anchor="middle">春天的诗"</text>
+<text x="115" y="198" text-anchor="middle" fill="#999999">切成 N 个 token</text>
+<rect x="260" y="90" width="180" height="120" rx="10" fill="#56B4E9" fill-opacity="0.2" stroke="#0072B2" stroke-width="2"/>
+<text x="350" y="118" text-anchor="middle" font-weight="bold">神经网络</text>
+<text x="350" y="146" text-anchor="middle">几十到上百层，每层：</text>
+<text x="350" y="172" text-anchor="middle">注意力 + 小网络</text>
+<text x="350" y="198" text-anchor="middle" fill="#999999">参数全部冻结（推理）</text>
+<rect x="510" y="90" width="170" height="120" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<text x="595" y="118" text-anchor="middle" font-weight="bold">下一个 token 的概率表</text>
+<text x="595" y="150" text-anchor="middle">"春" 62%　"风" 8%</text>
+<text x="595" y="174" text-anchor="middle">"花" 5%　……</text>
+<text x="595" y="198" text-anchor="middle" fill="#999999">按策略抽一个</text>
+</g>
+<path d="M 192 150 L 258 150" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M 442 150 L 508 150" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M 682 150 L 740 150" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="742" y="90" width="90" height="120" rx="10" fill="#E69F00"/>
+<text x="787" y="146" text-anchor="middle" fill="#ffffff" font-size="15">"春"</text>
+<path d="M 787 214 C 787 260 500 260 120 226" stroke="#999999" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<text x="440" y="266" font-size="13" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">拼回输入末尾，再算一次——一首诗就这样一个字一个字长出来</text>
+<text x="40" y="392" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">你看到的"流畅长文"，全部是这张图循环了几百次的结果：每次只多一个字。</text>
+</svg>

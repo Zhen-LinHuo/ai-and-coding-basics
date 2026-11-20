@@ -1,4 +1,4 @@
-### 线性注意力与状态空间模型：RNN 的逆袭
+### 线性注意力与状态空间模型：RNN 的逆袭 {#sec:ssm-and-linear-attention}
 
 <!-- stub -->
 
