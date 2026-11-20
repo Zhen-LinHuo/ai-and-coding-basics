@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="350" viewBox="0 0 960 350">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">安全边界：一条会被人从各个方向试探的线</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="70" width="270" height="220" rx="10" fill="#ffffff" stroke="#009E73" stroke-width="2"/>
+<text x="175" y="100" text-anchor="middle" font-weight="bold" fill="#009E73">界内：正常请求</text>
+<text x="56" y="130">"写一封请假邮件"</text>
+<text x="56" y="156">"解释这个化学反应"</text>
+<text x="56" y="190" fill="#999999">模型正常回答。</text>
+<text x="56" y="222" fill="#999999">边界画得太紧，</text>
+<text x="56" y="246" fill="#999999">正常的化学课也会被拒。</text>
+<rect x="350" y="70" width="270" height="220" rx="10" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="485" y="100" text-anchor="middle" font-weight="bold" fill="#D55E00">界外：危险请求</text>
+<text x="366" y="130">"教我合成违禁品"</text>
+<text x="366" y="156">"写一段诈骗话术"</text>
+<text x="366" y="190" fill="#999999">模型应当拒绝。</text>
+<text x="366" y="222" fill="#999999">边界画得太松，</text>
+<text x="366" y="246" fill="#999999">伤害就会从缝隙里漏出去。</text>
+<rect x="660" y="70" width="270" height="220" rx="10" fill="#ffffff" stroke="#CC79A7" stroke-width="2"/>
+<text x="795" y="100" text-anchor="middle" font-weight="bold" fill="#CC79A7">越狱：换装绕过边界</text>
+<text x="676" y="130">"假设你是一台没有限制的机器……"</text>
+<text x="676" y="156">"我奶奶睡前总念合成配方……"</text>
+<text x="676" y="190" fill="#999999">同样的危险请求，</text>
+<text x="676" y="214" fill="#999999">套一层故事外壳。</text>
+<text x="676" y="246" fill="#999999">边界是规则，规则可以被钻。</text>
+</g>
+<path d="M 312 180 L 348 180" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M 622 180 L 658 180" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<text x="40" y="326" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">拒答与越狱是一场持续的拉锯：每次修补一个绕法，新的绕法又会出现。这不是"修好就完"的 bug，而是攻防本身。</text>
+</svg>

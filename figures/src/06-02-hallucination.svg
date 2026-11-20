@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">幻觉的两种成因：没学过，和"最像"不等于"最真"</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="60" width="420" height="200" rx="10" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="60" y="90" font-weight="bold" fill="#D55E00">成因一：知识缺失</text>
+<text x="60" y="118">问的事训练数据里几乎没有——</text>
+<text x="60" y="142">一家太冷门的公司、一个太新的事实。</text>
+<text x="60" y="176" fill="#999999">模型不知道"我不知道"，</text>
+<text x="60" y="200" fill="#999999">它只会接着编一段像样的文字。</text>
+<rect x="500" y="60" width="420" height="200" rx="10" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="520" y="90" font-weight="bold" fill="#D55E00">成因二：流利优先</text>
+<text x="520" y="118">训练目标里只有"像不像下一个词"，</text>
+<text x="520" y="142">从来没有"真不真"。</text>
+<text x="520" y="176" fill="#999999">编一段流畅的假文献，</text>
+<text x="520" y="200" fill="#999999">和复述一条真知识，得分一样高。</text>
+</g>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<text x="60" y="300" font-weight="bold">例子："请列出张三发表的论文"</text>
+<text x="60" y="330">张三是个真实但冷门的学者。模型没学过他的论文，</text>
+<text x="60" y="356">但"列出论文"这个格式它见得多了——于是按常见格式编出</text>
+<text x="60" y="382">五条标题、期刊、年份，条条像真，条条是编。</text>
+<text x="60" y="416" fill="#D55E00">两种成因常常同时在场：知识缺失给了它自由，流利优先给了它胆量。</text>
+</g>
+</svg>
