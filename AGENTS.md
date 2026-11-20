@@ -47,6 +47,7 @@ guix time-machine -C .guix/channels.scm -- shell -m .guix/manifest.scm -- \
 5. **事实必须有引用**。模型名、榜单、价格这类时效内容只进带日期的注记框，不进正文叙述。
 6. **单节上限 11 页**。超了就往「数学注解」里挪，或者另立一节。
 7. 术语首次出现给中英并列，例如「梯度下降（gradient descent）」。
+10. **数学/正文里的负号用 ASCII 连字符 `-`，不用 U+2212**：Fandol 字体没有这个字形，会静默掉字。
 8. **插图编号手工管理，浮动排版交给 LaTeX。** 图题写在图片的替代文字里
    （成为正式 caption），编号格式 `图 x.y.z-N`（N 为节内序号），正文引用写全名。
    位置与格式由 `build/floats.tex` 控制：`\floatplacement{figure}{H}` 让图停在

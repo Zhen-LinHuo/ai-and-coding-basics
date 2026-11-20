@@ -27,6 +27,8 @@ def main():
         rel = p.relative_to(ROOT)
         for n, line in enumerate(p.read_text(encoding="utf-8").splitlines(), 1):
             for k in CITE_RE.findall(line):
+                if k.split(":")[0] in ("fig", "sec", "eq", "tab"):
+                    continue  # 交叉引用，归 lint_xref 管
                 cited.setdefault(k, f"{rel}:{n}")
 
     ghost = sorted(set(cited) - keys)

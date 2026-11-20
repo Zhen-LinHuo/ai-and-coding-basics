@@ -15,17 +15,17 @@ HTML  := $(OUT)/index.html
 PANDOC := pandoc
 PFLAGS := \
   --from markdown+smart+pipe_tables+implicit_figures \
-  --pdf-engine=lualatex \
+  --pdf-engine=latexmk --pdf-engine-opt=-lualatex \
   --listings \
-  --toc --toc-depth=2 \
+  --toc --toc-depth=3 \
   --citeproc \
   --bibliography=bib/refs.bib \
   --csl=$(BUILD)/gb-t-7714-2015-numeric.csl \
+  --lua-filter=$(BUILD)/xref.lua \
   --lua-filter=$(BUILD)/admonitions.lua \
   --lua-filter=$(BUILD)/inline-code-bg.lua \
   -H $(BUILD)/astra-doc-style.sty \
   --include-in-header=$(BUILD)/floats.tex \
-  -H $(BUILD)/floats.tex \
   --metadata-file=$(BUILD)/metadata.yaml \
   -V colorlinks=true \
   -V papersize=a4 \
@@ -46,10 +46,11 @@ html: $(HTML)
 
 $(HTML): $(SRC) bib/refs.bib $(BUILD)/metadata.yaml
 	@mkdir -p $(OUT)
-	$(PANDOC) $(SRC) --standalone --toc --toc-depth=2 --number-sections \
+	$(PANDOC) $(SRC) --standalone --toc --toc-depth=3 --number-sections \
 	  --citeproc --bibliography=bib/refs.bib --csl=$(BUILD)/gb-t-7714-2015-numeric.csl \
 	  --metadata-file=$(BUILD)/metadata.yaml \
-	  --lua-filter=$(BUILD)/admonitions.lua \
+	  --lua-filter=$(BUILD)/xref.lua \
+  --lua-filter=$(BUILD)/admonitions.lua \
 	  --css=site.css -o $@
 	@cp $(BUILD)/site.css $(OUT)/site.css
 
@@ -57,6 +58,7 @@ lint:
 	@python3 scripts/lint_emoji.py
 	@python3 scripts/lint_sections.py
 	@python3 scripts/lint_bib.py
+	@python3 scripts/lint_xref.py
 
 check: lint pdf
 
