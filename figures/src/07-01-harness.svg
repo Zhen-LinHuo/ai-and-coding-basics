@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="380" viewBox="0 0 960 380">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">裸模型 vs 助手：中间那层是工程，不是智能</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="70" width="380" height="150" rx="10" fill="#ffffff" stroke="#999999" stroke-width="2"/>
+<text x="230" y="100" text-anchor="middle" font-weight="bold" fill="#999999">裸模型</text>
+<text x="60" y="130">你说话 → 模型 → 它接着说</text>
+<text x="60" y="158" fill="#999999">没有记忆、没有工具、没有"做"的能力；</text>
+<text x="60" y="182" fill="#999999">说错了也只能嘴上改。</text>
+<rect x="500" y="70" width="430" height="290" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
+<text x="715" y="100" text-anchor="middle" font-weight="bold" fill="#0072B2">助手（模型 + harness）</text>
+<text x="520" y="130">同样的模型，外面套一层工程：</text>
+<text x="520" y="158">· 记忆：对话历史、文件、上次的决定</text>
+<text x="520" y="186">· 工具：读文件、跑命令、上网、发请求</text>
+<text x="520" y="214">· 循环：做完一步看结果，再决定下一步</text>
+<text x="520" y="242">· 规则：什么时候该停、什么不能做</text>
+<text x="520" y="278" fill="#0072B2">模型还是那个模型——harness 补的</text>
+<text x="520" y="302" fill="#0072B2">是"手、眼、记性"，不是"脑子"。</text>
+</g>
+<path d="M 422 145 L 498 145" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<text x="460" y="130" font-size="13" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">套壳</text>
+</svg>

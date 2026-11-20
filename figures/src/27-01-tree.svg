@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="340" viewBox="0 0 640 340">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">典型项目树：新人 10 分钟能猜对放哪</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<text x="80" y="80" font-family="monospace">myproject/</text>
+<text x="110" y="106" font-family="monospace">README.md</text><text x="330" y="106" fill="#999999" font-size="12">← 陌生人第一个读的文件</text>
+<text x="110" y="132" font-family="monospace">src/</text><text x="330" y="132" fill="#999999" font-size="12">源代码</text>
+<text x="110" y="158" font-family="monospace">tests/</text><text x="330" y="158" fill="#999999" font-size="12">测试（与 src 平级，一眼可见）</text>
+<text x="110" y="184" font-family="monospace">docs/</text><text x="330" y="184" fill="#999999" font-size="12">文档</text>
+<text x="110" y="210" font-family="monospace">LICENSE</text><text x="330" y="210" fill="#999999" font-size="12">法律身份</text>
+<text x="110" y="236" font-family="monospace">README 之外的配置……</text><text x="330" y="236" fill="#999999" font-size="12">构建、依赖声明</text>
+</g>
+<text x="60" y="292" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">惯例的价值：位置本身就是文档。"测试在哪"不用问，因为约定替你回答了。</text>
+<text x="60" y="318" font-size="13" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">自创的巧妙结构，是在向每一个后来者收"理解税"。</text>
+</svg>

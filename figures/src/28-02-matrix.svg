@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="410" viewBox="0 0 720 410">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">兼容矩阵：我的代码能不能链进你的项目</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="13" fill="#000000">
+<rect x="150" y="70" width="170" height="40" fill="#56B4E9" fill-opacity="0.4" stroke="#000000"/><text x="235" y="96" text-anchor="middle" font-weight="bold">MIT 代码</text>
+<rect x="325" y="70" width="170" height="40" fill="#56B4E9" fill-opacity="0.4" stroke="#000000"/><text x="410" y="96" text-anchor="middle" font-weight="bold">GPL 代码</text>
+<rect x="500" y="70" width="170" height="40" fill="#56B4E9" fill-opacity="0.4" stroke="#000000"/><text x="585" y="96" text-anchor="middle" font-weight="bold">AGPL 服务</text>
+<rect x="40" y="115" width="105" height="110" fill="#ffffff" stroke="#000000"/><text x="92" y="175" text-anchor="middle" font-weight="bold">MIT 项目</text>
+<rect x="150" y="115" width="170" height="110" fill="#009E73" fill-opacity="0.5" stroke="#000000"/><text x="235" y="175" text-anchor="middle">可用</text>
+<rect x="325" y="115" width="170" height="110" fill="#E69F00" fill-opacity="0.4" stroke="#000000"/><text x="410" y="165" text-anchor="middle">仅限不分发时</text><text x="410" y="188" text-anchor="middle" font-size="12" fill="#999999">（内部使用）</text>
+<rect x="500" y="115" width="170" height="110" fill="#009E73" fill-opacity="0.5" stroke="#000000"/><text x="585" y="175" text-anchor="middle">可调用</text>
+<rect x="40" y="230" width="105" height="110" fill="#ffffff" stroke="#000000"/><text x="92" y="290" text-anchor="middle" font-weight="bold">GPL 项目</text>
+<rect x="150" y="230" width="170" height="110" fill="#009E73" fill-opacity="0.5" stroke="#000000"/><text x="235" y="290" text-anchor="middle">可用</text>
+<rect x="325" y="230" width="170" height="110" fill="#009E73" fill-opacity="0.5" stroke="#000000"/><text x="410" y="290" text-anchor="middle">可用</text>
+<rect x="500" y="230" width="170" height="110" fill="#E69F00" fill-opacity="0.4" stroke="#000000"/><text x="585" y="280" text-anchor="middle">网络服务不算分发</text><text x="585" y="303" text-anchor="middle" font-size="12" fill="#999999">（GPL 不管，AGPL 管）</text>
+</g>
+<text x="40" y="382" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">读法：行是"我的项目"，列是"我引入的代码"。绿色 = 可以；橙色 = 有条件。这就是选许可证前必查的表。</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="340" viewBox="0 0 700 340">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">显存墙：三笔账加在一起</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="60" y="80" width="420" height="60" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<text x="270" y="116" text-anchor="middle" fill="#ffffff" font-weight="bold">权重（常驻，大头）</text>
+<rect x="60" y="146" width="180" height="60" fill="#009E73" stroke="#000000" stroke-width="1.2"/>
+<text x="150" y="182" text-anchor="middle" fill="#ffffff" font-weight="bold">激活</text>
+<rect x="246" y="146" width="180" height="60" fill="#E69F00" stroke="#000000" stroke-width="1.2"/>
+<text x="336" y="182" text-anchor="middle" fill="#ffffff" font-weight="bold">KV 缓存</text>
+<rect x="432" y="146" width="180" height="60" fill="#CC79A7" stroke="#000000" stroke-width="1.2"/>
+<text x="522" y="182" text-anchor="middle" fill="#ffffff" font-weight="bold">其他开销</text>
+</g>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="60" y="250">三条杠杆对应三个工程方向：量化压权重（[图 1-44](#fig:precision)）、批处理摊激活、</text>
+<text x="60" y="276">滑动窗口与缓存管理压 KV——[第 1.5.3 节](#sec:ssm-and-linear-attention)的固定状态是更激进的一招。</text>
+<text x="60" y="310" fill="#D55E00">墙的衡量单位很朴素：这个模型"装不装得下"这一张卡。</text>
+</g>
+</svg>
