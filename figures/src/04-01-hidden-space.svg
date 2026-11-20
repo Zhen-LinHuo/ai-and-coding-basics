@@ -8,12 +8,12 @@
 <text x="230" y="86" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">输入空间（你看到的 2D 平面）</text>
 <line x1="40" y1="210" x2="420" y2="210" stroke="#999999" stroke-width="0.8"/>
 <line x1="230" y1="60" x2="230" y2="360" stroke="#999999" stroke-width="0.8"/>
-<path d="M 100 340 C 190 300 230 210 230 210 C 230 210 280 130 380 100" stroke="#0072B2" stroke-width="3" fill="none"/>
-<circle cx="150" cy="300" r="13" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
-<circle cx="330" cy="320" r="13" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
-<circle cx="120" cy="110" r="13" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
-<path d="M 310 110 L 324 134 L 296 134 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
-<path d="M 180 130 L 194 154 L 166 154 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
+<path d="M 80 330 C 180 320 260 250 300 190 C 335 140 380 110 415 95" stroke="#0072B2" stroke-width="3" fill="none"/>
+<circle cx="140" cy="345" r="13" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<circle cx="340" cy="330" r="13" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<circle cx="390" cy="300" r="13" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<path d="M 100 105 L 114 129 L 86 129 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
+<path d="M 170 115 L 184 139 L 156 139 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
 <text x="230" y="336" font-size="13" text-anchor="middle" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">MLP 的边界：一条弯的线</text>
 <rect x="500" y="60" width="380" height="300" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
 <text x="690" y="86" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">隐藏层造出的新空间（每颗隐藏神经元一个坐标轴）</text>

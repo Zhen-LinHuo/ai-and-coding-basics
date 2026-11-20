@@ -8,6 +8,19 @@
 \usepackage{titlesec}
 % pandoc 把 H4 映射为 \paragraph（默认是"把标题吞进段落首行"的 run-in 样式），
 % 改成独立成行的块级标题，否则标题和正文挤在一行。
+% house style 故意留空了 section/subsection 的编号位（{}）——本书要编号，
+% 在此覆盖，字体与分页行为照抄 house style。
+% 注意 \makeatletter：@ 在 header 文件里不是字母，house style 的 \ifastra@sectionbreak
+% 必须在 makeatletter 环境里才能展开。
+\makeatletter
+% 部级标题用 titlesec 的官方 \sectionbreak 钩子分页（分页发生在编号之前，
+% 不会把编号甩到上一页）；sty 自己的 \ifastra@sectionbreak 有这个缺陷。
+\newcommand{\sectionbreak}{\clearpage}
+\titleformat{\section}[display]
+  {\sffamily\Large\bfseries\color{primary}}{第 \thesection 部分}{0pt}{}
+\titleformat{\subsection}{\sffamily\large\bfseries\color{accent}}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\sffamily\normalsize\bfseries\color{primary}}{\thesubsubsection}{0.6em}{}
+\makeatother
 \titleformat{\paragraph}[block]{\normalsize\bfseries}{\theparagraph}{0.6em}{}
 \titlespacing*{\paragraph}{0pt}{2.6ex plus 1ex minus .2ex}{1ex plus .2ex}
 \AtBeginDocument{\setlength{\parindent}{2em}}  % 中文段首缩进两字

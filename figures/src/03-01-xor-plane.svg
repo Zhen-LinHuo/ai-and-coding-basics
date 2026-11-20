@@ -8,12 +8,11 @@
 <rect x="150" y="80" width="300" height="240" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
 <line x1="150" y1="200.0" x2="450" y2="200.0" stroke="#E69F00" stroke-width="2.5" stroke-dasharray="8 5"/>
 <line x1="300.0" y1="80" x2="300.0" y2="320" stroke="#D55E00" stroke-width="2.5" stroke-dasharray="8 5"/>
-<line x1="150" y1="248.0" x2="450" y2="8.0" stroke="#CC79A7" stroke-width="2.5" stroke-dasharray="8 5"/>
-<text x="464" y="154.0" font-size="13" fill="#E69F00" font-family="Noto Sans CJK SC, sans-serif">横切：两侧各有一圆一三角</text>
-<text x="464" y="264.0" font-size="13" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">竖切：两侧各有一圆一三角</text>
-<text x="464" y="208.0" font-size="13" fill="#CC79A7" font-family="Noto Sans CJK SC, sans-serif">斜切：右上只剩一个三角，</text>
-<text x="464" y="228.0" font-size="13" fill="#CC79A7" font-family="Noto Sans CJK SC, sans-serif">其余三个全在另一侧</text>
+<line x1="150" y1="248" x2="360" y2="80" stroke="#CC79A7" stroke-width="2.5" stroke-dasharray="8 5"/>
 <circle cx="150" cy="320" r="14" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><circle cx="450" cy="80" r="14" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><path d="M 150 65 L 164 91 L 136 91 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/><path d="M 450 305 L 464 331 L 436 331 Z" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
+<text x="462" y="205" font-size="14" fill="#E69F00" font-family="Noto Sans CJK SC, sans-serif">横切</text>
+<text x="300" y="70" font-size="14" text-anchor="middle" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">竖切</text>
+<text x="368" y="74" font-size="14" fill="#CC79A7" font-family="Noto Sans CJK SC, sans-serif">斜切</text>
 <text x="150" y="346" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">横轴：输入 1　　纵轴：输入 2</text>
-<text x="60" y="392" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">圆 = 输出 0，三角 = 输出 1。三条线怎么摆都分不干净——这就是单层感知机的天花板。</text>
+<text x="60" y="392" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">圆 = 输出 0，三角 = 输出 1。三条线怎么摆都分不干净——这就是单层感知机的天花板。横切、竖切各混进一圆一三角；斜切挤出三个圆、只留住一个三角。</text>
 </svg>
