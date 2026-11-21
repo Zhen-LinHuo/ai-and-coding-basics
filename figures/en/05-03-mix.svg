@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">An engineering compromise between two extremes</text>
+<line x1="110" y1="330" x2="800" y2="330" stroke="#000000" stroke-width="1.3" marker-end="url(#arr)"/>
+<line x1="110" y1="330" x2="110" y2="70" stroke="#000000" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="806" y="334" font-size="9.0" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">long-context efficiency</text>
+<text x="46" y="66" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">exact recall</text>
+<circle cx="230" cy="130" r="10" fill="#0072B2"/><text x="230" y="112" text-anchor="middle" font-size="13" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">pure attention</text>
+<circle cx="700" cy="270" r="10" fill="#009E73"/><text x="700" y="252" text-anchor="middle" font-size="13" fill="#009E73" font-family="Noto Sans CJK SC, sans-serif">pure SSM / linear</text>
+<circle cx="470" cy="196" r="12" fill="#E69F00"/><text x="470" y="176" text-anchor="middle" font-size="13" fill="#E69F00" font-family="Noto Sans CJK SC, sans-serif">hybrid layers</text>
+<path d="M 250 138 C 330 160 400 180 452 192" stroke="#999999" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<path d="M 678 262 C 600 240 530 214 490 200" stroke="#999999" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="140" y="372">pure attention: most accurate on details, most expensive on long texts.</text>
+<text x="140" y="398">pure SSM: cheap on long texts, but"finding a sentence verbatim in 100k words"fails.</text>
+<text x="140" y="424" fill="#E69F00">hybrid: most layers cheap, a few exact——2025 the mainstream compromise since 2025.</text>
+</g>
+</svg>

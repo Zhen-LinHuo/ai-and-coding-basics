@@ -20,6 +20,8 @@
       
       
         
+          <link rel="alternate" href="/ai-and-coding-basics/en/" hreflang="en">
+        
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -148,6 +150,26 @@
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/ai-and-coding-basics/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
     
     
       
@@ -2222,29 +2244,29 @@
   <h1>1.8 部署</h1>
 
 <h2 id="sec:compute-and-deployment">部署模型会遇到的：同构、异构、精度与 KV 缓存<a class="headerlink" href="#sec:compute-and-deployment" title="Permanent link">&para;</a></h2>
-<h4 id="_1">一句话直觉<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<h3 id="_1">一句话直觉<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>前面所有章节的"训练""推理"，最后都要落到一块真实的芯片上。这一节回答最后一个常见疑问：<strong>为什么它这么贵、这么慢</strong>——以及工程师们用什么杠杆把它变便宜、变快。</p>
-<h4 id="vs">同构与异构：全能工人 vs 专业团队<a class="headerlink" href="#vs" title="Permanent link">&para;</a></h4>
+<h3 id="vs">同构与异构：全能工人 vs 专业团队<a class="headerlink" href="#vs" title="Permanent link">&para;</a></h3>
 <p><img alt="同构与异构" id="fig:homogeneous" src="../../figures/src/08-01-homogeneous.svg" /></p>
 <p>CPU 是<strong>同构</strong>计算：几十个一样的全能核心，什么都能做——逻辑判断、跳转、串行任务。GPU 是<strong>异构</strong>思路：几千个小核心只会一件简单的事（乘法加法），但同时做。</p>
 <p>神经网络的主体工作就是<strong>海量独立的乘加</strong>——矩阵乘法。这个"笨活"恰好是 GPU 的天赋任务。所以 AI 时代显卡成为战略物资：不是显卡神奇，是任务和工具恰好对口。</p>
-<h4 id="_2">精度：每个数用几位来存<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h3 id="_2">精度：每个数用几位来存<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><img alt="精度阶梯" id="fig:precision" src="../../figures/src/08-02-precision.svg" /></p>
 <p>模型里的每个参数是一个数，默认用 32 位浮点（fp32）存。但推理时其实不需要那么细：16 位（fp16/bf16）几乎无损，8 位（fp8）常用，4 位整数（int4）是把"能不能装下"和"质量略降"做交换的关键档位[44][45]。</p>
 <p><strong>量化</strong>（把高精度数压成低精度）的收益直接：显存从 4 份压到 0.5 份。代价是数值的细腻程度下降——极端情况下，最罕见的知识最先被抹掉。</p>
-<h4 id="kv">KV 缓存：长对话的物理瓶颈<a class="headerlink" href="#kv" title="Permanent link">&para;</a></h4>
+<h3 id="kv">KV 缓存：长对话的物理瓶颈<a class="headerlink" href="#kv" title="Permanent link">&para;</a></h3>
 <p><img alt="KV 缓存随上下文增长" id="fig:kv-cache" src="../../figures/src/08-03-kv-cache.svg" /></p>
 <p><a href="../05-02-attention/#sec:attention">第 1.5.2 节</a>说过注意力要两两配对；推理时为了不重算，历史每轮的键值都要留在显存里——这就是 <strong>KV 缓存</strong>，它随上下文长度<strong>线性增长</strong>。长对话还没说到重点，缓存先把显存吃掉了。</p>
-<h4 id="_3">显存墙：三笔账加在一起<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h3 id="_3">显存墙：三笔账加在一起<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p><img alt="显存墙" id="fig:memory-wall" src="../../figures/src/08-04-memory-wall.svg" /></p>
 <p>推理时显存里住着三样：权重（常驻大头）、激活（中间计算）、KV 缓存（随对话增长）——<a href="../03-04-train-and-infer/#sec:train-and-infer">第 1.3.4 节</a>埋的伏笔在这里合并成"显存墙"的完整账目。三条杠杆各对应一笔账：量化压权重、批处理摊激活、窗口与缓存管理压 KV；<a href="../05-03-ssm-and-linear-attention/#sec:ssm-and-linear-attention">第 1.5.3 节</a>的固定状态是更激进的一招。</p>
-<h4 id="_4">天然短板：所有优化都是交换<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h3 id="_4">天然短板：所有优化都是交换<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>量化的代价是精度，批处理的代价是延迟波动，压缩上下文的代价是细节。<strong>没有免费的杠杆，只有被明确接受的代价</strong>——部署工程的全部内容，就是按业务把代价选对。</p>
 <blockquote>
 <p><strong>常见误解</strong></p>
 <p>以为"模型大就一定慢"。推理速度同时受参数量、精度、批大小、上下文长度、架构（<a href="../05-04-diffusion/#sec:diffusion">第 1.5.4 节</a>的并行解码）影响——"大而快"与"小而慢"都存在，看的是整条工程链。</p>
 </blockquote>
-<h4 id="_5">小结与自检<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h3 id="_5">小结与自检<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>三句话总结：神经网络的主要工作是矩阵乘法，恰好对口 GPU 的异构架构；量化用精度换显存，是部署的关键杠杆；KV 缓存随上下文线性增长，是长对话的物理瓶颈。</p>
 <p>自检两题：</p>
 <ol>
@@ -2281,6 +2303,46 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../07-03-mcp-skills-rag/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 1.7.3 MCP、技能、嵌入与知识库">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                1.7.3 MCP、技能、嵌入与知识库
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../02-dev/00-chapter/" class="md-footer__link md-footer__link--next" aria-label="下一页: 计算机开发基础">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                计算机开发基础
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2328,7 +2390,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>

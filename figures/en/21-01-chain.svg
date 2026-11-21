@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="990" height="280" viewBox="0 0 990 280">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">How a line of text becomes something a machine can execute</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="80" width="180" height="70" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<text x="130" y="108" text-anchor="middle" font-weight="bold">Source code</text>
+<rect x="290" y="80" width="180" height="70" rx="10" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/>
+<text x="380" y="108" text-anchor="middle" font-weight="bold">Compiler</text>
+<rect x="540" y="80" width="180" height="70" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<text x="630" y="108" text-anchor="middle" font-weight="bold">Executable</text>
+<rect x="790" y="80" width="160" height="70" rx="10" fill="#E69F00" fill-opacity="0.4" stroke="#000000" stroke-width="1.5"/>
+<text x="870" y="108" text-anchor="middle" font-weight="bold">Process</text>
+</g>
+<path d="M 222 115 L 288 115" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M 472 115 L 538 115" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M 722 115 L 788 115" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<text x="130" y="176" font-size="12" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">main.c</text>
+<text x="380" y="176" font-size="12" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">gcc</text>
+<text x="630" y="176" font-size="12" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">a.out</text>
+<text x="870" y="176" font-size="9.1" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">A living thing in memory</text>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="40" y="230" font-size="12.8">A variable ≈ is a slot in memory (with a name, a type, an address); a function ≈ is a stretch of instructions you can jump to again and again;</text>
+<text x="40" y="256" font-size="11.6">a file ≈ is a named run of bytes on disk. Three abstractions, each mapping to one thing in the machine—— — learning the toolchain means learning this chain.</text>
+</g>
+</svg>

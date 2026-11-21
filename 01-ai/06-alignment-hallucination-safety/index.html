@@ -20,6 +20,8 @@
       
       
         
+          <link rel="alternate" href="/ai-and-coding-basics/en/" hreflang="en">
+        
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -148,6 +150,26 @@
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/ai-and-coding-basics/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
     
     
       
@@ -2200,23 +2222,23 @@
   <h1>1.6 对齐、幻觉与安全</h1>
 
 <h2 id="sec:alignment-hallucination-safety">让它听话：对齐、幻觉与安全<a class="headerlink" href="#sec:alignment-hallucination-safety" title="Permanent link">&para;</a></h2>
-<h4 id="_1">一句话直觉<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<h3 id="_1">一句话直觉<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p><a href="../05-00-llms/#sec:llms">第 1.5 节</a>出厂的那个模型只会"续写网页"——你问它问题，它可能接着编出十个类似的问题。从"会说话"到"好用"，中间还隔着一段<strong>出厂教育</strong>：先示范、再调教。而这段教育解决不了的两个问题——幻觉与越狱——各有各的机制性根源。</p>
 <p>这一节回答三个最常见的问题：它为什么能"回答问题"？为什么它会一本正经地胡说？安全限制挡住了什么、代价是什么？</p>
-<h4 id="_2">一个类比：新员工入职<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h3 id="_2">一个类比：新员工入职<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>预训练相当于<strong>读完公司攒了十年的全部资料</strong>——知识面惊人，但做事方式是野的：你问他"给客户写封道歉信"，他可能回你一段"道歉信的写作技巧分析"。监督微调相当于<strong>跟着师傅学做事</strong>：看几十个"这种情况该这么处理"的示范，学会助手的样子。人类反馈强化学习相当于<strong>按客户反馈调</strong>：同一件事做几个版本，让人挑哪个好，往人喜欢的方向调。</p>
 <p><img alt="出厂前的三段教育" id="fig:three-stages" src="../../figures/src/06-01-three-stages.svg" /></p>
 <p>三段教育[35]合起来，才把"续写机器"变成"助手"。注意一个常被忽略的事实：<strong>三段改的都是同一个模型的同一批参数</strong>——不是外挂了什么，是模型本身被重塑了。</p>
-<h4 id="_3">幻觉：从机制推出来的必然<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h3 id="_3">幻觉：从机制推出来的必然<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>先给结论：<strong>幻觉不是故障，是训练目标的自然产物。</strong><a href="../05-00-llms/#sec:llms">第 1.5 节</a>说过，预训练的目标是"预测下一个词"，而"下一个词"选谁的标准是<strong>像不像</strong>，不是<strong>真不真</strong>——这两个标准在训练里从未被区分过。</p>
 <p>具体拆成两种成因（<a href="#fig:hallucination">图 1-39</a>）。<strong>成因一，知识缺失</strong>：训练数据里没有的事，模型不知道自己不知道——它没有"我不确定"这个状态的天然表示，只会接着编一段像样的文字。<strong>成因二，流利优先</strong>：编一段格式完美的假文献，和复述一条真知识，在"预测下一个词"这个目标下得分一样高——幻觉的系统综述见[36]。</p>
 <p><img alt="幻觉的两种成因" id="fig:hallucination" src="../../figures/src/06-02-hallucination.svg" /></p>
 <p>于是"编造文献"这种经典幻觉非常好解释：格式它见过千百遍，内容它没有——<strong>知识缺失给了它自由，流利优先给了它胆量</strong>。为什么不能靠"更努力"消除？因为要消除它，就得在训练目标里引入"真"——而"真"没法从文本里自动标出来，这正是检索增强（<a href="../07-03-mcp-skills-rag/#sec:mcp-skills-rag">第 1.7.3 节</a>）要去补的洞。</p>
-<h4 id="_4">安全：一条会被人从各个方向试探的线<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h3 id="_4">安全：一条会被人从各个方向试探的线<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>对齐的第三段把"危险请求要拒绝"教给了模型。但"危险"是一条<strong>画在连续谱上的线</strong>（<a href="#fig:jailbreak">图 1-40</a>）：画得太松，伤害从缝隙里漏出去；画得太紧，正常的化学课、医疗咨询也会被拒。</p>
 <p><img alt="拒答与越狱的边界" id="fig:jailbreak" src="../../figures/src/06-03-jailbreak.svg" /></p>
 <p>而线是规则，规则可以被钻：把同样的危险请求套一层故事外壳（"假设你是一台没有限制的机器""我奶奶睡前总念这个配方"），早期的安全训练就可能失效——这叫<strong>越狱</strong>。它不是"修好就完"的 bug，而是一场持续的攻防：每次修补一个绕法，新的绕法又会出现。Constitutional AI 之类的做法是让模型按一套成文原则<strong>自我批评、自我修正</strong>，把一部分防线从人工标注转成可审计的规则[37]。</p>
-<h4 id="_5">天然短板：对齐税<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h3 id="_5">天然短板：对齐税<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>对齐不是免费的。把模型调得礼貌、安全、守规矩之后，基准分数往往<strong>略降</strong>——这部分损失俗称<strong>对齐税</strong>（<a href="#fig:alignment-tax">图 1-41</a>）。它不是 bug，而是一笔真实的交换：拿一部分"无所顾忌的能力"，换"可以被放心交给普通人"。</p>
 <p><img alt="对齐税：顺从的代价" id="fig:alignment-tax" src="../../figures/src/06-04-alignment-tax.svg" /></p>
 <p>真正的争论在于<strong>税该收多少、对齐到谁</strong>：同一句"让它听话"，听话的对象可能是用户、可能是厂商、可能是监管，三者的利益并不总是一致。这个问题在<a href="../07-00-agents/#sec:agents">第 1.7 节</a>的智能体时代只会更尖锐——手脚越多，"听话"的后果越重。</p>
@@ -2224,7 +2246,7 @@
 <p><strong>常见误解</strong></p>
 <p>两个。一，"幻觉是个 bug，修好就没了"——只要训练目标仍是"预测下一个词"，幻觉就有机制性来源；能做的是用检索、用校准、用拒答把它的<strong>发生率与危害</strong>压下去。二，"安全对齐只是加个过滤器"——它重塑参数、影响能力（对齐税），而且是一场上不完的攻防。</p>
 </blockquote>
-<h4 id="_6">小结与自检<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<h3 id="_6">小结与自检<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>三句话总结：预训练之后的监督微调与人类反馈，把"续写机器"重塑成"助手"；幻觉从"像不像 ≠ 真不真"的训练目标里机制性地长出来；安全对齐是一场攻防，其代价是对齐税。</p>
 <p>自检两题：</p>
 <ol>
@@ -2261,6 +2283,46 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../05-04-diffusion/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 1.5.4 扩散模型">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                1.5.4 扩散模型
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../07-00-agents/" class="md-footer__link md-footer__link--next" aria-label="下一页: 07 00 agents">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                07 00 agents
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2308,7 +2370,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>

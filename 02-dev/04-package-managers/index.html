@@ -20,6 +20,8 @@
       
       
         
+          <link rel="alternate" href="/ai-and-coding-basics/en/" hreflang="en">
+        
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -148,6 +150,26 @@
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/ai-and-coding-basics/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
     
     
       
@@ -2210,32 +2232,32 @@
   <h1>2.4 包管理器</h1>
 
 <h2 id="sec:package-managers">解决依赖：包管理器<a class="headerlink" href="#sec:package-managers" title="Permanent link">&para;</a></h2>
-<h4 id="_1">一句话直觉<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<h3 id="_1">一句话直觉<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>现代程序几乎都是<strong>拼装</strong>出来的：你的代码加上几十个别人写好的库。<strong>包管理器</strong>就是自动化的拼装工——声明你依赖谁，它负责下载、安装、装对版本。它存在的全部理由是：<strong>手工拼装在依赖超过三个之后必然失控。</strong></p>
-<h4 id="_2">依赖树与钻石依赖<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h3 id="_2">依赖树与钻石依赖<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><img alt="依赖树与钻石依赖" id="fig:diamond" src="../../figures/src/24-01-diamond.svg" /></p>
 <p>依赖是树状的：你的程序依赖库 A 和 B，A 和 B 又各依赖别的。麻烦的经典形态是<strong>钻石依赖</strong>——A 和 B 依赖同一个库的不同版本，装哪个？两条策略：升级到两方都兼容的新版，或全树统一到一个版本再祈祷。<strong>依赖树越深，钻石出现概率越高</strong>——这就是"少依赖"成为美德的原因。</p>
-<h4 id="_3">语义化版本：用数字声明破坏了多少<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h3 id="_3">语义化版本：用数字声明破坏了多少<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p><img alt="语义化版本" id="fig:semver" src="../../figures/src/24-02-semver.svg" /></p>
 <p>钻石之所以能谈判，靠的是<strong>语义化版本</strong>（semver）这个公约：版本号三段，主版本.次版本.修订号——主版本+1 = 接口变了（你要改代码），次版本+1 = 加了功能，修订号+1 = 修了 bug。于是"依赖 ≥2.3、&lt;3.0"就是一句可执行的承诺。<strong>公约的价值在于人人都守约</strong>——守约的生态里，自动升级才安全。</p>
-<h4 id="_4">包管理器是一个家族<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h3 id="_4">包管理器是一个家族<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>“包管理器”不指某一个软件，而是一个<strong>分层</strong>的家族：<strong>语言与运行时层</strong>管各自生态的库——Python 的 uv/pip、Rust 的 cargo、JavaScript 的 pnpm/npm、.NET 的 NuGet/dotnet；<strong>系统层</strong>管整台机器的软件——openSUSE 的 zypper、Debian 系的 apt、Fedora 系的 dnf、Arch 的 pacman、Windows 的 winget/scoop、macOS 的 brew；还有更彻底的<strong>声明式全局层</strong>——Nix 与 Guix（<a href="../06-declarative-os/#sec:declarative-os">第 2.6 节</a>）。同一台机器上常常多层并存：系统包用 zypper，项目依赖用 uv——<strong>层次分明、互不越界</strong>，是环境干净的第一守则。</p>
-<h4 id="_5">冲突消解与锁文件<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h3 id="_5">冲突消解与锁文件<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>冲突消解的两条策略之外，<a href="../05-reproducibility/#sec:reproducibility">第 2.5 节</a>的<strong>锁文件</strong>是第三条：把解析结果（整棵树的精确版本）钉死下来，让"装一次"和"装一万次"结果相同。声明依赖是"我要什么"，锁文件是"实际拿到了什么"——两者分开，可复现才有可能。</p>
-<h4 id="_6">天然短板：依赖是借来的信任<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<h3 id="_6">天然短板：依赖是借来的信任<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>你引入的每个包，都带来它的<strong>传递依赖</strong>——一个十行的工具库可能拖进上百个间接依赖。供应链攻击（作者账号被盗、发布恶意更新）正是从这条信任链打进来的。所以工程纪律是：<strong>依赖是负债不是资产</strong>——每加一个，问一句"这个功能真的值得一条信任链吗"。</p>
 <blockquote>
 <p><strong>常见误解</strong></p>
 <p>以为"包管理器解决了依赖问题"。它解决的是<strong>下载与安装</strong>的自动化；版本冲突、破坏性升级、供应链安全，依然要靠约定（semver）、工具（锁文件）和纪律（少依赖）共同管理。工具把失控变成可控，可控不等于无险。</p>
 </blockquote>
-<h4 id="_7">小结与自检<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<h3 id="_7">小结与自检<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>三句话总结：包管理器自动拼装依赖，树越深钻石越多；semver 用三段数字声明破坏程度，是自动升级的前提；锁文件把依赖树钉死，是可复现的地基。</p>
 <p>自检两题：</p>
 <ol>
 <li>钻石依赖的两种消解策略，各自的代价是什么？</li>
 <li>为什么"少依赖"在 AI 时代依然是美德？（提示：想想<a href="../../01-ai/07-03-mcp-skills-rag/#sec:mcp-skills-rag">第 1.7.3 节</a>的信任链。）</li>
 </ol>
-<p><strong>数学注解。</strong> 本节无公式。一个组合事实：若每个包平均依赖 3 个包、树深 5 层，传递依赖理论上可达 3⁵≈243 个——<strong>依赖树的增长是指数级的</strong>，这解释了为什么"一个小项目拖出几百个包"是常态。</p>
+<p><strong>数学注解。</strong> 本节无公式。一个组合事实：若每个包平均依赖 3 个包、树深 5 层，传递依赖理论上可达 <span class="arithmatex">\(3^5 = 243\)</span> 个——<strong>依赖树的增长是指数级的</strong>，这解释了为什么"一个小项目拖出几百个包"是常态。</p>
 
 
 
@@ -2265,6 +2287,46 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../03-ide-and-toolchain/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 2.3 IDE 与工具链">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                2.3 IDE 与工具链
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05-reproducibility/" class="md-footer__link md-footer__link--next" aria-label="下一页: 2.5 可复现性">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                2.5 可复现性
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2312,7 +2374,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>

@@ -20,6 +20,8 @@
       
       
         
+          <link rel="alternate" href="/ai-and-coding-basics/en/" hreflang="en">
+        
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -148,6 +150,26 @@
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/ai-and-coding-basics/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
     
     
       
@@ -2210,26 +2232,26 @@
   <h1>2.8 开源与许可证</h1>
 
 <h2 id="sec:licenses">自由之争：开源、许可证与开发社区的思潮<a class="headerlink" href="#sec:licenses" title="Permanent link">&para;</a></h2>
-<h4 id="_1">一句话直觉<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<h3 id="_1">一句话直觉<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>许可证不是法律装饰，而是<strong>一份可执行的合同</strong>：它决定别人能对你的代码做什么、你必须回馈什么。选许可证，本质是在"自由使用"与"强制共享"之间选一个点。</p>
-<h4 id="_2">两种理想主义：自由软件与开源<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h3 id="_2">两种理想主义：自由软件与开源<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>1983 年，Stallman 发起 GNU 工程，立场是<strong>自由软件</strong>：软件的自由是用户的权利——运行、研究、修改、再分发的自由缺一不可[47]。1998 年，另一批人提出<strong>开源</strong>：不谈道德、只谈实效——开放开发模式产出更好的软件[48]。两份清单高度重叠（OSI 的开源定义十项与四自由几乎等价），分歧在<strong>论证方式</strong>：一方说"这是权利"，一方说"这是方法"。这场争论至今没有裁决，也不需要裁决——它让两套价值观的人群在同一片代码上合作。</p>
-<h4 id="_3">许可证光谱<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h3 id="_3">许可证光谱<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p><img alt="许可证光谱" id="fig:spectrum" src="../../figures/src/28-01-spectrum.svg" /></p>
 <p>光谱的两端：<strong>宽松许可证</strong>（MIT——留一句版权声明，其余随便）到<strong>强 copyleft</strong>（AGPL——用了我的代码，你的整个作品也须以同许可开源）。中间是各种梯度：Apache 多一条专利授权；MPL 只要求"改动的这个文件"开源；GPL 要求整个衍生作品开源；AGPL 把"通过网络提供服务"也纳入——堵上 SaaS 时代的漏洞。</p>
 <p><strong>copyleft 的机制</strong>叫"传染"：以 GPL 发布的代码，进入谁的项目，谁的项目就须以 GPL 发布。这不是惩罚，是把"共享"条款法律强制化——自由的接力棒。</p>
-<h4 id="_4">兼容矩阵：选型前必查<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h3 id="_4">兼容矩阵：选型前必查<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p><img alt="兼容矩阵" id="fig:matrix" src="../../figures/src/28-02-matrix.svg" /></p>
 <p>选型的实操工具是<strong>兼容矩阵</strong>（<a href="#fig:matrix">图 1-63</a>）：行是你的项目，列是你想引入的代码。MIT 项目可以吃下任何代码；GPL 项目可以吃下任何代码但整个项目必须 GPL；MIT 项目引入 GPL 代码则被迫转 GPL；AGPL 代码连"只调用其网络服务"都受约束。<strong>引入一个依赖 = 签一份它的许可证</strong>——这和<a href="../04-package-managers/#sec:package-managers">第 2.4 节</a>的"依赖是借来的信任"是同一句话的法律面。</p>
-<h4 id="_5">本书的选择<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h3 id="_5">本书的选择<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>本书正文以 <strong>CC BY-SA 4.0</strong> 发布（copyleft：改编须署名并以同许可共享——知识应该像 GPL 代码一样接力），代码以 <strong>Apache-2.0</strong>（宽松：工具被最大范围使用才有价值）。<strong>内容选 copyleft、工具选宽松</strong>——一份许可证管一种资产，这是常见且自洽的组合。</p>
-<h4 id="_6">天然短板：许可证保护代码，不保护思想<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<h3 id="_6">天然短板：许可证保护代码，不保护思想<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>许可证约束的是<strong>代码的表达</strong>，不是<strong>思想本身</strong>——读完你的开源实现，别人可以用另一种语言重写一遍而不违反任何许可证（思想不受版权保护，受保护的是你写下的具体文字）。AI 时代又添新问题：用开放代码训练出的模型，算不算"衍生作品"？这个问题尚无定论，也是<a href="../../01-ai/06-alignment-hallucination-safety/#sec:alignment-hallucination-safety">第 1.6 节</a>之外又一个悬而未决的争论。</p>
 <blockquote>
 <p><strong>常见误解</strong></p>
 <p>两个。一，"开源 = 免费"——开源定义说的是自由，不指价格；开源软件收费卖完全合法。二，"没有许可证 = 可以随便用"——默认是<strong>保留所有权利</strong>，没有许可证的代码，法律上你什么都不能做。</p>
 </blockquote>
-<h4 id="_7">小结与自检<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<h3 id="_7">小结与自检<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>三句话总结：许可证是可执行的合同，光谱从宽松到强 copyleft；copyleft 用传染条款把"共享"法律强制化；引入依赖等于签一份它的许可证，选型前查兼容矩阵。</p>
 <p>自检两题：</p>
 <ol>
@@ -2266,6 +2288,46 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../07-project-structure/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 2.7 项目结构与文档">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                2.7 项目结构与文档
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../90-back/glossary/" class="md-footer__link md-footer__link--next" aria-label="下一页: 术语表">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                术语表
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2313,7 +2375,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>

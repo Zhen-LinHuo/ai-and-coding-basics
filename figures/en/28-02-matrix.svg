@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="410" viewBox="0 0 720 410">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Compatibility matrix: can my code link into your project</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="13" fill="#000000">
+<rect x="150" y="70" width="170" height="40" fill="#56B4E9" fill-opacity="0.4" stroke="#000000"/><text x="235" y="96" text-anchor="middle" font-weight="bold">MIT  code</text>
+<rect x="325" y="70" width="170" height="40" fill="#56B4E9" fill-opacity="0.4" stroke="#000000"/><text x="410" y="96" text-anchor="middle" font-weight="bold">GPL  code</text>
+<rect x="500" y="70" width="170" height="40" fill="#56B4E9" fill-opacity="0.4" stroke="#000000"/><text x="585" y="96" text-anchor="middle" font-weight="bold">AGPL  service</text>
+<rect x="40" y="115" width="105" height="110" fill="#ffffff" stroke="#000000"/><text x="92" y="175" text-anchor="middle" font-weight="bold">MIT  project</text>
+<rect x="150" y="115" width="170" height="110" fill="#009E73" fill-opacity="0.5" stroke="#000000"/><text x="235" y="175" text-anchor="middle">Usable</text>
+<rect x="325" y="115" width="170" height="110" fill="#E69F00" fill-opacity="0.4" stroke="#000000"/><text x="410" y="165" text-anchor="middle">Only if not distributed</text><text x="410" y="188" text-anchor="middle" font-size="12" fill="#999999">(internal use)</text>
+<rect x="500" y="115" width="170" height="110" fill="#009E73" fill-opacity="0.5" stroke="#000000"/><text x="585" y="175" text-anchor="middle">Callable</text>
+<rect x="40" y="230" width="105" height="110" fill="#ffffff" stroke="#000000"/><text x="92" y="290" text-anchor="middle" font-weight="bold">GPL  project</text>
+<rect x="150" y="230" width="170" height="110" fill="#009E73" fill-opacity="0.5" stroke="#000000"/><text x="235" y="290" text-anchor="middle">Usable</text>
+<rect x="325" y="230" width="170" height="110" fill="#009E73" fill-opacity="0.5" stroke="#000000"/><text x="410" y="290" text-anchor="middle">Usable</text>
+<rect x="500" y="230" width="170" height="110" fill="#E69F00" fill-opacity="0.4" stroke="#000000"/><text x="585" y="280" text-anchor="middle">A network service isn't distribution</text><text x="585" y="303" text-anchor="middle" font-size="12" fill="#999999">(GPL  doesn't care, AGPL  does)</text>
+</g>
+<text x="40" y="382" font-size="9.0" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">How to read: rows are "my project", columns are "the code I bring in". Green  =  = yes; orange  =  = conditional. The table to check before choosing a licence.</text>
+</svg>

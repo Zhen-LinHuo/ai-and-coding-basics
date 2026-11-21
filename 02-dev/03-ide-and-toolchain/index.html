@@ -20,6 +20,8 @@
       
       
         
+          <link rel="alternate" href="/ai-and-coding-basics/en/" hreflang="en">
+        
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -148,6 +150,26 @@
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/ai-and-coding-basics/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
     
     
       
@@ -2188,23 +2210,23 @@
   <h1>2.3 IDE 与工具链</h1>
 
 <h2 id="sec:ide-and-toolchain">编程工具：IDE 与工具链<a class="headerlink" href="#sec:ide-and-toolchain" title="Permanent link">&para;</a></h2>
-<h4 id="_1">一句话直觉<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<h3 id="_1">一句话直觉<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>写程序的四件核心工具——<strong>编辑器、编译器、调试器、版本控制</strong>——各自独立，IDE 只是把它们装进同一个窗口并让它们互相感知。理解了四件套的协作，IDE 的每个按钮就都不神秘了。</p>
-<h4 id="_2">四件套的协作<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h3 id="_2">四件套的协作<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><img alt="四件套的协作" id="fig:toolchain" src="../../figures/src/23-01-toolchain.svg" /></p>
 <p>编辑器管写与改；编译器管翻译与检查；调试器让程序<strong>停在半路</strong>，让你看内存里的真实状态；版本控制记住每一步、坏了能回滚。四者循环协作：改代码 → 编译报错 → 读错误 → 定位 → 通过 → 提交。</p>
-<h4 id="ide">命令行组合与 IDE 等价<a class="headerlink" href="#ide" title="Permanent link">&para;</a></h4>
+<h3 id="ide">命令行组合与 IDE 等价<a class="headerlink" href="#ide" title="Permanent link">&para;</a></h3>
 <p>命令行老手用独立工具完成同样的事：编辑器（Vim/Emacs）+ 命令行编译 + 调试器（GDB）+ Git。<strong>两套方式操作的是同样的底层工具</strong>，差别只在界面与自动化程度。IDE 的真实优势不是"功能多"，而是<strong>消除粘贴复制</strong>：报错点直接跳到代码行、断点直接挂在编辑器里。</p>
-<h4 id="-">一次编辑-编译-调试循环<a class="headerlink" href="#-" title="Permanent link">&para;</a></h4>
+<h3 id="-">一次编辑-编译-调试循环<a class="headerlink" href="#-" title="Permanent link">&para;</a></h3>
 <p><img alt="编辑-编译-调试循环" id="fig:cycle" src="../../figures/src/23-02-cycle.svg" /></p>
 <p>新手最该练的习惯藏在这个循环里：<strong>编译器的错误信息不是指责，是线索</strong>。第 ② 步报错后，第 ③ 步不是"重新编译碰运气"，而是读错误信息、定位、理解——这一步练熟了，工具链才真正为你所用。</p>
-<h4 id="_3">天然短板：工具会替你藏细节<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h3 id="_3">天然短板：工具会替你藏细节<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>IDE 的自动补全、一键运行，让新手可以长期不知道"背后发生了什么"。平时无妨，出事就抓瞎——因为它面对的不是代码，而是黑箱。本书的建议：<strong>用 IDE，但知道每个按钮背后是四件套里的哪一件</strong>。</p>
 <blockquote>
 <p><strong>常见误解</strong></p>
 <p>以为"工具决定水平"。工具决定的是下限与舒适度；决定上限的是对<a href="../01-what-is-a-program/#sec:what-is-a-program">第 2.1 节</a>那条链路的理解——链路清楚的人，换任何工具链都能在一天内上手。</p>
 </blockquote>
-<h4 id="_4">小结与自检<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h3 id="_4">小结与自检<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>三句话总结：四件套各管一段，IDE 是它们的整合器；编辑-编译-调试循环是日常节奏，错误信息是线索不是指责；工具会藏细节，理解链路的人不怕换工具。</p>
 <p>自检两题：</p>
 <ol>
@@ -2241,6 +2263,46 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../02-git/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 2.2 Git">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                2.2 Git
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-package-managers/" class="md-footer__link md-footer__link--next" aria-label="下一页: 2.4 包管理器">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                2.4 包管理器
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2288,7 +2350,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>

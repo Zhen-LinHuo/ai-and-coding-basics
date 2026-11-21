@@ -20,6 +20,8 @@
       
       
         
+          <link rel="alternate" href="/ai-and-coding-basics/en/" hreflang="en">
+        
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -148,6 +150,26 @@
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/ai-and-coding-basics/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
     
     
       
@@ -2188,26 +2210,26 @@
   <h1>2.1 程序是什么</h1>
 
 <h2 id="sec:what-is-a-program">程序是什么：从源码到运行<a class="headerlink" href="#sec:what-is-a-program" title="Permanent link">&para;</a></h2>
-<h4 id="_1">一句话直觉<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<h3 id="_1">一句话直觉<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>程序就是<strong>一段写给机器的文字</strong>，加上一条把它变成机器动作的传送带。本章全部工具的存在，都是为了服务这条传送带上的某一站。</p>
-<h4 id="_2">全链路：从文字到进程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h3 id="_2">全链路：从文字到进程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><img alt="从源码到进程" id="fig:chain" src="../../figures/src/21-01-chain.svg" /></p>
 <p>你写的叫<strong>源代码</strong>——人能读的文字。<strong>编译器</strong>把它翻译成机器指令，顺手做一大批检查；产物是可以直接运行的<strong>可执行文件</strong>；双击或命令行启动后，它变成内存里一团活动的东西——<strong>进程</strong>。</p>
 <p>三个抽象各对应机器里一样东西，记住这张对照表，后面所有工具都好懂：</p>
 <p><strong>变量</strong>是内存里的一格——有名字、有类型、有地址；<strong>函数</strong>是一段可反复跳转执行的指令——给它输入，它还你输出；<strong>文件</strong>是磁盘上一段有名字的字节——关机也不消失。</p>
-<h4 id="_3">编译型与解释型：先整本翻译，还是逐句同传<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h3 id="_3">编译型与解释型：先整本翻译，还是逐句同传<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p><img alt="编译型与解释型" id="fig:compile" src="../../figures/src/21-02-compile.svg" /></p>
 <p>有的语言先整本翻译再运行（C、Rust），跑得快、错误早暴露；有的语言边读边执行（Python、JS），改完立刻能跑、错误跑到那一行才炸。现代语言多为混合：Python 先编译成字节码再执行，Java 运行时还会即时编译。<strong>分界是光谱，不是二分</strong>；选型的真实依据是"你要改的频率"和"你要跑的速度"。</p>
-<h4 id="_4">函数调用时，栈里发生什么<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h3 id="_4">函数调用时，栈里发生什么<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p><img alt="调用栈" id="fig:stack" src="../../figures/src/21-03-stack.svg" /></p>
 <p>每次调用函数，内存里就叠一个"格子"：放它的参数、局部变量、以及"做完回哪去"。函数返回，格子撤掉。<strong>嵌套调用就是叠格子</strong>；"栈溢出"是格子堆过了天花板——通常意味着某个函数没完没了地调用自己。</p>
-<h4 id="_5">天然短板：链条上每一站都可能出错<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h3 id="_5">天然短板：链条上每一站都可能出错<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>源代码有语法错，编译器翻译时发现不了逻辑错，运行时还有只在特定数据下才炸的错。<strong>错误的种类与所在的站一一对应</strong>——这也是为什么工具链要有编译器（拦编译错）、测试（拦逻辑错）、调试器（抓运行错）：每一站配一种网。</p>
 <blockquote>
 <p><strong>常见误解</strong></p>
 <p>以为"程序 = 源代码文件"。源代码只是起点的文字；真正运行的是进程——它有内存、有状态、会死亡。理解"文件里的代码"和"内存里的进程"是两个世界，是理解一切开发工具的前提。</p>
 </blockquote>
-<h4 id="_6">小结与自检<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<h3 id="_6">小结与自检<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>三句话总结：程序 = 源代码经编译器变成可执行文件、运行后成为进程；变量、函数、文件分别对应内存格子、可跳转指令、命名字节；编译型与解释型是"何时翻译"的取舍。</p>
 <p>自检两题：</p>
 <ol>
@@ -2244,6 +2266,46 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../00-chapter/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 计算机开发基础">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                计算机开发基础
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../02-git/" class="md-footer__link md-footer__link--next" aria-label="下一页: 2.2 Git">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                2.2 Git
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2291,7 +2353,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>

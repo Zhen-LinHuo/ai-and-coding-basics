@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="420" viewBox="0 0 880 420">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">The agent loop: observe →  → decide →  → call →  → feed back</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="70" y="120" width="180" height="60" rx="10" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/>
+<text x="160" y="146" text-anchor="middle" font-weight="bold">Observe</text>
+<text x="160" y="168" text-anchor="middle" fill="#999999" font-size="12">Read context and tool results</text>
+<rect x="360" y="120" width="180" height="60" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<text x="450" y="146" text-anchor="middle" font-weight="bold">decide → </text>
+<text x="450" y="168" text-anchor="middle" fill="#999999" font-size="12">Model: what to do next</text>
+<rect x="650" y="120" width="180" height="60" rx="10" fill="#E69F00" fill-opacity="0.4" stroke="#000000" stroke-width="1.5"/>
+<text x="740" y="146" text-anchor="middle" font-weight="bold">call → </text>
+<text x="740" y="168" text-anchor="middle" fill="#999999" font-size="12">Tools: run commands/read files</text>
+</g>
+<path d="M 252 150 L 358 150" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M 542 150 L 648 150" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M 740 182 C 740 280 160 280 160 184" stroke="#0072B2" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<text x="450" y="272" text-anchor="middle" font-size="13" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">Results go back into the context (this is the "loop")</text>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="60" y="330">One task =  = this circle turning  N N laps. Every lap re-reads all the context — ——</text>
+<text x="60" y="356" fill="#D55E00">so the context window is a hard limit: more laps, more loaded, closer to ""overflow"" getting nearer.</text>
+<text x="60" y="392" fill="#999999" font-size="11.8">That also explains why the harness harness 's main engineering work is ""managing context"": what comes in, what gets compressed out.</text>
+</g>
+</svg>

@@ -20,6 +20,8 @@
       
       
         
+          <link rel="alternate" href="/ai-and-coding-basics/en/" hreflang="en">
+        
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -148,6 +150,26 @@
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/ai-and-coding-basics/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
     
     
       
@@ -2203,30 +2225,30 @@
 
 <h2 id="sec:llms">大语言模型<a class="headerlink" href="#sec:llms" title="Permanent link">&para;</a></h2>
 <p>本章先给出三条架构路线共同的前提：大模型在做什么、多模态怎么汇入、规模为什么有效（本章首三节）；然后逐条看路线本身。阅读顺序就是依赖顺序：跳过缩放定律直接看注意力，会看不懂"为什么要造那么大"。</p>
-<h4 id="_1">先看最简单的情形：它只会预测下一个词<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<h3 class="unnumbered" id="_1">先看最简单的情形：它只会预测下一个词<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>剥掉所有产品外壳，大语言模型在训练时只做一件事：<strong>给它一段文字，猜下一个 token 是什么</strong>（<a href="#fig:next-token">图 1-23</a>）。猜完对答案，答案就是原文——这就是<a href="../04-02-paradigms/#sec:paradigms">第 1.4.2 节</a>说的自监督，练习题无限供应。</p>
 <p><img alt="下一词预测：大模型唯一的动作" id="fig:next-token" src="../../figures/src/05-00-next-token.svg" /></p>
 <p>"只会猜下一个词"听起来配不上"智能"二字。但为了把下一个词猜准，模型被迫学会太多东西：预测"的"后面是"天空"要懂搭配，预测"137×24="后面是 3288 要会算术，预测"简·奥斯汀的代表作是《》"要记得事实。<strong>预测这个目标，逼着模型把语言里的规律全压缩进参数里。</strong>它表现出的能力是副产品，目标始终是预测。这一类"在海量数据上自监督预训练、再适配到各种任务"的模型，学界统称<strong>基础模型</strong>（foundation models）[21]。</p>
-<h4 id="_2">多模态：不同的感官，同一个表示空间<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h3 class="unnumbered" id="_2">多模态：不同的感官，同一个表示空间<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>文字之外，图像先切成小方块、音频切成短帧，各自过一道编码器，全部映射进<strong>同一个表示空间</strong>（<a href="../04-01-mlp-and-deep-learning/#fig:hidden-space">图 1-21</a> 里我们见过"万物皆为一列数"，这里是它的多感官版）。关键不是"能读图"，而是<strong>对齐</strong>：训练时把成对的"图和它的文字描述"在空间里拉近，模型才学会两张地图共用一套地名[22][23]。</p>
 <p><img alt="多模态输入汇入同一表示空间" id="fig:multimodal" src="../../figures/src/05-00-multimodal.svg" /></p>
-<h4 id="_3">一次前向，长出一个字<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h3 class="unnumbered" id="_3">一次前向，长出一个字<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>推理的完整流程（<a href="#fig:forward">图 1-23</a>）值得再看一眼：输入切成 token → 过几十层网络 → 得到下一个 token 的概率表 → 按策略抽一个 → 拼回句尾 → 再来一遍。<strong>你读到的长回答，是这张图循环几百次的结果，每次只长一个字。</strong></p>
 <p><img alt="一次前向推理" id="fig:forward" src="../../figures/src/05-00-forward.svg" /></p>
-<h4 id="_4">天然短板：预测下一个词，不判定真假<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h3 class="unnumbered" id="_4">天然短板：预测下一个词，不判定真假<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>训练目标里没有"真"这个维度——训练数据是互联网，互联网里有错的也有对的，模型一视同仁地学"接下来通常是什么"。<strong>流利与真实，在训练目标里从未被区分</strong>；这就是幻觉的机制性来源，<a href="../06-alignment-hallucination-safety/#sec:alignment-hallucination-safety">第 1.6 节</a>展开。</p>
 <blockquote>
 <p><strong>常见误解</strong></p>
 <p>以为"它回答前会先查证"。默认状态下它不做任何检索或查证——概率表来自参数里压缩的规律，不是来自数据库。会查证的那些产品，是<a href="../07-03-mcp-skills-rag/#sec:mcp-skills-rag">第 1.7.3 节</a>讲的检索在外面包了一层。</p>
 </blockquote>
-<h4 id="2026">定性梯队（截至 2026 年下半年）<a class="headerlink" href="#2026" title="Permanent link">&para;</a></h4>
+<h3 class="unnumbered" id="2026">定性梯队（截至 2026 年下半年）<a class="headerlink" href="#2026" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>能力梯队（定性，截至 2026 下半年）</strong></p>
 <p>第一梯队（综合能力与生态领先）：GPT、Claude、Gemini、DeepSeek。
 第二梯队（开源与区域领先）：Llama、Mistral、Qwen、Gemma 等。</p>
 <p>梯队只反映"在主流基准与公开体验上的大致档位"，不给分数、不排座次；名次以月为单位变动，读本书时请以当下公开评测为准。</p>
 </blockquote>
-<h4 id="_5">小结与自检<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h3 class="unnumbered" id="_5">小结与自检<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>三句话总结：大模型只做"预测下一个 token"一件事；多模态靠对齐把不同感官送进同一表示空间；流利与真实在训练目标里从未被区分。</p>
 <p>自检两题：</p>
 <ol>
@@ -2262,6 +2284,46 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../04-03-generalization/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 1.4.3 泛化与评估">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                1.4.3 泛化与评估
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05-01-scaling-laws/" class="md-footer__link md-footer__link--next" aria-label="下一页: 1.5.1 缩放定律">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                1.5.1 缩放定律
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2309,7 +2371,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
