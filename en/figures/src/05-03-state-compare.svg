@@ -15,6 +15,6 @@
 <text x="270" y="310" font-size="13" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">each new word: read the state, update it, same size</text>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
 <text x="60" y="356">look back over all history: exact, but cache and compute grow quadratically with length.</text>
-<text x="60" y="384">summary only: constant memory, linear speed, but"recalling one early detail exactly"is hard.</text>
+<text x="60" y="384">summary only: constant memory, linear speed, but" recalling one early detail exactly" is hard.</text>
 </g>
 </svg>

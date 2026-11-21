@@ -4,13 +4,13 @@
 </defs>
 <text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">KV cache: the memory baggage that grows linearly with the conversation</text>
 <g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
-<rect x="60" y="80" width="90" height="50" rx="6" fill="#56B4E9" stroke="#000000" stroke-width="1.2"/><text x="105" y="110" text-anchor="middle">Turn 1 begins</text>
+<rect x="60" y="80" width="90" height="50" rx="6" fill="#56B4E9" stroke="#000000" stroke-width="1.2"/><text x="105" y="110" text-anchor="middle" font-size="12.5">Turn 1 begins</text>
 <rect x="60" y="150" width="180" height="50" rx="6" fill="#56B4E9" fill-opacity="0.7" stroke="#000000" stroke-width="1.2"/><text x="150" y="180" text-anchor="middle">Turn 2 begins: cache ×2</text>
 <rect x="60" y="220" width="360" height="50" rx="6" fill="#56B4E9" fill-opacity="0.5" stroke="#000000" stroke-width="1.2"/><text x="240" y="250" text-anchor="middle">Turn 3 begins: cache ×4</text>
-<rect x="60" y="290" width="720" height="50" rx="6" fill="#56B4E9" fill-opacity="0.35" stroke="#000000" stroke-width="1.2"/><text x="420" y="320" text-anchor="middle">Turn 4 begins: cache ×8 —— not a single word answered, yet the baggage has already tripled.</text>
+<rect x="60" y="290" width="720" height="50" rx="6" fill="#56B4E9" fill-opacity="0.35" stroke="#000000" stroke-width="1.2"/><text x="420" y="320" text-anchor="middle">Turn 4 begins: cache ×8 — not a single word answered, yet the baggage has already tripled.</text>
 </g>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
-<text x="60" y="380" font-size="9.0">[Turn 1.5.2 above](#sec:attention) made the point that attention pairs things up two by two; at inference time, to avoid recomputing, each round's"key-value" pairs have to be kept——</text>
-<text x="60" y="406" fill="#D55E00" font-size="13.2">That is the KV cache: it grows in proportion to context length, the physical bottleneck of long conversations.</text>
+<text x="60" y="380" font-size="9.0">Earlier we saw that attention pairs things up two by two; at inference time, to avoid recomputing, each round's "key-value" pairs have to be kept.</text>
+<text x="60" y="406" fill="#D55E00" font-size="13.2">That is the KV cache: it grows in proportion to context</text><text x="60" y="423.2" fill="#D55E00" font-size="13.2">length, the physical bottleneck of long conversations.</text>
 </g>
 </svg>

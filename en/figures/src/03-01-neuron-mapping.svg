@@ -14,16 +14,16 @@
 <path d="M 208 176 L 330 176" stroke="#009E73" stroke-width="3" fill="none"/>
 <path d="M 330 176 L 366 162 M 330 176 L 366 190" stroke="#009E73" stroke-width="2.5" fill="none"/>
 <text x="58" y="86" font-size="14" fill="#E69F00" font-family="Noto Sans CJK SC, sans-serif">Dendrite</text>
-<text x="248" y="206" font-size="14" fill="#009E73" font-family="Noto Sans CJK SC, sans-serif">Axon</text>
+<text x="220" y="206" font-size="14" fill="#009E73" font-family="Noto Sans CJK SC, sans-serif">Axon</text>
 <text x="352" y="222" font-size="14" fill="#009E73" font-family="Noto Sans CJK SC, sans-serif">Terminal</text>
 <!-- middle mapping -->
 <g font-size="15" fill="#CC79A7" font-family="Noto Sans CJK SC, sans-serif">
 <text x="410" y="125" text-anchor="end">Dendrite takes signal</text>
 <path d="M 420 120 L 560 120" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
 <text x="570" y="125" fill="#000000">Input x</text>
-<text x="410" y="185" text-anchor="end">Cell body combines</text>
-<path d="M 420 180 L 560 180" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
-<text x="570" y="185" fill="#000000">weighted sum Σ</text>
+<text x="410" y="203" text-anchor="end">Cell body combines</text>
+<path d="M 420 198 L 560 198" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
+<text x="570" y="203" fill="#000000">weighted sum Σ</text>
 <text x="410" y="245" text-anchor="end">Axon sends</text>
 <path d="M 420 240 L 560 240" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
 <text x="570" y="245" fill="#000000">Output y</text>

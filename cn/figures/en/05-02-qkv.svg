@@ -26,7 +26,7 @@
 <circle cx="726" cy="170" r="26" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/>
 <text x="726" y="177" font-size="16" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Σ</text>
 <path d="M 754 170 L 800 170" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
-<text x="808" y="176" font-size="10.8" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">new representation of "it"</text>
-<text x="60" y="306" font-size="12.7" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">the higher the match (thicker arrow), the more its "value" contributes: new representation = = 0.8×kitten + 0.15×chased + 0.05×the sun.</text>
-<text x="60" y="332" font-size="12.5" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">Match is the dot product, then softmax normalised into percentages by softmax; query, key and value are each a learnable linear transform.</text>
+<text x="808" y="176" font-size="10.8" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">new representation</text><text x="808" y="190.0" font-size="10.8" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">of "it"</text>
+<text x="60" y="306" font-size="12.7" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">the higher the match (thicker arrow), the more its "value" contributes:</text><text x="60" y="322.5" font-size="12.7" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">new representation = = 0.8×kitten + 0.15×chased + 0.05×the sun.</text>
+<text x="60" y="339.0" font-size="12.5" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">Match is the dot product, then softmax normalised into percentages by</text><text x="60" y="355.3" font-size="12.5" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">softmax; query, key and value are each a learnable linear transform.</text>
 </svg>

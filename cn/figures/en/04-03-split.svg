@@ -11,9 +11,9 @@
 <text x="800" y="106" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Test set 15%</text>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
 <text x="40" y="172" fill="#0072B2">Training set: the workbook that adjusts the weights.</text>
-<text x="40" y="198" fill="#E69F00">Validation set: a mock exam for tuning "how it learns":—— pick the model, set hyperparameters, decide when to stop.</text>
-<text x="40" y="224" fill="#D55E00">Test set: the final exam, sat exactly once.</text>
-<text x="40" y="266" fill="#999999" font-size="12.1">Tune against the validation set too often and it is "leaked"; the test set is one-shot ———sit it twice and the score stops being honest.</text>
+<text x="40" y="198" fill="#E69F00" font-size="14.0">Validation set: a mock exam for tuning "how it learns":——</text><text x="40" y="216.2" fill="#E69F00" font-size="14.0">pick the model, set hyperparameters, decide when to stop.</text>
+<text x="40" y="234.4" fill="#D55E00">Test set: the final exam, sat exactly once.</text>
+<text x="40" y="266" fill="#999999" font-size="12.1">Tune against the validation set too often and it is "leaked"; the test</text><text x="40" y="281.7" fill="#999999" font-size="12.1">set is one-shot ———sit it twice and the score stops being honest.</text>
 <text x="40" y="300">This three-way split is the backbone of the whole " how do you know it has learned" question.</text>
 </g>
 </svg>

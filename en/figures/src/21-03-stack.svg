@@ -10,6 +10,6 @@
 <text x="250" y="146" fill="#000000">↑ Top: the function currently running</text>
 <text x="250" y="186" fill="#000000">Middle: callers waiting for results</text>
 <text x="250" y="226" fill="#000000">Bottom: program entry point</text>
-<text x="60" y="290" fill="#999999" font-size="10.0">Function returns = its frame is removed."Stack overflow"= nesting too deep — frames piled past the ceiling.</text>
+<text x="60" y="290" fill="#999999" font-size="10.0">Function returns = its frame is removed. "Stack overflow"</text><text x="60" y="303.0" fill="#999999" font-size="10.0">= nesting too deep — frames piled past the ceiling.</text>
 </g>
 </svg>

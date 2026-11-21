@@ -18,7 +18,7 @@
 <text x="550" y="224" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#999999">只有算术，一次前向</text>
 <path d="M 380 170 L 520 170" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
 <text x="450" y="156" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">训练结束，权重定型</text>
-<text x="450" y="192" font-size="13" text-anchor="middle" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">（除非刻意微调，见第 1.4 节）</text>
+<text x="450" y="192" font-size="13" text-anchor="middle" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">（除非刻意微调，见前文）</text>
 <text x="450" y="320" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">训练是"上课"，推理是"考试"：</text>
 <text x="450" y="346" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">考试时翻书不算犯规，但再也没有老师批改。</text>
 

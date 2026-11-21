@@ -9,10 +9,10 @@
 <rect x="60" y="140" width="300" height="60" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
 <text x="210" y="178" font-size="14" text-anchor="middle" fill="#ffffff" font-family="Noto Sans CJK SC, sans-serif">Intermediate results (per layer)</text>
 <rect x="370" y="140" width="300" height="60" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
-<text x="520" y="178" font-size="14" text-anchor="middle" fill="#ffffff" font-family="Noto Sans CJK SC, sans-serif">Chat cache (grows; Section 1.5 )</text>
+<text x="520" y="178" font-size="14" text-anchor="middle" fill="#ffffff" font-family="Noto Sans CJK SC, sans-serif">Chat cache (grows; see later)</text>
 <rect x="680" y="140" width="140" height="60" fill="#D55E00" stroke="#000000" stroke-width="1.5"/>
 <text x="750" y="178" font-size="13" text-anchor="middle" fill="#ffffff" font-family="Noto Sans CJK SC, sans-serif">Other overhead</text>
-<text x="60" y="250" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">Weights big + + cache small: they decide"will it fit"and"how long you chat"——</text>
-<text x="60" y="278" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">The first of the"memory walls" deployers cite; Sections 1.5  and 1.8  add two more.</text>
+<text x="60" y="250" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">Weights big + cache small: they decide "will it fit" and "how long you chat" —</text>
+<text x="60" y="278" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">The first of the "memory walls" deployers cite; later sections add two more.</text>
 
 </svg>

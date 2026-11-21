@@ -30,5 +30,5 @@
 <rect x="590" y="344" width="120" height="46" rx="6" fill="#ffffff" stroke="#999999" stroke-width="1.5" stroke-dasharray="6 4"/><text x="650" y="372" text-anchor="middle" fill="#999999">？</text>
 </g>
 <path d="M 700 150 C 760 180 760 300 700 334" stroke="#999999" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
-<text x="775" y="248" font-size="13" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">循环往复</text>
+<text x="760" y="248" font-size="13" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">循环往复</text>
 </svg>

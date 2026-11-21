@@ -26,7 +26,7 @@
 <path d="M 330 145 L 352 145" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
 <path d="M 630 145 L 652 145" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
-<text x="60" y="262" font-size="13.9">Chinchilla conclusion: given fixed compute, parameters and data should scale in proportion——about 20 words per parameter.</text>
-<text x="60" y="288" fill="#999999">Real numbers shift with era and model, but"invest on both sides"holds.</text>
+<text x="60" y="262" font-size="13.9">Chinchilla conclusion: given fixed compute, parameters and data</text><text x="60" y="280.1" font-size="13.9">should scale in proportion——about 20 words per parameter.</text>
+<text x="60" y="298.3" fill="#999999">Real numbers shift with era and model, but"invest on both sides"holds.</text>
 </g>
 </svg>

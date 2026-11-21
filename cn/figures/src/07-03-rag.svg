@@ -23,5 +23,5 @@
 <text x="510" y="276" text-anchor="middle">把检索到的段落 + 原问题一起交给模型</text>
 <text x="510" y="298" text-anchor="middle" fill="#999999" font-size="12">模型照着资料回答，而不是凭参数里的记忆</text>
 </g>
-<text x="60" y="348" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">检索缓解幻觉的原理：把"从记忆里编"换成"照着给的资料说"。它不能根治——资料没有的照样编，资料 retrieval 错了照样错。</text>
+<text x="60" y="348" font-size="14.0" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">检索缓解幻觉的原理：把"从记忆里编"换成"照着给的资料说"。它不能根治——资料没有的照样编，资料</text><text x="60" y="366.2" font-size="14.0" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">retrieval 错了照样错。</text>
 </svg>

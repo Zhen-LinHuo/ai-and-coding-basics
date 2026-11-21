@@ -20,7 +20,7 @@
 <text x="100" y="170" text-anchor="middle" font-size="12" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">每个提交记住"我的上一个是谁"</text>
 <text x="580" y="166" text-anchor="middle" font-size="12" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">合并提交：两个爹</text>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
-<text x="60" y="230">D 和 E 是从 C 分出的两条平行尝试（分支）；F 把它们合并。整个历史是一张"只进不退"的图（DAG）。</text>
-<text x="60" y="258" fill="#0072B2">这就是"可以大胆改"的底气：任何一步都能回到任何一个快照。</text>
+<text x="60" y="230" font-size="14.0">D 和 E 是从 C 分出的两条平行尝试（分支）；F 把它们合并。整个历史是一张"只进不退"的</text><text x="60" y="248.2" font-size="14.0">图（DAG）。</text>
+<text x="60" y="268" fill="#0072B2">这就是"可以大胆改"的底气：任何一步都能回到任何一个快照。</text>
 </g>
 </svg>

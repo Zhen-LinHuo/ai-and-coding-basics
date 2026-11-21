@@ -14,8 +14,8 @@
 <text x="522" y="182" text-anchor="middle" fill="#ffffff" font-weight="bold">Other overhead</text>
 </g>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
-<text x="60" y="250" font-size="9.0">Three levers, three engineering directions: quantisation shrinks the weights ([Figure 1-44](#fig:precision)), batching spreads the activations, </text>
-<text x="60" y="276" font-size="9.0">and sliding windows plus cache management shrink the KV——[Section 1.5.3 above](#sec:ssm-and-linear-attention): the fixed state there is the more aggressive move.</text>
+<text x="60" y="250" font-size="9.0">Three levers, three engineering directions: quantisation shrinks the weights (see earlier), batching spreads the activations, </text>
+<text x="60" y="276" font-size="9.0">and sliding windows plus cache management shrink the KV — the fixed state seen earlier is the more aggressive move.</text>
 <text x="60" y="310" fill="#D55E00">The wall's unit of measure is plain: can this model "fit" on one card.</text>
 </g>
 </svg>

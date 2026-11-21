@@ -21,5 +21,5 @@
 <text x="150" y="342">让机器人在线应答，按"用户是否满意/转人工"给分</text>
 <text x="150" y="366" fill="#999999">不用标注、直接对齐目标；但在线试错会真的得罪用户</text>
 </g>
-<text x="40" y="420" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">另外还有一支：自监督——拿数据自己当答案（用前文预测下一词）。它属于无监督家族，但威力最大，第 1.5 节见。</text>
+<text x="40" y="420" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">另外还有一支：自监督——拿数据自己当答案（用前文预测下一词）。它属于无监督家族，但威力最大，后文详述。</text>
 </svg>

@@ -21,9 +21,9 @@
 <text x="410" y="125" text-anchor="end">树突 收信号</text>
 <path d="M 420 120 L 560 120" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
 <text x="570" y="125" fill="#000000">输入 x</text>
-<text x="410" y="185" text-anchor="end">胞体 汇总</text>
-<path d="M 420 180 L 560 180" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
-<text x="570" y="185" fill="#000000">加权求和 Σ</text>
+<text x="410" y="203" text-anchor="end">胞体 汇总</text>
+<path d="M 420 198 L 560 198" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
+<text x="570" y="203" fill="#000000">加权求和 Σ</text>
 <text x="410" y="245" text-anchor="end">轴突 传出</text>
 <path d="M 420 240 L 560 240" stroke="#CC79A7" stroke-width="2.5" marker-end="url(#arrp)"/>
 <text x="570" y="245" fill="#000000">输出 y</text>

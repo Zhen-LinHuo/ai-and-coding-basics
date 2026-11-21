@@ -29,6 +29,6 @@
 <text x="726" y="122" fill="#009E73">≥60 → pass (1)</text>
 <text x="726" y="162" fill="#D55E00">&lt;60 → fail (0)</text>
 </g>
-<text x="40" y="266" font-size="15" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Output is just 0 and 1  values:"pass or fail" is all it says.</text>
+<text x="40" y="266" font-size="15" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Output is just 0 and 1 values:"pass or fail" is all it says.</text>
 
 </svg>

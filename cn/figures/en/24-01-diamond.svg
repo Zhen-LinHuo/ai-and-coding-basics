@@ -5,19 +5,19 @@
 <text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Dependency tree and diamond dependency</text>
 <g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
 <circle cx="150" cy="80" r="26" fill="#56B4E9" stroke="#000000" stroke-width="1.4"/><text x="150" y="85" text-anchor="middle" font-size="12">Your program</text>
-<circle cx="90" cy="170" r="26" fill="#ffffff" stroke="#000000" stroke-width="1.4"/><text x="90" y="175" text-anchor="middle" font-size="12">Library  A</text>
-<circle cx="230" cy="170" r="26" fill="#ffffff" stroke="#000000" stroke-width="1.4"/><text x="230" y="175" text-anchor="middle" font-size="12">Library  B</text>
-<circle cx="90" cy="260" r="26" fill="#E69F00" fill-opacity="0.5" stroke="#000000" stroke-width="1.4"/><text x="90" y="265" text-anchor="middle" font-size="12">Log  1.0</text>
-<circle cx="230" cy="260" r="26" fill="#E69F00" fill-opacity="0.5" stroke="#000000" stroke-width="1.4"/><text x="230" y="265" text-anchor="middle" font-size="12">Log  2.0</text>
+<circle cx="90" cy="170" r="26" fill="#ffffff" stroke="#000000" stroke-width="1.4"/><text x="90" y="175" text-anchor="middle" font-size="12">Library A</text>
+<circle cx="230" cy="170" r="26" fill="#ffffff" stroke="#000000" stroke-width="1.4"/><text x="230" y="175" text-anchor="middle" font-size="12">Library B</text>
+<circle cx="90" cy="260" r="26" fill="#E69F00" fill-opacity="0.5" stroke="#000000" stroke-width="1.4"/><text x="90" y="265" text-anchor="middle" font-size="12">Log 1.0</text>
+<circle cx="230" cy="260" r="26" fill="#E69F00" fill-opacity="0.5" stroke="#000000" stroke-width="1.4"/><text x="230" y="265" text-anchor="middle" font-size="12">Log 2.0</text>
 </g>
 <path d="M 128 96 L 104 146" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
 <path d="M 176 98 L 216 148" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
 <path d="M 90 198 L 90 232" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
 <path d="M 230 198 L 230 232" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
-<text x="320" y="90" fill="#D55E00" font-weight="bold" font-size="11.7">Diamond: A needs log  1.0, B needs log  2.0—— — which to install?</text>
-<text x="320" y="120" font-size="9.0">Two strategies: upgrade to a version both accept (rare), or unify the whole tree on one version </text>
-<text x="320" y="148">(then pray  A  and  B  both accept).</text>
-<text x="320" y="190" fill="#999999" font-size="9.0">The deeper the tree, the likelier a diamond——That is the virtue of ""few dependencies"".</text>
+<text x="320" y="90" fill="#D55E00" font-weight="bold" font-size="11.7">Diamond: A needs log 1.0, B needs log 2.0 — which to install?</text>
+<text x="320" y="120" font-size="9.0">Two strategies: upgrade to a version both accept</text><text x="320" y="131.7" font-size="9.0">(rare), or unify the whole tree on one version</text>
+<text x="320" y="148">(then pray A and B both accept).</text>
+<text x="320" y="190" fill="#999999" font-size="9.0">The deeper the tree, the likelier a diamond</text><text x="320" y="201.7" fill="#999999" font-size="9.0">— that is the virtue of "few dependencies".</text>
 </g>
 </svg>

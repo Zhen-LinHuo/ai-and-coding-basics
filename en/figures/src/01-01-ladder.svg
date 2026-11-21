@@ -6,27 +6,30 @@
 <g font-family="Noto Sans CJK SC, sans-serif">
 <path d="M 180 140 L 180 164" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
 <rect x="60" y="70" width="240" height="64" rx="10" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
-<text x="76" y="96" font-size="15" font-weight="bold" fill="#000000">Level 1: people write the rules</text>
-<text x="76" y="120" font-size="13" fill="#000000">If it contains"a prize", block it. The machine just executes.</text>
+<text x="76" y="93" font-size="12.8" font-weight="bold" fill="#000000">Level 1: people write the rules</text>
+<text x="76" y="111" font-size="11.3" fill="#000000">If it contains "a prize", block it.</text>
+<text x="76" y="126" font-size="12" fill="#000000">The machine only executes.</text>
 <path d="M 180 240 L 180 264" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
 <rect x="60" y="170" width="240" height="64" rx="10" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
-<text x="76" y="196" font-size="15" font-weight="bold" fill="#000000">Level 2: the machine learns the rules</text>
-<text x="76" y="220" font-size="13" fill="#000000">Give it ten thousand labelled emails; the weights tune themselves.</text>
+<text x="76" y="193" font-size="10.7" font-weight="bold" fill="#000000">Level 2: the machine learns the rules</text>
+<text x="76" y="211" font-size="10.7" fill="#000000">Give it ten thousand labelled emails;</text>
+<text x="76" y="226" font-size="12" fill="#000000">the weights tune themselves.</text>
 <rect x="60" y="270" width="240" height="64" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
-<text x="76" y="296" font-size="15" font-weight="bold" fill="#000000">Level 3: the machine does it alone</text>
-<text x="76" y="320" font-size="13" fill="#000000">No labels at all; it finds the email categories itself.</text>
+<text x="76" y="293" font-size="11.7" font-weight="bold" fill="#000000">Level 3: the machine does it alone</text>
+<text x="76" y="311" font-size="12" fill="#000000">No labels at all; it finds the</text>
+<text x="76" y="326" font-size="12" fill="#000000">email categories itself.</text>
 </g>
 
 
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
-<text x="360" y="96" fill="#D55E00" font-size="13.3">Rule system: all the intelligence is in human-written rules.</text>
-<text x="360" y="120" fill="#000000">Rules never end: reword it and the filter misses it.</text>
+<text x="360" y="96" fill="#D55E00" font-size="13.3">Rule system: all the intelligence</text><text x="360" y="113.3" fill="#D55E00" font-size="13.3">is in human-written rules.</text>
+<text x="360" y="130.3" fill="#000000">Rules never end: reword it and the filter misses it.</text>
 <text x="360" y="196" fill="#E69F00">Learning system: intelligence grows out of examples.</text>
-<text x="360" y="220" fill="#000000" font-size="12.1">People supply only the raw material (data) and the marking scheme.</text>
-<text x="360" y="296" fill="#0072B2">Generative AI AI lives mostly on these two levels:</text>
+<text x="360" y="220" fill="#000000" font-size="12.1">People supply only the raw material</text><text x="360" y="235.7" fill="#000000" font-size="12.1">(data) and the marking scheme.</text>
+<text x="360" y="296" fill="#0072B2">Generative AI lives mostly on these two levels:</text>
 <text x="360" y="320" fill="#000000">it not only judges, it produces something new.</text>
-<text x="360" y="368" fill="#000000">This book's"AI"refers mainly to levels 2 and 3.</text>
-<text x="360" y="392" fill="#000000">Level 1 is"automation", not intelligence.</text>
+<text x="360" y="368" fill="#000000">This book's "AI" refers mainly to levels 2 and 3.</text>
+<text x="360" y="392" fill="#000000">Level 1 is "automation", not intelligence.</text>
 </g>
 
 </svg>

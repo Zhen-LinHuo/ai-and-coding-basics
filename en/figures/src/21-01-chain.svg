@@ -21,7 +21,7 @@
 <text x="630" y="176" font-size="12" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">a.out</text>
 <text x="870" y="176" font-size="9.1" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">A living thing in memory</text>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
-<text x="40" y="230" font-size="12.8">A variable ≈ is a slot in memory (with a name, a type, an address); a function ≈ is a stretch of instructions you can jump to again and again;</text>
-<text x="40" y="256" font-size="11.6">a file ≈ is a named run of bytes on disk. Three abstractions, each mapping to one thing in the machine—— — learning the toolchain means learning this chain.</text>
+<text x="40" y="230" font-size="12.8">A variable ≈ is a slot in memory (with a name, a type, an address); a function</text><text x="40" y="246.6" font-size="12.8">≈ is a stretch of instructions you can jump to again and again;</text>
+<text x="40" y="263.2" font-size="11.6">a file ≈ is a named run of bytes on disk. Three abstractions, each mapping to</text><text x="40" y="278.3" font-size="11.6">one thing in the machine — learning the toolchain means learning this chain.</text>
 </g>
 </svg>

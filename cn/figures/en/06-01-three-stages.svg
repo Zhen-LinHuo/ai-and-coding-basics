@@ -3,29 +3,35 @@
 <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
 </defs>
 <text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">The three stages before release</text>
-<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="12" fill="#000000">
 <rect x="40" y="70" width="270" height="200" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
-<text x="175" y="100" text-anchor="middle" font-weight="bold" fill="#0072B2">1. Pretraining</text>
-<text x="56" y="130">Read: massive text at internet scale</text>
-<text x="56" y="156">Learn: language patterns + + world knowledge</text>
-<text x="56" y="190" fill="#999999">Output: a model that"continues web pages".</text>
-<text x="56" y="222" fill="#999999">——Ask it a question and it may</text>
-<text x="56" y="246" fill="#999999">go on to invent ten similar questions</text>
+<text x="175" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#0072B2">1. Pretraining</text>
+<text x="56" y="126" font-size="12.9">Read: massive text at internet scale</text>
+<text x="56" y="145">Learn: language patterns +</text>
+<text x="56" y="164">world knowledge</text>
+<text x="56" y="183" fill="#999999">Output: a model that</text>
+<text x="56" y="202" fill="#999999">just continues web pages.</text>
+<text x="56" y="221" fill="#999999">— Ask it a question and it may</text>
+<text x="56" y="240" fill="#999999">invent ten similar questions</text>
 <rect x="350" y="70" width="270" height="200" rx="10" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
-<text x="485" y="100" text-anchor="middle" font-weight="bold" fill="#E69F00">2. Supervised fine-tuning (SFT)</text>
-<text x="366" y="130">Read: human-written""question" /—"good answer""pairs</text>
-<text x="366" y="156">Learn: how an assistant should behave</text>
-<text x="366" y="190" fill="#999999">Output: a model that"answer questions".</text>
-<text x="366" y="222" fill="#999999">——But"sounding like a good answer"is not the same as</text>
-<text x="366" y="246" fill="#999999">"being one"</text>
+<text x="485" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#E69F00">2. Supervised fine-tuning (SFT)</text>
+<text x="366" y="126" font-size="12.9">Read: human-written question–answer</text>
+<text x="366" y="145">pairs</text>
+<text x="366" y="164" font-size="11.8">Learn: how an assistant should behave</text>
+<text x="366" y="183" fill="#999999">Output: a model that answers</text>
+<text x="366" y="202" fill="#999999">questions.</text>
+<text x="366" y="221" fill="#999999" font-size="12.9">— But "sounding like a good answer"</text>
+<text x="366" y="240" fill="#999999">is not the same as "being one"</text>
 <rect x="660" y="70" width="270" height="200" rx="10" fill="#ffffff" stroke="#009E73" stroke-width="2"/>
-<text x="795" y="100" text-anchor="middle" font-weight="bold" fill="#009E73">3. Reinforcement learning from human feedback</text>
-<text x="676" y="130" font-size="12.2">Read: human preference rankings over answers</text>
-<text x="676" y="156" font-size="13.4">Learn: move"towards what people prefer".</text>
-<text x="676" y="190" fill="#999999" font-size="13.0">Output: more polite, safer, more obedient</text>
-<text x="676" y="222" fill="#999999">——The cost is the""alignment tax""</text>
+<text x="795" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#009E73">3. Reinforcement learning (RLHF)</text>
+<text x="676" y="126">Read: human preference rankings</text>
+<text x="676" y="145">over answers</text>
+<text x="676" y="164" font-size="14.0">Learn: move toward</text><text x="676" y="182.2" font-size="14.0">what people prefer.</text>
+<text x="676" y="202" fill="#999999">Output: more polite, safer,</text>
+<text x="676" y="218" fill="#999999">more obedient</text>
+<text x="676" y="236" fill="#999999">— The cost is the "alignment tax"</text>
 </g>
 <path d="M 312 170 L 348 170" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
 <path d="M 622 170 L 658 170" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
-<text x="40" y="308" font-size="10.2" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">Only all three stages together turn"a machine that continues web pages"into"an assistant that answers questions". Each stage retunes the parameters of that same large model.</text>
+<text x="40" y="308" font-size="10.2" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">Only all three stages together turn a machine that continues web pages into an assistant</text><text x="40" y="321.3" font-size="10.2" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">that answers questions. Each stage retunes the parameters of that same large model.</text>
 </svg>

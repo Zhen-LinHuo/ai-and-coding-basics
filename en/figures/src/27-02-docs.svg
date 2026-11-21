@@ -13,8 +13,8 @@
 <rect x="560" y="118" width="200" height="90" fill="#ffffff" stroke="#000000"/><text x="660" y="158" text-anchor="middle">Explanation</text><text x="660" y="184" text-anchor="middle" font-size="12" fill="#999999">Why it is designed this way</text>
 <rect x="40" y="212" width="105" height="90" fill="#ffffff" stroke="#000000"/><text x="92" y="262" text-anchor="middle" font-weight="bold">Experienced</text>
 <rect x="150" y="212" width="200" height="90" fill="#ffffff" stroke="#000000"/><text x="250" y="252" text-anchor="middle">(they have graduated)</text>
-<rect x="355" y="212" width="200" height="90" fill="#ffffff" stroke="#000000"/><text x="455" y="252" text-anchor="middle">Reference</text><text x="455" y="278" text-anchor="middle" font-size="12" fill="#999999">Every parameter, accurate and complete</text>
+<rect x="355" y="212" width="200" height="90" fill="#ffffff" stroke="#000000"/><text x="455" y="252" text-anchor="middle">Reference</text><text x="455" y="278" text-anchor="middle" font-size="12" fill="#999999">All parameters, complete</text>
 <rect x="560" y="212" width="200" height="90" fill="#ffffff" stroke="#000000"/><text x="660" y="252" text-anchor="middle">Architecture</text><text x="660" y="278" text-anchor="middle" font-size="12" fill="#999999">Trade-offs and boundaries</text>
 </g>
-<text x="40" y="340" font-size="11.0" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">The commonest failure: all four kinds mixed into one giant  README——Beginners drown in parameters; the experienced cannot find them.</text>
+<text x="40" y="340" font-size="11.0" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">The commonest failure: all four kinds mixed into one giant README</text><text x="40" y="354.3" font-size="11.0" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">— beginners drown in parameters; the experienced cannot find them.</text>
 </svg>

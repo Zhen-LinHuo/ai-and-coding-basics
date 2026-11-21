@@ -2,13 +2,13 @@
 <defs>
 <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
 </defs>
-<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">The four tools working together: edit →  compile →  debug →  version</text>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">The four tools working together: edit → compile → debug → version</text>
 <g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
 <rect x="40" y="80" width="190" height="110" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
 <text x="135" y="110" text-anchor="middle" font-weight="bold" fill="#0072B2">Editor</text>
 <text x="135" y="140" text-anchor="middle" fill="#999999" font-size="12">Write and change</text>
 <rect x="300" y="80" width="190" height="110" rx="10" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
-<text x="395" y="110" text-anchor="middle" font-weight="bold" fill="#E69F00">Compiler//build</text>
+<text x="395" y="110" text-anchor="middle" font-weight="bold" fill="#E69F00">Compiler / build</text>
 <text x="395" y="140" text-anchor="middle" fill="#999999" font-size="12">Translate and check</text>
 <rect x="560" y="80" width="190" height="110" rx="10" fill="#ffffff" stroke="#009E73" stroke-width="2"/>
 <text x="655" y="110" text-anchor="middle" font-weight="bold" fill="#009E73">Debugger</text>
@@ -20,8 +20,8 @@
 <path d="M 232 135 L 298 135" stroke="#000000" stroke-width="1.8" marker-end="url(#arr)"/>
 <path d="M 492 135 L 558 135" stroke="#000000" stroke-width="1.8" marker-end="url(#arr)"/>
 <path d="M 655 192 C 655 230 860 230 860 192" stroke="#999999" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
-<text x="760" y="248" font-size="9.4" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">Broke it? Roll back to the last good version</text>
+<text x="760" y="248" font-size="9.4" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">Broke it? Roll back to</text><text x="760" y="260.2" font-size="9.4" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">the last good version</text>
 <path d="M 860 80 C 860 40 135 40 135 78" stroke="#999999" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
 <text x="480" y="52" font-size="12" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">Fetch a version from history and keep editing</text>
-<text x="40" y="290" font-size="10.1" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">IDE  is not a fifth tool but an integrator: the four in one window, aware of each other. The command-line combination and the IDE  IDE are equivalent; only the interface differs.</text>
+<text x="40" y="290" font-size="10.1" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">IDE is not a fifth tool but an integrator: the four in one window, aware of each other.</text><text x="40" y="303.1" font-size="10.1" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">The command-line combination and the IDE are equivalent; only the interface differs.</text>
 </svg>

@@ -14,8 +14,8 @@
 <text x="522" y="182" text-anchor="middle" fill="#ffffff" font-weight="bold">其他开销</text>
 </g>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
-<text x="60" y="250">三条杠杆对应三个工程方向：量化压权重（[图 1-44](#fig:precision)）、批处理摊激活、</text>
-<text x="60" y="276">滑动窗口与缓存管理压 KV——[第 1.5.3 节](#sec:ssm-and-linear-attention)的固定状态是更激进的一招。</text>
+<text x="60" y="250">三条杠杆对应三个工程方向：量化压权重（见前文）、批处理摊激活、</text>
+<text x="60" y="276">滑动窗口与缓存管理压 KV——前文的固定状态是更激进的一招。</text>
 <text x="60" y="310" fill="#D55E00">墙的衡量单位很朴素：这个模型"装不装得下"这一张卡。</text>
 </g>
 </svg>
