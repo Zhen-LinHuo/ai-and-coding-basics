@@ -1,0 +1,18 @@
+{
+ "依赖树与钻石依赖": "Dependency tree and diamond dependency",
+ "你的程序": "Your program",
+ "库": "Library ",
+ "日志": "Log ",
+ "钻石依赖：": "Diamond: ",
+ "要日志": "needs log ",
+ "，": ", ",
+ "装哪个？": " — which to install?",
+ "两条策略：升级到并存的新版（少数生态支持），或全树统一到一个版本": "Two strategies: upgrade to a version both accept (rare), or unify the whole tree on one version ",
+ "（然后祈祷": "(then pray ",
+ "和": " and ",
+ "都兼容）。": " both accept).",
+ "依赖树越深，钻石出现的概率越高": "The deeper the tree, the likelier a diamond",
+ "这就是": "That is the virtue of ",
+ "少依赖": "\"few dependencies\"",
+ "的美德。": "."
+}

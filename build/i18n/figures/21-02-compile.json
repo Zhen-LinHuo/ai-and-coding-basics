@@ -1,0 +1,20 @@
+{
+ "编译型与解释型：先整本翻译，还是逐句同传": "Compiled vs interpreted: translate the whole book, or interpret as you go",
+ "编译型（": "Compiled (",
+ "、": ", ",
+ "）": ")",
+ "先整本翻译成机器指令，再运行。": "Translate everything into machine instructions first, then run.",
+ "跑得快（指令是本地的）": "Runs fast (instructions are native)",
+ "改一行就要重新编译": "Change one line and you must recompile",
+ "错误在编译期被拦下一大批": "Many errors caught at compile time",
+ "解释型（": "Interpreted (",
+ "带一个": "with a ",
+ "同传": "\"simultaneous interpreter\"",
+ "，读一句执行一句。": ", reading and executing one line at a time.",
+ "改完立刻能跑，试错飞快": "Runs right after editing — fast trial and error",
+ "跑得慢（边翻译边执行）": "Runs slow (translating as it executes)",
+ "错误往往跑到那一行才炸": "Errors often blow up only when that line is reached",
+ "现代语言多为混合：": "Modern languages are mostly hybrids: ",
+ "先编译成字节码再由解释器执行；": "compiles to bytecode, then the interpreter runs it; ",
+ "编译成字节码、运行时再即时编译成机器码。分界是光谱，不是二分。": "compiles to bytecode, then just-in-time to machine code at runtime. The boundary is a spectrum, not a binary."
+}

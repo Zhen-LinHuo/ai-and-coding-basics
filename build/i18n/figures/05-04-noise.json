@@ -1,0 +1,16 @@
+{
+  "扩散：先把图毁掉，再学着一步步修回来": "Diffusion: ruin the image first, then learn to repair it step by step",
+  "训练时：加噪（已知答案，可以自动出题）": "training: add noise (known answer, examples come free)",
+  "第": "step ",
+  "步": " of 200",
+  "纯噪声": "pure noise",
+  "生成时：去噪（从纯噪声开始，学过的": "generation: denoise (start from pure noise, run the learned",
+  "修图手艺": "image repair",
+  "反向使用）": "backwards)",
+  "每一步只需要学会": "each step only has to learn",
+  "把一点点噪声去掉": "to remove a little noise",
+  "一件比": "a far smaller task than",
+  "一次画好": "drawing it right first time",
+  "小得多的任务。": ".",
+  "加噪的每一步都是已知的，所以训练数据可以无限自动生成：这就是扩散能学到细活的原因。": "Every noising step is known, so training data can be generated without limit: that is how diffusion learns detail."
+}

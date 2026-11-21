@@ -1,0 +1,22 @@
+{
+ "强化学习最难的地方：分数来得又晚又稀": "The hardest part of reinforcement learning: the score comes late and sparse",
+ "一局棋的": "One game of",
+ "步：": "moves:",
+ "第": "#",
+ "步": ".",
+ "结局": "End",
+ "（赢了）": " (a win)",
+ "整个回合只在这一个瞬间给了一个分数。": "The whole episode hands out a score at this single instant.",
+ "问题：第": "Question: how much credit do step",
+ "步和第": "and step",
+ "步，各自该为这个": " each get for this ",
+ "赢": "win",
+ "记多少功？": "?",
+ "这就是": "This is ",
+ "信用分配": "credit assignment",
+ "：分数要沿时间倒着摊回每一步": ": the score is spread back over every step in time",
+ "和反向传播把误差摊回每个权重，是同一类脑力活。": "the same mental work as spreading the error back to every weight in backpropagation.",
+ "分数越晚、越稀，学习越慢；所以很多任务要给": "The later and sparser the score, the slower the learning; so many tasks add ",
+ "过程奖励": "process rewards",
+ "（吃到一个豆子也加分），但设计过程奖励又容易教坏它（刷分）。": " (a pellet eaten also scores), but process rewards are easy to design badly and teach it to game the score."
+}

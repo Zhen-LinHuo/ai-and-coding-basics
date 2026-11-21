@@ -1,0 +1,15 @@
+{
+  "注意力一步：查询去问每个键，按匹配度取值": "One attention step: a query asks every key, and values are taken by match",
+  "「它」（当前词）": "\"it\" (the current word)",
+  "查询": "query",
+  "小猫　（键：动物）": "kitten (key: animal)",
+  "追　（键：动作）": "chased (key: action)",
+  "晒太阳　（键：场景）": "the sun (key: scene)",
+  "「它」的新表示": "new representation of \"it\"",
+  "匹配度越高（箭头越粗），贡献的「值」越多：新表示": "the higher the match (thicker arrow), the more its \"value\" contributes: new representation =",
+  "小猫": "kitten",
+  "追": "chased",
+  "晒太阳。": "the sun.",
+  "匹配度由点积算出，再经": "Match is the dot product, then",
+  "归一为百分比；查询、键、值各是一组可学习的线性变换。": "normalised into percentages by softmax; query, key and value are each a learnable linear transform."
+}

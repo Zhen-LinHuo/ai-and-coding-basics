@@ -1,0 +1,13 @@
+{
+ "同一份声明，三台机器收敛到同一结果": "One declaration, three machines, one result",
+ "系统配置（一个文件）": "System configuration (one file)",
+ "声明：装哪些包、开哪些服务、": "Declares: which packages, which services, ",
+ "用户是谁、防火墙规则": "which users, which firewall rules",
+ "这个文件进版本控制": "This file goes into version control",
+ "笔记本": "Laptop",
+ "服务器": "Server",
+ "旧机器救援": "Old machine (rescue)",
+ "三台机器从同一份声明出发，收敛到相同的系统状态": "Three machines, one declaration, the same system state",
+ "新机器到手一小时可用": "A new machine usable within the hour",
+ "就是这份声明的回报。": " is this declaration's payoff."
+}

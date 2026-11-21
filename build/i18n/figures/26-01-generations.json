@@ -1,0 +1,21 @@
+{
+ "代际：升级的两种可能，都有后路": "Generations: two upgrade outcomes, both with an exit",
+ "第": "Generation ",
+ "代": " generation",
+ "当前系统，一切正常": "Current system, all fine",
+ "可能一：升级成功，切过去": "Option 1: upgrade succeeds — switch to it",
+ "可能二：": "Option 2: ",
+ "有问题": " has problems",
+ "代原样躺在那里": " generation still sits there untouched",
+ "升级": "Upgrade",
+ "回滚：指针拨回": "Rollback: point back at generation ",
+ "代，原子操作": ", atomic",
+ "两种可能共用同一个前提：第": "Both options share one premise: generation ",
+ "代从未被改动": " was never modified",
+ "升级与回滚都只是": "Upgrade and rollback are both just ",
+ "指针": "pointer",
+ "的移动。": " moves.",
+ "大胆升级的底气，来自": "The confidence to upgrade boldly comes from ",
+ "失败也不痛": "\"failure costs nothing\"",
+ "。": "."
+}

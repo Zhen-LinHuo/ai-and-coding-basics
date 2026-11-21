@@ -1,0 +1,19 @@
+{
+ "光谱：从": "The spectrum: from ",
+ "随便用": "use as you like",
+ "到": " to ",
+ "用了也得开源": "use it and you must open up",
+ "宽松（拿去商用、闭源都行）": "Permissive (commercial, closed — fine)",
+ "（传染开源）": "(infectiously open)",
+ "：留一句版权声明，其他随便。": ": keep a copyright notice, do as you like.",
+ "：多一条专利授权，企业偏爱。": ": adds a patent grant; businesses like it.",
+ "：改动的那个文件要开源。": ": the file you changed must be opened.",
+ "：用了我的代码，你的整个作品也须以": ": use my code and your whole work must be open under ",
+ "开源。": ".",
+ "：连": ": even ",
+ "通过网络提供服务": "serving it over a network",
+ "也算分发": " counts as distribution",
+ "堵上": " — closing the ",
+ "网络服务不算分发": "\"a network service isn't distribution\"",
+ "的漏洞。": " loophole."
+}

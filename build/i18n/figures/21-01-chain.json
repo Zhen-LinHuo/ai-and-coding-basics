@@ -1,0 +1,14 @@
+{
+ "一行文字怎么变成机器能执行的东西": "How a line of text becomes something a machine can execute",
+ "源代码": "Source code",
+ "编译器": "Compiler",
+ "可执行文件": "Executable",
+ "进程": "Process",
+ "内存里的一团活动": "A living thing in memory",
+ "变量": "A variable",
+ "内存里的一格（有名字、有类型、有地址）；函数": "is a slot in memory (with a name, a type, an address); a function",
+ "一段可反复跳转执行的指令；": "is a stretch of instructions you can jump to again and again;",
+ "文件": "a file",
+ "磁盘上一段有名字的字节。三个抽象各对应机器里一样东西": "is a named run of bytes on disk. Three abstractions, each mapping to one thing in the machine",
+ "学工具链就是学这条链。": " — learning the toolchain means learning this chain."
+}

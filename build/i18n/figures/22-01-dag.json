@@ -1,0 +1,17 @@
+{
+ "提交链：每个提交都是一次快照": "Commit chain: each commit is a snapshot",
+ "指向上一个的指针": "plus a pointer to the previous one",
+ "每个提交记住": "Each commit remembers ",
+ "我的上一个是谁": "who my predecessor is",
+ "合并提交：两个爹": "Merge commit: two parents",
+ "和": " and ",
+ "是从": " branched from ",
+ "分出的两条平行尝试（分支）；": " — two parallel attempts (branches); ",
+ "把它们合并。整个历史是一张": " merges them. The whole history is an ",
+ "只进不退": "append-only",
+ "的图（": " graph (",
+ "）。": ").",
+ "这就是": "This is the basis of ",
+ "可以大胆改": "\"change boldly\": ",
+ "的底气：任何一步都能回到任何一个快照。": "every step can return to any snapshot."
+}

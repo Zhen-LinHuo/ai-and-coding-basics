@@ -1,0 +1,19 @@
+{
+  "生物神经元": "Biological neuron",
+  "人工神经元": "Artificial neuron",
+  "生物：树突橙、胞体天蓝、轴突绿": "bio: dendrites orange, body blue, axon green",
+  "胞体": "Cell body",
+  "树突": "Dendrite",
+  "轴突": "Axon",
+  "末梢": "Terminal",
+  "中栏映射": "middle mapping",
+  "收信号": "takes signal",
+  "输入": "Input",
+  "汇总": "combines",
+  "加权求和": "weighted sum",
+  "传出": "sends",
+  "输出": "Output",
+  "人工：输入橙、": "artificial: in orange, ",
+  "天蓝、输出绿": "blue, out green",
+  "同色即同职：收信号的部件橙、汇总的部件天蓝、送出结果的部件绿。": "Same colour, same job: orange receives, blue combines, green sends."
+}

@@ -1,0 +1,10 @@
+{
+ "单智能体": "Single agent",
+ "多智能体：收益不是白来的": "Multi-agent: the gain is not free",
+ "任务复杂度": "Task complexity",
+ "收益": "Gain",
+ "多智能体：复杂任务上占优": "Multi-agent: wins on complex tasks",
+ "单智能体：简单任务够用且便宜": "Single agent: enough and cheaper on simple tasks",
+ "复杂度过线后：协调成本反噬收益": "Past the line: coordination cost eats the gain",
+ "虚线为多智能体收益：起步就亏（协调开销），先追平，再反超，最后被自己的混乱拖垮。": "Dashed line = multi-agent gain: starts in the red (coordination overhead), catches up, overtakes, then sinks under its own chaos."
+}

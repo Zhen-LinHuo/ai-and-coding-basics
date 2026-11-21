@@ -1,0 +1,21 @@
+{
+  "一层网络到底有几个": "How many",
+  "旋钮": "knobs",
+  "？（": " has a layer? (",
+  "的例子）": "example)",
+  "输入层": "Input",
+  "隐藏层": "Hidden",
+  "输出层": "Output",
+  "连线": "Connections",
+  "条，": ",",
+  "每条一个权重；": "one weight each;",
+  "再加每颗神经元的偏置": "plus a bias per neuron",
+  "个；": ".",
+  "合计": "total",
+  "个参数。": " parameters.",
+  "训练就是把这": "Training turns these",
+  "个旋钮": " knobs",
+  "一起拧到合适的位置。": "to the right place.",
+  "级模型是同样的动作，": "-scale models do the same;",
+  "只是旋钮数以千亿计。": "just far more knobs."
+}

@@ -1,0 +1,17 @@
+{
+  "大模型会做的事只有一件：给下一个": "A large model does one thing: score the next",
+  "打分": "word",
+  "今天": "today",
+  "的": "the",
+  "天空": "sky",
+  "很": "is",
+  "？": "?",
+  "算一遍概率": "compute probabilities",
+  "蓝　": "blue",
+  "晴　": "clear",
+  "冷　": "cold",
+  "不　": "no",
+  "按概率抽一个，拼回句尾": "draw one by probability, append to the sentence",
+  "蓝": "blue",
+  "循环往复": "again and again"
+}

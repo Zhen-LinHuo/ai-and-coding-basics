@@ -1,0 +1,13 @@
+{
+  "递推：每一步只带一份": "Recurrence: carry just one",
+  "状态摘要": "state summary",
+  "往前走": "forward each step",
+  "状态": "state",
+  "：固定大小的一页纸": "a fixed-size page",
+  "输入": "input",
+  "：每一步新来的词": "the word arriving at each step",
+  "红色箭头：上一步的摘要": "red arrow: the previous summary",
+  "这一步的输入": "the input at this step",
+  "新摘要。每步只读写这一页纸。": "new summary. Each step only reads and writes this one page.",
+  "内存恒定、速度线性；代价是历史越早，挤得越扁。": "constant memory, linear speed; the cost is that older history is squeezed flatter."
+}

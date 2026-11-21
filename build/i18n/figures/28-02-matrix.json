@@ -1,0 +1,21 @@
+{
+ "兼容矩阵：我的代码能不能链进你的项目": "Compatibility matrix: can my code link into your project",
+ "代码": " code",
+ "服务": " service",
+ "项目": " project",
+ "可用": "Usable",
+ "仅限不分发时": "Only if not distributed",
+ "（内部使用）": "(internal use)",
+ "可调用": "Callable",
+ "网络服务不算分发": "A network service isn't distribution",
+ "（": "(",
+ "不管，": " doesn't care, ",
+ "管）": " does)",
+ "读法：行是": "How to read: rows are ",
+ "我的项目": "my project",
+ "，列是": ", columns are ",
+ "我引入的代码": "the code I bring in",
+ "。绿色": ". Green ",
+ "可以；橙色": " = yes; orange ",
+ "有条件。这就是选许可证前必查的表。": " = conditional. The table to check before choosing a licence."
+}

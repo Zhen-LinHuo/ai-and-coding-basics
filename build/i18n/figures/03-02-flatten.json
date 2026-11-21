@@ -1,0 +1,22 @@
+{
+  "的手写数字": " handwritten digit",
+  "个数排成一列": " numbers in one row",
+  "和": "and",
+  "组成的": " grid of",
+  "网格（": " (",
+  "的简笔版）": " sketch)",
+  "按行拉直": "straighten row by row",
+  "（共": "(",
+  "个数）": " numbers)",
+  "拉直不丢信息：纸上每个格子": "Straightening loses nothing: each cell",
+  "都对应列表里的一个位置。": "maps to one position in the list.",
+  "但": "But ",
+  "哪些像素相邻": "which pixels are adjacent",
+  "这个几何关系，": " this geometry",
+  "拉直后只藏在下标里，网络要自己学。": "lives only in the indices; the net must learn it.",
+  "就是这个世界的": " is this world's",
+  "维度": "dimensionality",
+  "。": ".",
+  "换一张": "Another",
+  "的照片，维度是三千万。": " photo is 30M."
+}

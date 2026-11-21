@@ -1,0 +1,13 @@
+{
+ "缓存：随对话线性增长的记忆包袱": "cache: the memory baggage that grows linearly with the conversation",
+ "第": "Turn",
+ "轮": "begins",
+ "轮：缓存": "begins: cache ",
+ "还没回答一个字，包袱已经翻三倍": "not a single word answered, yet the baggage has already tripled.",
+ "节": "above",
+ "说过注意力要两两配对；推理时为了不重算，每一轮的": " made the point that attention pairs things up two by two; at inference time, to avoid recomputing, each round's",
+ "键值": "key-value",
+ "都要留着": " pairs have to be kept",
+ "这就是": "That is the",
+ "缓存：与上下文长度成正比，长对话的物理瓶颈。": "cache: it grows in proportion to context length, the physical bottleneck of long conversations."
+}

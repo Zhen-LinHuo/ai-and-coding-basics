@@ -1,0 +1,17 @@
+{
+ "两条损失曲线：分叉的地方，就是该停的地方": "Two loss curves: the fork is where you stop",
+ "训练轮数": "Epochs",
+ "损失": "Loss",
+ "训练损失：一路下降": "Training loss: falls all the way",
+ "验证损失：降到某轮开始回升": "Validation loss: falls, then turns up at some epoch",
+ "分叉点": "Fork point",
+ "开始背题的地方": "where memorising starts",
+ "训练损失只说明": "Training loss only says ",
+ "它对练过的题多熟": "how well it knows the questions it practised",
+ "；验证损失才说明": "; validation loss says ",
+ "它对新题有没有把握": "whether it can handle new ones",
+ "。": ".",
+ "停早了欠拟合，停晚了过拟合": "Stop too early and you underfit, too late and you overfit",
+ "什么时候停": "when to stop",
+ "本身就是一个要学的决策（早停）。": " is itself a decision to be learned (early stopping)."
+}

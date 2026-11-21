@@ -1,0 +1,17 @@
+{
+ "自举飞轮：模型产出数据，数据训出更好的模型": "The bootstrap flywheel: models produce data, data trains better models",
+ "当前模型": "Current model",
+ "生成数据": "Generate data",
+ "解法": "solutions",
+ "筛选：只留对的": "Filter: keep only correct ones",
+ "训练出更强的模型": "Train a stronger model",
+ "自动出题、自动验证（有验证器的任务才能转）": "Auto-generated problems, auto-verified (only tasks with a verifier can spin)",
+ "能转起来的前提：成果可以被": "Prerequisite for spinning: the output can be ",
+ "自动验证": "auto-verified",
+ "（代码能跑、数学能验算）。": " (code runs, maths checks out).",
+ "失效点：没有验证器的领域（写作、品味），": "Failure point: fields without a verifier (writing, taste) — ",
+ "自己判自己对": "\"judging itself right\"",
+ "飞轮退化成自我陶醉。": "the flywheel decays into self-admiration.",
+ "的做法：模型生成解题过程，只保留得出正确答案的，拿去训练": "'s approach: the model generates solutions, only those reaching the correct answer are kept for training",
+ "。": "."
+}

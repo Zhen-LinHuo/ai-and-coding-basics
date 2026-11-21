@@ -1,0 +1,18 @@
+{
+ "同一条数据，三种": "One dataset, three ways of ",
+ "学": "learning",
+ "法（黑点为训练数据）": " (black dots are the training data)",
+ "欠拟合：太懒": "Underfitting: too lazy",
+ "合适：抓住趋势": "Just right: catches the trend",
+ "过拟合：逐点背下": "Overfitting: memorises every point",
+ "一条直线，连趋势都没学会。": "A single straight line that misses even the trend.",
+ "平顺地穿过点云中间，容忍个别偏差。": "Runs smoothly through the middle of the cloud, tolerating the odd stray point.",
+ "每个训练点都精确穿过，还画出了数据里不存在的锯齿。": "Passes exactly through every point and invents sawteeth the data never had.",
+ "三张图的训练得分：差、好、": "Training scores: poor, good, ",
+ "分。": "points.",
+ "但拿新数据一考，最好的是中间那张": "But on fresh data the middle one wins",
+ "背题": "memorising",
+ "不等于": " is not ",
+ "会做题": "solving",
+ "。": "."
+}

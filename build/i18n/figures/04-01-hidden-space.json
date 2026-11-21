@@ -1,0 +1,17 @@
+{
+ "同一条分界线：高维里是直线，低维里是双曲线": "One boundary, two shapes: a straight line up high, a hyperbola down low",
+ "左：高维特征空间": "Left: high-dimensional feature space",
+ "直线": "straight line",
+ "高维特征空间：一条直线": "High-dimensional feature space: a straight line",
+ "右：低维输入空间": "Right: low-dimensional input space",
+ "双曲线": "hyperbola",
+ "低维输入空间：双曲线": "Low-dimensional input space: a hyperbola",
+ "横轴：输入": "horizontal: input",
+ "　　纵轴：输入": ", vertical: input",
+ "左：在隐藏层造出的": "Left: in the",
+ "坐标里，分界是一条直线": "coords the hidden layer builds, the boundary is one straight line",
+ "圆在上、三角在下。": " circles above, triangles below.",
+ "右：同一条直线投影回输入平面，变成一条双曲线（两支）": "Right: the same line projected back onto the input plane becomes a hyperbola (two branches)",
+ "照样把两类分开。": "and still separates the two classes.",
+ "高维的直，低维的弯：形状随空间而变，分类能力不变。": "Straight up high, curved down low: the shape follows the space, the separating power does not."
+}

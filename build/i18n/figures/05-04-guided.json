@@ -1,0 +1,22 @@
+{
+  "条件：每一步都抬头看一眼提示词": "Conditioning: look up at the prompt at every step",
+  "提示词": "prompt",
+  "一只橘猫在窗台上": "an orange cat on the windowsill",
+  "编码成向量": "encoded as a vector",
+  "去噪网络": "denoising network",
+  "每一步都接收提示": "receives the prompt at every step",
+  "去掉的噪声": "the noise to remove",
+  "这一步该减掉什么": "what to subtract at this step",
+  "循环几十步": "loop for dozens of steps",
+  "同一个去噪网络，换个提示词就换一幅画": "one denoising network, a new prompt means a new picture",
+  "画什么": "what to draw",
+  "由提示词决定，": "is set by the prompt;",
+  "画得细不细": "how finely it is drawn",
+  "由网络决定。": "is set by the network.",
+  "这种做法叫文本引导（": "This is called text guidance (",
+  "）：训练时随机把提示词置空，让网络同时学会": "): training randomly blanks the prompt, so the network learns both",
+  "无条件画": "unconditional drawing",
+  "和": "and",
+  "按条件画": "conditional drawing",
+  "。": "."
+}

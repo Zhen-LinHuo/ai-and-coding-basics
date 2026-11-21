@@ -1,0 +1,12 @@
+{
+ "上下文预算：一块必须分着花的内存": "Context budget: one pool of memory that must be shared out",
+ "系统提示": "System prompt",
+ "对话历史": "Conversation history",
+ "工具结果": "Tool results",
+ "留给回答": "Left for the answer",
+ "四个租户抢同一块内存：系统提示是固定租金；历史越聊越长；工具结果一页能顶几千": "Four tenants fight over one pool: the system prompt is fixed rent; history grows with every turn; one page of tool results can cost thousands",
+ "；": " tokens;",
+ "留白太少，回答就没地方写。": "Too little slack and the answer has nowhere to go. ",
+ "的日常就是砍谁、留谁、压缩谁。": "The harness's daily job is deciding what to cut, what to keep, what to compress.",
+ "装满之后：要么丢历史（失忆），要么压缩（丢细节），要么报错（拒绝工作）。": "When it fills up: drop history (amnesia), compress (lose detail), or error out (refuse to work)."
+}

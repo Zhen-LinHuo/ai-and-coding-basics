@@ -1,0 +1,23 @@
+{
+  "：从字符开始，一步步合并最常见的搭档": ": start with characters, merge the commonest pairs step by step",
+  "低频做法：一个字一格": "Naive: one cell per character",
+  "高频组合：合成一块": "Common pairs: one chunk",
+  "（": " (",
+  "格）": " cells)",
+  "统计语料发现": "Corpus:",
+  "常见": "is frequent",
+  "合并": "merge",
+  "也常见": "too",
+  "规则只有一个：数一数哪对搭档出现得最多，就把它们焊死成一个新符号，重复几万次。": "One rule: count which pair occurs most, weld it into a new symbol, repeat tens of thousands of times.",
+  "于是常见词被合并成整块，生僻词自动退回字符": "So common words merge into chunks, rare ones fall back to characters",
+  "一个词表同时照顾两头。": " one vocabulary for both.",
+  "词表太小：切得太碎，序列长，": "Vocab too small: cut too fine, sequences long, the",
+  "词": "word",
+  "的内部结构全靠自己拼。": "'s insides must be assembled.",
+  "词表太大：每个词整块记忆，生僻词、错拼词、新词全变成生字。": "Vocab too large: each word a memorised block; rare, misspelt and new words all unknown.",
+  "模型": "Model ",
+  "规模的取舍，本质是": " vocab size is a trade-off: the ",
+  "背多少、拼多少": "memorise vs assemble",
+  "的分工线": " split",
+  "通常在几万到十几万块。": " usually tens to hundreds of thousands of chunks."
+}

@@ -1,0 +1,13 @@
+{
+  "反向传播：错在输出层，账要算回每一颗神经元": "Backpropagation: error at the output, the bill goes back to every neuron",
+  "误差信号从右往左回流": "Error flows right to left",
+  "输入层": "Input layer",
+  "隐藏层": "Hidden layer",
+  "输出层": "Output layer",
+  "灰色：正向计算（信号从左到右，给出预测）。": "Grey: forward pass (left to right, giving the prediction).",
+  "红色：反向传播（误差从右到左，逐层指出": "Red: backprop (right to left, layer by layer saying",
+  "你该为这个错负多少责": "how much of this error is yours",
+  "）。": ").",
+  "每个权重按自己的责任大小被拧一下": "Each weight is turned by its share of blame",
+  "责任大的多拧，责任小的少拧。": " more for the guilty, less for the rest."
+}

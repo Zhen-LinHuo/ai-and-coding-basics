@@ -1,0 +1,12 @@
+{
+  "损失地形：一片连绵的山谷": "The loss landscape: a range of valleys",
+  "当前参数（球的位置）": "Current params (ball)",
+  "谷底：损失最小": "valley floor: lowest loss",
+  "竖直方向：损失（越高错得越离谱）": "Vertical: loss (higher = more wrong)",
+  "碗口两个方向：两个参数的取值": "Bowl's two axes: two parameters",
+  "梯度下降": "Gradient descent",
+  "球沿坡面一路滚到谷底。坡面上任何一点都能读出一个损失值，": "the ball rolls down to the floor; every point has a loss value,",
+  "球总能感觉到": "the ball feels",
+  "哪个方向是下坡": "which way is downhill",
+  "这个感觉来自反向传播（下一图）。": " — that sense is backpropagation (next figure)."
+}

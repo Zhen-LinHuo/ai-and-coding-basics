@@ -1,0 +1,15 @@
+{
+  "撞上数据墙之后，加算力不再按老曲线下降": "After the data wall, added compute no longer follows the old curve",
+  "投入（算力": "input (compute",
+  "数据）": "data)",
+  "损失": "loss",
+  "数据墙：高质量公开文本用尽": "data wall: high-quality public text exhausted",
+  "（新样例不再增加）": "(no new examples)",
+  "没了新数据，加算力也": "no new data, so added compute",
+  "换不回损失下降": "cannot buy lower loss",
+  "墙前：投入越多，损失越低": "before the wall: more input, lower loss",
+  "（幂律仍有效）": "(power law still holds)",
+  "所以出路不是": "so the way out is not",
+  "再大一点": "a bit bigger",
+  "，而是：合成数据、更好的数据清洗、更省数据的架构与训练方法。": "but: synthetic data, better data cleaning, more data-efficient architectures and training methods."
+}

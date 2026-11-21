@@ -1,0 +1,17 @@
+{
+  "多头：同一个房间里的几双眼睛": "Multi-head: several pairs of eyes in one room",
+  "输入（同一句话）": "input (the same sentence)",
+  "头": "head",
+  "：谁在干什么": "what each one watches",
+  "盯": "watch",
+  "主语": "subject",
+  "动词": "verb",
+  "搭配": "collocation",
+  "：谁指谁": "who refers to whom",
+  "盯代词与先行词": "watch pronoun and antecedent",
+  "：修饰关系": "modification",
+  "盯形容词与名词": "watch adjective and noun",
+  "输出拼在一起": "outputs concatenated",
+  "下一层": "next layer",
+  "三个头各自独立做一遍完整的注意力，看到的关系不同；分工不是人为指定的，是训练中自己长出来的。": "Three heads each run the full attention independently, seeing different relations; the split is not assigned by hand, it grows in training."
+}

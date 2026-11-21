@@ -1,0 +1,23 @@
+{
+ "同一类任务，三种做法：判断一封邮件是不是垃圾邮件": "One task, three approaches: is this email spam?",
+ "第一级：人写规则": "Level 1: people write the rules",
+ "如果含": "If it contains",
+ "中奖": "a prize",
+ "就拦截。机器只是执行。": ", block it. The machine just executes.",
+ "第二级：机器学规则": "Level 2: the machine learns the rules",
+ "给它一万个已标注邮件，权重自己调。": "Give it ten thousand labelled emails; the weights tune themselves.",
+ "第三级：机器自己干": "Level 3: the machine does it alone",
+ "没有任何标注，自己发现邮件的类别。": "No labels at all; it finds the email categories itself.",
+ "规则系统：智能全在人写的规则里。": "Rule system: all the intelligence is in human-written rules.",
+ "规则穷不尽：换一种写法就漏拦。": "Rules never end: reword it and the filter misses it.",
+ "学习系统：智能从样例里长出来。": "Learning system: intelligence grows out of examples.",
+ "人只给原料（数据）和判卷标准。": "People supply only the raw material (data) and the marking scheme.",
+ "生成式": "Generative",
+ "常住在这两级之上：": "AI lives mostly on these two levels:",
+ "它不但会判断，还会产出新东西。": "it not only judges, it produces something new.",
+ "本书的": "This book's",
+ "主要指第二、三级。": "refers mainly to levels 2 and 3.",
+ "第一级是": "Level 1 is",
+ "自动化": "automation",
+ "，不是智能。": ", not intelligence."
+}

@@ -17,17 +17,43 @@ SKIP_PREFIX = ("00-front", "90-back")
 HEADING_RE = re.compile(r"^#{1,3} \S")
 MANUAL_NUM = re.compile(r"^#{1,3} [0-9]+(\.[0-9]+)*\s")
 RULES = [("小结", "缺少「小结与自检」")]
+RULES_EN = [("Summary and self-check", "missing 'Summary and self-check' beat")]
 # 「常见误解」是第五拍的默认呈现方式；若误解已在正文里辟清可省略，只提示不拦截
 SOFT_RULES = [("常见误解", "没有「常见误解」callout（若误解已在正文辟清可忽略）")]
+SOFT_RULES_EN = [("Common misconceptions", "no 'Common misconceptions' callout (fine if refuted in prose)")]
+
+
+def check_levels(files, tag):
+    """标题跳级（如 H2 直接到 H4）会让 PDF 出现 x.y.0.z 的零段编号。"""
+    bad = 0
+    for p in files:
+        prev = 0
+        for ln in p.read_text(encoding="utf-8").splitlines():
+            m = re.match(r"^(#{1,6}) ", ln)
+            if m:
+                lvl = len(m.group(1))
+                if prev and lvl > prev + 1:
+                    print(f"LEVEL JUMP {tag}:{p.relative_to(ROOT / 'content')}: H{prev}->H{lvl}: {ln[:50]}")
+                    bad += 1
+                prev = lvl
+    return bad
 
 
 def main():
     problems = 0
     hints = 0
     checked = 0
-    for p in sorted((ROOT / "content").rglob("*.md")):
+    all_files = sorted((ROOT / "content").rglob("*.md"))
+    zh_files = [p for p in all_files if "en" not in p.relative_to(ROOT / "content").parts]
+    en_files = [p for p in all_files if "en" in p.relative_to(ROOT / "content").parts]
+    problems += check_levels(all_files, "lvl")
+    for p, rules, soft in [(p, RULES, SOFT_RULES) for p in zh_files] + \
+                          [(p, RULES_EN, SOFT_RULES_EN) for p in en_files]:
         rel = p.relative_to(ROOT / "content")
-        if rel.parts and rel.parts[0] in SKIP_PREFIX:
+        parts = rel.parts
+        if "en" in parts:
+            parts = parts[parts.index("en") + 1:] or ("en",)
+        if parts[0] in SKIP_PREFIX:
             continue
         if rel.name.startswith("00-") or "-00-" in rel.name:  # 章首导语：不是完整的"节"，不受六拍约束
             continue
@@ -45,11 +71,11 @@ def main():
             continue
         if "<!-- stub -->" in text:
             continue
-        for needle, msg in RULES:
+        for needle, msg in rules:
             if needle not in text:
                 problems += 1
                 print(f"{rel}: {msg}")
-        for needle, msg in SOFT_RULES:
+        for needle, msg in soft:
             if needle not in text:
                 hints += 1
                 print(f"WARN  {rel}: {msg}")

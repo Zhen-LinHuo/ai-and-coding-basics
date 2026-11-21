@@ -1,0 +1,15 @@
+{
+  "双对数坐标下，它是一条直线": "On log-log axes it is a straight line",
+  "算力（对数刻度）": "compute (log scale)",
+  "损失（对数刻度）": "loss (log scale)",
+  "实测点几乎落在一条直线上": "measured points fall almost on a straight line",
+  "横轴每翻": "each doubling on the x-axis",
+  "倍，纵轴下降固定的格数": "drops the y-axis by a fixed number of steps",
+  "这就是": "that is all",
+  "幂律": "power law",
+  "的全部含义": "means",
+  "换到普通坐标，它是一条越来越平的曲线：损失还在降，只是每降一格越来越贵。": "Switch to ordinary axes and it is an ever-flatter curve: loss still falls, but each step costs more.",
+  "双对数坐标的作用，就是把指数关系": "What log-log axes do is",
+  "拉直": "straighten",
+  "成直线，方便外推报价。": "an exponential relation into a line, for easy extrapolation and pricing."
+}

@@ -1,0 +1,16 @@
+{
+ "语义化版本：用三个数字声明": "Semantic versioning: three numbers declaring ",
+ "破坏了多少": "how much breaks",
+ "主版本": "Major",
+ "次版本": "Minor",
+ "修订号": "Patch",
+ "：接口变了": ": interface changed",
+ "：加了功能": ": feature added",
+ "：修了": ": bug fixed",
+ "于是": "So ",
+ "我依赖": "\"I depend on ",
+ "、": ", ",
+ "就是一句承诺：次版本随便升，主版本动了我再改代码。": "\" is a promise: minors upgrade freely; I change code only when the major moves.",
+ "前提是所有人都守约": "Provided everyone keeps the promise",
+ "谁在修订号里偷偷改接口，谁的依赖树就会在深夜爆炸。": "sneak an interface change into a patch and your dependency tree explodes at midnight."
+}

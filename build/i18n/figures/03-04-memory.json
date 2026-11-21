@@ -1,0 +1,19 @@
+{
+  "推理时，显存里住着什么": "What lives in video memory at inference",
+  "网络权重（几百": "Weights (hundreds of",
+  "起步，常驻）": "GB up, resident)",
+  "中间计算结果（每层暂存）": "Intermediate results (per layer)",
+  "对话历史缓存（越长越大，见第": "Chat cache (grows; Section",
+  "节）": ")",
+  "其他开销": "Other overhead",
+  "权重大头": "Weights big",
+  "缓存小头，决定了": "+ cache small: they decide",
+  "能不能装下": "will it fit",
+  "和": "and",
+  "能聊多长": "how long you chat",
+  "这也是部署方常说的": "The first of the",
+  "显存墙": "memory walls",
+  "的第一堵，第": " deployers cite; Sections",
+  "节和第": " and",
+  "节会再砌两堵。": " add two more."
+}

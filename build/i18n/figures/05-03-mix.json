@@ -1,0 +1,15 @@
+{
+  "两个极端之间的工程折中": "An engineering compromise between two extremes",
+  "长上下文效率": "long-context efficiency",
+  "精确回忆能力": "exact recall",
+  "纯注意力": "pure attention",
+  "纯": "pure",
+  "线性": "linear",
+  "混合层": "hybrid layers",
+  "纯注意力：找细节最准，长文最贵。": "pure attention: most accurate on details, most expensive on long texts.",
+  "：长文便宜，但": ": cheap on long texts, but",
+  "从十万字里原样找出某句话": "finding a sentence verbatim in 100k words",
+  "会失手。": "fails.",
+  "混合：大部分层用省钱的，少数层用精确的": "hybrid: most layers cheap, a few exact",
+  "年后的主流折中。": "the mainstream compromise since 2025."
+}

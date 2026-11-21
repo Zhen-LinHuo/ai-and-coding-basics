@@ -1,0 +1,21 @@
+{
+ "同构与异构：一样的工人，和各司其职的工人": "Homogeneous and heterogeneous: identical workers, and workers each with their own job",
+ "同构（": "Homogeneous (",
+ "）：全能工人": "): all-rounder workers",
+ "核": "Core",
+ "什么都会做：逻辑、跳转、串行任务。": "It does everything: logic, jumps, serial tasks.",
+ "但": "But ",
+ "万次乘加": "million multiply-adds",
+ "这种粗活，效率一般。": " is grunt work, and its efficiency is only so-so.",
+ "异构（": "Heterogeneous (",
+ "加速器）：专业团队": "accelerators): a team of specialists",
+ "几千个小工人同时做同一件事：乘加。": "Thousands of little workers all doing the same thing at once: multiply-add.",
+ "神经网络": "Neural networks",
+ "海量独立的乘加": "huge numbers of independent multiply-adds",
+ "天生对口。": "a perfect match.",
+ "这就是为什么": "That is why",
+ "时代显卡涨价：神经网络的主要工作（矩阵乘法）恰好是": "era GPUs got so expensive: the main work of neural networks (matrix multiplication) is exactly what",
+ "最擅长的": "is best at ",
+ "笨活": "dumb work",
+ "。": "."
+}

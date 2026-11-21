@@ -1,0 +1,18 @@
+{
+ "典型项目树：新人": "A typical project tree: a newcomer guesses right in ",
+ "分钟能猜对放哪": " minutes",
+ "陌生人第一个读的文件": "The first file a stranger reads",
+ "源代码": "Source code",
+ "测试（与": "Tests (next to ",
+ "平级，一眼可见）": ", impossible to miss)",
+ "文档": "Documentation",
+ "法律身份": "Legal identity",
+ "之外的配置": " config beyond it",
+ "构建、依赖声明": "Build and dependency declarations",
+ "惯例的价值：位置本身就是文档。": "The value of convention: location is documentation.",
+ "测试在哪": "Where are the tests?",
+ "不用问，因为约定替你回答了。": " No need to ask — the convention answered.",
+ "自创的巧妙结构，是在向每一个后来者收": "A clever structure of your own levies an ",
+ "理解税": "understanding tax",
+ "。": " on every newcomer."
+}

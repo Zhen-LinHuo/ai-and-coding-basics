@@ -1,0 +1,21 @@
+{
+ "行为主义的基本回路：行动、反馈、改进": "The behaviourist loop: act, get feedback, improve",
+ "智能体": "Agent",
+ "（做出动作的一方）": "(the one that acts)",
+ "环境": "Environment",
+ "（不迁就它的一方）": "(the one that won't accommodate it)",
+ "动作": "action",
+ "反馈（分数": "feedback (score",
+ "惩罚": "penalty",
+ "新局面）": "new situation)",
+ "没有人告诉它": "Nobody tells it the",
+ "正确答案": "right answer",
+ "，只有环境回一句": "; the environment just says",
+ "这步不错": "good move",
+ "这步很糟": "bad move",
+ "。": ".",
+ "智能不写在任何规则库里，而是几万次循环攒出来的行动策略。": "The intelligence is not in any rule base; it is a policy accumulated over tens of thousands of loops.",
+ "孩子学走路、玩家练关卡、算法下棋，用的是同一张回路图。": "A child learning to walk, a player grinding a level, an algorithm playing chess: same loop diagram.",
+ "这条回路在第": "This loop gets its proper name in section",
+ "节会拿到正式名字：强化学习。": ": reinforcement learning."
+}

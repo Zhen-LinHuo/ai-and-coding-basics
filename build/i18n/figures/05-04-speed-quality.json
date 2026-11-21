@@ -1,0 +1,21 @@
+{
+  "速度与质量：一条正在移动的边界": "Speed and quality: a boundary on the move",
+  "每秒生成": "tokens",
+  "数": " generated per second",
+  "质量": "quality",
+  "大模型自回归": "large autoregressive",
+  "小模型自回归": "small autoregressive",
+  "扩散式语言模型": "diffusion LMs",
+  "这条路在往右上走": "this path moves up and right",
+  "自回归：质量与速度直接冲突": "autoregressive: quality and speed in direct conflict",
+  "要快就换小模型，质量立刻掉。": "want speed, take a small model; quality drops at once.",
+  "扩散：并行解码把": "diffusion: parallel decoding decouples",
+  "快": "speed",
+  "和": "from",
+  "部分解耦，边界还在移动（": " quality; the boundary is still moving (",
+  "年的": "'s",
+  "、": " and ",
+  "）。": ").",
+  "注意：坐标里的位置不写具体数字": "note: positions in the axes give no numbers",
+  "这类性能数据三个月就过时。": "this kind of performance data goes stale in three months."
+}

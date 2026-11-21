@@ -1,0 +1,20 @@
+{
+ "三个区域：改完": "Three areas: change",
+ "挑好": " pick",
+ "存档": " archive",
+ "工作区": "Working tree",
+ "你正在改的文件": "The files you are editing",
+ "（乱七八糟没关系）": "(mess is fine)",
+ "暂存区": "Staging area",
+ "挑出来准备存档的改动": "Changes picked for archiving",
+ "（可以只挑一半）": "(you can pick only half)",
+ "仓库（历史）": "Repository (history)",
+ "正式的快照链": "The formal snapshot chain",
+ "（不可变）": "(immutable)",
+ "暂存区的价值：改动可以先攒着，按": "Why staging matters: changes can accumulate, committed by ",
+ "逻辑": "logic",
+ "而不是按": " rather than by ",
+ "时间": "time",
+ "分组提交": " group the commits",
+ "一个提交只讲一件事。": "One commit, one story."
+}

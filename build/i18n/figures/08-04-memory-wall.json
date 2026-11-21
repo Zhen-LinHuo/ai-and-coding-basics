@@ -1,0 +1,17 @@
+{
+ "显存墙：三笔账加在一起": "The memory wall: three bills added together",
+ "权重（常驻，大头）": "Weights (resident, the biggest share)",
+ "激活": "Activations",
+ "缓存": "cache",
+ "其他开销": "Other overhead",
+ "三条杠杆对应三个工程方向：量化压权重（": "Three levers, three engineering directions: quantisation shrinks the weights (",
+ "图": "Figure",
+ "）、批处理摊激活、": "), batching spreads the activations, ",
+ "滑动窗口与缓存管理压": "and sliding windows plus cache management shrink the",
+ "第": "Section",
+ "节": "above",
+ "的固定状态是更激进的一招。": ": the fixed state there is the more aggressive move.",
+ "墙的衡量单位很朴素：这个模型": "The wall's unit of measure is plain: can this model ",
+ "装不装得下": "fit",
+ "这一张卡。": " on one card."
+}

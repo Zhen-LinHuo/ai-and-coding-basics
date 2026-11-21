@@ -1,0 +1,14 @@
+{
+  "两种记忆方式：全记下来，还是只记摘要": "Two ways to remember: keep everything, or keep a summary",
+  "注意力：每一步都能回看全部历史": "attention: every step can look back over all history",
+  "缓存随长度增长": "cache grows with length",
+  "线性注意力": "linear attention",
+  "：把历史压进固定大小的状态": ": squeeze history into a fixed-size state",
+  "状态": "state",
+  "固定大小": "fixed size",
+  "每来一个词：读状态、更新状态，状态大小不变": "each new word: read the state, update it, same size",
+  "回看全部历史：精确，但缓存与计算随长度平方增长。": "look back over all history: exact, but cache and compute grow quadratically with length.",
+  "只记摘要：内存恒定、速度线性，但": "summary only: constant memory, linear speed, but",
+  "精确找回很早的某个细节": "recalling one early detail exactly",
+  "会吃力。": "is hard."
+}

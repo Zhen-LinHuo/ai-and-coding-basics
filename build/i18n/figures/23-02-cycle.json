@@ -1,0 +1,12 @@
+{
+ "一次编辑": "The edit",
+ "编译": "-compile",
+ "调试循环": "-debug cycle",
+ "改代码": "Change code",
+ "编译：报错！": "Compile: error!",
+ "读错误信息": "Read the error message",
+ "定位并理解": "Locate and understand",
+ "重编译：通过": "Recompile: passes",
+ "编译器的错误信息不是指责，是线索": "The compiler's error message is not an accusation, it is a clue",
+ "读它是新手成长最快的方式。": "Reading it is the fastest way for a beginner to improve."
+}

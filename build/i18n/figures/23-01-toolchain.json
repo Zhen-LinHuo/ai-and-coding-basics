@@ -1,0 +1,19 @@
+{
+ "四件套的协作：编辑": "The four tools working together: edit",
+ "编译": " compile",
+ "调试": " debug",
+ "版本": " version",
+ "编辑器": "Editor",
+ "写与改": "Write and change",
+ "编译器": "Compiler",
+ "构建": "/build",
+ "翻译与检查": "Translate and check",
+ "调试器": "Debugger",
+ "停下来看内部": "Stop and look inside",
+ "版本控制": "Version control",
+ "记住每一步": "Remember every step",
+ "改坏了？回滚到上一个好版本": "Broke it? Roll back to the last good version",
+ "从历史取回某个版本继续编辑": "Fetch a version from history and keep editing",
+ "不是第四种东西，而是把四件套装进同一个窗口、让它们互相感知的整合器。命令行组合与": " is not a fifth tool but an integrator: the four in one window, aware of each other. The command-line combination and the IDE ",
+ "等价，只是界面不同。": "are equivalent; only the interface differs."
+}

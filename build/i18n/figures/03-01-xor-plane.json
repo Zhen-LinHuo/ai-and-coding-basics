@@ -1,0 +1,14 @@
+{
+  "异或（": "Exclusive OR (",
+  "）：三条候选直线，每条都至少混进一个异类": ") and three candidate lines, each mixing the classes",
+  "横切": "horizontal",
+  "竖切": "vertical",
+  "斜切": "diagonal",
+  "横轴：输入": "x-axis: input",
+  "　　纵轴：输入": "   y-axis: input",
+  "圆": "circle",
+  "输出": "output",
+  "，三角": ", triangle",
+  "。三条线怎么摆都分不干净": "; no line splits them cleanly",
+  "这就是单层感知机的天花板。横切、竖切各混进一圆一三角；斜切把其余三个点全挤到另一侧。": " — the single-layer ceiling. Every cut mixes the classes."
+}

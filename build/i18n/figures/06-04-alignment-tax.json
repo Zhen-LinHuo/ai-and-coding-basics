@@ -1,0 +1,21 @@
+{
+ "对齐税：顺从是有价钱的": "Alignment tax: obedience has a price",
+ "顺从程度（安全、礼貌、守规矩）": "Obedience (safe, polite, rule-following)",
+ "能力（基准分数）": "Capability (benchmark score)",
+ "预训练模型": "pretrained model",
+ "对齐后": "after alignment",
+ "移动轨迹：往左下走": "Path of movement: down and to the left",
+ "对齐让模型更好用、更安全，但基准分数往往略降": "Alignment makes a model more usable and safer, but benchmark scores often dip slightly",
+ "这部分损失俗称": "this loss is commonly called",
+ "对齐税": "the \"alignment tax\"",
+ "。": ".",
+ "它不是": "It is not a bug",
+ "，而是一笔真实的交换：拿一部分": ", but a real trade: part of the model's",
+ "无所顾忌的能力": "unconstrained capability",
+ "，换": "is exchanged for",
+ "可以被放心交给普通人": "something that can be safely handed to ordinary people",
+ "争论在于税该收多少": "The argument is over how much tax to levy",
+ "这也是": "and this is part of",
+ "对齐到谁": "\"aligned to whom\"",
+ "之争的一部分。": "the debate."
+}

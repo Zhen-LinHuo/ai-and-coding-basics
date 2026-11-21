@@ -1,0 +1,23 @@
+{
+ "检索增强：先查资料，再作答": "Retrieval augmentation: look it up first, then answer",
+ "问题：": "Question: ",
+ "我们公司": "\"How is annual leave ",
+ "年假怎么算？": "calculated at our company?\"",
+ "编码成向量": "Encode as a vector",
+ "知识库": "Knowledge base",
+ "公司文档，每段一个向量": "Company documents, one vector per passage",
+ "（离线建好）": "(built offline)",
+ "取语义最相近的几段（不是关键词匹配，是": "Take the few most similar passages (not keyword matching — ",
+ "意思相近": "same meaning",
+ "）": ")",
+ "把检索到的段落": "Hand the retrieved passages ",
+ "原问题一起交给模型": "+ the original question to the model",
+ "模型照着资料回答，而不是凭参数里的记忆": "The model answers from the material, not from memory in its parameters",
+ "检索缓解幻觉的原理：把": "Why retrieval curbs hallucination: it swaps ",
+ "从记忆里编": "\"making it up from memory\" ",
+ "换成": "for ",
+ "照着给的资料说": "\"saying what the material says\"",
+ "。它不能根治": ". It is no cure — ",
+ "资料没有的照样编，资料": "it still invents what the material lacks, and ",
+ "错了照样错。": "still errs when the material does."
+}

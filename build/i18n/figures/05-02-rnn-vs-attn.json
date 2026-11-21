@@ -1,0 +1,22 @@
+{
+  "循环网络与注意力：传话游戏": "Recurrent network vs attention: Chinese whispers",
+  "圆桌会议": "a round table",
+  "循环网络（": "recurrent network (",
+  "）：逐词传话": ") word by word",
+  "每个词只拿到上一词压缩出的": "each word only gets a",
+  "摘要": "summary",
+  "；隔得越远，早期信息磨损越重。": " compressed from the previous one; the farther apart, the more early information wears away.",
+  "注意力：任意两词直达": "attention: any two words connect directly",
+  "第": "the",
+  "个词与第": "th word and the",
+  "个词直接相连：距离不再磨损信息。": "th word are directly linked: distance no longer wears away information.",
+  "并行性：": "Parallelism:",
+  "必须按顺序算": "must run in order for",
+  "步；注意力可以一次算完所有配对": "steps; attention computes all pairs at once, which",
+  "最擅长这种。": "GPUs are best at.",
+  "代价：": "Cost:",
+  "个词要算": "words need",
+  "对关系": "pairs",
+  "平方增长，这就是长上下文贵的根源（第": " quadratically, the root of expensive long contexts (Section",
+  "节）。": ")"
+}

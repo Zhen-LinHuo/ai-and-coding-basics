@@ -1,0 +1,21 @@
+{
+  "存：把图案写进连线权重": "Store: write the pattern into the weights",
+  "存入图案：「十」": "Stored: \"ten\"",
+  "九颗神经元两两相连，共": "Nine neurons, all pairs linked:",
+  "条连线；": "weights;",
+  "存的那一刻按一个规则定死：": "one rule fixed at store time:",
+  "图案里同色的两颗，权重": "same colour: weight",
+  "（绿线）": " (green)",
+  "图案里异色的两颗，权重": "different colour: weight",
+  "（朱虚线）": " (red dashed)",
+  "不需要任何训练，权重就是记忆。": "No training; the weights are the memory.",
+  "条连线，中心那颗的": "weights; the centre's",
+  "条加粗": "are bold",
+  "再现：弄脏的进，完整的出": "Recall: dirty in, whole out",
+  "送进（中心被抹掉）": "Input (centre erased)",
+  "刷完一轮（完整了）": "After one round (whole)",
+  "一轮投票：每颗神经元把": "One vote: each neuron sums its",
+  "个同伴的颜色乘上连线权重加总，和为正就亮，为负就暗。": " neighbours' colours times the weights; positive lights, negative darkens.",
+  "中心那颗收到": "The centre receives",
+  "，重新亮起；朱红虚线框标出被抹掉的像素。": " +8 and lights again; the dashed box marks the erased pixel."
+}

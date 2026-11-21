@@ -1,0 +1,98 @@
+site_name: AI and Computing, from First Principles
+site_description: For readers who want to understand how it all actually works
+site_url: https://zhen-linhuo.github.io/ai-and-coding-basics/en/
+repo_url: https://github.com/Zhen-LinHuo/ai-and-coding-basics
+edit_uri: blob/main/content/en/
+docs_dir: site-src-en
+site_dir: site-en
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Zhen-LinHuo/ai-and-coding-basics
+
+copyright: >
+  CC BY-SA 4.0 (text) · Apache-2.0 (code) &copy; 2026 Zhen-Lin Huo
+
+nav:
+  - Home: index.md
+  - Preface: 00-front/preface.md
+  - How to read this book: 00-front/how-to-read.md
+  - Part 1 · AI basics:
+    - 01-ai/00-chapter.md
+    - '1.1 What is AI?': 01-ai/01-what-is-ai.md
+    - '1.2 The three schools': 01-ai/02-three-schools.md
+    - '1.3 Neural networks':
+      - 01-ai/03-00-neural-networks.md
+      - '1.3.1 Start with a neuron': 01-ai/03-01-neuron.md
+      - '1.3.2 Data in': 01-ai/03-02-data-input.md
+      - '1.3.3 Learning': 01-ai/03-03-learning.md
+      - '1.3.4 Training and inference': 01-ai/03-04-train-and-infer.md
+    - '1.4 Machine learning':
+      - 01-ai/04-00-machine-learning.md
+      - '1.4.1 MLPs and deep learning': 01-ai/04-01-mlp-and-deep-learning.md
+      - '1.4.2 Three learning paradigms': 01-ai/04-02-paradigms.md
+      - '1.4.3 Generalisation and evaluation': 01-ai/04-03-generalization.md
+    - '1.5 Large language models':
+      - 01-ai/05-00-llms.md
+      - '1.5.1 Scaling laws': 01-ai/05-01-scaling-laws.md
+      - '1.5.2 Attention': 01-ai/05-02-attention.md
+      - '1.5.3 Linear attention and SSMs': 01-ai/05-03-ssm-and-linear-attention.md
+      - '1.5.4 Diffusion models': 01-ai/05-04-diffusion.md
+    - '1.6 Alignment, hallucination and safety': 01-ai/06-alignment-hallucination-safety.md
+    - '1.7 Agents':
+      - 01-ai/07-00-agents.md
+      - '1.7.1 Harness': 01-ai/07-01-harness.md
+      - '1.7.2 RSI and multi-agent': 01-ai/07-02-rsi-and-multi-agent.md
+      - '1.7.3 MCP, skills, embeddings and knowledge bases': 01-ai/07-03-mcp-skills-rag.md
+    - '1.8 Compute and deployment': 01-ai/08-compute-and-deployment.md
+  - Part 2 · Computing basics:
+    - 02-dev/00-chapter.md
+    - '2.1 What is a program?': 02-dev/01-what-is-a-program.md
+    - '2.2 Git': 02-dev/02-git.md
+    - '2.3 IDEs and toolchains': 02-dev/03-ide-and-toolchain.md
+    - '2.4 Package managers': 02-dev/04-package-managers.md
+    - '2.5 Reproducibility': 02-dev/05-reproducibility.md
+    - '2.6 Declarative operating systems': 02-dev/06-declarative-os.md
+    - '2.7 Project structure and documentation': 02-dev/07-project-structure.md
+    - '2.8 Licences': 02-dev/08-licenses.md
+  - Glossary: 90-back/glossary.md
+  - References: 90-back/references.md

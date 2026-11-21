@@ -1,0 +1,19 @@
+{
+ "一万条数据，分成三份各管什么": "Ten thousand records, split three ways, each with a job",
+ "训练集": "Training set",
+ "验证集": "Validation set",
+ "测试集": "Test set",
+ "训练集：调权重的题本。": "Training set: the workbook that adjusts the weights.",
+ "验证集：调": "Validation set: a mock exam for tuning ",
+ "怎么学": "how it learns",
+ "的模拟考": ":",
+ "挑模型、定超参数、决定何时停。": " pick the model, set hyperparameters, decide when to stop.",
+ "测试集：期末考，只许考一次。": "Test set: the final exam, sat exactly once.",
+ "如果验证集也拿来反复调，它就被": "Tune against the validation set too often and it is ",
+ "泄露": "leaked",
+ "了；测试集更是一次性的": "; the test set is one-shot —",
+ "考第二次，分数就不再诚实。": "sit it twice and the score stops being honest.",
+ "这三份的分工，是整个": "This three-way split is the backbone of the whole ",
+ "怎么知道它学会了": " how do you know it has learned",
+ "的骨架。": " question."
+}

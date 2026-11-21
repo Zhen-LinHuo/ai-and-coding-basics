@@ -1,0 +1,21 @@
+{
+ "：把": ": turning ",
+ "的接线": " wiring ",
+ "变成": "into ",
+ "主机（你的助手）": "Host (your assistant)",
+ "内置一个": "with a built-in ",
+ "客户端": "MCP client",
+ "服务器：文件系统": "Server: filesystem",
+ "服务器：": "Server: ",
+ "服务器：数据库": "Server: database",
+ "没有": "Without ",
+ "之前：": " before: ",
+ "个助手接": " assistants × ",
+ "个工具，要写": " tools = ",
+ "份专用胶水。": " bespoke glue adapters.",
+ "有了统一协议：每个助手实现一次客户端，每个工具实现一次服务器": "One protocol: each assistant implements the client once, each tool a server once — ",
+ "份。": " adapters.",
+ "统一接口的价值远大于接口本身：它把": "A unified interface is worth far more than the interface itself: it turns ",
+ "接新工具": "\"adding a new tool\"",
+ "从开发问题变成了配置问题。": "from a development problem into a configuration problem."
+}

@@ -1,0 +1,20 @@
+{
+ "四个词的包含关系": "How the four terms nest",
+ "大语言": "Large language",
+ "模型": "models",
+ "深度学习": "Deep learning",
+ "机器学习": "Machine learning",
+ "人工智能": "Artificial intelligence",
+ "人工智能：让机器做": "Artificial intelligence: getting machines to do",
+ "需要智能的事": "the things that need intelligence",
+ "这个目标本身": "that goal itself",
+ "机器学习：达成它的手段之一": "Machine learning: one means of reaching it",
+ "从数据里调参数": "tuning parameters from data",
+ "深度学习：机器学习的一种，用很多层的神经网络": "Deep learning: a kind of machine learning, using many-layer neural networks",
+ "大语言模型：深度学习的一种产物，预测下一个词": "Large language models: a product of deep learning, predicting the next word",
+ "读法：每往里一层，范围缩小一圈，": "How to read it: each ring inwards is a smaller scope,",
+ "但今天新闻里的": "but in today's news the",
+ "几乎都住在最里层。": "lives almost entirely in the innermost ring.",
+ "同心圆的用处是定位：听到任何一个新词，": "The concentric circles are for positioning: on hearing any new term,",
+ "先问它在哪一层，再问它和邻层是什么关系。": "ask which layer it sits in, then how it relates to the neighbouring layer."
+}

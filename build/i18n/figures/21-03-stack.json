@@ -1,0 +1,11 @@
+{
+ "函数调用时，栈里发生什么": "What happens in the stack when a function is called",
+ "的格子": "'s frame",
+ "最上层：正在执行的函数": "Top: the function currently running",
+ "中间：等着结果回来的调用者": "Middle: callers waiting for results",
+ "栈底：程序入口": "Bottom: program entry point",
+ "函数返回": "Function returns",
+ "它的格子被撤掉。": "its frame is removed.",
+ "栈溢出": "Stack overflow",
+ "嵌套太深，格子堆过了天花板。": "nesting too deep — frames piled past the ceiling."
+}

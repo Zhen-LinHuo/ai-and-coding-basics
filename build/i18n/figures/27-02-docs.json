@@ -1,0 +1,23 @@
+{
+ "文档矩阵：按": "The documentation matrix: sort by ",
+ "读者的状态": "reader state",
+ "分类型": " and purpose",
+ "怎么入门（学）": "How to start (learn)",
+ "怎么用（查）": "How to use (look up)",
+ "为什么（懂）": "Why (understand)",
+ "新手": "Beginner",
+ "教程": "Tutorial",
+ "带我做一遍": "Walk me through it",
+ "操作指南": "How-to guide",
+ "解决这个具体问题": "Solve this specific problem",
+ "解释": "Explanation",
+ "为什么这样设计": "Why it is designed this way",
+ "熟手": "Experienced",
+ "（他们已经毕业）": "(they have graduated)",
+ "参考手册": "Reference",
+ "全部参数，准确无遗漏": "Every parameter, accurate and complete",
+ "架构说明": "Architecture",
+ "取舍与边界": "Trade-offs and boundaries",
+ "最常见的失败：把四种内容混进一个巨大的": "The commonest failure: all four kinds mixed into one giant ",
+ "新手被参数淹没，熟手找不到参数。": "Beginners drown in parameters; the experienced cannot find them."
+}

@@ -9,10 +9,11 @@ import re, shutil, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DOCS = ROOT / "site-src"
+LANG = "en" if "--lang" in sys.argv and sys.argv[sys.argv.index("--lang") + 1] == "en" else "zh"
+DOCS = ROOT / ("site-src-en" if LANG == "en" else "site-src")
 
 # (源文件, 输出名, 导航标题) —— nav 在 mkdocs.yml 中引用这些输出名
-PAGES = [
+PAGES_ZH = [
     ("content/00-front/00-preface.md",           "00-front/preface.md",           "preface.md"),
     ("content/00-front/01-how-to-read.md",       "00-front/how-to-read.md",       "how-to-read.md"),
     ("content/01-ai/00-chapter.md",              "01-ai/00-chapter.md",           "p1.md"),
@@ -49,6 +50,12 @@ PAGES = [
     ("content/02-dev/08-licenses.md",            "02-dev/08-licenses.md",         "2-8.md"),
     ("content/90-back/00-glossary.md",           "90-back/glossary.md",           "glossary.md"),
 ]
+
+# EN pages mirror ZH output paths under content/en (nav titles live in mkdocs-en.yml)
+PAGES_EN = [("content/en/" + src.replace("content/", ""), out, title)
+            for src, out, title in PAGES_ZH]
+
+PAGES = PAGES_EN if LANG == "en" else PAGES_ZH
 
 CITE = re.compile(r"\[@([A-Za-z0-9_]+)(?:[;,][^\]]*)?\]")
 
@@ -107,9 +114,10 @@ def main():
         entries[key] = (title.group(1).replace("\n", " ").strip() if title else "(无题)",
                         (author.group(1).replace("\n", " ").strip() if author else ""),
                         year.group(1) if year else "")
-    lines = ["# 参考文献 {.unnumbered}\n"]
+    ref_title = "# References {.unnumbered}\n" if LANG == "en" else "# 参考文献 {.unnumbered}\n"
+    lines = [ref_title]
     for i, key in enumerate(order, 1):
-        t, a, y = entries.get(key, ("(缺失条目)", "", ""))
+        t, a, y = entries.get(key, (("(missing entry)" if LANG == "en" else "缺失条目"), "", ""))
         lines.append(f"{i}. {a} *{t}* ({y})")
     (DOCS / "90-back" / "references.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -118,7 +126,11 @@ def main():
     (DOCS / "index.md").write_text(renumber(index), encoding="utf-8")
 
     # 图：保持 figures/src/... 相对路径
-    shutil.copytree(ROOT / "figures", DOCS / "figures", dirs_exist_ok=True)
+    if LANG == "en":
+        # EN markdown keeps the zh-style paths (figures/src/...); stage EN figures there.
+        shutil.copytree(ROOT / "figures/en", DOCS / "figures/src", dirs_exist_ok=True)
+    else:
+        shutil.copytree(ROOT / "figures", DOCS / "figures", dirs_exist_ok=True)
     # MathJax 配置
     js = DOCS / "javascripts"
     js.mkdir(exist_ok=True)

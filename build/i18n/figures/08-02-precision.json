@@ -1,0 +1,22 @@
+{
+ "精度阶梯：每个数用几位来存": "The precision ladder: how many bits each number takes",
+ "（": " (",
+ "位）": "bits)",
+ "训练的默认精度": "the default precision for training",
+ "训练常用": "common for training",
+ "显存占用从": "VRAM use drops from",
+ "份压到": "parts down to",
+ "份；量化到": "parts; quantised to",
+ "后，一张消费级显卡也能装下很大的模型。": "and even a consumer graphics card can hold a very large model.",
+ "代价：数值的": "The cost: the numerical ",
+ "细腻程度": "fine detail",
+ "下降": " drops",
+ "极端情况下，罕见知识最先被抹掉。": "in extreme cases, rare knowledge is the first to be erased.",
+ "实践中": "In practice,",
+ "的质量损失通常很小，是": "quality loss is usually small; the trade-off between ",
+ "能跑起来": "it runs",
+ "与": " and ",
+ "跑不起": "it won't run",
+ "之间的关键折中": " is what really matters",
+ "。": "."
+}

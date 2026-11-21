@@ -1,0 +1,22 @@
+{
+ "命令式：记步骤。声明式：记终点。": "Imperative: record steps. Declarative: record the destination.",
+ "命令式（菜谱）": "Imperative (recipe)",
+ "安装": "install ",
+ "手动改配置文件第": "hand-edit line ",
+ "行": " of the config file",
+ "下载并解压": "download and unpack ",
+ "到": " into ",
+ "每台机器执行顺序与历史不同，": "Each machine runs a different order and history; ",
+ "漂移悄悄发生，没人知道差在哪。": "drift happens quietly, nobody knows where.",
+ "声明式（终点）": "Declarative (destination)",
+ "我要的状态：": "\"The state I want: ",
+ "、": ", ",
+ "、配置": ", config ",
+ "。": ".\"",
+ "工具自己算出从现状到终点的路径。": "The tool works out the path from here to there.",
+ "同一份声明，在任何机器上": "The same declaration, on any machine, ",
+ "都收敛到同一个终点。": "converges on the same destination.",
+ "重装": "Reinstall",
+ "重新声明，而不是重新回忆。": " = re-declare, not re-remember.",
+ "命令式的知识活在人的脑子里和聊天记录里；声明式的知识活在仓库里，可以进版本控制、可以审查、可以回滚。": "Imperative knowledge lives in heads and chat logs; declarative knowledge lives in the repository — version-controlled, reviewable, revertible."
+}

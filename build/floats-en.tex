@@ -1,0 +1,20 @@
+% English edition overrides — loaded AFTER floats.tex
+% Same layout policy, English typographic names.
+% NOTE: book-style.sty loads ctex, which resets \contentsname/\figurename to
+% Chinese in its own \AtBeginDocument hook. Hook order = declaration order and
+% ours is declared last, so ALL name overrides must live in \AtBeginDocument
+% to win — a preamble renewcommand gets clobbered by ctex.
+\AtBeginDocument{%
+  \renewcommand{\contentsname}{Contents}%
+  \renewcommand{\figurename}{Figure}%
+  \renewcommand{\tablename}{Table}%
+  % English convention: no first-line indent, paragraph spacing instead.
+  % (floats.tex sets 2em indent + indentfirst for the Chinese edition; undo both.)
+  \setlength{\parindent}{0pt}%
+  \setlength{\parskip}{0.45em}%
+}
+\captionsetup{labelsep=period}       % "Figure 1.1. Title"
+\usepackage{microtype}
+% Part divider: "Part 1" label (floats.tex formats it as 第 X 部分 for the zh edition).
+\titleformat{\section}[display]
+  {\sffamily\Large\bfseries\color{primary}}{Part \thesection}{0pt}{}

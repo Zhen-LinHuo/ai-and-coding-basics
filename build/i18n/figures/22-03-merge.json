@@ -1,0 +1,14 @@
+{
+ "合并的两种形态": "Two shapes of merging",
+ "快进：主线没动过，直接把指针滑到新端": "Fast-forward: main line untouched — slide the pointer to the new tip",
+ "历史上没有": "History has no ",
+ "合并": "merge",
+ "这一步": " step",
+ "因为没必要。": " — there was no need.",
+ "三方合并：两边都动了，造一个有两个爹的新提交": "Three-way merge: both sides moved — create a new commit with two parents",
+ "同时记得": " remembers both ",
+ "和": " and ",
+ "；": "; ",
+ "若同一行两边都改了": "if both sides changed the same line",
+ "冲突，人来裁。": " → conflict; a human decides."
+}
