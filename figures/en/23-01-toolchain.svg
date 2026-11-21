@@ -20,8 +20,8 @@
 <path d="M 232 135 L 298 135" stroke="#000000" stroke-width="1.8" marker-end="url(#arr)"/>
 <path d="M 492 135 L 558 135" stroke="#000000" stroke-width="1.8" marker-end="url(#arr)"/>
 <path d="M 655 192 C 655 230 860 230 860 192" stroke="#999999" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
-<text x="760" y="248" font-size="9.4" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">Broke it? Roll back to the last good version</text>
+<text x="760" y="248" font-size="9.4" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">Broke it? Roll back to</text><text x="760" y="260.2" font-size="9.4" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">the last good version</text>
 <path d="M 860 80 C 860 40 135 40 135 78" stroke="#999999" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
 <text x="480" y="52" font-size="12" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">Fetch a version from history and keep editing</text>
-<text x="40" y="290" font-size="10.1" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">IDE is not a fifth tool but an integrator: the four in one window, aware of each other. The command-line combination and the IDE are equivalent; only the interface differs.</text>
+<text x="40" y="290" font-size="10.1" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">IDE is not a fifth tool but an integrator: the four in one window, aware of each other.</text><text x="40" y="303.1" font-size="10.1" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">The command-line combination and the IDE are equivalent; only the interface differs.</text>
 </svg>

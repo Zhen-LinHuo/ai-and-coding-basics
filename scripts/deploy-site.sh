@@ -5,6 +5,8 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
+python3 scripts/build-site.py              # refresh site-src (content + figures)
+python3 scripts/build-site.py --lang en    # refresh site-src-en
 mkdocs build --strict                      # -> site/cn
 mkdocs build --strict -f mkdocs-en.yml     # -> site/en
 

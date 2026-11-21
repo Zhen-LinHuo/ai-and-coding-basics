@@ -15,7 +15,7 @@
 <text x="520" y="130">The same model, wrapped in a layer of engineering:</text>
 <text x="520" y="158">· Memory: conversation history, files, decisions</text>
 <text x="520" y="186" font-size="13.0">· Tools: read files, run commands, browse, send requests</text>
-<text x="520" y="214">· Loop: do a step, see the result, decide the next one</text>
+<text x="520" y="214" font-size="13.3">· Loop: do a step, see the result, decide the next one</text>
 <text x="520" y="242">· Rules: when to stop, what must not be done</text>
 <text x="520" y="278" fill="#0072B2" font-size="13.5">The model is still the model; the harness adds</text>
 <text x="520" y="302" fill="#0072B2" font-size="13.5">hands, eyes and memory, not brains.</text>

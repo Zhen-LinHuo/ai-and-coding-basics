@@ -6,16 +6,16 @@
 <g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
 <rect x="40" y="70" width="400" height="170" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
 <text x="240" y="100" text-anchor="middle" font-weight="bold" fill="#0072B2">Compiled (C, Rust, Go)</text>
-<text x="60" y="130">Translate all into machine instructions, then run.</text>
+<text x="60" y="130" font-size="13.3">Translate all into machine instructions, then run.</text>
 <text x="60" y="158" fill="#009E73">Runs fast (instructions are native)</text>
 <text x="60" y="186" fill="#D55E00">Change one line and you must recompile</text>
 <text x="60" y="214" fill="#999999">Many errors caught at compile time</text>
 <rect x="500" y="70" width="400" height="170" rx="10" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
 <text x="700" y="100" text-anchor="middle" font-weight="bold" fill="#E69F00">Interpreted (Python, JS)</text>
-<text x="520" y="130" font-size="10.2">with a "simultaneous interpreter", reading and executing one line at a time.</text>
+<text x="520" y="130" font-size="10.2">with a "simultaneous interpreter", reading</text><text x="520" y="143.3" font-size="10.2">and executing one line at a time.</text>
 <text x="520" y="158" fill="#009E73">Runs right after editing — fast trial and error</text>
 <text x="520" y="186" fill="#D55E00">Runs slow (translating as it executes)</text>
-<text x="520" y="214" fill="#999999">Errors often blow up only when that line is reached</text>
+<text x="520" y="214" fill="#999999" font-size="12.9">Errors often blow up only when that line is reached</text>
 </g>
-<text x="40" y="276" font-size="9.0" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">Modern languages are mostly hybrids: Python compiles to bytecode, then the interpreter runs it; Java compiles to bytecode, then just-in-time to machine code at runtime. The boundary is a spectrum, not a binary.</text>
+<text x="40" y="276" font-size="9.0" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">Modern languages are mostly hybrids: Python compiles to bytecode, then the interpreter runs it; Java compiles</text><text x="40" y="287.7" font-size="9.0" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">to bytecode, then just-in-time to machine code at runtime. The boundary is a spectrum, not a binary.</text>
 </svg>

@@ -6,12 +6,12 @@
 <text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">From one neuron to a layer to many: "depth" — where the name came from</text>
 <g font-family="Noto Sans CJK SC, sans-serif">
 <rect x="40" y="70" width="250" height="150" rx="10" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
-<text x="56" y="98" font-size="15" font-weight="bold" fill="#D55E00">Single-layer perceptron (1960s)</text>
+<text x="56" y="98" font-size="13.8" font-weight="bold" fill="#D55E00">Single-layer perceptron (1960s)</text>
 <text x="56" y="124" font-size="13" fill="#000000">One layer of neurons, one</text>
 <text x="56" y="146" font-size="13" fill="#000000">straight boundary.</text>
 <text x="56" y="168" font-size="13" fill="#000000">XOR is a dead end.</text>
 <rect x="330" y="70" width="250" height="150" rx="10" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
-<text x="346" y="98" font-size="14" font-weight="bold" fill="#E69F00">Multilayer perceptron MLP (1986+)</text>
+<text x="346" y="98" font-size="12.9" font-weight="bold" fill="#E69F00">Multilayer perceptron MLP (1986+)</text>
 <text x="346" y="124" font-size="13" fill="#000000">Add a "hidden layer" in between</text>
 <text x="346" y="146" font-size="13" fill="#000000">and the boundary bends.</text>
 <text x="346" y="168" font-size="13" fill="#000000">XOR unlocked.</text>
@@ -26,7 +26,7 @@
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
 <text x="40" y="270" fill="#D55E00">Layers = 1, depth = 0</text>
 <text x="330" y="270" fill="#E69F00">Layers = 2, depth = 1</text>
-<text x="620" y="270" fill="#0072B2" font-size="11.7">Layers = dozens to hundreds — that is "depth"</text>
+<text x="620" y="270" fill="#0072B2" font-size="11.7">Layers = dozens to hundreds</text><text x="620" y="285.2" fill="#0072B2" font-size="11.7">— that is "depth"</text>
 </g>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
 <text x="40" y="330">Why "deep" beats "wide"? Compositional reuse: the small parts the first layer learns (edges, corners),</text>

@@ -13,8 +13,8 @@
 <text x="540" y="120" font-size="14" text-anchor="middle" fill="#000000" font-weight="bold" font-family="Noto Sans CJK SC, sans-serif">Tool results</text>
 <text x="730" y="120" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="bold" font-family="Noto Sans CJK SC, sans-serif">Left for the answer</text>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
-<text x="60" y="196" font-size="10.1">Four tenants fight over one pool: the system prompt is fixed rent; history grows with every turn; one page of tool results can cost thousands token tokens;</text>
-<text x="60" y="222" font-size="11.3">Too little slack and the answer has nowhere to go. harness The harness's daily job is deciding what to cut, what to keep, what to compress.</text>
+<text x="60" y="196" font-size="10.1">Four tenants fight over one pool: the system prompt is fixed rent; history grows</text><text x="60" y="209.1" font-size="10.1">with every turn; one page of tool results can cost thousands token tokens;</text>
+<text x="60" y="222" font-size="11.3">Too little slack and the answer has nowhere to go. harness The harness's</text><text x="60" y="236.7" font-size="11.3">daily job is deciding what to cut, what to keep, what to compress.</text>
 <text x="60" y="258" fill="#D55E00">When it fills up: drop history (amnesia), compress (lose detail), or error out (refuse to work).</text>
 </g>
 </svg>

@@ -5,16 +5,19 @@
 <text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Seventy years: three changes of lead</text>
 <line x1="60" y1="230" x2="880" y2="230" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
 <g font-family="Noto Sans CJK SC, sans-serif" font-size="13" fill="#000000">
-<text x="60" y="62" fill="#D55E00">Symbolism's golden age: proving theorems, writing rules, confidence</text>
-<text x="60" y="79" fill="#D55E00">peaking in a famous claim — " machines will be able to do any work a</text>
-<text x="60" y="96" fill="#D55E00">person can within a generation ".</text>
-<text x="60" y="119" fill="#999999">(It never came true. The price was two "AI winters": funding withdrawn,</text>
-<text x="60" y="136" fill="#999999">the field renamed itself to survive.)</text>
-<text x="530" y="62" fill="#0072B2">Connectionism survived both winters: 1986 backpropagation solved</text>
-<text x="530" y="79" fill="#0072B2">"how multilayer networks learn", and 2012 compute and data finally</text>
-<text x="530" y="96" fill="#0072B2">caught up.</text>
-<text x="530" y="119" fill="#009E73">Behaviourism runs all the way through, from cybernetics to</text>
-<text x="530" y="136" fill="#009E73">reinforcement learning — never the headline, never off stage.</text>
+<text x="60" y="62" fill="#D55E00" font-size="12">Symbolism's golden age: proving theorems, writing</text>
+<text x="60" y="76" fill="#D55E00" font-size="12">rules, confidence peaking in a famous claim —</text>
+<text x="60" y="90" fill="#D55E00" font-size="12">" machines will be able to do any work a person</text>
+<text x="60" y="104" fill="#D55E00" font-size="12">can within a generation ".</text>
+<text x="60" y="120" fill="#999999" font-size="12">(It never came true. The price was two "AI winters":</text>
+<text x="60" y="134" fill="#999999" font-size="12">funding withdrawn, the field renamed itself.)</text>
+<text x="530" y="62" fill="#0072B2">Connectionism survived both winters:</text>
+<text x="530" y="78" fill="#0072B2">1986 backpropagation solved</text>
+<text x="530" y="94" fill="#0072B2">"how multilayer networks learn",</text>
+<text x="530" y="110" fill="#0072B2">and 2012 compute and data caught up.</text>
+<text x="530" y="126" fill="#009E73" font-size="12">Behaviourism runs all the way through,</text>
+<text x="530" y="139" fill="#009E73" font-size="12">from cybernetics to reinforcement</text>
+<text x="530" y="152" fill="#009E73" font-size="12">learning — never the headline.</text>
 <circle cx="110" cy="230" r="9" fill="#D55E00"/>
 <text x="110" y="204" font-size="12.5" text-anchor="middle">1956</text>
 <text x="110" y="188" font-size="12.5" text-anchor="middle">Dartmouth conference</text>

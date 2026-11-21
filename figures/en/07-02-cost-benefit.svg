@@ -13,7 +13,7 @@
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
 <text x="600" y="110" fill="#0072B2">Multi-agent: wins on complex tasks</text>
 <text x="300" y="196" fill="#999999">Single agent: enough and cheaper on simple tasks</text>
-<text x="560" y="248" fill="#D55E00" font-size="12.3">Past the line: coordination cost eats the gain</text>
-<text x="140" y="372" fill="#999999" font-size="10.6">Dashed line = multi-agent gain: starts in the red (coordination overhead), catches up, overtakes, then sinks under its own chaos.</text>
+<text x="560" y="248" fill="#D55E00" font-size="12.3">Past the line: coordination</text><text x="560" y="264.0" fill="#D55E00" font-size="12.3">cost eats the gain</text>
+<text x="140" y="372" fill="#999999" font-size="10.6">Dashed line = multi-agent gain: starts in the red (coordination overhead),</text><text x="140" y="385.8" fill="#999999" font-size="10.6">catches up, overtakes, then sinks under its own chaos.</text>
 </g>
 </svg>

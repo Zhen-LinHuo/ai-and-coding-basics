@@ -13,7 +13,7 @@
 <text x="360" y="120" text-anchor="middle">Hidden layer</text>
 <text x="580" y="185" text-anchor="middle">Output layer</text>
 <text x="60" y="428">Grey: forward pass (left to right, giving the prediction).</text>
-<text x="60" y="452">Red: backprop (right to left, layer by layer saying "how much of this error is yours").</text>
-<text x="60" y="476">Each weight is turned by its share of blame — more for the guilty, less for the rest.</text>
+<text x="60" y="452" font-size="14.0">Red: backprop (right to left, layer by layer</text><text x="60" y="470.2" font-size="14.0">saying "how much of this error is yours").</text>
+<text x="60" y="488.4">Each weight is turned by its share of blame — more for the guilty, less for the rest.</text>
 </g>
 </svg>

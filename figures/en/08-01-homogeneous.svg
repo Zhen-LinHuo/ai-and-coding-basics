@@ -8,7 +8,7 @@
 <text x="245" y="100" text-anchor="middle" font-weight="bold" fill="#999999">Homogeneous (CPU): all-rounder workers</text>
 <rect x="90" y="130" width="100" height="50" rx="6" fill="#56B4E9" fill-opacity="0.3" stroke="#999999" stroke-width="1.2"/><text x="140" y="160" text-anchor="middle" font-size="12">Core 1</text><rect x="210" y="130" width="100" height="50" rx="6" fill="#56B4E9" fill-opacity="0.3" stroke="#999999" stroke-width="1.2"/><text x="260" y="160" text-anchor="middle" font-size="12">Core 2</text><rect x="330" y="130" width="100" height="50" rx="6" fill="#56B4E9" fill-opacity="0.3" stroke="#999999" stroke-width="1.2"/><text x="380" y="160" text-anchor="middle" font-size="12">Core 3</text><rect x="90" y="200" width="100" height="50" rx="6" fill="#56B4E9" fill-opacity="0.3" stroke="#999999" stroke-width="1.2"/><text x="140" y="230" text-anchor="middle" font-size="12">Core 4</text><rect x="210" y="200" width="100" height="50" rx="6" fill="#56B4E9" fill-opacity="0.3" stroke="#999999" stroke-width="1.2"/><text x="260" y="230" text-anchor="middle" font-size="12">Core 5</text><rect x="330" y="200" width="100" height="50" rx="6" fill="#56B4E9" fill-opacity="0.3" stroke="#999999" stroke-width="1.2"/><text x="380" y="230" text-anchor="middle" font-size="12">Core 6</text>
 <text x="60" y="262" fill="#999999">It does everything: logic, jumps, serial tasks.</text>
-<text x="60" y="282" font-size="10.5" fill="#999999">But "100 million multiply-adds" is grunt work, and its efficiency is only so-so.</text>
+<text x="60" y="282" font-size="8.9" fill="#999999">But "100 million multiply-adds" is grunt work, and its efficiency is only so-so.</text>
 
 <rect x="500" y="70" width="410" height="220" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
 <text x="705" y="100" text-anchor="middle" font-weight="bold" fill="#0072B2">Heterogeneous (GPU/accelerators): a team of specialists</text>
@@ -17,5 +17,5 @@
 <text x="520" y="256" fill="#0072B2" font-size="10.5">same multiply-add at once.</text>
 <text x="520" y="278" fill="#0072B2" font-size="10.5">Neural networks are piles of independent multiply-adds.</text>
 </g>
-<text x="40" y="330" font-size="12.2" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">That is why AI era GPUs got so expensive: the main work of neural networks (matrix multiplication) is exactly what GPU is best at "dumb work".</text>
+<text x="40" y="330" font-size="12.2" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">That is why AI era GPUs got so expensive: the main work of neural networks</text><text x="40" y="345.9" font-size="12.2" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">(matrix multiplication) is exactly what GPU is best at "dumb work".</text>
 </svg>

@@ -7,31 +7,31 @@
 <g font-family="Noto Sans CJK SC, sans-serif" font-size="12.5" fill="#000000">
 <rect x="40" y="58" width="270" height="290" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
 <text x="56" y="86" font-size="15" font-weight="bold" fill="#0072B2">Supervised learning</text>
-<text x="56" y="112">Signal: every example comes with the answer</text>
+<text x="56" y="112" font-size="10.2">Signal: every example comes with the answer</text>
 <text x="56" y="136">(this email is "spam/normal")</text>
-<text x="56" y="170">Question: what label does a new one get?</text>
-<text x="56" y="204">Typical: classification, prediction, translation</text>
-<text x="56" y="238" fill="#999999">Cost: labels take people, money, time</text>
-<text x="56" y="272" fill="#D55E00">Weakness: only answers "seen before"</text>
-<text x="56" y="296" fill="#D55E00">questions; new situations derail it</text>
+<text x="56" y="170" font-size="10.9">Question: what label does a new one get?</text>
+<text x="56" y="204" font-size="9.2">Typical: classification, prediction, translation</text>
+<text x="56" y="238" fill="#999999" font-size="11.8">Cost: labels take people, money, time</text>
+<text x="56" y="272" fill="#D55E00" font-size="12.9">Weakness: only answers "seen before"</text>
+<text x="56" y="296" fill="#D55E00" font-size="12.9">questions; new situations derail it</text>
 <rect x="335" y="58" width="270" height="290" rx="10" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
 <text x="351" y="86" font-size="15" font-weight="bold" fill="#E69F00">Unsupervised learning</text>
-<text x="351" y="112">Signal: no answers, only the data itself</text>
-<text x="351" y="136">(ten thousand emails, none labelled)</text>
-<text x="351" y="170">Question: what shape does the data have?</text>
-<text x="351" y="204">Typical: clustering, dimension reduction</text>
-<text x="351" y="238" fill="#999999">Cost: hard to judge if the result is good</text>
-<text x="351" y="272" fill="#D55E00">Weakness: the "structure" it finds need not be</text>
+<text x="351" y="112" font-size="10.9">Signal: no answers, only the data itself</text>
+<text x="351" y="136" font-size="12.9">(ten thousand emails, none labelled)</text>
+<text x="351" y="170" font-size="10.9">Question: what shape does the data have?</text>
+<text x="351" y="204" font-size="10.9">Typical: clustering, dimension reduction</text>
+<text x="351" y="238" fill="#999999" font-size="10.9">Cost: hard to judge if the result is good</text>
+<text x="351" y="272" fill="#D55E00" font-size="10.0">Weakness: the "structure" it finds need not be</text>
 <text x="351" y="296" fill="#D55E00">the structure you wanted</text>
 <rect x="630" y="58" width="270" height="290" rx="10" fill="#ffffff" stroke="#009E73" stroke-width="2"/>
 <text x="646" y="86" font-size="15" font-weight="bold" fill="#009E73">Reinforcement learning</text>
 <text x="646" y="112">Signal: no answers, only a score</text>
-<text x="646" y="136" font-size="12">(how the whole game went after this move)</text>
+<text x="646" y="136" font-size="11.0">(how the whole game went after this move)</text>
 <text x="646" y="170">Question: what action comes next?</text>
-<text x="646" y="204">Typical: chess, robotics, scheduling</text>
-<text x="646" y="238" fill="#999999">Cost: trial and error needs real stakes</text>
-<text x="646" y="272" fill="#D55E00">Weakness: the score is late and sparse,</text>
-<text x="646" y="296" fill="#D55E00">"was this step good or bad" is hard to say</text>
+<text x="646" y="204" font-size="12.9">Typical: chess, robotics, scheduling</text>
+<text x="646" y="238" fill="#999999" font-size="14.0">Cost: trial and error</text><text x="646" y="256.2" fill="#999999" font-size="14.0">needs real stakes</text>
+<text x="646" y="272" fill="#D55E00" font-size="14.0">Weakness: the score</text><text x="646" y="290.2" fill="#D55E00" font-size="14.0">is late and sparse,</text>
+<text x="646" y="308.4" fill="#D55E00" font-size="14.0">"was this step good or</text><text x="646" y="326.6" fill="#D55E00" font-size="14.0">bad" is hard to say</text>
 </g>
-<text x="40" y="382" font-size="13.6" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">One ruler: ask "what you hold while learning" — answers (supervised), data alone (unsupervised), a score alone (reinforcement).</text>
+<text x="40" y="376" font-size="12.4" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">One ruler: ask "what you hold while learning" — answers (supervised),</text><text x="40" font-size="12.4" font-family="Noto Sans CJK SC, sans-serif" fill="#000000" y="393">data alone (unsupervised), a score alone (reinforcement).</text>
 </svg>

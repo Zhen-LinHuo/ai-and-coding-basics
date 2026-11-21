@@ -13,12 +13,12 @@
 <text x="670" y="130" font-size="13" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Q(KᵀV) : first use K andV  to accumulate a state matrix</text>
 <text x="670" y="154" font-size="13" text-anchor="middle" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">compute and memory ~ n</text>
 <path d="M 425 120 L 475 120" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
-<text x="450" y="108" font-size="10" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">associativity</text>
-<text x="450" y="142" font-size="10" text-anchor="middle" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">same result</text>
+<text x="385" y="108" font-size="7.5" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">associativity</text>
+<text x="450" y="142" font-size="8.5" text-anchor="middle" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">same result</text>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
 <text x="60" y="230">the only cost:softmax  is gone. Remove"normalisation", and the weighted average can be rewritten as</text>
 <text x="60" y="256">"state accumulated with each input", a recurrence——that is, an RNN  form.</text>
-<text x="60" y="292" fill="#0072B2" font-size="13.6">So one network can take two shapes: trains like attention (parallel), infers like RNN (step by step, cheap on memory).</text>
-<text x="60" y="318" fill="#999999">This is"linear attention": replace n² with n, at a slight cost in expressiveness——, hence hybrids (next figure).</text>
+<text x="60" y="292" fill="#0072B2" font-size="13.6">So one network can take two shapes: trains like attention (parallel),</text><text x="60" y="309.7" fill="#0072B2" font-size="13.6">infers like RNN (step by step, cheap on memory).</text>
+<text x="60" y="327.9" fill="#999999" font-size="14.0">This is"linear attention": replace n² with n, at a slight</text><text x="60" y="346.1" fill="#999999" font-size="14.0">cost in expressiveness——, hence hybrids (next figure).</text>
 </g>
 </svg>

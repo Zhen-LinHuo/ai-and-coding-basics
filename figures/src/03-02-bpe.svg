@@ -12,7 +12,7 @@
 <g font-family="Noto Sans CJK SC, sans-serif" font-size="15" fill="#000000">
 <text x="330" y="86">t · o · k · e · n   （5 格）</text>
 <path d="M 470 80 L 520 80" stroke="#999999" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="530" y="86">统计语料发现 "to" 常见</text>
+<text x="560" y="86">统计语料发现 "to" 常见</text>
 <path d="M 740 80 L 790 80" stroke="#999999" stroke-width="1.5" marker-end="url(#arr)"/>
 <text x="800" y="86">合并 →</text>
 <text x="330" y="156">to · k · e · n   （4 格）</text>

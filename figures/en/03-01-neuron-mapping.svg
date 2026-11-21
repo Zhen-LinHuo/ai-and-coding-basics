@@ -14,7 +14,7 @@
 <path d="M 208 176 L 330 176" stroke="#009E73" stroke-width="3" fill="none"/>
 <path d="M 330 176 L 366 162 M 330 176 L 366 190" stroke="#009E73" stroke-width="2.5" fill="none"/>
 <text x="58" y="86" font-size="14" fill="#E69F00" font-family="Noto Sans CJK SC, sans-serif">Dendrite</text>
-<text x="248" y="206" font-size="14" fill="#009E73" font-family="Noto Sans CJK SC, sans-serif">Axon</text>
+<text x="220" y="206" font-size="14" fill="#009E73" font-family="Noto Sans CJK SC, sans-serif">Axon</text>
 <text x="352" y="222" font-size="14" fill="#009E73" font-family="Noto Sans CJK SC, sans-serif">Terminal</text>
 <!-- middle mapping -->
 <g font-size="15" fill="#CC79A7" font-family="Noto Sans CJK SC, sans-serif">

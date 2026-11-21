@@ -19,7 +19,7 @@
 <path d="M 745 168 C 745 230 200 230 170 168" stroke="#999999" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
 <text x="470" y="252" font-size="13" text-anchor="middle" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">loop for dozens of steps</text>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
-<text x="60" y="300" font-size="11.6">one denoising network, a new prompt means a new picture—"what to draw" is set by the prompt;"how finely it is drawn" is set by the network.</text>
-<text x="60" y="328" fill="#0072B2" font-size="9.5">This is called text guidance (classifier-free guidance): training randomly blanks the prompt, so the network learns both" unconditional drawing" and" conditional drawing".</text>
+<text x="60" y="300" font-size="11.6">one denoising network, a new prompt means a new picture—"what to draw"</text><text x="60" y="315.1" font-size="11.6">is set by the prompt;"how finely it is drawn" is set by the network.</text>
+<text x="60" y="328" fill="#0072B2" font-size="9.5">This is called text guidance (classifier-free guidance): training randomly blanks the</text><text x="60" y="340.4" fill="#0072B2" font-size="9.5">prompt, so the network learns both" unconditional drawing" and" conditional drawing".</text>
 </g>
 </svg>

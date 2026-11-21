@@ -21,6 +21,6 @@
 <path d="M 240 240 L 320 256" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
 <path d="M 240 288 L 320 268" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
 <text x="380" y="262" fill="#999999" font-size="12">M remembers both B and C; </text>
-<text x="380" y="282" fill="#999999" font-size="9.0">if both sides changed the same line → conflict; a human decides.</text>
+<text x="380" y="282" fill="#999999" font-size="9.0">if both sides changed the same line</text><text x="380" y="293.7" fill="#999999" font-size="9.0">→ conflict; a human decides.</text>
 </g>
 </svg>

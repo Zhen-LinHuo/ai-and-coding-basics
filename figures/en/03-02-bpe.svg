@@ -10,14 +10,14 @@
 <text x="160" y="180" text-anchor="middle">Common pairs: one chunk</text>
 </g>
 <g font-family="Noto Sans CJK SC, sans-serif" font-size="15" fill="#000000">
-<text x="330" y="86">t · o · k · e · n (5 cells)</text>
-<path d="M 470 80 L 520 80" stroke="#999999" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="530" y="86">Corpus: "to" is frequent</text>
-<path d="M 740 80 L 790 80" stroke="#999999" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="800" y="86">merge →</text>
-<text x="330" y="156">to · k · e · n (4 cells)</text>
-<path d="M 470 150 L 520 150" stroke="#999999" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="530" y="150">"ke" too</text>
+<text x="330" y="86" font-size="14">t · o · k · e · n (5 cells)</text>
+<path d="M 512 80 L 546 80" stroke="#999999" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="556" y="86" font-size="14">Corpus: "to" is frequent</text>
+<path d="M 764 80 L 792 80" stroke="#999999" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="796" y="86" font-size="14">merge →</text>
+<text x="330" y="156" font-size="14">to · k · e · n (4 cells)</text>
+<path d="M 512 150 L 546 150" stroke="#999999" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="556" y="156" font-size="14">"ke" too</text>
 <text x="330" y="226">to · ken (2 cells)</text>
 </g>
 <g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">

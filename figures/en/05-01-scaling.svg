@@ -11,6 +11,6 @@
 <text x="430" y="170" font-size="13" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">measured points fall almost on a straight line</text>
 <text x="430" y="194" font-size="10.0" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">each doubling on the x-axis drops the y-axis by a fixed number of steps</text>
 <text x="430" y="218" font-size="13" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">——that is all"power law"means</text>
-<text x="100" y="376" font-size="13.7" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Switch to ordinary axes and it is an ever-flatter curve: loss still falls, but each step costs more.</text>
-<text x="100" y="402" font-size="12.8" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">What log-log axes do is"straighten"an exponential relation into a line, for easy extrapolation and pricing.</text>
+<text x="100" y="376" font-size="13.7" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Switch to ordinary axes and it is an ever-flatter</text><text x="100" y="393.8" font-size="13.7" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">curve: loss still falls, but each step costs more.</text>
+<text x="100" y="411.6" font-size="12.8" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">What log-log axes do is"straighten"an exponential relation</text><text x="100" y="428.2" font-size="12.8" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">into a line, for easy extrapolation and pricing.</text>
 </svg>

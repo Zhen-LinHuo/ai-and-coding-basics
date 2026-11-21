@@ -12,6 +12,6 @@
 <text x="110" y="210" font-family="monospace">LICENSE</text><text x="330" y="210" fill="#999999" font-size="12">Legal identity</text>
 <text x="110" y="236" font-family="monospace">Config beyond the README…</text><text x="330" y="236" fill="#999999" font-size="12">Build and dependency declarations</text>
 </g>
-<text x="60" y="292" font-size="9.6" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">The value of convention: location is documentation. "Where are the tests?" No need to ask — the convention answered.</text>
+<text x="60" y="292" font-size="9.6" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">The value of convention: location is documentation. "Where</text><text x="60" y="304.5" font-size="9.6" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">are the tests?" No need to ask — the convention answered.</text>
 <text x="60" y="318" font-size="13" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">A clever structure of your own levies an "understanding tax" on every newcomer.</text>
 </svg>

@@ -16,5 +16,5 @@
 <rect x="325" y="230" width="170" height="110" fill="#009E73" fill-opacity="0.5" stroke="#000000"/><text x="410" y="290" text-anchor="middle">Usable</text>
 <rect x="500" y="230" width="170" height="110" fill="#E69F00" fill-opacity="0.4" stroke="#000000"/><text x="585" y="272" text-anchor="middle">A network service</text><text x="585" y="291" text-anchor="middle">isn't distribution</text><text x="585" y="310" text-anchor="middle" font-size="12" fill="#999999">(GPL no, AGPL yes)</text>
 </g>
-<text x="40" y="382" font-size="9.0" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">How to read: rows are "my project", columns are "the code I bring in". Green = yes; orange = conditional. The table to check before choosing a licence.</text>
+<text x="40" y="382" font-size="9.0" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">How to read: rows are "my project", columns are "the code I bring in". Green</text><text x="40" y="393.7" font-size="9.0" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">= yes; orange = conditional. The table to check before choosing a licence.</text>
 </svg>

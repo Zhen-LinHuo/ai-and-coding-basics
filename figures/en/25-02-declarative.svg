@@ -19,5 +19,5 @@
 <text x="520" y="214" fill="#999999">converges on the same destination.</text>
 <text x="520" y="244" fill="#009E73">Reinstall = re-declare, not re-remember.</text>
 </g>
-<text x="40" y="310" font-size="12.1" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">Imperative knowledge lives in heads and chat logs; declarative knowledge lives in the repository — version-controlled, reviewable, revertible.</text>
+<text x="40" y="310" font-size="12.1" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">Imperative knowledge lives in heads and chat logs; declarative knowledge</text><text x="40" y="325.7" font-size="12.1" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">lives in the repository — version-controlled, reviewable, revertible.</text>
 </svg>

@@ -28,6 +28,6 @@
 <rect x="742" y="90" width="90" height="120" rx="10" fill="#E69F00"/>
 <text x="787" y="146" text-anchor="middle" fill="#ffffff" font-size="15">"spring"</text>
 <path d="M 787 214 C 787 260 500 260 120 226" stroke="#999999" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
-<text x="440" y="266" font-size="9.0" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">append to the end of the input, run again——that is how a poem grows one character at a time</text>
-<text x="40" y="392" font-size="13.9" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">what you see"a fluent long text"all of it is this loop running hundreds of times: each pass adds one character.</text>
+<text x="440" y="266" font-size="9.0" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">append to the end of the input, run again——that</text><text x="440" y="277.7" font-size="9.0" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">is how a poem grows one character at a time</text>
+<text x="40" y="392" font-size="13.9" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">what you see"a fluent long text"all of it is this loop running</text><text x="40" y="410.1" font-size="13.9" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">hundreds of times: each pass adds one character.</text>
 </svg>
