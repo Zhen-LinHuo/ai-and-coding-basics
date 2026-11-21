@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="34" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">存：把图案写进连线权重</text>
+<rect x="60" y="60" width="52" height="52" fill="#ffffff" stroke="#000000" stroke-width="1.5"/><rect x="112" y="60" width="52" height="52" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><rect x="164" y="60" width="52" height="52" fill="#ffffff" stroke="#000000" stroke-width="1.5"/><rect x="60" y="112" width="52" height="52" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><rect x="112" y="112" width="52" height="52" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><rect x="164" y="112" width="52" height="52" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><rect x="60" y="164" width="52" height="52" fill="#ffffff" stroke="#000000" stroke-width="1.5"/><rect x="112" y="164" width="52" height="52" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><rect x="164" y="164" width="52" height="52" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<text x="86" y="52" font-size="13" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">存入图案：「十」</text>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="250" y="86">九颗神经元两两相连，共 36 条连线；</text>
+<text x="250" y="110">存的那一刻按一个规则定死：</text>
+<text x="250" y="140" fill="#009E73">图案里同色的两颗，权重 +1（绿线）</text>
+<text x="250" y="164" fill="#D55E00">图案里异色的两颗，权重 -1（朱虚线）</text>
+<text x="250" y="194">不需要任何训练，权重就是记忆。</text>
+</g>
+<text x="560" y="52" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">36 条连线，中心那颗的 8 条加粗</text>
+<line x1="582" y1="86" x2="626" y2="86" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<line x1="582" y1="86" x2="670" y2="86" stroke="#009E73" stroke-width="1.0"/>
+<line x1="582" y1="86" x2="582" y2="130" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<line x1="582" y1="86" x2="626" y2="130" stroke="#D55E00" stroke-width="2.2" stroke-dasharray="5 3"/>
+<line x1="582" y1="86" x2="670" y2="130" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<line x1="582" y1="86" x2="582" y2="174" stroke="#009E73" stroke-width="1.0"/>
+<line x1="582" y1="86" x2="626" y2="174" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<line x1="582" y1="86" x2="670" y2="174" stroke="#009E73" stroke-width="1.0"/>
+<line x1="626" y1="86" x2="670" y2="86" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<line x1="626" y1="86" x2="582" y2="130" stroke="#009E73" stroke-width="1.0"/>
+<line x1="626" y1="86" x2="626" y2="130" stroke="#009E73" stroke-width="2.2"/>
+<line x1="626" y1="86" x2="670" y2="130" stroke="#009E73" stroke-width="1.0"/>
+<line x1="626" y1="86" x2="582" y2="174" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<line x1="626" y1="86" x2="626" y2="174" stroke="#009E73" stroke-width="1.0"/>
+<line x1="626" y1="86" x2="670" y2="174" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<line x1="670" y1="86" x2="582" y2="130" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<line x1="670" y1="86" x2="626" y2="130" stroke="#D55E00" stroke-width="2.2" stroke-dasharray="5 3"/>
+<line x1="670" y1="86" x2="670" y2="130" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<line x1="670" y1="86" x2="582" y2="174" stroke="#009E73" stroke-width="1.0"/>
+<line x1="670" y1="86" x2="626" y2="174" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<line x1="670" y1="86" x2="670" y2="174" stroke="#009E73" stroke-width="1.0"/>
+<line x1="582" y1="130" x2="626" y2="130" stroke="#009E73" stroke-width="2.2"/>
+<line x1="582" y1="130" x2="670" y2="130" stroke="#009E73" stroke-width="1.0"/>
+<line x1="582" y1="130" x2="582" y2="174" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<line x1="582" y1="130" x2="626" y2="174" stroke="#009E73" stroke-width="1.0"/>
+<line x1="582" y1="130" x2="670" y2="174" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<line x1="626" y1="130" x2="670" y2="130" stroke="#009E73" stroke-width="2.2"/>
+<line x1="626" y1="130" x2="582" y2="174" stroke="#D55E00" stroke-width="2.2" stroke-dasharray="5 3"/>
+<line x1="626" y1="130" x2="626" y2="174" stroke="#009E73" stroke-width="2.2"/>
+<line x1="626" y1="130" x2="670" y2="174" stroke="#D55E00" stroke-width="2.2" stroke-dasharray="5 3"/>
+<line x1="670" y1="130" x2="582" y2="174" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<line x1="670" y1="130" x2="626" y2="174" stroke="#009E73" stroke-width="1.0"/>
+<line x1="670" y1="130" x2="670" y2="174" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<line x1="582" y1="174" x2="626" y2="174" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<line x1="582" y1="174" x2="670" y2="174" stroke="#009E73" stroke-width="1.0"/>
+<line x1="626" y1="174" x2="670" y2="174" stroke="#D55E00" stroke-width="1.0" stroke-dasharray="5 3"/>
+<circle cx="582" cy="86" r="16" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<circle cx="626" cy="86" r="16" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<circle cx="670" cy="86" r="16" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<circle cx="582" cy="130" r="16" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<circle cx="626" cy="130" r="16" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/>
+<circle cx="670" cy="130" r="16" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<circle cx="582" cy="174" r="16" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<circle cx="626" cy="174" r="16" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<circle cx="670" cy="174" r="16" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+
+<text x="20" y="272" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">再现：弄脏的进，完整的出</text>
+<text x="86" y="296" font-size="13" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">送进（中心被抹掉）</text>
+<rect x="60" y="308" width="52" height="52" fill="#ffffff" stroke="#000000" stroke-width="1.5"/><rect x="112" y="308" width="52" height="52" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><rect x="164" y="308" width="52" height="52" fill="#ffffff" stroke="#000000" stroke-width="1.5"/><rect x="60" y="360" width="52" height="52" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><rect x="112" y="360" width="52" height="52" fill="#ffffff" stroke="#D55E00" stroke-width="2" stroke-dasharray="5 3"/><rect x="164" y="360" width="52" height="52" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><rect x="60" y="412" width="52" height="52" fill="#ffffff" stroke="#000000" stroke-width="1.5"/><rect x="112" y="412" width="52" height="52" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><rect x="164" y="412" width="52" height="52" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<path d="M 260 384 L 470 384" stroke="#0072B2" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="556" y="296" font-size="13" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">刷完一轮（完整了）</text>
+<rect x="556" y="308" width="52" height="52" fill="#ffffff" stroke="#000000" stroke-width="1.5"/><rect x="608" y="308" width="52" height="52" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><rect x="660" y="308" width="52" height="52" fill="#ffffff" stroke="#000000" stroke-width="1.5"/><rect x="556" y="360" width="52" height="52" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><rect x="608" y="360" width="52" height="52" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><rect x="660" y="360" width="52" height="52" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><rect x="556" y="412" width="52" height="52" fill="#ffffff" stroke="#000000" stroke-width="1.5"/><rect x="608" y="412" width="52" height="52" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><rect x="660" y="412" width="52" height="52" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="60" y="500" fill="#0072B2">一轮投票：每颗神经元把 8 个同伴的颜色乘上连线权重加总，和为正就亮，为负就暗。</text>
+<text x="60" y="526">中心那颗收到 +8，重新亮起；朱红虚线框标出被抹掉的像素。</text>
+</g>
+</svg>

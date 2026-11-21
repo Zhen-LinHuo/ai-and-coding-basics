@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="300" viewBox="0 0 920 300">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">七十年：三次换主角</text>
+<line x1="60" y1="200" x2="880" y2="200" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="13" fill="#000000">
+<circle cx="120" cy="200" r="9" fill="#D55E00"/><text x="120" y="176" text-anchor="middle">1956</text>
+<text x="120" y="234" text-anchor="middle">达特茅斯会议</text>
+<text x="120" y="252" text-anchor="middle">符号主义开场</text>
+<circle cx="270" cy="200" r="9" fill="#0072B2"/><text x="270" y="176" text-anchor="middle">1958</text>
+<text x="270" y="234" text-anchor="middle">感知机</text>
+<text x="270" y="252" text-anchor="middle">连接主义首秀</text>
+<circle cx="400" cy="200" r="9" fill="#999999"/><text x="400" y="176" text-anchor="middle">1969</text>
+<text x="400" y="234" text-anchor="middle">XOR 批评</text>
+<text x="400" y="252" text-anchor="middle">连接主义入冬</text>
+<circle cx="520" cy="200" r="9" fill="#E69F00"/><text x="520" y="176" text-anchor="middle">1980s</text>
+<text x="520" y="234" text-anchor="middle">专家系统商业潮</text>
+<text x="520" y="252" text-anchor="middle">随后退潮</text>
+<circle cx="640" cy="200" r="9" fill="#0072B2"/><text x="640" y="176" text-anchor="middle">1986</text>
+<text x="640" y="234" text-anchor="middle">反向传播</text>
+<text x="640" y="252" text-anchor="middle">连接主义复苏</text>
+<circle cx="760" cy="200" r="9" fill="#0072B2"/><text x="760" y="176" text-anchor="middle">2012</text>
+<text x="760" y="234" text-anchor="middle">深度学习爆发</text>
+<text x="760" y="252" text-anchor="middle">此后成为主角</text>
+</g>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<text x="60" y="86" fill="#D55E00">符号主义的黄金年代：证明定理、编写规则，</text>
+<text x="60" y="108" fill="#D55E00">信心最高点是一句著名的断言——"机器将能在一代人内完成人能做的一切工作"。</text>
+<text x="60" y="140" fill="#999999">（这句话没兑现，兑现代价的是两次"AI 寒冬"：经费撤离、领域改名自保。）</text>
+<text x="560" y="86" fill="#0072B2">连接主义的两个冬天都熬了过来：1986 年反向传播解决了</text>
+<text x="560" y="108" fill="#0072B2">"多层网络怎么学"，2012 年算力和数据终于跟上。</text>
+<text x="560" y="140" fill="#009E73">行为主义贯穿始终，从控制论到强化学习，从不当头条但从不退场。</text>
+</g>
+
+</svg>

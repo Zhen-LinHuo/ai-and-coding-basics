@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">两颗神经元，各自折一下；加起来，就是一条 V 形的线</text>
+<line x1="130" y1="340" x2="450" y2="340" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="150" y1="360" x2="150" y2="70" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="456" y="344" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">x</text>
+<text x="128" y="66" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">y</text>
+<polyline points="150,330 155,330 159,330 164,330 169,330 174,330 178,330 183,330 188,330 193,330 197,330 202,330 207,330 212,330 216,330 221,330 226,330 231,330 235,330 240,330 245,330 250,330 254,330 259,330 264,330 269,330 273,330 278,330 283,330 288,330 292,330 297,330 302,330 307,330 311,330 316,330 321,330 326,330 330,330 335,330 340,327 345,323 349,319 354,315 359,311 364,307 368,303 373,299 378,295 383,291 387,287 392,283 397,278 402,274 406,270 411,266 416,262 421,258 425,254 430,250" fill="none" stroke="#009E73" stroke-width="2.2"/>
+<polyline points="150,170 155,174 159,178 164,182 169,186 174,190 178,194 183,198 188,203 193,207 197,211 202,215 207,219 212,223 216,227 221,231 226,235 231,239 235,243 240,247 245,251 250,255 254,259 259,264 264,268 269,272 273,276 278,280 283,284 288,288 292,292 297,296 302,300 307,304 311,308 316,312 321,316 326,321 330,325 335,329 340,330 345,330 349,330 354,330 359,330 364,330 368,330 373,330 378,330 383,330 387,330 392,330 397,330 402,330 406,330 411,330 416,330 421,330 425,330 430,330" fill="none" stroke="#D55E00" stroke-width="2.2"/>
+<polyline points="150,170 155,174 159,178 164,182 169,186 174,190 178,194 183,198 188,203 193,207 197,211 202,215 207,219 212,223 216,227 221,231 226,235 231,239 235,243 240,247 245,251 250,255 254,259 259,264 264,268 269,272 273,276 278,280 283,284 288,288 292,292 297,296 302,300 307,304 311,308 316,312 321,316 326,321 330,325 335,329 340,327 345,323 349,319 354,315 359,311 364,307 368,303 373,299 378,295 383,291 387,287 392,283 397,278 402,274 406,270 411,266 416,262 421,258 425,254 430,250" fill="none" stroke="#0072B2" stroke-width="3.5"/>
+<circle cx="169" cy="186" r="5.5" fill="#E69F00" stroke="#ffffff" stroke-width="1"/><circle cx="193" cy="207" r="5.5" fill="#E69F00" stroke="#ffffff" stroke-width="1"/><circle cx="217" cy="228" r="5.5" fill="#E69F00" stroke="#ffffff" stroke-width="1"/><circle cx="241" cy="248" r="5.5" fill="#E69F00" stroke="#ffffff" stroke-width="1"/><circle cx="266" cy="269" r="5.5" fill="#E69F00" stroke="#ffffff" stroke-width="1"/><circle cx="290" cy="290" r="5.5" fill="#E69F00" stroke="#ffffff" stroke-width="1"/><circle cx="314" cy="311" r="5.5" fill="#E69F00" stroke="#ffffff" stroke-width="1"/><circle cx="339" cy="328" r="5.5" fill="#E69F00" stroke="#ffffff" stroke-width="1"/><circle cx="363" cy="308" r="5.5" fill="#E69F00" stroke="#ffffff" stroke-width="1"/><circle cx="387" cy="287" r="5.5" fill="#E69F00" stroke="#ffffff" stroke-width="1"/><circle cx="411" cy="266" r="5.5" fill="#E69F00" stroke="#ffffff" stroke-width="1"/>
+<g font-size="13" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="330" y="250" fill="#009E73">神经元 1 的输出</text>
+<text x="70" y="250" fill="#D55E00">神经元 2 的输出</text>
+<text x="180" y="150" fill="#0072B2">两者相加 = V 形</text>
+<text x="337" y="348" text-anchor="middle" fill="#999999">折点（x=1）</text>
+</g>
+<circle cx="180" cy="128" r="11" fill="#56B4E9"/><text x="180" y="133" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Noto Sans CJK SC, sans-serif">1</text>
+<circle cx="180" cy="196" r="11" fill="#56B4E9"/><text x="180" y="201" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Noto Sans CJK SC, sans-serif">2</text>
+<circle cx="180" cy="296" r="11" fill="#56B4E9"/><text x="180" y="301" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Noto Sans CJK SC, sans-serif">3</text>
+<!-- 迷你网络 -->
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="560" y="70" font-size="15" font-weight="bold" fill="#000000">对应的小网络（4 个权重 + 2 个折弯）：</text>
+<circle cx="600" cy="150" r="20" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><text x="600" y="155" text-anchor="middle">x</text>
+<path d="M 622 140 L 700 112" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 622 160 L 700 190" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="648" y="112" fill="#009E73">w₁, b₁</text>
+<text x="648" y="196" fill="#D55E00">w₂, b₂</text>
+<rect x="702" y="92" width="130" height="40" rx="8" fill="#009E73" fill-opacity="0.2" stroke="#009E73" stroke-width="1.5"/>
+<text x="767" y="117" text-anchor="middle">直线 → 负数归零</text>
+<rect x="702" y="170" width="130" height="40" rx="8" fill="#D55E00" fill-opacity="0.15" stroke="#D55E00" stroke-width="1.5"/>
+<text x="767" y="195" text-anchor="middle">直线 → 负数归零</text>
+<circle cx="885" cy="150" r="24" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/>
+<text x="885" y="157" text-anchor="middle" font-size="16">Σ</text>
+<path d="M 832 112 L 863 138" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 832 190 L 863 162" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 909 150 L 944 150" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="952" y="156" fill="#000000">y</text>
+<text x="560" y="256">每颗神经元只两件事：</text>
+<text x="560" y="282">先算一条直线（加权和），再把负数折成 0。</text>
+<text x="560" y="316" fill="#0072B2">每颗贡献一个"折点"；两颗相加，就是两段直线拼成的 V。</text>
+<text x="560" y="350">神经元越多，折点越多，拼出的线越接近任意曲线——</text>
+<text x="560" y="376">这就是"许多简单单元拼出复杂映射"的全部秘密。</text>
+<text x="560" y="410" fill="#999999">这个"负数归零"的动作叫 ReLU，是深度学习里最常见的非线性（第 1.4.1 节）。</text>
+</g>
+</svg>

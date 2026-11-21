@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="340" viewBox="0 0 940 340">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">技能：不塞进上下文，按需取用</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="60" y="80" width="340" height="180" rx="10" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="230" y="110" text-anchor="middle" font-weight="bold" fill="#D55E00">提示词硬塞（全量预载）</text>
+<text x="80" y="140">系统提示 + 全部说明 + 全部历史……</text>
+<text x="80" y="166" fill="#999999">上下文很快被占满；</text>
+<text x="80" y="192" fill="#999999">大部分内容与当前任务无关；</text>
+<text x="80" y="218" fill="#999999">无关内容还会干扰模型。</text>
+<rect x="560" y="80" width="340" height="180" rx="10" fill="#ffffff" stroke="#009E73" stroke-width="2"/>
+<text x="730" y="110" text-anchor="middle" font-weight="bold" fill="#009E73">技能（只带目录，按需加载）</text>
+<text x="580" y="140">上下文里只放一行清单：</text>
+<text x="580" y="166" fill="#999999">"有技能 A/B/C，各管什么"</text>
+<text x="580" y="192">遇到 A 的活，才把 A 的全文取来；</text>
+<text x="580" y="218" fill="#999999">用完即走，上下文保持干净。</text>
+</g>
+<path d="M 402 170 L 558 170" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<text x="480" y="158" font-size="13" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">改进</text>
+<text x="60" y="310" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">技能与提示词的区别：提示词是"每次都带着的话"，技能是"图书馆里按需借的书"——目录常驻，正文按需。</text>
+</svg>

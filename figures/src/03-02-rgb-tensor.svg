@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">一张彩色照片进网络前，先变成三个数字阵列</text><rect x="70" y="120" width="42" height="42" fill="#D55E00" fill-opacity="0.9" stroke="#000000" stroke-width="1"/><rect x="116" y="120" width="42" height="42" fill="#D55E00" fill-opacity="0.2" stroke="#000000" stroke-width="1"/><rect x="162" y="120" width="42" height="42" fill="#D55E00" fill-opacity="0.9" stroke="#000000" stroke-width="1"/><rect x="208" y="120" width="42" height="42" fill="#D55E00" fill-opacity="0.55" stroke="#000000" stroke-width="1"/><rect x="70" y="166" width="42" height="42" fill="#D55E00" fill-opacity="0.75" stroke="#000000" stroke-width="1"/><rect x="116" y="166" width="42" height="42" fill="#D55E00" fill-opacity="0.3" stroke="#000000" stroke-width="1"/><rect x="162" y="166" width="42" height="42" fill="#D55E00" fill-opacity="0.5" stroke="#000000" stroke-width="1"/><rect x="208" y="166" width="42" height="42" fill="#D55E00" fill-opacity="0.85" stroke="#000000" stroke-width="1"/><rect x="70" y="212" width="42" height="42" fill="#D55E00" fill-opacity="0.25" stroke="#000000" stroke-width="1"/><rect x="116" y="212" width="42" height="42" fill="#D55E00" fill-opacity="0.6" stroke="#000000" stroke-width="1"/><rect x="162" y="212" width="42" height="42" fill="#D55E00" fill-opacity="0.95" stroke="#000000" stroke-width="1"/><rect x="208" y="212" width="42" height="42" fill="#D55E00" fill-opacity="0.4" stroke="#000000" stroke-width="1"/><rect x="70" y="258" width="42" height="42" fill="#D55E00" fill-opacity="0.3" stroke="#000000" stroke-width="1"/><rect x="116" y="258" width="42" height="42" fill="#D55E00" fill-opacity="0.7" stroke="#000000" stroke-width="1"/><rect x="162" y="258" width="42" height="42" fill="#D55E00" fill-opacity="0.15" stroke="#000000" stroke-width="1"/><rect x="208" y="258" width="42" height="42" fill="#D55E00" fill-opacity="0.8" stroke="#000000" stroke-width="1"/>
+<text x="206" y="106" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">R 通道（红）</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<text x="70" y="330">每个格子一个数：0（无红光）到 255（红光拉满）。</text>
+<text x="70" y="354">绿、蓝两层同理，三层摞在一起叫张量。</text>
+<text x="70" y="386">这张 4×4 的小图 = 4×4×3 = 48 个数。</text>
+<text x="70" y="410">一张 4000×3000 的照片 = 三千六百万个数。</text>
+</g>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<text x="480" y="120" fill="#999999">没有"红色"，没有"猫耳朵"，</text>
+<text x="480" y="144" fill="#999999">只有一格一格的数。</text>
+<text x="480" y="188">所以"AI 看图"的准确说法是：</text>
+<text x="480" y="212">AI 读一张数字表，然后给出答案。</text>
+<text x="480" y="256">它和图的关系，和会计与公司的</text>
+<text x="480" y="280">关系一样——只通过报表打交道。</text>
+</g>
+</svg>

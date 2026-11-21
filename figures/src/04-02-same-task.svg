@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="440" viewBox="0 0 940 440">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">同一个客服场景，三种问法</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="60" width="860" height="70" rx="8" fill="#56B4E9" fill-opacity="0.15" stroke="#0072B2" stroke-width="1.5"/>
+<text x="60" y="88" font-weight="bold">场景</text><text x="140" y="88">一万条用户对话，想把它们自动化</text>
+<text x="140" y="112" fill="#999999">三种问法给出三种不同的产品与代价</text>
+<rect x="40" y="150" width="860" height="66" rx="8" fill="#ffffff" stroke="#0072B2" stroke-width="1.5"/>
+<text x="60" y="178" font-weight="bold" fill="#0072B2">监督</text>
+<text x="150" y="178">标注"每句话该走哪个流程"，训练一个分诊器</text>
+<text x="150" y="202" fill="#999999">要人标；新流程上线要补标；答得准，但只在见过的流程里准</text>
+<rect x="40" y="232" width="860" height="66" rx="8" fill="#ffffff" stroke="#E69F00" stroke-width="1.5"/>
+<text x="60" y="260" font-weight="bold" fill="#E69F00">无监督</text>
+<text x="150" y="260">不标注，让机器自己把对话聚成若干簇</text>
+<text x="150" y="284" fill="#999999">不用标注；但聚出来的簇可能按"问候语长短"分，而不是按"问题类型"</text>
+<rect x="40" y="314" width="860" height="66" rx="8" fill="#ffffff" stroke="#009E73" stroke-width="1.5"/>
+<text x="60" y="342" font-weight="bold" fill="#009E73">强化</text>
+<text x="150" y="342">让机器人在线应答，按"用户是否满意/转人工"给分</text>
+<text x="150" y="366" fill="#999999">不用标注、直接对齐目标；但在线试错会真的得罪用户</text>
+</g>
+<text x="40" y="420" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">另外还有一支：自监督——拿数据自己当答案（用前文预测下一词）。它属于无监督家族，但威力最大，第 1.5 节见。</text>
+</svg>

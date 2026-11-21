@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="310" viewBox="0 0 620 310">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">函数调用时，栈里发生什么</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="60" y="200" width="160" height="40" fill="#56B4E9" stroke="#000000" stroke-width="1.2"/><text x="140" y="226" text-anchor="middle">main() 的格子</text>
+<rect x="60" y="160" width="160" height="40" fill="#E69F00" fill-opacity="0.5" stroke="#000000" stroke-width="1.2"/><text x="140" y="186" text-anchor="middle">read_file() 的格子</text>
+<rect x="60" y="120" width="160" height="40" fill="#009E73" fill-opacity="0.5" stroke="#000000" stroke-width="1.2"/><text x="140" y="146" text-anchor="middle">parse() 的格子</text>
+<text x="250" y="146" fill="#000000">↑ 最上层：正在执行的函数</text>
+<text x="250" y="186" fill="#000000">中间：等着结果回来的调用者</text>
+<text x="250" y="226" fill="#000000">栈底：程序入口</text>
+<text x="60" y="290" fill="#999999" font-size="12">函数返回 = 它的格子被撤掉。"栈溢出"= 嵌套太深，格子堆过了天花板。</text>
+</g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="330" viewBox="0 0 960 330">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">出厂前的三段教育</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="70" width="270" height="200" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
+<text x="175" y="100" text-anchor="middle" font-weight="bold" fill="#0072B2">1. 预训练</text>
+<text x="56" y="130">读：互联网级别的海量文本</text>
+<text x="56" y="156">学：语言规律 + 世界知识</text>
+<text x="56" y="190" fill="#999999">产出：会"续写网页"的模型</text>
+<text x="56" y="222" fill="#999999">——你问它问题，它可能</text>
+<text x="56" y="246" fill="#999999">接着编出十个类似的问题</text>
+<rect x="350" y="70" width="270" height="200" rx="10" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
+<text x="485" y="100" text-anchor="middle" font-weight="bold" fill="#E69F00">2. 监督微调（SFT）</text>
+<text x="366" y="130">读：人写好的"问题—好回答"示范</text>
+<text x="366" y="156">学：助手该有的样子</text>
+<text x="366" y="190" fill="#999999">产出：会"回答问题"的模型</text>
+<text x="366" y="222" fill="#999999">——但"像好回答"不等于</text>
+<text x="366" y="246" fill="#999999">"真是好回答"</text>
+<rect x="660" y="70" width="270" height="200" rx="10" fill="#ffffff" stroke="#009E73" stroke-width="2"/>
+<text x="795" y="100" text-anchor="middle" font-weight="bold" fill="#009E73">3. 人类反馈强化学习</text>
+<text x="676" y="130">读：人对多个回答的偏好排序</text>
+<text x="676" y="156">学：往"人更喜欢"的方向调</text>
+<text x="676" y="190" fill="#999999">产出：更礼貌、更安全、更听话</text>
+<text x="676" y="222" fill="#999999">——代价见后面的"对齐税"</text>
+</g>
+<path d="M 312 170 L 348 170" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M 622 170 L 658 170" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<text x="40" y="308" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">三段合起来，才把"续写网页的机器"变成"回答问题的助手"。每一段都在改同一场大模型的参数。</text>
+</svg>

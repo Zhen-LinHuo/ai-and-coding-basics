@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="370" viewBox="0 0 960 370">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">三种多智能体拓扑：流水线、辩论、市场</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="70" width="270" height="200" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
+<text x="175" y="98" text-anchor="middle" font-weight="bold" fill="#0072B2">流水线</text>
+<rect x="70" y="120" width="60" height="40" fill="#56B4E9" stroke="#000000"/><text x="100" y="145" text-anchor="middle" font-size="12">写</text>
+<rect x="150" y="120" width="60" height="40" fill="#56B4E9" stroke="#000000"/><text x="180" y="145" text-anchor="middle" font-size="12">审</text>
+<rect x="230" y="120" width="60" height="40" fill="#56B4E9" stroke="#000000"/><text x="260" y="145" text-anchor="middle" font-size="12">改</text>
+<path d="M 130 140 L 148 140" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 210 140 L 228 140" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="56" y="200" fill="#999999">各管一段，像工厂工序。</text>
+<text x="56" y="224" fill="#999999">适合"步骤清楚"的任务；</text>
+<text x="56" y="248" fill="#999999">上一环节的错会顺流而下。</text>
+<rect x="345" y="70" width="270" height="200" rx="10" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
+<text x="480" y="98" text-anchor="middle" font-weight="bold" fill="#E69F00">辩论</text>
+<circle cx="420" cy="140" r="24" fill="#56B4E9" stroke="#000000"/><text x="420" y="145" text-anchor="middle" font-size="12">正方</text>
+<circle cx="540" cy="140" r="24" fill="#56B4E9" stroke="#000000"/><text x="540" y="145" text-anchor="middle" font-size="12">反方</text>
+<circle cx="480" cy="210" r="24" fill="#ffffff" stroke="#000000"/><text x="480" y="215" text-anchor="middle" font-size="12">裁判</text>
+<path d="M 444 148 L 460 194" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 516 148 L 500 194" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="361" y="248" fill="#999999">互相挑错，减少盲点；</text>
+<text x="361" y="264" fill="#999999">但也可能吵着吵着一起错。</text>
+<rect x="650" y="70" width="270" height="200" rx="10" fill="#ffffff" stroke="#009E73" stroke-width="2"/>
+<text x="785" y="98" text-anchor="middle" font-weight="bold" fill="#009E73">市场</text>
+<circle cx="700" cy="140" r="20" fill="#56B4E9" stroke="#000000"/><circle cx="750" cy="170" r="20" fill="#56B4E9" stroke="#000000"/><circle cx="700" cy="205" r="20" fill="#56B4E9" stroke="#000000"/><circle cx="755" cy="230" r="20" fill="#56B4E9" stroke="#000000"/>
+<text x="785" y="168" font-size="12" fill="#999999">若干专长各异的智能体</text>
+<text x="666" y="256" fill="#999999">按任务认领、按质量竞争。</text>
+<text x="666" y="248" fill="#999999"> </text>
+</g>
+<text x="40" y="312" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">多智能体真正优于单智能体的条件：任务可拆分、中间结果可验证、协调成本低于分工收益。三者缺一，</text>
+<text x="40" y="338" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">多智能体就只是把成本和混乱放大——AutoGen 这类框架的价值在于让"试"变便宜[@wu2023]。</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">一万条数据，分成三份各管什么</text>
+<rect x="40" y="70" width="560" height="60" fill="#56B4E9" fill-opacity="0.35" stroke="#000000" stroke-width="1.3"/>
+<text x="320" y="106" font-size="15" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">训练集 70%</text>
+<rect x="610" y="70" width="120" height="60" fill="#E69F00" fill-opacity="0.4" stroke="#000000" stroke-width="1.3"/>
+<text x="670" y="106" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">验证集 15%</text>
+<rect x="740" y="70" width="120" height="60" fill="#D55E00" fill-opacity="0.35" stroke="#000000" stroke-width="1.3"/>
+<text x="800" y="106" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">测试集 15%</text>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="40" y="172" fill="#0072B2">训练集：调权重的题本。</text>
+<text x="40" y="198" fill="#E69F00">验证集：调"怎么学"的模拟考——挑模型、定超参数、决定何时停。</text>
+<text x="40" y="224" fill="#D55E00">测试集：期末考，只许考一次。</text>
+<text x="40" y="266" fill="#999999">如果验证集也拿来反复调，它就被"泄露"了；测试集更是一次性的——考第二次，分数就不再诚实。</text>
+<text x="40" y="300">这三份的分工，是整个"怎么知道它学会了"的骨架。</text>
+</g>
+</svg>

@@ -1,2963 +1,2226 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Zhen-Lin Huo" />
-  <meta name="dcterms.date" content="2026-01-01" />
-  <title>人工智能和计算机开发基础</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    /* CSS for citations */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-      margin-bottom: 0em;
-    }
-    .hanging-indent div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }  </style>
-  <link rel="stylesheet" href="site.css" />
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">人工智能和计算机开发基础</h1>
-<p class="subtitle">写给想真正理解它如何运转的读者</p>
-<p class="author">Zhen-Lin Huo</p>
-<p class="date">2026</p>
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="写给想真正理解它如何运转的读者">
+      
+      
+      
+        <link rel="canonical" href="https://zhen-linhuo.github.io/ai-and-coding-basics/">
+      
+      
+      
+        <link rel="next" href="00-front/preface/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>人工智能和计算机开发基础</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="." title="人工智能和计算机开发基础" class="md-header__button md-logo" aria-label="人工智能和计算机开发基础" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            人工智能和计算机开发基础
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              首页
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Zhen-LinHuo/ai-and-coding-basics" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
 </header>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#前言" id="toc-前言">前言</a></li>
-<li><a href="#如何读这本书" id="toc-如何读这本书">如何读这本书</a>
-<ul>
-<li><a href="#三条路径" id="toc-三条路径">三条路径</a></li>
-<li><a href="#每节的固定结构"
-id="toc-每节的固定结构">每节的固定结构</a></li>
-<li><a href="#关于时效" id="toc-关于时效">关于时效</a></li>
-<li><a href="#关于术语" id="toc-关于术语">关于术语</a></li>
-</ul></li>
-<li><a href="#人工智能基础" id="toc-人工智能基础"><span
-class="toc-section-number">1</span> 人工智能基础</a>
-<ul>
-<li><a href="#sec:what-is-ai" id="toc-sec:what-is-ai"><span
-class="toc-section-number">1.1</span> 人工智能是什么</a>
-<ul>
-<li><a href="#一句话直觉" id="toc-一句话直觉"><span
-class="toc-section-number">1.1.1</span> 一句话直觉</a></li>
-<li><a href="#一个类比垃圾邮件的三代处理方式"
-id="toc-一个类比垃圾邮件的三代处理方式"><span
-class="toc-section-number">1.1.2</span>
-一个类比：垃圾邮件的三代处理方式</a></li>
-<li><a href="#四个词一张地图" id="toc-四个词一张地图"><span
-class="toc-section-number">1.1.3</span> 四个词，一张地图</a></li>
-<li><a href="#天然短板难的简单简单的难"
-id="toc-天然短板难的简单简单的难"><span
-class="toc-section-number">1.1.4</span>
-天然短板：难的简单，简单的难</a></li>
-<li><a href="#小结与自检" id="toc-小结与自检"><span
-class="toc-section-number">1.1.5</span> 小结与自检</a></li>
-</ul></li>
-<li><a href="#sec:three-schools" id="toc-sec:three-schools"><span
-class="toc-section-number">1.2</span> 人工智能的三大流派</a>
-<ul>
-<li><a href="#一句话直觉-1" id="toc-一句话直觉-1"><span
-class="toc-section-number">1.2.1</span> 一句话直觉</a></li>
-<li><a href="#一个类比三条登山路" id="toc-一个类比三条登山路"><span
-class="toc-section-number">1.2.2</span> 一个类比：三条登山路</a></li>
-<li><a href="#它解决什么问题三种回答与它们的黄金年代"
-id="toc-它解决什么问题三种回答与它们的黄金年代"><span
-class="toc-section-number">1.2.3</span>
-它解决什么问题：三种回答与它们的黄金年代</a></li>
-<li><a href="#天然短板各自的墙" id="toc-天然短板各自的墙"><span
-class="toc-section-number">1.2.4</span> 天然短板：各自的墙</a></li>
-<li><a href="#小结与自检-1" id="toc-小结与自检-1"><span
-class="toc-section-number">1.2.5</span> 小结与自检</a></li>
-</ul></li>
-<li><a href="#sec:neural-networks" id="toc-sec:neural-networks"><span
-class="toc-section-number">1.3</span> 神经网络</a>
-<ul>
-<li><a href="#从神经元开始" id="toc-从神经元开始"><span
-class="toc-section-number">1.3.1</span> 从神经元开始</a></li>
-<li><a href="#sec:data-input" id="toc-sec:data-input"><span
-class="toc-section-number">1.3.2</span>
-数据输入：从真实量到高维向量</a></li>
-<li><a href="#sec:learning" id="toc-sec:learning"><span
-class="toc-section-number">1.3.3</span>
-高维找规律：神经网络如何学习</a></li>
-<li><a href="#sec:train-and-infer" id="toc-sec:train-and-infer"><span
-class="toc-section-number">1.3.4</span> 学到与用上：训练和推理</a></li>
-</ul></li>
-<li><a href="#sec:machine-learning" id="toc-sec:machine-learning"><span
-class="toc-section-number">1.4</span> 机器学习</a>
-<ul>
-<li><a href="#sec:mlp" id="toc-sec:mlp"><span
-class="toc-section-number">1.4.1</span>
-更深的大脑：多层感知机与深度学习</a></li>
-<li><a href="#sec:paradigms" id="toc-sec:paradigms"><span
-class="toc-section-number">1.4.2</span>
-监督学习、无监督学习、强化学习</a></li>
-<li><a href="#sec:generalization" id="toc-sec:generalization"><span
-class="toc-section-number">1.4.3</span>
-它到底学会了没有：泛化、过拟合与评估</a></li>
-</ul></li>
-<li><a href="#sec:llms" id="toc-sec:llms"><span
-class="toc-section-number">1.5</span> 大语言模型</a>
-<ul>
-<li><a href="#sec:scaling-laws" id="toc-sec:scaling-laws"><span
-class="toc-section-number">1.5.1</span>
-规模为什么有效：缩放定律</a></li>
-<li><a href="#sec:attention" id="toc-sec:attention"><span
-class="toc-section-number">1.5.2</span>
-注意力机制：让每个词回头找答案</a></li>
-<li><a href="#sec:ssm-and-linear-attention"
-id="toc-sec:ssm-and-linear-attention"><span
-class="toc-section-number">1.5.3</span> 线性注意力与状态空间模型：RNN
-的逆袭</a></li>
-<li><a href="#sec:diffusion" id="toc-sec:diffusion"><span
-class="toc-section-number">1.5.4</span>
-从生图到大语言：扩散模型</a></li>
-</ul></li>
-<li><a href="#sec:alignment-hallucination-safety"
-id="toc-sec:alignment-hallucination-safety"><span
-class="toc-section-number">1.6</span>
-让它听话：对齐、幻觉与安全</a></li>
-<li><a href="#sec:agents" id="toc-sec:agents"><span
-class="toc-section-number">1.7</span> 智能体</a>
-<ul>
-<li><a href="#sec:harness" id="toc-sec:harness"><span
-class="toc-section-number">1.7.1</span> 大模型的手脚：Harness</a></li>
-<li><a href="#sec:rsi-and-multi-agent"
-id="toc-sec:rsi-and-multi-agent"><span
-class="toc-section-number">1.7.2</span> 智能体的优化：RSI
-与多智能体</a></li>
-<li><a href="#sec:mcp-skills-rag" id="toc-sec:mcp-skills-rag"><span
-class="toc-section-number">1.7.3</span>
-智能体的扩展：MCP、技能、嵌入与知识库</a></li>
-</ul></li>
-<li><a href="#sec:compute-and-deployment"
-id="toc-sec:compute-and-deployment"><span
-class="toc-section-number">1.8</span>
-部署模型会遇到的：同构、异构、精度与 KV 缓存</a></li>
-</ul></li>
-<li><a href="#计算机开发基础" id="toc-计算机开发基础"><span
-class="toc-section-number">2</span> 计算机开发基础</a>
-<ul>
-<li><a href="#sec:what-is-a-program"
-id="toc-sec:what-is-a-program"><span
-class="toc-section-number">2.1</span> 程序是什么：从源码到运行</a></li>
-<li><a href="#sec:git" id="toc-sec:git"><span
-class="toc-section-number">2.2</span> 像快照一样追踪修改：Git 与 Git
-客户端</a></li>
-<li><a href="#sec:ide-and-toolchain"
-id="toc-sec:ide-and-toolchain"><span
-class="toc-section-number">2.3</span> 编程工具：IDE 与工具链</a></li>
-<li><a href="#sec:package-managers" id="toc-sec:package-managers"><span
-class="toc-section-number">2.4</span> 解决依赖：包管理器</a></li>
-<li><a href="#sec:reproducibility" id="toc-sec:reproducibility"><span
-class="toc-section-number">2.5</span>
-让行为保持一致：可复现性与声明式工具</a></li>
-<li><a href="#sec:declarative-os" id="toc-sec:declarative-os"><span
-class="toc-section-number">2.6</span>
-操作系统也能像代码一样复现：声明式操作系统</a></li>
-<li><a href="#sec:project-structure"
-id="toc-sec:project-structure"><span
-class="toc-section-number">2.7</span>
-让别人也能看懂：项目结构与技术文档</a></li>
-<li><a href="#sec:licenses" id="toc-sec:licenses"><span
-class="toc-section-number">2.8</span>
-自由之争：开源、许可证与开发社区的思潮</a></li>
-</ul></li>
-<li><a href="#术语表" id="toc-术语表">术语表</a></li>
-<li><a href="#参考文献" id="toc-参考文献">参考文献</a></li>
-</ul>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="00-front/preface/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  前言
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="00-front/how-to-read/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  如何读这本书
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="01-ai/00-chapter/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  第一部分 · 人工智能基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="02-dev/00-chapter/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  第二部分 · 计算机开发基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="90-back/glossary/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  附录
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
 </nav>
-<h1 class="unnumbered" id="前言">前言</h1>
-<p>这本书想解决一个具体的不适。</p>
-<p>今天任何人打开浏览器,都会撞见同一类词:大模型、算力、开源、参数、智能体。这些词各自
-都能查到解释,但没有人告诉你它们之间是什么关系。于是形成一个尴尬的位置——你知道这些
-东西在改变世界,却说不清改变是怎么发生的,更说不清哪条路走下去会撞墙。</p>
-<p>于是有两种常见的读物。一种是科普,读完你知道了故事,但依然无法判断;一种是教材,
-它要求你先学完三章数学。这本书走第三条路:它不教你算,只教你判断。每一条技术路线都会
-被同样四个问题追问——它想解决什么,它为什么有效,它的代价是什么,它什么时候会失效。</p>
-<p>第四个问题最重要,也最常被省略。一项技术被介绍时,优点总是清晰的,缺点总是含糊成
-“目前还有局限”。这本书不接受这种含糊:每个短板都要能从原理推出来,而不是从新闻里抄来。</p>
-<p>全书分两部分。第一部分讲人工智能,从一个人工神经元讲到智能体,中间把大模型的三条主要
-架构路线并排放在一起,让你看清它们的取舍。第二部分讲计算机开发,从”程序是什么”讲到
-许可证政治,内容包括版本控制、依赖、可复现性与声明式系统。两部分可以分开读,合起来
-才是一张完整的图:模型是这套系统里最显眼的一层,但不是唯一的一层。</p>
-<p>书里会出现公式,但只在每节末尾的”数学注解”里。跳过它们,正文依然完整;如果你想深入,
-它们就在那里。</p>
-<h1 class="unnumbered" id="如何读这本书">如何读这本书</h1>
-<h2 class="unnumbered" id="三条路径">三条路径</h2>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="人工智能和计算机开发基础" class="md-nav__button md-logo" aria-label="人工智能和计算机开发基础" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    人工智能和计算机开发基础
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Zhen-LinHuo/ai-and-coding-basics" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        读这本书
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        构建
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        许可
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="00-front/preface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    前言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="00-front/how-to-read/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    如何读这本书
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一部分 · 人工智能基础
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第一部分 · 人工智能基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/00-chapter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    人工智能基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/01-what-is-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 人工智能是什么
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/02-three-schools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2 三大流派
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3 神经网络
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1.3 神经网络
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/03-00-neural-networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 00 neural networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/03-01-neuron/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3.1 从神经元开始
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/03-02-data-input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3.2 数据输入
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/03-03-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3.3 学习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/03-04-train-and-infer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3.4 训练与推理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4 机器学习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1.4 机器学习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/04-00-machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 00 machine learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/04-01-mlp-and-deep-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4.1 多层感知机与深度学习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/04-02-paradigms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4.2 三种学习范式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/04-03-generalization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4.3 泛化与评估
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.5 大语言模型
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1.5 大语言模型
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/05-00-llms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 00 llms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/05-01-scaling-laws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.5.1 缩放定律
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/05-02-attention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.5.2 注意力机制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/05-03-ssm-and-linear-attention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.5.3 线性注意力与 SSM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/05-04-diffusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.5.4 扩散模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/06-alignment-hallucination-safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.6 对齐、幻觉与安全
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.7 智能体
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1.7 智能体
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/07-00-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 00 agents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/07-01-harness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.7.1 Harness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/07-02-rsi-and-multi-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.7.2 RSI 与多智能体
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/07-03-mcp-skills-rag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.7.3 MCP、技能、嵌入与知识库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-ai/08-compute-and-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.8 部署
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二部分 · 计算机开发基础
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第二部分 · 计算机开发基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-dev/00-chapter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机开发基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-dev/01-what-is-a-program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1 程序是什么
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-dev/02-git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2 Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-dev/03-ide-and-toolchain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3 IDE 与工具链
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-dev/04-package-managers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4 包管理器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-dev/05-reproducibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.5 可复现性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-dev/06-declarative-os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.6 声明式操作系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-dev/07-project-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.7 项目结构与文档
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-dev/08-licenses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.8 开源与许可证
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    附录
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="90-back/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    术语表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="90-back/references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考文献
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        读这本书
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        构建
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        许可
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">人工智能和计算机开发基础<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>写给想真正理解 AI 与软件如何运转的读者。不预设背景，也不居高临下：不教写代码，也不教训模型，只求读完能判断：一条技术路线解决什么问题、
+为什么有效、什么时候会失效。</p>
+<p>全书两部分：</p>
+<ul>
+<li><strong>人工智能基础</strong>：从神经元讲到智能体，含三条大模型架构路线的定性对照。</li>
+<li><strong>计算机开发基础</strong>：从"程序是什么"讲到许可证政治，含可复现性与声明式系统。</li>
+</ul>
+<h2 id="_2">读这本书<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">你想解决的问题</th>
-<th style="text-align: left;">读哪部分</th>
-<th style="text-align: right;">大致页数</th>
+<th style="text-align: left;">只想搞懂 AI</th>
+<th style="text-align: left;">只想搞懂开发工具</th>
+<th style="text-align: left;">想建立完整图景</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">人工智能到底是怎么回事</td>
 <td style="text-align: left;">第 1 部分</td>
-<td style="text-align: right;">150</td>
-</tr>
-<tr>
-<td style="text-align: left;">开发工具链为什么长这样</td>
-<td style="text-align: left;">第 2 部分(从 2.1 起)</td>
-<td style="text-align: right;">70</td>
-</tr>
-<tr>
-<td style="text-align: left;">想建立完整图景</td>
-<td style="text-align: left;">全书,按顺序</td>
-<td style="text-align: right;">230</td>
+<td style="text-align: left;">第 2 部分（2.1 起）</td>
+<td style="text-align: left;">按顺序</td>
 </tr>
 </tbody>
 </table>
-<p>第 2 部分不依赖第 1 部分。第 1
-部分内部有依赖关系,每节开头都会标出前置章节;沿前置
-一路回溯到底,就是你需要的全部背景。</p>
-<h2 class="unnumbered" id="每节的固定结构">每节的固定结构</h2>
-<p>每一节都按同一个节奏展开,六步:</p>
-<ol type="1">
-<li><strong>一句话直觉</strong> —— 不引入术语,先把这件事说成人话。</li>
-<li><strong>生活类比</strong> —— 一个你有切身体验的场景。</li>
-<li><strong>示意图</strong> —— 先看图,再看解释。</li>
-<li><strong>它解决什么问题</strong> ——
-为什么历史上需要这个东西,没有它会怎样。</li>
-<li><strong>它的天然短板</strong> ——
-这一节最重要的部分。每个短板都从原理推出,并点出最常见的误解。</li>
-<li><strong>小结与自检</strong> —— 三句话总结,两道自检题。</li>
-</ol>
-<p>结构固定有个副作用:第二遍读时可以只看第 1 步和第 5
-步,一本书变成两张纸。</p>
-<h2 class="unnumbered" id="关于时效">关于时效</h2>
-<p>技术细节会过期。书里的处理原则是:三年后还成立的内容进正文,不成立的内容进带日期的
-注记框。所以你会看到”截至某年某月”这样的限定语——那不是免责声明,是信息本身的一部分。</p>
-<h2 class="unnumbered" id="关于术语">关于术语</h2>
-<p>每个术语首次出现时给出英文原词,例如「梯度下降(gradient
-descent)」。这不是摆样子: 想自己往下查的人,需要知道该搜什么。</p>
-<h1 data-number="1" id="人工智能基础"><span
-class="header-section-number">1</span> 人工智能基础</h1>
-<p>本部分从一个人工神经元出发，走到智能体。每一节都标出前置章节，沿前置回溯到底即可。</p>
-<h2 data-number="1.1" id="sec:what-is-ai"><span
-class="header-section-number">1.1</span> 人工智能是什么</h2>
-<h3 data-number="1.1.1" id="一句话直觉"><span
-class="header-section-number">1.1.1</span> 一句话直觉</h3>
-<p>人工智能不是一个产品，也不是一项技术，而是一个<strong>目标</strong>：让机器去做”需要智能才能做的事”。这个目标
-1955 年被写下来的时候<span class="citation"
-data-cites="mccarthy1955"><sup>[1]</sup></span>，作者们自己也说不清它包含什么——七十年来，它的边界一直在移动。</p>
-<p>这一节的任务不是给 AI
-下定义，而是给你一张<strong>地图</strong>：以后听到任何新词——大模型、智能体、深度学习——你都能把它放到地图上正确的位置，并说出它和邻层的关系。</p>
-<h3 data-number="1.1.2" id="一个类比垃圾邮件的三代处理方式"><span
-class="header-section-number">1.1.2</span>
-一个类比：垃圾邮件的三代处理方式</h3>
-<p>想一个具体任务：判断一封邮件是不是垃圾邮件。</p>
-<p><strong>第一代，人写规则。</strong>”凡含’中奖’二字即拦截”。机器只是执行者，智能全在写规则的人脑子里。这种系统今天仍然无处不在，但它的名字不是
-AI，是<strong>自动化</strong>。</p>
-<p><strong>第二代，机器学规则。</strong>给它一万个已被人类标好”垃圾/正常”的邮件，让它自己找规律。人不再写规则，只提供两样东西：<strong>原料</strong>（数据）和<strong>判卷标准</strong>（对错）。这就是机器学习。</p>
-<p><strong>第三代，机器自己干。</strong>不给任何标注，让机器自己发现邮件天然分成几类。今天的大语言模型主要住在这一层之上——它不但会判断，还会<strong>生成</strong>以前不存在的东西。</p>
-<figure>
-<img src="figures/src/01-01-ladder.svg" alt="同一类任务的三种做法" />
-<figcaption aria-hidden="true">同一类任务的三种做法</figcaption>
-</figure>
-<p>这三代之间的差别，就是”智能放在哪里”的差别：第一代放在人写的规则里，第二代放在从样例里调出的参数里，第三代放在机器自己找出的结构里。后面的章节会反复用到这张阶梯。</p>
-<h3 data-number="1.1.3" id="四个词一张地图"><span
-class="header-section-number">1.1.3</span> 四个词，一张地图</h3>
-<p>新闻里混着用的四个词，其实是层层包含的关系（<a
-href="#fig:ai-nested">下图</a>）：</p>
-<p><strong>人工智能</strong>是最外圈的目标。<strong>机器学习</strong>是目前达成它的主力手段——从数据里调参数。<strong>深度学习</strong>是机器学习的一支，用很多层的神经网络。<strong>大语言模型</strong>是深度学习的一种产物。今天新闻里的”AI”，几乎都住在最里层；但外圈并没有消失——工厂里的机械臂、地图软件的路径规划，都是人工智能，只是不是新闻主角。</p>
-<figure id="fig:ai-nested">
-<img src="figures/src/01-01-nested.svg"
-alt="人工智能、机器学习、深度学习与大语言模型的包含关系" />
-<figcaption
-aria-hidden="true">人工智能、机器学习、深度学习与大语言模型的包含关系</figcaption>
-</figure>
-<p>同心圆的用处是<strong>定位</strong>。听到一个新名词，先问它在哪一层，再问它和邻层的关系，多半就知道该用什么章节的武器去理解它。</p>
-<h3 data-number="1.1.4" id="天然短板难的简单简单的难"><span
-class="header-section-number">1.1.4</span>
-天然短板：难的简单，简单的难</h3>
-<p>“需要智能才能做的事”这个定义里藏着一个陷阱：<strong>“智能”这个词高估了某些难度的难度，又低估了另一些。</strong></p>
-<p>让机器下围棋，1997
-年就赢了世界冠军；让机器在客厅里不撞到桌椅，至今仍是机器人行业的难题。让机器背出整本百科全书轻而易举；让机器从两张照片里认出同一只猫，做了几十年才像样。心理学家莫拉维克把这个反差总结成一句话：让电脑在智力测验或者跳棋上表现成人水平相对容易，但要让它具备一岁婴儿的感知和移动能力却难得多<span
-class="citation" data-cites="moravec1988"><sup>[2]</sup></span>。</p>
-<figure id="fig:ai-moravec">
-<img src="figures/src/01-01-moravec.svg" alt="莫拉维克悖论" />
-<figcaption aria-hidden="true">莫拉维克悖论</figcaption>
-</figure>
-<p>原因不在机器，在<strong>进化</strong>：走路、认猫、听语气，是几亿年打磨出来的本能，人觉得毫不费力，是因为背后的计算被进化藏起来了；而下棋、算术只有几千年历史，人要费劲学，每一步规则都摆在明面上——<strong>摆在明面的，机器就能抄</strong>。这个不对称是全书的底色之一：机器擅长什么，从来不取决于任务对人多难，而取决于任务的规律能不能被数据表达。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”AI 是一个东西”，所以会有”AI 什么时候统治世界”这类问题。实际上 AI
-是一个七十年不断改写边界的目标集合：今天的 AI 和 1990 年的 AI
-只共享名字。同类的误解还有”会下棋说明它会思考”——会下棋只说明某一件被数据化了的事做得好，见<a
-href="#fig:ai-moravec">上图</a>里的绿色区。</p>
-</blockquote>
-<h3 data-number="1.1.5" id="小结与自检"><span
-class="header-section-number">1.1.5</span> 小结与自检</h3>
-<p>三句话总结：AI 是目标不是产品；机器学习用”数据 +
-判卷标准”取代”人写规则”；机器的强弱不随人的难度走，而随任务规律能否被数据表达走。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>一个会议预约系统”阅读”邮件并自动回复，它属于哪一代？如果它的读信能力来自大语言模型呢？</li>
-<li>为什么”机器永远不会像人一样走路”这句话，在 2010
-年代之后需要重新评估？（提示：进化藏起来的计算，未必永远藏不住。）</li>
-</ol>
-<h2 data-number="1.2" id="sec:three-schools"><span
-class="header-section-number">1.2</span> 人工智能的三大流派</h2>
-<h3 data-number="1.2.1" id="一句话直觉-1"><span
-class="header-section-number">1.2.1</span> 一句话直觉</h3>
-<p>“让机器有智能”这个目标之下，藏着三个更根本的问题：智能到底从哪来？七十年里出现过三种认真的回答——<strong>从推理来</strong>（符号主义）、<strong>从连接来</strong>（连接主义）、<strong>从交互来</strong>（行为主义）。今天新闻里的胜负手是第二种，但另外两种没有死，它们的血脉就活在你每天用的系统里。</p>
-<p>这一节给你的不是历史课，而是<strong>三副眼镜</strong>：任何 AI
-系统拿来，先问它是靠哪一副看世界的。</p>
-<h3 data-number="1.2.2" id="一个类比三条登山路"><span
-class="header-section-number">1.2.2</span> 一个类比：三条登山路</h3>
-<p>同一个山顶，三条路。符号主义修缆车：每一段轨道都要人预先铺好，安全、可解释，但铺不到的地方就到不了。连接主义种葡萄：给土壤和气候（数据），藤自己长，长势惊人，但没人说得出每根卷须为什么这样弯。行为主义放山羊：让它在山里自己爬、自己摔、自己记住哪条路好走——没人教，但它真的能到。</p>
-<p>三条路上都有人宣布过”这条路才是正路”。七十年的教训是：<strong>山顶不止一个，路也未必只有一条。</strong></p>
-<h3 data-number="1.2.3"
-id="它解决什么问题三种回答与它们的黄金年代"><span
-class="header-section-number">1.2.3</span>
-它解决什么问题：三种回答与它们的黄金年代</h3>
-<figure id="fig:schools">
-<img src="figures/src/02-01-schools.svg" alt="三个流派的基本假设" />
-<figcaption aria-hidden="true">三个流派的基本假设</figcaption>
-</figure>
-<p><strong>符号主义</strong>认为智能是对符号的推理，所以智能系统的核心是一个写清楚的知识库加一套推理规则。它孕育了定理证明、专家系统，以及”机器能思考吗”这个问题最早的严肃讨论——图灵在
-1950 年那篇论文里预言，到世纪末人们将不再争论机器能否思考<span
-class="citation"
-data-cites="turing1950"><sup>[3]</sup></span>。它的黄金年代立下的断言后来成了它自己的包袱：规则写不全，写全了也维护不动——这叫<strong>知识获取瓶颈</strong>，第
-1.1 节的第一代垃圾邮件过滤器就是它的缩影。</p>
-<p><strong>连接主义</strong>认为智能不在于每条规则，而在于大量简单单元的连接方式。它的命运在<a
-href="#sec:neural-networks">第 1.3
-节</a>展开——两度入冬、两度复活，今天的主角大语言模型是它的第三代产物。</p>
-<p><strong>行为主义</strong>认为智能不在脑子里，而在”行动、吃反馈、改进”这条回路上。没有人给它标准答案，环境只回一句”不错/很糟”，策略是自己攒出来的<span
-class="citation"
-data-cites="brooks1991"><sup>[4]</sup></span>。它从控制论一路走到机器人，从不当头条，但从不退场。</p>
-<figure id="fig:schools-timeline">
-<img src="figures/src/02-02-timeline.svg" alt="七十年三次换主角" />
-<figcaption aria-hidden="true">七十年三次换主角</figcaption>
-</figure>
-<p><a href="#fig:schools-timeline">上图</a>
-的时间轴上有一个值得记住的规律：<strong>每个流派最强的年代，恰好是另外两个最弱的年代</strong>——经费、人才和耐心在三者之间来回搬家，搬家失败的那些年被称为”AI
-寒冬”。教科书把它们整理成三种标准框架，按”智能来自推理、来自学习、还是来自行动”来划分<span
-class="citation"
-data-cites="russell2020"><sup>[5]</sup></span>，和这里的三个流派一一对应。</p>
-<h3 data-number="1.2.4" id="天然短板各自的墙"><span
-class="header-section-number">1.2.4</span> 天然短板：各自的墙</h3>
-<p>三副眼镜各有戴不了的地方，而且墙都从各自的假设里长出来：</p>
-<p><strong>符号主义</strong>的墙是完备性：世界不会按你的规则出牌，规则库越大，例外越多，直到维护成本吞掉全部收益。<strong>连接主义</strong>的墙是透明性：权重里存着能力，但没人能读出”它为什么这样判断”——错了很难修，对了很难解释。<strong>行为主义</strong>的墙是代价：试错要真刀真枪地和世界交互，学走路的机器人得摔真跤，学投资的智能体得亏真钱——不是所有环境都允许随便试。</p>
-<figure id="fig:loop">
-<img src="figures/src/02-03-loop.svg" alt="行为主义的基本回路" />
-<figcaption aria-hidden="true">行为主义的基本回路</figcaption>
-</figure>
-<p>行为主义的回路（<a
-href="#fig:loop">上图</a>）值得单独记住：<strong>动作、反馈、改进</strong>，环上没有任何一处需要”标准答案”。这条回路是第
-1.4 节强化学习的原型，也是第 1.7 节智能体优化自己的方式——RSI
-那些故事，本质上都是把这条回路接到了 AI 自己身上。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为三大流派是历史陈迹，“现在只剩深度学习”。实际上今天的赢家是混血：大语言模型的骨架是连接主义，让它”听话”的训练大量用了行为主义的反馈回路，而它调用日历、查数据库的那部分，靠的恰恰是符号主义的老手艺——把世界写成机器可查的结构。三副眼镜都别扔。</p>
-</blockquote>
-<h3 data-number="1.2.5" id="小结与自检-1"><span
-class="header-section-number">1.2.5</span> 小结与自检</h3>
-<p>三句话总结：符号主义把智能放在写清楚的规则里，连接主义放在连接的权重里，行为主义放在与环境的循环里；三者的墙分别是维护成本、不可解释、试错代价；今天的系统是三者的混血。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>一个”拍了张植物照片就告诉你能不能吃”的应用，三副眼镜各贡献了什么？</li>
-<li>为什么”专家系统的知识获取瓶颈”没有随着大语言模型出现而消失？（提示：把知识写进规则和把知识写进权重，是同一种困难的不同化身。）</li>
-</ol>
-<h2 data-number="1.3" id="sec:neural-networks"><span
-class="header-section-number">1.3</span> 神经网络</h2>
-<p>本节的记号在整本书里通用。读之前先记住三个：<strong>x</strong>
-是输入向量，<strong>w</strong> 是权重，<strong>f</strong>
-是激活函数。看不懂这一行没关系——正文不需要它们。</p>
-<h3 data-number="1.3.1" id="从神经元开始"><span
-class="header-section-number">1.3.1</span> 从神经元开始</h3>
-<h4 data-number="1.3.1.1" id="一句话直觉-2"><span
-class="header-section-number">1.3.1.1</span> 一句话直觉</h4>
-<p>人脑里大约有八百六十亿个神经细胞<span class="citation"
-data-cites="azevedo2009"><sup>[6]</sup></span>，每个细胞只会做一件极其简单的事：接收信号，信号够强就往外传。没有任何一个细胞”懂得”下棋或认字，但它们连在一起时，这些能力就出现了。人工神经元把这件简单的事原样抄下来——于是”智能”这样复杂的东西，第一次有了一个可以计算的零件。</p>
-<p>这一节只回答一个问题：<strong>一组只会做加减法和比较的零件，凭什么能产生有用的效果。</strong></p>
-<h4 data-number="1.3.1.2" id="一个你每天都在用的类比"><span
-class="header-section-number">1.3.1.2</span> 一个你每天都在用的类比</h4>
-<p>想一门课的及格判定：总评 = 平时分 × 30% + 期末分 × 70%，满 60
-分算过。</p>
-<p>这个规则里已经有了一颗人工神经元的全部零件：两个<strong>输入</strong>（平时分、期末分）、两个<strong>权重</strong>（30%、70%）、一步<strong>加权求和</strong>、一个<strong>阈值</strong>（60）、一个<strong>输出</strong>（及格为
-1，不及格为
-0）。你不是靠背”哪些学生及格”来判定及格的——你定好权重和阈值，任何一个新学生的成绩送进来，答案自动出来。</p>
-<p>感知机（perceptron）做的事一模一样，只是权重不由人定，而是从数据里调出来。</p>
-<figure id="fig:neuron-mapping">
-<img src="figures/src/03-01-neuron-mapping.svg"
-alt="生物神经元与人工神经元的对应" />
-<figcaption aria-hidden="true">生物神经元与人工神经元的对应</figcaption>
-</figure>
-<p>同色的部件功能相同：树突收信号，胞体整合信号，轴突送信号；在人工神经元里，这三件事分别叫输入、加权求和与输出。注意对应是功能上的，不是解剖上的：它只借走了”收、汇、传”这三件事的分工。</p>
-<h4 data-number="1.3.1.3" id="它解决什么问题"><span
-class="header-section-number">1.3.1.3</span> 它解决什么问题</h4>
-<p>1943 年，McCulloch 和 Pitts
-证明了一件当时看来不可能的事：一个只做”加权、求和、阈值判断”的逻辑单元，串起来之后能表达任何命题逻辑<span
-class="citation"
-data-cites="mcculloch1943"><sup>[7]</sup></span>。这给了”思维可以被计算”这个想法一个具体的立足点。</p>
-<p>1958 年，Rosenblatt
-在此之上加了一样东西：权重不是设计出来的，而是<strong>从样例里调出来的</strong><span
-class="citation"
-data-cites="rosenblatt1958"><sup>[8]</sup></span>。这个改动比听起来大得多。在它之前，要让机器完成一个判断任务，人必须把判断规则一条条写全——这是符号主义的路数，<a
-href="#sec:three-schools">第 1.2
-节</a>里说过它的难处。感知机把”完成任务”变成了”调参数”：规则从人手里转移到了数据手里。</p>
-<p>所以这一节里，“学习”一词还没有出场，但它的舞台已经搭好了：<strong>只要存在一种自动调权重的办法，判断能力就可以从经验中生长出来。</strong>那个办法叫梯度下降，在第
-<a href="#sec:learning">1.3.3 节</a>才登场。</p>
-<figure id="fig:perceptron-sum">
-<img src="figures/src/03-01-perceptron-sum.svg"
-alt="感知机的三步：输入、加权求和、阈值判断" />
-<figcaption
-aria-hidden="true">感知机的三步：输入、加权求和、阈值判断</figcaption>
-</figure>
-<h4 data-number="1.3.1.4" id="一颗神经元能干什么不能干什么"><span
-class="header-section-number">1.3.1.4</span>
-一颗神经元能干什么，不能干什么</h4>
-<p>给 <a href="#fig:perceptron-sum">上图</a> 的两个输入各取 0 或
-1，这颗神经元能实现的判断有一个共同的几何形状：<strong>在平面上画一条直线，直线的一侧输出
-1，另一侧输出
-0。</strong>这不是比喻——加权和恰好就是直线的方程。权重决定直线的方向，阈值决定它离原点远近。</p>
-<p>直线能分开的问题，单层感知机都能做。直线分不开的问题，它一个都做不了。最著名的反例是异或（XOR）：相同输出
-0，不同输出 1。把四个点画在平面上（<a
-href="#fig:xor">下图</a>），两个同类永远落在对角线上，任何一条直线都必然把某个同类切到另一边去。</p>
-<figure id="fig:xor">
-<img src="figures/src/03-01-xor-plane.svg" alt="异或问题（XOR）" />
-<figcaption aria-hidden="true">异或问题（XOR）</figcaption>
-</figure>
-<p>圆在 (0,0) 和 (1,1)，三角在 (0,1) 和
-(1,0)：两类各占一条对角线。三条候选切法里，横切、竖切把两类各混一半，斜切勉强留下一个三角、却把其余三个全挤到另一侧——没有一条能幸免。</p>
-<p>1969 年，Minsky 和 Papert
-在《Perceptrons》里把这一点论证得足够彻底<span class="citation"
-data-cites="minsky1969"><sup>[9]</sup></span>，加上当时没有人知道怎么越过这道墙，感知机研究停顿了将近二十年。回头看，这堵墙的越过方式简单得近乎轻佻：<strong>多放几颗神经元，把直线摞成折线</strong>。但”怎么让摞起来的神经元各自调好自己的权重”，直到反向传播出现才有了答案——那是<a
-href="#sec:learning">第 1.3.3 节</a>的内容。</p>
-<p>在此先记住一个判断标准，它后面会反复用到：<strong>评价一个模型，先问它画得出的边界是什么形状。</strong>边界形状决定了它天生能做什么任务，这是”天然优缺点”最早的来源。</p>
-<h4 data-number="1.3.1.5" id="一层互相连接的神经元记住一个图案"><span
-class="header-section-number">1.3.1.5</span>
-一层互相连接的神经元，记住一个图案</h4>
-<p>前一颗神经元是”像素进来、答案出去”。现在换个摆法，把九颗神经元摆成
-3×3，<strong>两两相连</strong>，不设输入层、输出层——每个像素的位置本身就是一颗神经元，它既是入口也是出口。</p>
-<p>图案怎么存进连线？规则只有一句，在存图案的那一刻定死：<strong>图案里颜色相同的两颗，连线权重
-+1；颜色不同的，-1。</strong>九颗神经元、36
-条连线，权重全部由图案直接算出，不需要任何训练——“直接设定图案让它记忆”，字面意思。</p>
-<p>记忆是这样工作的（<a
-href="#fig:pattern-memory">下图</a>）：给网络看一个缺了一块的图案，每颗神经元把所有同伴的当前颜色乘上连线权重、全部加起来，和为正就亮、为负就暗。这个动作同时发生在九颗神经元身上，算一轮，图案就刷新一次。</p>
-<figure id="fig:pattern-memory">
-<img src="figures/src/03-01-pattern-memory.svg"
-alt="联想记忆：存入「十」，再现「十」" />
-<figcaption
-aria-hidden="true">联想记忆：存入「十」，再现「十」</figcaption>
-</figure>
-<p>拿 <a href="#fig:pattern-memory">上图</a>
-的右半边算一笔账：送进来的「十」中心被抹掉，其余八个像素都是对的。轮到中心那颗神经元表态时，它数一数
-8 个同伴——存图案时与它同色的 4 颗，现在颜色正确，各贡献 +1；与它异色的 4
-颗（四个角）现在也正确地暗着，异色配负权重，又各贡献 +1。合计
-<strong>+8</strong>，中心亮回来。同时，四条臂各算出
-+6，保持亮；四个角各算出
--8，保持暗——没人被带偏。一个像素的错误，一轮投票修复。</p>
-<p>这类网络今天叫<strong>联想记忆</strong>（associative
-memory），Hopfield 在 1982 年证明了这种投票一定会停下来<span
-class="citation"
-data-cites="hopfield1982"><sup>[10]</sup></span>。它是”一组神经元直接记住一个图案”的最简单例子：<strong>权重表就是记忆，再现就是投票。</strong>而它的天然短板也一眼可见：这套
-36
-个权重只认识「十」一个图案，想再存一个「X」，两组权重就会打架——存得多、记得糙，是所有记忆网络的共同税。</p>
-<h4 data-number="1.3.1.6" id="小结与自检-2"><span
-class="header-section-number">1.3.1.6</span> 小结与自检</h4>
-<p>三句话总结：人工神经元 = 输入加权求和 +
-阈值判断；单层感知机的判断边界是一条直线，所以它能做与不能做的事都由这个形状决定；一组神经元还能直接把图案存进连线权重、靠投票再现——权重表就是记忆，但一网只存得下一件事。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>把 <a href="#fig:perceptron-sum">上图</a> 里的阈值从 60 改成
-90，判断边界发生了什么变化？</li>
-<li>一个朋友说：“神经元越多，单层感知机能解决的问题就越多。”这句话错在哪？</li>
-</ol>
-<p><strong>数学注解。</strong> 本节用到的全部数学，以下两行。记输入为
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">x_1, \dots, x_n</annotation></semantics></math>，权重为
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>w</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">w_1, \dots, w_n</annotation></semantics></math>，偏置为
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>（就是
-<a href="#fig:perceptron-sum">上图</a> 里那个阈值的负数）：</p>
-<p>加权和：</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>w</mi><mi>i</mi></msub><msub><mi>x</mi><mi>i</mi></msub><mo>+</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">z = \sum_{i=1}^{n} w_i x_i + b</annotation></semantics></math></p>
-<p>输出（阶跃激活）：</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left" style="text-align: left"><mn>1</mn></mtd><mtd columnalign="left" style="text-align: left"><mi>z</mi><mo>≥</mo><mn>0</mn></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mn>0</mn></mtd><mtd columnalign="left" style="text-align: left"><mi>z</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">y = \begin{cases} 1 &amp; z \ge 0 \\ 0 &amp; z &lt; 0 \end{cases}</annotation></semantics></math></p>
-<p>联想记忆的连线权重与刷新规则：存图案
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
-时，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mi>+</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">w_{ij} = +1</annotation></semantics></math>
-若
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub><mo>=</mo><msub><mi>s</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">s_i = s_j</annotation></semantics></math>，否则
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>（<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mrow><mi>i</mi><mi>i</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">w_{ii}=0</annotation></semantics></math>）；再现时每颗神经元计算
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>h</mi><mi>i</mi></msub><mo>=</mo><msub><mo>∑</mo><mrow><mi>j</mi><mo>≠</mo><mi>i</mi></mrow></msub><msub><mi>w</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mspace width="0.167em"></mspace><msub><mi>s</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">h_i = \sum_{j \ne i} w_{ij}\, s_j</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>h</mi><mi>i</mi></msub><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">h_i \ge 0</annotation></semantics></math>
-则亮、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">&lt; 0</annotation></semantics></math>
-则暗。</p>
-<p>权重如何从数据里调出来（学习规则），统一放到<a
-href="#sec:learning">第 1.3.3 节</a>。</p>
-<h3 data-number="1.3.2" id="sec:data-input"><span
-class="header-section-number">1.3.2</span>
-数据输入：从真实量到高维向量</h3>
-<h4 data-number="1.3.2.1" id="一句话直觉-3"><span
-class="header-section-number">1.3.2.1</span> 一句话直觉</h4>
-<p><a href="#sec:neural-networks">第 1.3.1
-节</a>里那颗神经元只会做一件事：拿数字算加权求和。它不认识红色，不认识汉字，不认识猫。所以全世界的一切——照片、语音、文本、你此刻的走路姿势——想进神经网络，都得先办同一件事：<strong>变成一列数</strong>。</p>
-<p>这一节讲”变”的手艺。变完之后，一个东西就用它所在的那列数来代表，这列数有多少个格，我们就说这个世界有多少<strong>维</strong>。</p>
-<h4 data-number="1.3.2.2" id="一个类比体检报告"><span
-class="header-section-number">1.3.2.2</span> 一个类比：体检报告</h4>
-<p>体检报告把”你这个人”压缩成几百个数：身高、体重、血压、二十项血指标……医生没有见过你，只看数就能做出相当靠谱的判断。压缩必然丢东西——你的性格不在报告里——但选对了指标，丢掉的恰好是不影响判断的部分。</p>
-<p>神经网络吃的就是这种报告。给它的”体检项目”选得好，它学得又快又准；选得不好，神仙也救不回来。</p>
-<h4 data-number="1.3.2.3" id="图像从颜色到张量"><span
-class="header-section-number">1.3.2.3</span> 图像：从颜色到张量</h4>
-<p>一张数字照片在屏幕上本来就是一个数字阵列：每个像素三个数，分别描述红、绿、蓝三种光的强度（0
-到
-255）。所以”把照片喂给网络”不是翻译，而是<strong>照搬</strong>——只是要照搬三百万个数（<a
-href="#fig:rgb-tensor">下图</a>）。</p>
-<figure id="fig:rgb-tensor">
-<img src="figures/src/03-02-rgb-tensor.svg"
-alt="一张彩色照片变成三个数字阵列" />
-<figcaption aria-hidden="true">一张彩色照片变成三个数字阵列</figcaption>
-</figure>
-<p>灰度图更简单：黑白手写数字常做成 28×28 的小格，每个格一个 0 到 1
-的数。把 784 个格按行拉直，就是一条 784 维的向量（<a
-href="#fig:flatten">下图</a>）——784 就是这个世界交给网络的”维度”。</p>
-<figure id="fig:flatten">
-<img src="figures/src/03-02-flatten.svg"
-alt="28×28 的手写数字拉直成 784 维向量" />
-<figcaption aria-hidden="true">28×28 的手写数字拉直成 784
-维向量</figcaption>
-</figure>
-<p>拉直不丢信息，但丢<strong>关系</strong>：纸上相邻的两个像素，在向量里相距
-28
-个位置，“相邻”这件事网络要自己重新学。这是后面许多架构发明的出发点，先记下。</p>
-<h4 data-number="1.3.2.4" id="文本从字到块"><span
-class="header-section-number">1.3.2.4</span> 文本：从字到块</h4>
-<p>数字和图片天然是数。文本不是，总得先切。切法是一个纯粹的工程取舍（<a
-href="#fig:bpe">下图</a>），主流办法叫 BPE（byte-pair encoding）<span
-class="citation"
-data-cites="sennrich2016"><sup>[11]</sup></span>：从单个字符出发，反复统计语料里哪一对搭档出现得最多，就把它们合并成一个新符号。几万轮之后，常见词被合并成整块，生僻词自动退回字符——<strong>一个词表同时照顾两头</strong>。</p>
-<figure id="fig:bpe">
-<img src="figures/src/03-02-bpe.svg" alt="BPE 的合并过程" />
-<figcaption aria-hidden="true">BPE 的合并过程</figcaption>
-</figure>
-<figure id="fig:tokenize-compare">
-<img src="figures/src/03-02-tokenize-compare.svg"
-alt="同一段话在不同语言下的切块数" />
-<figcaption aria-hidden="true">同一段话在不同语言下的切块数</figcaption>
-</figure>
-<p>切出来的每一块叫一个 <strong>token</strong>。模型的眼里没有词，只有
-token 和它们的编号。中文没有空格、字字常用，BPE
-通常不去合并汉字，于是同一段话中文要比英文多花两三倍的
-token——这个倍数在第 1.5 节讲上下文窗口时会变成真金白银的约束。</p>
-<h4 data-number="1.3.2.5" id="数据从哪来"><span
-class="header-section-number">1.3.2.5</span> 数据从哪来</h4>
-<p>向量是”形”，数据是”料”。料有三个来源：<strong>天然带标注</strong>的（点外卖时的评分、照片的拍摄时间）、<strong>花钱花人力标的</strong>（医学影像要医生画框）、<strong>自己产生的</strong>（把互联网上的文本直接拿来，“下一句”就是免费的标准答案——这是大语言模型时代最关键的洞察，第
-1.5 节展开）。</p>
-<p>数据脏，模型就脏：标注员手一抖、爬虫混进重复样本、体检单抄错一格，网络会忠实地把这些错误也学进去，而且学得一样起劲。</p>
-<h4 data-number="1.3.2.6" id="天然短板维度是选择选择就有代价"><span
-class="header-section-number">1.3.2.6</span>
-天然短板：维度是选择，选择就有代价</h4>
-<p>把世界变成向量，每一步都在做决定：用 784
-个格子表示一个数字，是决定”忽略笔画的粗细和颜色”；用三个数表示一个像素，是决定”色相和亮度的组合方式无所谓”。<strong>被表示法丢掉的信息，网络永远学不回来。</strong></p>
-<p>更隐蔽的代价是维度本身：维度越高，“相邻”越失去直觉意义——784
-维空间里两点距离都不远也都不近。所谓维数灾难，直白版就是：格子越多，需要的样本越多，否则大部分格子一辈子等不来一个例子。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”AI
-看到了”照片。它没有。它读到一张数字报表，报表的格式（维度、顺序、每格的取值范围）全是人定的；两个格式不同的世界，对它来说是两个世界。这也是为什么”把人眼看到的东西给
-AI”永远隔着一层表示法——表示法里的偏见会原样传给模型。</p>
-</blockquote>
-<h4 data-number="1.3.2.7" id="小结与自检-3"><span
-class="header-section-number">1.3.2.7</span> 小结与自检</h4>
-<p>三句话总结：一切输入先变成定长向量，维度就是”描述一个东西用了几个数”；文本靠分词切成
-token，词表大小是”背多少、拼多少”的分工线；被表示法丢掉的信息永远学不回来，脏数据会被同样起劲地学会。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>把 28×28 的手写数字图旋转 90
-度再拉直，得到的向量和原来的有任何关系吗？这说明了拉直表示的什么性质？</li>
-<li>一个应用要识别手写汉字，词表该偏大还是偏小？（提示：汉字是”字”还是”块”，取决于你希望模型背还是拼。）</li>
-</ol>
-<p><strong>数学注解。</strong> 本节只引入记号：输入向量写作粗体
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>x</mi><mi>d</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{x} = (x_1, x_2, \dots, x_d)</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
-是维度；图像的三个颜色层摞成的阵列叫张量（tensor），就是”多维表格”的数学名字。BPE
-的合并规则不涉及数学，只涉及计数。</p>
-<h3 data-number="1.3.3" id="sec:learning"><span
-class="header-section-number">1.3.3</span>
-高维找规律：神经网络如何学习</h3>
-<h4 data-number="1.3.3.1" id="一句话直觉-4"><span
-class="header-section-number">1.3.3.1</span> 一句话直觉</h4>
-<p>学习就是<strong>拧旋钮</strong>：网络里有几百万到几千亿个参数（第
-1.3.1
-节数过），每个参数一个旋钮。训练开始时全部乱拧，网络胡说八道；然后一遍一遍地做同一件事——看一批例子，量一量错得有多离谱，把每个旋钮朝”错误变小”的方向拧一点点。几百万遍之后，旋钮的组合开始产生正确的答案。</p>
-<p>没有灵感，没有顿悟，只有<strong>量错误、拧旋钮</strong>这两个动作的几百万次重复。</p>
-<h4 data-number="1.3.3.2" id="一个类比蒙眼调音"><span
-class="header-section-number">1.3.3.2</span> 一个类比：蒙眼调音</h4>
-<p>想象蒙着眼睛调一台有两百个旋钮的老收音机，目标是听到一档干净的爵士乐。你看不见旋钮，但听得见杂音的大小。策略只有一个：每个旋钮轻轻拧一点，听听杂音是变大了还是变小了，变小的方向就继续拧。两百个旋钮轮流来，几十轮之后音乐浮出来。</p>
-<p><strong>“听得见杂音变大变小”就是损失函数，“往杂音变小的方向拧”就是梯度下降。</strong>唯一的差别是：神经网络的两百个旋钮互相影响，而且有几百亿个。</p>
-<h4 data-number="1.3.3.3" id="它解决什么问题-1"><span
-class="header-section-number">1.3.3.3</span> 它解决什么问题</h4>
-<p><a href="#sec:neural-networks">第 1.3.1 节</a>留了两个悬案：XOR
-之墙靠”多放几颗神经元”翻越，但没人知道<strong>怎么让每一颗各自调好自己的权重</strong>。这一节就是答案。</p>
-<h4 data-number="1.3.3.4"
-id="先看最简单的情形两颗神经元拼出一条折线"><span
-class="header-section-number">1.3.3.4</span>
-先看最简单的情形：两颗神经元，拼出一条折线</h4>
-<p>理解”学习”最省力的入口，是先看一个只有四个权重的”迷你网络”：给它一堆橙色数据点，让它画出穿过它们的线（<a
-href="#fig:fit-curve">图 1-15</a>）。</p>
-<p>网络里只有两颗神经元。<a href="#sec:neural-networks">第 1.3.1
-节</a>说过，每颗神经元只干两件事：先算一条直线（加权和），再把结果过一道<strong>非线性</strong>。最常见的那道非线性朴素得惊人——<strong>负数归零</strong>：负数一律变
-0，正数原样通过。它的效果只有一个：把直线在零点”折”一下，折出一个折点。</p>
-<p>于是事情串起来了：<strong>每颗神经元贡献一个折点</strong>。两颗神经元，两个折点，加起来就是一条两段直线拼成的
-<strong>V 形线</strong>——<a href="#fig:fit-curve">图 1-15</a>
-里两条彩色折线相加得到蓝色 V 形，橙色数据点就落在这条 V
-上。神经元加到十颗，就有十个折点；加到几百颗，折点密到看不出折痕，拼出的线可以贴合任意一条曲线。</p>
-<figure id="fig:fit-curve">
-<img src="figures/src/03-03-fit-curve.svg"
-alt="两颗神经元拼出一条折线" />
-<figcaption aria-hidden="true">两颗神经元拼出一条折线</figcaption>
-</figure>
-<p>这就是”高维找规律”的最小版本：<strong>规律就是这条线——它穿过学过的所有点，靠折点模仿数据里的一切弯折。</strong>真网络把游戏放大亿万倍：输入是
-784
-维向量，“线”是三千万维空间里的一张折面，但”每颗神经元折一下、加起来拼出复杂映射”这句话一个字不用改。</p>
-<p>也顺手看清它的极限：折点再多，也只是在模仿点与点之间的走势。它是一只<strong>鹦鹉</strong>，把见过的规律模仿得惟妙惟肖，规律之外一概不知——这只鹦鹉在第
-1.6 节还会回来（幻觉的种子在这里就埋下了）。</p>
-<p>关键动作分三步，每一步都有图。</p>
-<p><strong>第一步：给”错得离谱”定一个数。</strong>网络拿一个训练样例算出预测，和标准答案相减、平方、平均，得到一个数——<strong>损失</strong>（loss）。损失大
-= 错得离谱，损失小 = 接近正确。全部训练要做的就是让这个数变小。</p>
-<p><strong>第二步：在”旋钮空间”里找下坡。</strong>把每个参数当一根坐标轴，损失就是这片高维空间的高度，合起来是一张起伏的曲面（<a
-href="#fig:loss-surface">下图</a>
-用两个参数画了它的缩影）。梯度下降的规则朴素到一句话：<strong>算出当前点最陡的下坡方向，朝那个方向挪一小步，重复。</strong>那”一小步”的大小叫学习率——太大一步跨过谷底来回震荡，太小则一百年也走不到。</p>
-<figure id="fig:loss-surface">
-<img src="figures/src/03-03-loss-surface.svg"
-alt="损失曲面与下坡路径" />
-<figcaption aria-hidden="true">损失曲面与下坡路径</figcaption>
-</figure>
-<p><strong>第三步：算出每个旋钮该往哪边拧。</strong>曲面上千万个参数，怎么知道”最陡下坡”？这就是
-1986 年反向传播的功劳<span class="citation"
-data-cites="rumelhart1986"><sup>[12]</sup></span>：先正向算出预测（灰线），再从输出层的误差出发，<strong>沿网络从右往左逐层分账</strong>（红线）——每个权重分到”你该为这个错负多少责”，责任大的多拧、小的少拧（<a
-href="#fig:backprop">下图</a>）。一条链式法则，把几百亿个旋钮的方向一次算清。</p>
-<figure id="fig:backprop">
-<img src="figures/src/03-03-backprop.svg" alt="反向传播的误差回流" />
-<figcaption aria-hidden="true">反向传播的误差回流</figcaption>
-</figure>
-<p>这三步合起来跑一遍，叫一次<strong>迭代</strong>。几十亿次迭代之后，第
-1.3.1 节那个 26 个旋钮的小网络就能正确分类，而同样的机制放大一万倍，就是
-LeCun 等人手上最早的卷积网络<span class="citation"
-data-cites="lecun1998"><sup>[13]</sup></span>和今天的一切大模型。</p>
-<h4 data-number="1.3.3.5" id="高维找规律数据住在一张纸上"><span
-class="header-section-number">1.3.3.5</span>
-高维找规律：数据住在一张纸上</h4>
-<p>还剩最后一个谜：三千万维的空间那么空，几百张猫照片怎么可能教会网络认猫？</p>
-<p>因为数据不填满空间。所有”猫的照片”互相之间的差异——角度、光线、距离、姿态——只有几个自由度，所以它们在三千万维空间里<strong>聚在一张弯曲的低维纸面上</strong>，这张纸叫<strong>流形</strong>（manifold）<span
-class="citation"
-data-cites="bengio2013"><sup>[14]</sup></span>。学习就是摸清这张纸的形状：把卷起来的地方展开，把同一类聚拢、不同类隔开（<a
-href="#fig:manifold">下图</a>）。</p>
-<figure id="fig:manifold">
-<img src="figures/src/03-03-manifold.svg"
-alt="流形：数据住在低维的纸上" />
-<figcaption aria-hidden="true">流形：数据住在低维的纸上</figcaption>
-</figure>
-<p>这也解释了为什么”高维”没有听上去的那么可怕：<strong>维度是表示的原料，规律住在低维的流形上</strong>。网络学得好不好，取决于它能不能顺着数据真正所在的那张纸走，而不是被空间里没人的区域骗走。</p>
-<h4 data-number="1.3.3.6"
-id="天然短板梯度下降只保证变好不保证变对"><span
-class="header-section-number">1.3.3.6</span>
-天然短板：梯度下降只保证”变好”，不保证”变对”</h4>
-<p>曲面上的下坡有三重坑。<strong>局部坑</strong>：走到一个小坑里，四周都是上坡，机器人会以为到了谷底——好在高维空间里真正的局部坑比二维直觉少得多。<strong>过拟合</strong>：把训练数据背得滚瓜烂熟，损失一路下降，遇到新样例一塌糊涂——怎么发现和预防是<a
-href="#sec:generalization">第 1.4.3
-节</a>的主角。<strong>数据饿</strong>：参数越多，要喂的例子越多，否则旋钮记的是每个样例而不是规律。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为神经网络”像大脑一样学习”。真实的训练是一台数值优化机器：损失函数、梯度、更新，每一步都是确定性的算术。大脑给它的只有灵感（第
-1.3.1
-节的三步结构），学的方式完全是工程。同理，“网络想通了”也没有对应物——它只是某次迭代之后，损失恰好降到了某个位置。</p>
-</blockquote>
-<h4 data-number="1.3.3.7" id="小结与自检-4"><span
-class="header-section-number">1.3.3.7</span> 小结与自检</h4>
-<p>三句话总结：损失函数把”错得离谱”变成一个数；梯度下降沿最陡下坡拧旋钮；反向传播沿网络把误差分账到每个权重。学习没有灵光一现，只有几百万次”量错误、拧旋钮”——而学成的网络本质上是一只鹦鹉：把见过的规律模仿得惟妙惟肖。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>学习率调到 10 倍会发生什么？调到十分之一呢？（提示：<a
-href="#fig:loss-surface">上图</a> 上想象步长。）</li>
-<li>为什么”几十张猫照片”能教出认猫的模型，而”几十道微积分题”教不出会微积分的模型？（提示：流形。）</li>
-</ol>
-<p><strong>数学注解。</strong> 记预测为
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>y</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{y}</annotation></semantics></math>、标准答案为
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>，均方误差损失：</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo stretchy="false" form="prefix">(</mo><msub><mover><mi>y</mi><mo accent="true">̂</mo></mover><mi>i</mi></msub><mo>−</mo><msub><mi>y</mi><mi>i</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">L = \frac{1}{n}\sum_{i=1}^{n} (\hat{y}_i - y_i)^2</annotation></semantics></math></p>
-<p>每颗神经元的”折弯”与每颗神经元：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mi>max</mi><mo>&#8289;</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mspace width="0.167em"></mspace><mi>w</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">h = \max(0,\, wx+b)</annotation></semantics></math>（“负数归零”），后面再把各个
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>
-加权相加。</p>
-<p>梯度下降更新式：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>←</mo><mi>θ</mi><mo>−</mo><mi>η</mi><mi>∇</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">\theta \leftarrow \theta - \eta \nabla L</annotation></semantics></math>，其中
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
-是全部参数，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math>
-是学习率，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">\nabla L</annotation></semantics></math>
-是损失对各参数的梯度（“最陡下坡方向”）。反向传播就是用链式法则一次算出
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">\nabla L</annotation></semantics></math>
-的每一个分量。</p>
-<h3 data-number="1.3.4" id="sec:train-and-infer"><span
-class="header-section-number">1.3.4</span> 学到与用上：训练和推理</h3>
-<h4 data-number="1.3.4.1" id="一句话直觉-5"><span
-class="header-section-number">1.3.4.1</span> 一句话直觉</h4>
-<p><a href="#sec:learning">第 1.3.3
-节</a>讲的”量错误、拧旋钮”是<strong>训练</strong>；训练结束、旋钮冻结之后，拿一个新问题让网络正向算一遍给出答案，是<strong>推理</strong>。同一个网络，两种生活：训练时它在变，推理时它不变。</p>
-<p>把这两件事分开，是理解大模型成本、速度和一切”它到底学没学”问题的前提。</p>
-<h4 data-number="1.3.4.2" id="一个类比研发菜谱与照单出餐"><span
-class="header-section-number">1.3.4.2</span>
-一个类比：研发菜谱与照单出餐</h4>
-<p>连锁餐厅的新菜研发是训练：试菜、收反馈、改配方，改几十上百版，动用最好的厨师和最贵的原料，一道菜定稿要几周。而全国门店照单出餐是推理：配方（权重）已冻结，每份出品只是执行，几分钟一道，翻台几十万次。</p>
-<p>关键在两件事的分界：<strong>配方定型的那一刻</strong>。定型之后，门店的出品再受欢迎，配方也不会自己变——除非总部决定改版，那是新一轮训练。</p>
-<h4 data-number="1.3.4.3" id="两个阶段两种成本结构"><span
-class="header-section-number">1.3.4.3</span> 两个阶段，两种成本结构</h4>
-<figure id="fig:two-phases">
-<img src="figures/src/03-04-two-phases.svg" alt="训练与推理的对比" />
-<figcaption aria-hidden="true">训练与推理的对比</figcaption>
-</figure>
-<p><strong>训练</strong>正向、反向都要算：正向给预测，反向分账拧旋钮（<a
-href="#sec:learning">第 1.3.3
-节</a>）。它要吃下海量数据、跑几周、烧掉一整间机房的电，但它<strong>一生只做一次</strong>（准确说：每个模型版本一次）。</p>
-<p><strong>推理</strong>只有正向：问题进来，信号从左到右过一遍网络，答案出去。没有误差、没有梯度、没有旋钮会动。单次推理毫秒级，但全世界每天推理几十亿次——<strong>便宜的单价乘以天文数字的次数</strong>，就是大模型公司真正的成本结构。</p>
-<p>这也是为什么行业里”训练一次多少钱”和”问一次多少钱”是两个完全不同的报价：前者是研发费，后者是门店的原料加水电。</p>
-<h4 data-number="1.3.4.4" id="推理时显存里住着什么"><span
-class="header-section-number">1.3.4.4</span> 推理时显存里住着什么</h4>
-<p>推理虽然算得少，但<strong>网络权重必须整个住在显存里</strong>，另外还要给计算过程和对话历史留位置（<a
-href="#fig:memory">下图</a>）。这就是部署方念叨的”显存墙”的第一堵：模型能不能跑，先看墙够不够高。</p>
-<figure id="fig:memory">
-<img src="figures/src/03-04-memory.svg" alt="推理时的显存构成" />
-<figcaption aria-hidden="true">推理时的显存构成</figcaption>
-</figure>
-<p>这里埋两根线，后面各有一节来收：对话历史那块缓存为什么”越长越大”，牵出注意力机制的结构（<a
-href="#sec:attention">第 1.5.2 节</a>）和 KV 缓存（<a
-href="#sec:compute-and-deployment">第 1.8
-节</a>）；“墙太高怎么办”牵出量化和精度（<a
-href="#sec:compute-and-deployment">第 1.8 节</a>）。</p>
-<h4 data-number="1.3.4.5"
-id="天然短板定型之后它不再从你这里学到任何东西"><span
-class="header-section-number">1.3.4.5</span>
-天然短板：定型之后，它不再从你这里学到任何东西</h4>
-<p>推理阶段无论你说什么、纠正什么，权重一个都不动。你花一下午把模型驳得哑口无言，关掉窗口，下一次它原样再犯——<strong>它没有”记住这次教训”这回事</strong>（要真的改，得回到训练侧，那叫微调或对齐，<a
-href="#sec:alignment-hallucination-safety">第 1.6 节</a>）。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”AI
-在和我聊天的时候在学习”。用户以为的”它越来越懂我”，几乎都来自对话窗口里它看得见的上文（上下文，<a
-href="#sec:harness">第 1.7.1
-节</a>），而不是权重变了。分清这两件事，很多困惑——“为什么换个新会话它全忘了”“为什么它学不会我的偏好”——会一起消失。</p>
-</blockquote>
-<h4 data-number="1.3.4.6" id="小结与自检-5"><span
-class="header-section-number">1.3.4.6</span> 小结与自检</h4>
-<p>三句话总结：训练正向反向都算、旋钮在动、一生一次；推理只算正向、旋钮冻结、每天几十亿次；显存墙先卡”装不装得下”，再卡”聊得多长”。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>某产品宣称”和它聊得越多它越懂你”。用本节的框架，列出验证这个宣称需要确认的两件事。</li>
-<li>一家餐厅把”新菜研发”外包给了三家门店各自试菜。用训练/推理的语言描述这种做法的问题。</li>
-</ol>
-<h2 data-number="1.4" id="sec:machine-learning"><span
-class="header-section-number">1.4</span> 机器学习</h2>
-<p>本章把”学习”从一颗神经元放大到整个学科：先看<strong>深度</strong>是怎么来的（多层怎么学会了拐弯），再分清三种学习范式——对着答案学、自己找结构、和世界试错；最后回答一个最实际的问题：<strong>怎么判断它到底学会了没有。</strong></p>
-<p>三节相对独立；<a href="#sec:generalization">第 1.4.3
-节</a>也可以单独先读——那里不谈原理，只谈怎么验收。</p>
-<h3 data-number="1.4.1" id="sec:mlp"><span
-class="header-section-number">1.4.1</span>
-更深的大脑：多层感知机与深度学习</h3>
-<h4 data-number="1.4.1.1" id="一句话直觉-6"><span
-class="header-section-number">1.4.1.1</span> 一句话直觉</h4>
-<p><a href="#sec:neural-networks">第 1.3.1
-节</a>的单层感知机只能画一条直线；<a href="#sec:learning">第 1.3.3
-节</a>讲了怎么拧旋钮，但旋钮再多，只要网络只有一层，能画的还是直线。<strong>在输入和输出之间加一层，直线就学会了拐弯</strong>——这一层叫隐藏层，有了它，“深度”这个新时代的名字才有了着落。</p>
-<h4 data-number="1.4.1.2" id="一个类比先判小题再判大题"><span
-class="header-section-number">1.4.1.2</span>
-一个类比：先判小题，再判大题</h4>
-<p>面对”这张脸是不是猫”，人不会直接瞪着像素下结论，而是心里过一连串小问题：有耳朵吗？耳朵尖吗？有胡须？——每个小问题都是一颗神经元，它们的答案拼在一起，最后一颗神经元才下大结论。</p>
-<p><strong>先答小题，再拿小题的答案答大题</strong>——多层网络做的就是这个。那些”小题神经元”夹在输入和输出之间，看不见也摸不着，所以叫<strong>隐藏层</strong>（hidden
-layer）。</p>
-<h4 data-number="1.4.1.3" id="它解决什么问题直线在哪个空间里画"><span
-class="header-section-number">1.4.1.3</span>
-它解决什么问题：直线在哪个空间里画</h4>
-<p>先兑现<a href="#sec:learning">第 1.3.3
-节</a>埋下的问题：多层网络凭什么能解开 XOR？</p>
-<p>诀窍是<strong>高维的直线，低维的投影</strong>。隐藏层把每个输入送进一个新的坐标系：每一维就是一颗隐藏神经元的”是/否”答案。在这个新空间里，网络画出的分界是一张<strong>平直的超平面</strong>——高维空间里的一条直线；同一个分界面投回你熟悉的二维平面，就变成折线、带子、甚至一时看不出形状的复杂边界（<a
-href="#fig:hidden-space">图 1-21</a>）。</p>
-<p><strong>同一条线，在高维是直的，在低维看着复杂</strong>——这就是 MLP
-能解 XOR 的全部秘密。</p>
-<figure id="fig:hidden-space">
-<img src="figures/src/04-01-hidden-space.svg"
-alt="同一条分界线：高维里是直线，低维里是双曲线。左图中两个三角在新坐标里重合于同一点。" />
-<figcaption
-aria-hidden="true">同一条分界线：高维里是直线，低维里是双曲线。左图中两个三角在新坐标里重合于同一点。</figcaption>
-</figure>
-<p>投回原始平面，高维空间里那一条直线会现出原形：<strong>一条双曲线，两支分别切过两个圆的角落</strong>——三角在曲线的一侧，圆在另一侧。XOR
-之墙，翻墙方式不过如此：不是一条线学会了拐弯，而是高维的一条直线在低维的投影本来就可以是复杂曲线。</p>
-<figure id="fig:depth">
-<img src="figures/src/04-01-depth.svg" alt="从单层到深度" />
-<figcaption aria-hidden="true">从单层到深度</figcaption>
-</figure>
-<p><strong>“深度学习”的”深度”，就是隐藏层的层数。</strong>一层是 1986
-年之后的 MLP；十几层、几百层，就是 2012
-年以后接管整个领域的深度网络<span class="citation"
-data-cites="krizhevsky2012"><sup>[15]</sup></span>。层数为什么值得堆？<strong>组合复用</strong>：第一层学会的小零件（边缘、拐角），第二层直接拿去拼大零件（耳朵、胡须），第三层拼出整只猫——零件不用重学。扁平的宽网络想表达同样的东西，参数要多得多<span
-class="citation" data-cites="lecun2015"><sup>[16]</sup></span>。</p>
-<p>顺带补全拼图：第 1.3.3
-节那个拟合曲线的迷你网络里，神经元用的是直通输出；真网络的每颗神经元都要过一道<strong>非线性激活</strong>（比如”负数归零”），否则不管叠多少层，整摞网络在数学上都塌缩成一条直线——<strong>非线性是”深度”有意义的前提</strong>，也是深度网络强大与难解释的共同源头<span
-class="citation"
-data-cites="goodfellow2016"><sup>[17]</sup></span>。</p>
-<h4 data-number="1.4.1.4" id="天然短板三张账单"><span
-class="header-section-number">1.4.1.4</span> 天然短板：三张账单</h4>
-<p>深度网络的强大是拿三样东西换的。<strong>数据</strong>：参数多到几亿，要喂的样例也得同量级，否则就过拟合（<a
-href="#sec:generalization">第 1.4.3
-节</a>）。<strong>算力</strong>：几百万次”正向 +
-反向”迭代，每次都动用全网络——这是 2012
-年之前深度学习一直沉睡的原因，唤醒它的不是新理论，是显卡。<strong>透明性</strong>：层数越深，“为什么这样判断”越难回答，连造它的人也答不上来。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”深度 =
-更聪明”，层数堆上去能力自然长。层数只提供<strong>表达的潜力</strong>——能画出更复杂的边界；潜力要靠数据和算力去兑现，靠好的训练去实现。一个层数很深、数据很少的网络，输给一个层数浅、数据充足的对手，是常态而不是新闻。</p>
-</blockquote>
-<h4 data-number="1.4.1.5" id="小结与自检-6"><span
-class="header-section-number">1.4.1.5</span> 小结与自检</h4>
-<p>三句话总结：隐藏层让网络先造一个”直线够用”的新空间，弯线在新空间里是直线；隐藏层堆起来就是深度学习，威力来自零件的组合复用；代价是数据、算力和透明性三张账单。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>把<a href="#fig:hidden-space">图
-1-20</a>右图里的直线画到左图的输入空间里，会是什么形状？</li>
-<li>为什么给一颗神经元的输入里塞一个 x²（<a href="#sec:learning">第
-1.3.3
-节</a>的迷你网络），它也能画出弯线？这和隐藏层做的事有什么相通之处？</li>
-</ol>
-<p><strong>数学注解。</strong>
-每颗隐藏神经元：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>h</mi><mi>j</mi></msub><mo>=</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><msub><mo>∑</mo><mi>i</mi></msub><msub><mi>w</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>x</mi><mi>i</mi></msub><mo>+</mo><msub><mi>b</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">h_j = f(\sum_i w_{ij} x_i + b_j)</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>
-是非线性激活（如
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>max</mi><mo>&#8289;</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(z)=\max(0,z)</annotation></semantics></math>，负数归零）。多层网络
-= 这个式子套娃若干层。“若没有
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>，多层塌缩成一层”可以一行验证：两个线性层复合仍是线性映射。</p>
-<h3 data-number="1.4.2" id="sec:paradigms"><span
-class="header-section-number">1.4.2</span>
-监督学习、无监督学习、强化学习</h3>
-<h4 data-number="1.4.2.1" id="一句话直觉-7"><span
-class="header-section-number">1.4.2.1</span> 一句话直觉</h4>
-<p>三种学习范式，区别只在<strong>学习时手里有什么信号</strong>：监督学习手里有<strong>标准答案</strong>，无监督学习手里只有<strong>数据本身</strong>，强化学习手里只有<strong>一个分数</strong>——而且往往是很久以后才给的分数。</p>
-<p>同一件事，三种问法会造出三种完全不同的产品、三种不同的代价。认得出问的是哪一种，你就能预判它贵在哪、会在哪里翻车。</p>
-<h4 data-number="1.4.2.2" id="一个类比三个学生学做饭"><span
-class="header-section-number">1.4.2.2</span>
-一个类比：三个学生学做饭</h4>
-<p><strong>监督学习</strong>的学生有名厨站在旁边，每道菜做完立刻尝一口：“盐多了”“火大了”。反馈密集、具体、可复制——但厨师的舌头很贵，一道菜要有人尝一道菜。</p>
-<p><strong>无监督学习</strong>的学生没有老师，只有一冰箱食材，自己把它们按相近程度归类：这些都发霉了、这些能放一周。没人告诉他分类对不对，他可能按产地分、也可能按颜色分——<strong>分得出来，但未必分得有意义</strong>。</p>
-<p><strong>强化学习</strong>的学生在真餐厅干学徒：没人告诉他每道菜哪里错，只有月底老板一句“这个月还行”。<strong>分数来得晚、来得稀，而且他必须自己猜是哪一步（哪道菜）贡献了这个分数。</strong></p>
-<figure id="fig:paradigms">
-<img src="figures/src/04-02-paradigms.svg" alt="三种学习信号" />
-<figcaption aria-hidden="true">三种学习信号</figcaption>
-</figure>
-<h4 data-number="1.4.2.3" id="监督学习有答案的学习"><span
-class="header-section-number">1.4.2.3</span> 监督学习：有答案的学习</h4>
-<p>一万封邮件、每封标好“垃圾”或“正常”，让模型学会分辨——<a
-href="#sec:what-is-ai">第 1.1
-节</a>的垃圾邮件过滤器就是它。分类、回归、翻译、语音识别，本质上都在做这件事：<strong>从（输入，答案）的配对里，找输入到答案的映射。</strong></p>
-<p>它的代价很直接：答案要人给。医疗影像要医生画框、法律文书要律师标条款、方言语音要懂方言的人转写——<strong>标注的价钱，往往比训练本身还贵</strong>。它的短板也很直接：只在“答案里出现过的类型”里可靠；遇到训练集里从没出现的情况，它会把新东西硬塞进旧答案里。</p>
-<h4 data-number="1.4.2.4" id="无监督学习以及它最成功的那一支"><span
-class="header-section-number">1.4.2.4</span>
-无监督学习，以及它最成功的那一支</h4>
-<p>这一支没有答案，机器只能自己找结构：把相似的聚成一堆（聚类）、把高维压成能画出来的几维（降维）、找出“不合群”的那几条（异常检测）。<a
-href="#sec:learning">第 1.3.3
-节</a>的流形，讲的就是它在做的事——摸清数据住在哪张纸上。</p>
-<p>它的软肋是<strong>没有裁判</strong>：聚出来十堆，是“问题类型”还是“问候语长短”？没人数得清。评估难，于是它常常被当成探索工具，而不是生产线上的成品。</p>
-<p>但它有一支分支，后来把整个行业掀翻了。<strong>自监督</strong>：把数据自己劈成“题目”和“答案”——拿一段文本，遮住最后一个词，让模型猜；猜完对答案，答案就是原文。<strong>没有标注成本，却有近乎无限的练习题。</strong>严格说它属于无监督家族，但威力远大于其余成员——大语言模型就是靠它喂大的，<a
-href="#sec:llms">第 1.5 节</a>整节都在讲它。</p>
-<h4 data-number="1.4.2.5" id="强化学习只有分数的学习"><span
-class="header-section-number">1.4.2.5</span>
-强化学习：只有分数的学习</h4>
-<p>下棋、机器人走路、给数据中心调度任务——这三件事都没有“标准答案”，只有<strong>结局的好坏</strong>：赢或输、摔或站、电费高或低。</p>
-<p>难点不在“学”，在<strong>归因</strong><span class="citation"
-data-cites="sutton2018"><sup>[18]</sup></span>：一局一百多步棋，赢了，第
-3 步和第 97 步各该记多少功？分数只在最后一刻给一次，而且往往很稀疏（<a
-href="#fig:rl-delay">图
-1-18</a>）——这叫<strong>信用分配</strong>问题。往回摊分数、摊给每一步，和<a
-href="#sec:learning">第 1.3.3
-节</a>反向传播把误差摊回每个权重，是同一类脑力活。</p>
-<figure id="fig:rl-delay">
-<img src="figures/src/04-02-rl-delay.svg"
-alt="强化学习的延迟奖励与信用分配" />
-<figcaption aria-hidden="true">强化学习的延迟奖励与信用分配</figcaption>
-</figure>
-<p>强化学习的第二个坑是<strong>试错要真代价</strong>：学走路的机器人摔真跤，学推荐的商品得罪真用户。所以实际系统常用“模拟环境”先练，再上线微调——模拟得不像，练出来的本事就搬不过去。</p>
-<h4 data-number="1.4.2.6" id="天然短板三种信号三种残缺"><span
-class="header-section-number">1.4.2.6</span>
-天然短板：三种信号，三种残缺</h4>
-<p>监督的残缺在<strong>覆盖</strong>：答案之外的世界它不认识。无监督的残缺在<strong>裁判</strong>：它找到的结构未必有意义，而且很难验证。强化的残缺在<strong>归因与代价</strong>：晚到的稀疏分数难摊、真实环境的试错烧钱。</p>
-<p>一个实用的判断：<strong>看它的失败方式，就知道它属于哪一支。</strong>答错但“答得很自信”通常出在覆盖（监督）；结果“看着有结构却没有用”通常出在裁判（无监督）；“只会刷分、不会做事”通常出在归因（强化）。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”无监督”就是”没人管、随便学”。它的准确含义是”没有标准答案”，而它的成败往往更依赖人——数据怎么准备、结构怎么解释、结果怎么评估，全是人的活。另一个常见误解是把自监督当成第四种范式：它属于无监督家族，“题目与答案都从数据里自己长出来”是它的手段，不是它的类别。</p>
-</blockquote>
-<h4 data-number="1.4.2.7" id="小结与自检-7"><span
-class="header-section-number">1.4.2.7</span> 小结与自检</h4>
-<p>三句话总结：三种范式的区别只在学习信号——答案、只有数据、只有分数；强化的核心难题是信用分配与试错代价；无监督没有裁判，而它最成功的分支自监督，正在养活全部大模型。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>一个”根据历史用电曲线预测明天电价”的系统，最可能用哪种范式？它的标注成本在哪里？</li>
-<li>为什么”过程奖励”能加速强化学习，却又可能教坏它？（提示：<a
-href="#fig:rl-delay">图 1-18</a> 里的“刷分”。）</li>
-</ol>
-<h3 data-number="1.4.3" id="sec:generalization"><span
-class="header-section-number">1.4.3</span>
-它到底学会了没有：泛化、过拟合与评估</h3>
-<h4 data-number="1.4.3.1" id="一句话直觉-8"><span
-class="header-section-number">1.4.3.1</span> 一句话直觉</h4>
-<p>一个模型在训练数据上表现好，几乎什么都不能说明。<strong>真正的本事是「举一反三」——在没见过的数据上依然表现好，这叫泛化。</strong>这一节讲的就是：怎么知道它做到了，以及它怎么假装做到了。</p>
-<p>这是全书的第二个转折点。前面讲”怎么学”，从这里开始讲”怎么知道学会了”——后一个问题，才是把
-AI 当工程而不是当信仰的分界线。</p>
-<h4 data-number="1.4.3.2" id="一个类比背题与做题"><span
-class="header-section-number">1.4.3.2</span> 一个类比：背题与做题</h4>
-<p>两个学生考同一份卷子都得了 95 分。甲是理解了方法，换一套卷子还能考 90
-分；乙是把练习册的答案全背下来了，换一套卷子立刻不及格。</p>
-<p><strong>分数一样，本事不一样。</strong>模型也一样：<a
-href="#sec:learning">第 1.3.3
-节</a>的”折点”如果只是精确地穿过每个训练点，它学到的不是规律，是这张练习册（<a
-href="#fig:fit-three">图 1-19</a>）。</p>
-<figure id="fig:fit-three">
-<img src="figures/src/04-03-fit-three.svg" alt="欠拟合、合适、过拟合" />
-<figcaption aria-hidden="true">欠拟合、合适、过拟合</figcaption>
-</figure>
-<h4 data-number="1.4.3.3" id="三种学法"><span
-class="header-section-number">1.4.3.3</span> 三种”学”法</h4>
-<p><strong>欠拟合</strong>：连训练数据都没学好，趋势都没抓住——折点太少、参数太少。</p>
-<p><strong>过拟合</strong>：把训练数据背得滚瓜烂熟，连噪声都记住了，画出了数据里根本不存在的起伏——参数太多、训练太久。</p>
-<p><strong>合适</strong>：抓住了趋势，容忍个别偏差。三者之间没有天然的界线，只有”多拟合一分”与”多背一分”的连续谱。</p>
-<p>有趣的是三者的“训练得分”：欠拟合最低，合适居中，过拟合 <strong>100
-分</strong>。<strong>训练得分与真实本事，在过拟合这一侧是反向的</strong>——这就是为什么”看训练损失”什么都判断不了。</p>
-<h4 data-number="1.4.3.4" id="拿什么考它"><span
-class="header-section-number">1.4.3.4</span> 拿什么考它</h4>
-<p>所以要留出数据当考卷。一万条数据分成三份（<a href="#fig:split">图
-1-20</a>）：<strong>训练集</strong>调权重；<strong>验证集</strong>挑模型、定超参数、决定什么时候停；<strong>测试集</strong>只在最后考一次。</p>
-<figure id="fig:split">
-<img src="figures/src/04-03-split.svg" alt="训练集、验证集与测试集" />
-<figcaption aria-hidden="true">训练集、验证集与测试集</figcaption>
-</figure>
-<p>验证集和测试集都是”没见过的数据”，区别在<strong>你拿它做什么、用它几次</strong>。</p>
-<p>验证集是<strong>模拟考</strong>：考完可以看卷子、可以反复考——你根据它的分数挑模型、调学习率、决定何时停。它是你决策流程的一部分。测试集是<strong>期末考</strong>：只在一切定稿之后考一次，它的分数要写进对外承诺里。</p>
-<p>为什么”只是推理模式”的测试集也只能考一次？推理阶段模型确实不学，但<strong>你</strong>在学：每看一次测试分数，你就据它做了一个决策——选这个版本、再调一轮、换个结构。决策信息经由你的手漏回了训练侧。考的次数越多，漏得越多，分数就越像验证集而不是期末考。工程上的规矩由此而来：<strong>测试集的分数，看一次，定一次，别再调。</strong></p>
-<h4 data-number="1.4.3.5" id="最实用的诊断图两条损失曲线"><span
-class="header-section-number">1.4.3.5</span>
-最实用的诊断图：两条损失曲线</h4>
-<p>训练损失一路下降，验证损失先降后升——上升的那一刻，模型开始背题了（<a
-href="#fig:loss-curves">图
-1-21</a>）。这个分叉点是训练里最重要的读数：<strong>停早了欠拟合，停晚了过拟合，“什么时候停”本身就是一个决策</strong>（工程上叫早停）。</p>
-<figure id="fig:loss-curves">
-<img src="figures/src/04-03-loss-curves.svg"
-alt="训练损失与验证损失的分叉" />
-<figcaption aria-hidden="true">训练损失与验证损失的分叉</figcaption>
-</figure>
-<h4 data-number="1.4.3.6" id="评估为什么会骗人"><span
-class="header-section-number">1.4.3.6</span> 评估为什么会骗人</h4>
-<p>就算流程全对，成绩也常常不诚实。三种最常见的骗法（<a
-href="#fig:leakage">图 1-22</a>）：</p>
-<p><strong>数据泄漏</strong>——考题混进了题库。随机切分时间序列（用未来预测过去）、同一患者的两次影像分到两边、输入里藏着答案（预测“是否退款”却把“退款金额”当特征）。症状统一：<strong>离线成绩高得可疑</strong>。</p>
-<p><strong>分布漂移</strong>——考卷和时代换了。模型在去年数据上考 95
-分，今年用户习惯变了，成绩悄悄滑到
-70。评测集不更新，指标就成了安慰剂。</p>
-<p><strong>指标本身被钻空子</strong>——这叫古德哈特定律：一个指标一旦变成目标，它就不再是好指标。排行榜上刷分的模型、专挑评测集风格写答案的模型，都是这条定律的注脚<span
-class="citation" data-cites="recht2019"><sup>[19]</sup></span>。</p>
-<figure id="fig:leakage">
-<img src="figures/src/04-03-leakage.svg" alt="三种常见的数据泄漏" />
-<figcaption aria-hidden="true">三种常见的数据泄漏</figcaption>
-</figure>
-<h4 data-number="1.4.3.7" id="天然短板泛化的保证本质上是不存在的"><span
-class="header-section-number">1.4.3.7</span>
-天然短板：泛化的保证，本质上是不存在的</h4>
-<p>几何上可以这样理解：模型在训练点之间”画线”，点与点之间画得再顺，也只是几种<strong>猜测</strong>；真实的规律可能在你没有数据的地方拐弯。流形假设（<a
-href="#sec:learning">第 1.3.3
-节</a>）告诉我们数据住在一张低维纸上，但没人保证这张纸的形状在你没采样到的地方也平滑。</p>
-<p><strong>换句话说：泛化是归纳，归纳永远需要假设。</strong>评估能做的是把假设的失败暴露出来，做不到消除它。这是所有”可解释性”“可信
-AI”讨论的地基，也是<a href="#sec:alignment-hallucination-safety">第 1.6
-节</a>幻觉问题的根源之一。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”准确率 99%“就是好模型。类别不平衡时，99%
-可能只是”把少数类全判错”的另一种说法（一千个样本里 990
-个是正常邮件，永远回答”正常”就是
-99%）。所以看任何指标，先问三件事：<strong>类别怎么分布、测试集怎么来的、这个分数被调过多少次。</strong></p>
-</blockquote>
-<h4 data-number="1.4.3.8" id="小结与自检-8"><span
-class="header-section-number">1.4.3.8</span> 小结与自检</h4>
-<p>三句话总结：训练得分不能说明本事，只有没见过的数据才能；过拟合是背题，训练分数与真实本事会反向；评估会被泄漏、漂移和被钻空子的指标骗——泛化的保证本质上不存在，只能靠设计去暴露失败。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>一个模型训练集准确率 99%、验证集 62%、测试集
-61%。问题在模型上还是在流程上？下一步先看什么？</li>
-<li>为什么”随机切分”在预测股票、预测疾病风险这类任务里，本身就是数据泄漏？</li>
-</ol>
-<p><strong>数学注解。</strong> 记训练损失为
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>L</mi><mtext mathvariant="normal">train</mtext></msub><annotation encoding="application/x-tex">L_{\text{train}}</annotation></semantics></math>、验证损失为
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>L</mi><mtext mathvariant="normal">val</mtext></msub><annotation encoding="application/x-tex">L_{\text{val}}</annotation></semantics></math>。过拟合区间里
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>L</mi><mtext mathvariant="normal">train</mtext></msub><annotation encoding="application/x-tex">L_{\text{train}}</annotation></semantics></math>
-继续下降而
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>L</mi><mtext mathvariant="normal">val</mtext></msub><annotation encoding="application/x-tex">L_{\text{val}}</annotation></semantics></math>
-上升；早停取的正是
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>L</mi><mtext mathvariant="normal">val</mtext></msub><annotation encoding="application/x-tex">L_{\text{val}}</annotation></semantics></math>
-的最小点。泛化误差可以粗略分解为
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mtext mathvariant="normal">val</mtext></msub><mo>≈</mo><msup><mtext mathvariant="normal">偏差</mtext><mn>2</mn></msup><mo>+</mo><mtext mathvariant="normal">方差</mtext><mo>+</mo><mtext mathvariant="normal">噪声</mtext></mrow><annotation encoding="application/x-tex">L_{\text{val}} \approx \text{偏差}^2 + \text{方差} + \text{噪声}</annotation></semantics></math>：欠拟合是高偏差，过拟合是高方差，合适是两者折中<span
-class="citation" data-cites="hastie2009"><sup>[20]</sup></span>。</p>
-<h2 data-number="1.5" id="sec:llms"><span
-class="header-section-number">1.5</span> 大语言模型</h2>
-<p>本章先给出三条架构路线共同的前提：大模型在做什么、多模态怎么汇入、规模为什么有效（本章首三节）；然后逐条看路线本身。阅读顺序就是依赖顺序：跳过缩放定律直接看注意力，会看不懂”为什么要造那么大”。</p>
-<h4 data-number="1.5.0.1" id="先看最简单的情形它只会预测下一个词"><span
-class="header-section-number">1.5.0.1</span>
-先看最简单的情形：它只会预测下一个词</h4>
-<p>剥掉所有产品外壳，大语言模型在训练时只做一件事：<strong>给它一段文字，猜下一个
-token 是什么</strong>（<a href="#fig:next-token">图
-1-23</a>）。猜完对答案，答案就是原文——这就是<a href="#sec:paradigms">第
-1.4.2 节</a>说的自监督，练习题无限供应。</p>
-<figure id="fig:next-token">
-<img src="figures/src/05-00-next-token.svg"
-alt="下一词预测：大模型唯一的动作" />
-<figcaption aria-hidden="true">下一词预测：大模型唯一的动作</figcaption>
-</figure>
-<p>“只会猜下一个词”听起来配不上”智能”二字。但为了把下一个词猜准，模型被迫学会太多东西：预测”的”后面是”天空”要懂搭配，预测”137×24=“后面是
-3288
-要会算术，预测”简·奥斯汀的代表作是《》“要记得事实。<strong>预测这个目标，逼着模型把语言里的规律全压缩进参数里。</strong>它表现出的能力是副产品，目标始终是预测。这一类”在海量数据上自监督预训练、再适配到各种任务”的模型，学界统称<strong>基础模型</strong>（foundation
-models）<span class="citation"
-data-cites="bommasani2021"><sup>[21]</sup></span>。</p>
-<h4 data-number="1.5.0.2" id="多模态不同的感官同一个表示空间"><span
-class="header-section-number">1.5.0.2</span>
-多模态：不同的感官，同一个表示空间</h4>
-<p>文字之外，图像先切成小方块、音频切成短帧，各自过一道编码器，全部映射进<strong>同一个表示空间</strong>（<a
-href="#fig:hidden-space">图 1-21</a>
-里我们见过”万物皆为一列数”，这里是它的多感官版）。关键不是”能读图”，而是<strong>对齐</strong>：训练时把成对的”图和它的文字描述”在空间里拉近，模型才学会两张地图共用一套地名[<span
-class="citation" data-cites="radford2021"><sup>[22]</sup></span>]<span
-class="citation" data-cites="alayrac2022"><sup>[23]</sup></span>。</p>
-<figure id="fig:multimodal">
-<img src="figures/src/05-00-multimodal.svg"
-alt="多模态输入汇入同一表示空间" />
-<figcaption aria-hidden="true">多模态输入汇入同一表示空间</figcaption>
-</figure>
-<h4 data-number="1.5.0.3" id="一次前向长出一个字"><span
-class="header-section-number">1.5.0.3</span> 一次前向，长出一个字</h4>
-<p>推理的完整流程（<a href="#fig:forward">图
-1-23</a>）值得再看一眼：输入切成 token → 过几十层网络 → 得到下一个 token
-的概率表 → 按策略抽一个 → 拼回句尾 →
-再来一遍。<strong>你读到的长回答，是这张图循环几百次的结果，每次只长一个字。</strong></p>
-<figure id="fig:forward">
-<img src="figures/src/05-00-forward.svg" alt="一次前向推理" />
-<figcaption aria-hidden="true">一次前向推理</figcaption>
-</figure>
-<h4 data-number="1.5.0.4" id="天然短板预测下一个词不判定真假"><span
-class="header-section-number">1.5.0.4</span>
-天然短板：预测下一个词，不判定真假</h4>
-<p>训练目标里没有”真”这个维度——训练数据是互联网，互联网里有错的也有对的，模型一视同仁地学”接下来通常是什么”。<strong>流利与真实，在训练目标里从未被区分</strong>；这就是幻觉的机制性来源，<a
-href="#sec:alignment-hallucination-safety">第 1.6 节</a>展开。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”它回答前会先查证”。默认状态下它不做任何检索或查证——概率表来自参数里压缩的规律，不是来自数据库。会查证的那些产品，是<a
-href="#sec:mcp-skills-rag">第 1.7.3 节</a>讲的检索在外面包了一层。</p>
-</blockquote>
-<h4 data-number="1.5.0.5" id="定性梯队截至-2026-年下半年"><span
-class="header-section-number">1.5.0.5</span> 定性梯队（截至 2026
-年下半年）</h4>
-<blockquote>
-<p><strong>能力梯队（定性，截至 2026 下半年）</strong></p>
-<p>第一梯队（综合能力与生态领先）：GPT、Claude、Gemini、DeepSeek。
-第二梯队（开源与区域领先）：Llama、Mistral、Qwen、Gemma 等。</p>
-<p>梯队只反映”在主流基准与公开体验上的大致档位”，不给分数、不排座次；名次以月为单位变动，读本书时请以当下公开评测为准。</p>
-</blockquote>
-<h4 data-number="1.5.0.6" id="小结与自检-9"><span
-class="header-section-number">1.5.0.6</span> 小结与自检</h4>
-<p>三句话总结：大模型只做”预测下一个
-token”一件事；多模态靠对齐把不同感官送进同一表示空间；流利与真实在训练目标里从未被区分。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>为什么”自监督”对这个领域是决定性的？（提示：想想标注的价钱。）</li>
-<li>模型答完一句话要用几百次前向，那”降低推理成本”最直接的手段是什么？</li>
-</ol>
-<h3 data-number="1.5.1" id="sec:scaling-laws"><span
-class="header-section-number">1.5.1</span> 规模为什么有效：缩放定律</h3>
-<h4 data-number="1.5.1.1" id="一句话直觉-9"><span
-class="header-section-number">1.5.1.1</span> 一句话直觉</h4>
-<p>在这个领域，“更大”不是玄学口号，而是一条<strong>可以提前画出来的曲线</strong>：把模型做大（参数、数据、算力同向增长），损失会按一条平滑的幂律下降，而且下降多少能在训练前预测。这条曲线叫缩放定律（scaling
-laws），它是整个行业敢把几十亿押上去的账本。</p>
-<h4 data-number="1.5.1.2" id="一个类比规模经济"><span
-class="header-section-number">1.5.1.2</span> 一个类比：规模经济</h4>
-<p>工厂产量翻倍，单位成本下降固定比例——这是工业里的规模经济。大模型把这件事搬到了”智能”上：<strong>投入（算力、数据、参数）每翻几倍，损失按固定比例下降，而且这一比例可以提前预测</strong><span
-class="citation"
-data-cites="kaplan2020"><sup>[24]</sup></span>。不是”更大可能更好”，而是”更大必然按曲线更好”——正是这条曲线，让整个行业敢押上几十亿的赌注。</p>
-<h4 data-number="1.5.1.3" id="缩放定律在说什么"><span
-class="header-section-number">1.5.1.3</span> 缩放定律在说什么</h4>
-<figure id="fig:scaling">
-<img src="figures/src/05-01-scaling.svg" alt="双对数坐标下的缩放直线" />
-<figcaption aria-hidden="true">双对数坐标下的缩放直线</figcaption>
-</figure>
-<p>把损失和算力都取对数画出来，实测点几乎落在一条直线上（<a
-href="#fig:scaling">图
-1-24</a>）——这就是<strong>缩放定律</strong>。它的实际含义是：<strong>想验证”更大的模型更好”，不用造出来，看这条线就能报价。</strong></p>
-<h4 data-number="1.5.1.4" id="年的修正两头都要投"><span
-class="header-section-number">1.5.1.4</span> 2022
-年的修正：两头都要投</h4>
-<p>算力要花在两处：<strong>参数</strong>（大脑容量）和<strong>数据</strong>（课本）。2022
-年的 Chinchilla
-研究修正了此前的偏科——给定总算力，参数与数据应当<strong>等比放大</strong>，每个参数约配
-20 个词的文本<span class="citation"
-data-cites="hoffmann2022"><sup>[25]</sup></span>（<a
-href="#fig:budget">图
-1-25</a>）。此前的大模型普遍”大脑巨大、读书不足”，同样的算力本可以换来更低的损失。</p>
-<figure id="fig:budget">
-<img src="figures/src/05-01-budget.svg" alt="固定预算的三种分法" />
-<figcaption aria-hidden="true">固定预算的三种分法</figcaption>
-</figure>
-<h4 data-number="1.5.1.5" id="天然短板边际递减与数据墙"><span
-class="header-section-number">1.5.1.5</span>
-天然短板：边际递减与数据墙</h4>
-<p>幂律是条会趋平的曲线（双对数下是直线，普通坐标下越来越平）：<strong>损失仍在降，但每降同样的幅度，投入要翻好几倍</strong>（<a
-href="#fig:diminishing">图
-1-26</a>）。更硬的约束是<strong>数据墙</strong>——高质量公开文本接近用尽，“喂更多数据”这条腿先迈不动了<span
-class="citation" data-cites="hoffmann2022"><sup>[25]</sup></span>。</p>
-<figure id="fig:diminishing">
-<img src="figures/src/05-01-diminishing.svg" alt="边际递减与数据墙" />
-<figcaption aria-hidden="true">边际递减与数据墙</figcaption>
-</figure>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>两个：一，“缩放定律是定律”——它是经验规律，不是物理定律，换数据质量、换架构，曲线会动。二，“损失下降
-=
-能力等比上升”——损失只是代理指标，某些能力（推理、多步计算）的出现更陡峭也更难预测，这叫<strong>涌现</strong>，本身也是学界争论的对象。</p>
-</blockquote>
-<h4 data-number="1.5.1.6" id="小结与自检-10"><span
-class="header-section-number">1.5.1.6</span> 小结与自检</h4>
-<p>三句话总结：损失与算力在双对数坐标下近似直线，这是行业敢押注的依据；预算要在参数与数据间等比分配；曲线趋平与数据墙说明”更大”不是永动机。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>一家公司算力翻倍。按
-Chinchilla，它应该把参数翻倍、数据翻倍，还是只翻其一？</li>
-<li>为什么”数据墙”会推动行业去研究合成数据和小模型？（提示：两条腿里哪条先迈不动了。）</li>
-</ol>
-<h3 data-number="1.5.2" id="sec:attention"><span
-class="header-section-number">1.5.2</span>
-注意力机制：让每个词回头找答案</h3>
-<h4 data-number="1.5.2.1" id="一句话直觉-10"><span
-class="header-section-number">1.5.2.1</span> 一句话直觉</h4>
-<p>一个词的含义，取决于句子里别的词。注意力机制让每个词<strong>向所有词提问、按相关度取回信息</strong>——它把”上下文”从一个模糊的说法，变成了一道能并行计算的加权平均。</p>
-<h4 data-number="1.5.2.2" id="一个类比开会"><span
-class="header-section-number">1.5.2.2</span> 一个类比：开会</h4>
-<p>读”小明把作业忘在教室了”时，你听到”它”会回头找它指什么，听到”忘”会问忘了什么——<strong>每个词都在向别的词提问，按相关程度取回信息</strong>。注意力机制就是把这一瞬间的心理活动变成一道算术题：查询（我在找什么）、键（我能被找到的标签）、值（我携带的内容）<span
-class="citation" data-cites="vaswani2017"><sup>[26]</sup></span>。</p>
-<h4 data-number="1.5.2.3" id="注意力一步按匹配度取值"><span
-class="header-section-number">1.5.2.3</span>
-注意力一步：按匹配度取值</h4>
-<figure id="fig:qkv">
-<img src="figures/src/05-02-qkv.svg" alt="注意力的一步计算" />
-<figcaption aria-hidden="true">注意力的一步计算</figcaption>
-</figure>
-<p><a href="#fig:qkv">图 1-27</a>
-是一步的完整过程：当前词发出<strong>查询</strong>，每个词亮出自己的<strong>键</strong>，点积算出匹配度，softmax
-归一成百分比，再按百分比<strong>加权求和</strong>各词的<strong>值</strong>。输出就是”这个词条件下应有的新表示”。这一思想最早为翻译而生——让译文每个词回头看原文的相关部分<span
-class="citation" data-cites="bahdanau2015"><sup>[27]</sup></span>。</p>
-<h4 data-number="1.5.2.4" id="多头几双眼睛各看各的"><span
-class="header-section-number">1.5.2.4</span> 多头：几双眼睛各看各的</h4>
-<figure id="fig:heads">
-<img src="figures/src/05-02-heads.svg" alt="多头注意力" />
-<figcaption aria-hidden="true">多头注意力</figcaption>
-</figure>
-<p>一个词与别的词之间有很多种关系：语法搭配、指代、修饰……<strong>多头</strong>就是并列做好几套独立的注意力，各看各的关系，输出拼在一起（<a
-href="#fig:heads">图
-1-28</a>）。头与头的分工不是人为指定的，是训练中自己长出来的。</p>
-<h4 data-number="1.5.2.5" id="与循环网络对比传话游戏-vs-圆桌会议"><span
-class="header-section-number">1.5.2.5</span> 与循环网络对比：传话游戏 vs
-圆桌会议</h4>
-<figure id="fig:rnn-vs-attn">
-<img src="figures/src/05-02-rnn-vs-attn.svg" alt="RNN 与注意力" />
-<figcaption aria-hidden="true">RNN 与注意力</figcaption>
-</figure>
-<p>注意力之前的霸主是循环网络（RNN）：逐词读入，每步只拿到上一词压缩出的摘要，<strong>远距离信息一路磨损</strong>，而且必须按顺序算一百步。注意力让任意两词直达（<a
-href="#fig:rnn-vs-attn">图 1-29</a>）：信息不磨损，计算还能并行——这正是
-2017 年那篇论文标题的承诺：“Attention Is All You Need”<span
-class="citation" data-cites="vaswani2017"><sup>[26]</sup></span>。</p>
-<h4 data-number="1.5.2.6" id="天然短板平方复杂度"><span
-class="header-section-number">1.5.2.6</span> 天然短板：平方复杂度</h4>
-<p>一百个词两两相连，就是 100×100
-对关系；<strong>上下文翻倍，计算量翻四倍</strong>。这既是长上下文昂贵的根源，也是<a
-href="#sec:ssm-and-linear-attention">第 1.5.3
-节</a>（把历史压缩进固定状态）和<a href="#sec:compute-and-deployment">第
-1.8 节</a>（KV 缓存）要解决的问题。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”注意力 =
-人类的注意力”。它只是”按匹配度加权取值”这道算术的名字；热图上看似”专注”的模式是优化的副产品，与人类注意力的生理机制无关<span
-class="citation" data-cites="vaswani2017"><sup>[26]</sup></span>。</p>
-</blockquote>
-<h4 data-number="1.5.2.7" id="小结与自检-11"><span
-class="header-section-number">1.5.2.7</span> 小结与自检</h4>
-<p>三句话总结：注意力 =
-每个词向其他词提问、按匹配度加权取回信息；多头让不同的关系各看各的；相对循环网络，它同时赢在信息不磨损和可并行，代价是平方复杂度。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>上下文从 4 千 token 加倍到 8 千，注意力计算量变为几倍？</li>
-<li>为什么说”注意力解决了循环网络的信息磨损”？（提示：<a
-href="#fig:rnn-vs-attn">图 1-29</a> 的连线。）</li>
-</ol>
-<p><strong>数学注解。</strong>
-一步注意力：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Attention</mtext><mo stretchy="false" form="prefix">(</mo><mi>Q</mi><mo>,</mo><mi>K</mi><mo>,</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mtext mathvariant="normal">softmax</mtext><mspace width="-0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>Q</mi><msup><mi>K</mi><mi>⊤</mi></msup></mrow><msqrt><mi>d</mi></msqrt></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">\text{Attention}(Q,K,V)=\text{softmax}\!\left(\frac{QK^{\top}}{\sqrt{d}}\right)V</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
-分别是查询、键、值矩阵，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mi>d</mi></msqrt><annotation encoding="application/x-tex">\sqrt{d}</annotation></semantics></math>
-是缩放因子（防止点积过大把 softmax 推成极端分布）。多头即并行做
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>
-次再拼接。</p>
-<h3 data-number="1.5.3" id="sec:ssm-and-linear-attention"><span
-class="header-section-number">1.5.3</span> 线性注意力与状态空间模型：RNN
-的逆袭</h3>
-<h4 data-number="1.5.3.1" id="一句话直觉-11"><span
-class="header-section-number">1.5.3.1</span> 一句话直觉</h4>
-<p><a
-href="#sec:attention">上一节</a>留下的平方复杂度，解法出人意料：<strong>把旧霸主
-RNN 请回来</strong>。只要把注意力里的那道 softmax
-拿掉，同一张网络就能改写成”带一份固定状态、逐词递推”的
-RNN——缓存恒定、速度线性。这就是线性注意力与状态空间模型（SSM）的共同思想[<span
-class="citation"
-data-cites="katharopoulos2020"><sup>[28]</sup></span>]<span
-class="citation" data-cites="gu2023"><sup>[29]</sup></span>。</p>
-<h4 data-number="1.5.3.2" id="一个类比会议纪要"><span
-class="header-section-number">1.5.3.2</span> 一个类比：会议纪要</h4>
-<p>开两小时会，事后要引用某句话，你有两种办法：<strong>翻全部录音</strong>（注意力：精确，但要回放全时长）；<strong>只带一页纪要</strong>（状态：口袋里就一页，但细节被压缩掉了）。</p>
-<p>注意力选择全记下来，缓存随会议时长增长；RNN/SSM
-选择只记摘要，口袋恒定。这一节讲的是：<strong>纪要怎么记，才能丢得少一点。</strong></p>
-<h4 data-number="1.5.3.3" id="它解决什么问题同一个式子两种算法"><span
-class="header-section-number">1.5.3.3</span>
-它解决什么问题：同一个式子，两种算法</h4>
-<figure id="fig:linear-attn">
-<img src="figures/src/05-03-linear-attn.svg"
-alt="先配对，还是先攒状态" />
-<figcaption aria-hidden="true">先配对，还是先攒状态</figcaption>
-</figure>
-<p>注意力输出的是”加权和”。数学上，把 softmax
-拿掉后，“(QKᵀ)V”这个式子可以用<strong>结合律</strong>换一种顺序算：先用
-K 和 V 攒出一个状态矩阵，再用 Q 去查它（<a href="#fig:linear-attn">图
-1-31</a>）。结果完全相同，但第二种顺序可以<strong>一步一步递推</strong>——来一个词，更新一次状态，不需要回看全部历史。</p>
-<p>递推版就是一台
-RNN：状态大小固定，内存恒定，速度线性。<strong>训练时像注意力（并行），推理时像
-RNN（省内存）</strong>——同一张网，两种形态。</p>
-<figure id="fig:recurrence">
-<img src="figures/src/05-03-recurrence.svg"
-alt="递推：固定状态的逐词更新" />
-<figcaption aria-hidden="true">递推：固定状态的逐词更新</figcaption>
-</figure>
-<h4 data-number="1.5.3.4" id="状态空间模型把记什么变成可学习的"><span
-class="header-section-number">1.5.3.4</span>
-状态空间模型：把”记什么”变成可学习的</h4>
-<figure id="fig:state-compare">
-<img src="figures/src/05-03-state-compare.svg" alt="全缓存与固定状态" />
-<figcaption aria-hidden="true">全缓存与固定状态</figcaption>
-</figure>
-<p>SSM 把递推写成更一般的形式：新状态 = 旧状态的衰减 +
-新输入的注入，<strong>衰减多少、注入多少由网络自己学</strong>。RWKV
-把注意力改写成纯递推形态<span class="citation"
-data-cites="peng2023"><sup>[30]</sup></span>；Mamba
-给状态加上”选择性”——<strong>由当前输入决定哪些信息写进状态、哪些丢弃</strong><span
-class="citation"
-data-cites="gu2023"><sup>[29]</sup></span>，这正是”纪要该记哪句”的学法。</p>
-<h4 data-number="1.5.3.5" id="天然短板精确回忆是硬伤"><span
-class="header-section-number">1.5.3.5</span>
-天然短板：精确回忆是硬伤</h4>
-<p>固定状态是一页纸：<strong>写满 10
-万字的历史，纸还是那么大</strong>。让它”从长文里原样找出某句话”，纯 SSM
-经常失手——细节被压缩掉了。而注意力回看全部历史，找细节是强项。</p>
-<p>所以 2025
-年后的主流不是替换，而是<strong>混合</strong>：大部分层用省钱的线性/SSM
-层管长程脉络，少数层用注意力管精确回忆（<a href="#fig:mix">图
-1-32</a>）。</p>
-<figure id="fig:mix">
-<img src="figures/src/05-03-mix.svg" alt="两个极端之间的混合" />
-<figcaption aria-hidden="true">两个极端之间的混合</figcaption>
-</figure>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”SSM
-会取代注意力”。混合架构的流行恰恰说明两者是互补品：一个管便宜的长程记忆，一个管昂贵的精确回忆。取代论每隔几个月出现一次，混合架构的份额却一直在涨。</p>
-</blockquote>
-<h4 data-number="1.5.3.6" id="小结与自检-12"><span
-class="header-section-number">1.5.3.6</span> 小结与自检</h4>
-<p>三句话总结：去掉 softmax，注意力就能改写成固定状态的递推；SSM
-把”记什么”变成可学习的；纯 SSM 输在精确回忆，主流答案是混合架构。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>上下文 10 万 token
-时，纯注意力的缓存约是固定状态的多少倍？（量级估算即可。）</li>
-<li>为什么”从合同里逐字找出某条款”这类任务，混合架构比纯 SSM 靠谱？</li>
-</ol>
-<p><strong>数学注解。</strong>
-递推：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>h</mi><mi>t</mi></msub><mo>=</mo><mi>A</mi><mspace width="0.167em"></mspace><msub><mi>h</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><mi>B</mi><mspace width="0.167em"></mspace><msub><mi>x</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">h_t = A\,h_{t-1} + B\,x_t</annotation></semantics></math>，输出
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>t</mi></msub><mo>=</mo><mi>C</mi><mspace width="0.167em"></mspace><msub><mi>h</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">y_t = C\,h_t</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
-是衰减（可学习），<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
-是注入。线性注意力（无 softmax）满足
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>t</mi></msub><mo>=</mo><msub><mi>Q</mi><mi>t</mi></msub><msub><mo>∑</mo><mrow><mi>i</mi><mo>≤</mo><mi>t</mi></mrow></msub><msubsup><mi>K</mi><mi>i</mi><mi>⊤</mi></msubsup><msub><mi>V</mi><mi>i</mi></msub><mo>=</mo><msub><mi>Q</mi><mi>t</mi></msub><mspace width="0.167em"></mspace><msub><mi>S</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">y_t = Q_t \sum_{i\le t} K_i^\top V_i = Q_t\, S_t</annotation></semantics></math>，其中
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>t</mi></msub><mo>=</mo><msub><mi>S</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msubsup><mi>K</mi><mi>t</mi><mi>⊤</mi></msubsup><msub><mi>V</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">S_t = S_{t-1} + K_t^\top V_t</annotation></semantics></math>——这就是”状态累加”的形态。</p>
-<h3 data-number="1.5.4" id="sec:diffusion"><span
-class="header-section-number">1.5.4</span> 从生图到大语言：扩散模型</h3>
-<h4 data-number="1.5.4.1" id="一句话直觉-12"><span
-class="header-section-number">1.5.4.1</span> 一句话直觉</h4>
-<p>自回归模型一个字一个字往后写；扩散模型换了一条路：<strong>先有一团噪声，然后一步一步把噪声去掉</strong>，几十步之后内容显形（<a
-href="#fig:noise">图 1-33</a>）。它原本是图像生成的主力，2025
-年起也杀进了语言生成——因为”并行”两个字太诱人。</p>
-<h4 data-number="1.5.4.2" id="一个类比显影照片"><span
-class="header-section-number">1.5.4.2</span> 一个类比：显影照片</h4>
-<p>扩散的思路像洗胶片：影像不是一笔画出来的，而是在显影液里<strong>一点点浮现</strong>。每一步只做一件小事——“把这一层雾去掉一点”。训练时
-reverse
-过程的每一步都有标准答案（因为雾是模型自己加的），所以练习题无限、可自动生成<span
-class="citation" data-cites="ho2020"><sup>[31]</sup></span>。</p>
-<h4 data-number="1.5.4.3"
-id="它解决什么问题把一次画对拆成每次修一点"><span
-class="header-section-number">1.5.4.3</span>
-它解决什么问题：把”一次画对”拆成”每次修一点”</h4>
-<figure id="fig:noise">
-<img src="figures/src/05-04-noise.svg" alt="加噪与去噪" />
-<figcaption aria-hidden="true">加噪与去噪</figcaption>
-</figure>
-<p>训练时走左路：给清晰图像逐步加噪声，直到变成纯噪声——<strong>每一步加了什么完全已知</strong>，网络的任务就是学会”减掉这一点”。生成时走右路：从纯噪声出发，把学到的”去噪手艺”反向使用，几十步后图像显形。</p>
-<p><strong>把一个大任务拆成几百个小任务，每个小任务都容易学</strong>——这是扩散能画出细节的核心原因。</p>
-<h4 data-number="1.5.4.4" id="条件每一步都看一眼提示词"><span
-class="header-section-number">1.5.4.4</span>
-条件：每一步都看一眼提示词</h4>
-<figure id="fig:guided">
-<img src="figures/src/05-04-guided.svg" alt="文本引导的条件生成" />
-<figcaption aria-hidden="true">文本引导的条件生成</figcaption>
-</figure>
-<p>“画什么”由提示词决定：去噪网络的每一步都接收提示词的向量<span
-class="citation"
-data-cites="nichol2021"><sup>[32]</sup></span>。训练时随机把提示词置空，让网络同时学会”无条件画”与”按条件画”，两者的差用来<strong>放大</strong>提示词的影响——这就是文生图质量的关键技巧之一。</p>
-<h4 data-number="1.5.4.5" id="从图像到语言并行解码"><span
-class="header-section-number">1.5.4.5</span> 从图像到语言：并行解码</h4>
-<figure id="fig:parallel">
-<img src="figures/src/05-04-parallel.svg"
-alt="自回归与扩散的出字方式" />
-<figcaption aria-hidden="true">自回归与扩散的出字方式</figcaption>
-</figure>
-<p>语言扩散（LLaDA<span class="citation"
-data-cites="nie2025"><sup>[33]</sup></span>、Mercury<span
-class="citation"
-data-cites="lou2025"><sup>[34]</sup></span>）把同样的玩法搬到文本：整句先都是占位符，模型每步同时改多个位置，几步收敛到完整文本（<a
-href="#fig:parallel">图 1-34</a>）。<strong>自回归生成 n 个字至少要 n
-步；扩散可以几十步出整段</strong>——这就是扩散式语言模型卖点是”每秒 token
-数翻倍”的原因。</p>
-<h4 data-number="1.5.4.6" id="天然短板连贯性与步数"><span
-class="header-section-number">1.5.4.6</span> 天然短板：连贯性与步数</h4>
-<p>并行改写省了步数，也丢了自回归的一个天然优点：<strong>从左到右写，前文天然约束后文</strong>。扩散要靠更多步数与更好的训练才能追平长文的连贯性；步数减太多，质量立刻掉——步数与延迟的取舍是它自己的”缩放定律”。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”扩散模型只能画图”。它是一种<strong>生成范式</strong>，图像、音频、视频、蛋白质结构、文本都有扩散实现。范式与模态是两回事。</p>
-</blockquote>
-<h4 data-number="1.5.4.7" id="小结与自检-13"><span
-class="header-section-number">1.5.4.7</span> 小结与自检</h4>
-<p>三句话总结：扩散把生成拆成几百步”去一点噪声”，训练题自动生成；条件生成靠每步都看提示词；搬到语言后并行解码换速度，代价是长文连贯性更难。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>为什么扩散的训练数据”可以无限自动生成”，而监督学习的标注不能？</li>
-<li>一个要求”逐字精确引用合同条款”的应用，自回归与扩散各有什么风险？</li>
-</ol>
-<p><strong>数学注解。</strong>
-前向加噪：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo>∣</mo><msub><mi>x</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>𝒩</mi><mspace width="-0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><msqrt><mrow><mn>1</mn><mo>−</mo><msub><mi>β</mi><mi>t</mi></msub></mrow></msqrt><mspace width="0.167em"></mspace><msub><mi>x</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>β</mi><mi>t</mi></msub><mi>I</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">q(x_t \mid x_{t-1}) = \mathcal{N}\!\left(\sqrt{1-\beta_t}\,x_{t-1},\ \beta_t I\right)</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>β</mi><mi>t</mi></msub><annotation encoding="application/x-tex">\beta_t</annotation></semantics></math>
-是第
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
-步的噪声强度。网络学的反向过程
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>θ</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>∣</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p_\theta(x_{t-1}\mid x_t)</annotation></semantics></math>
-用同一套
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>β</mi><mi>t</mi></msub><annotation encoding="application/x-tex">\beta_t</annotation></semantics></math>，因此训练目标（预测每步加入的噪声）有解析答案。</p>
-<h2 data-number="1.6" id="sec:alignment-hallucination-safety"><span
-class="header-section-number">1.6</span> 让它听话：对齐、幻觉与安全</h2>
-<h4 data-number="1.6.0.1" id="一句话直觉-13"><span
-class="header-section-number">1.6.0.1</span> 一句话直觉</h4>
-<p><a href="#sec:llms">第 1.5
-节</a>出厂的那个模型只会”续写网页”——你问它问题，它可能接着编出十个类似的问题。从”会说话”到”好用”，中间还隔着一段<strong>出厂教育</strong>：先示范、再调教。而这段教育解决不了的两个问题——幻觉与越狱——各有各的机制性根源。</p>
-<p>这一节回答三个最常见的问题：它为什么能”回答问题”？为什么它会一本正经地胡说？安全限制挡住了什么、代价是什么？</p>
-<h4 data-number="1.6.0.2" id="一个类比新员工入职"><span
-class="header-section-number">1.6.0.2</span> 一个类比：新员工入职</h4>
-<p>预训练相当于<strong>读完公司攒了十年的全部资料</strong>——知识面惊人，但做事方式是野的：你问他”给客户写封道歉信”，他可能回你一段”道歉信的写作技巧分析”。监督微调相当于<strong>跟着师傅学做事</strong>：看几十个”这种情况该这么处理”的示范，学会助手的样子。人类反馈强化学习相当于<strong>按客户反馈调</strong>：同一件事做几个版本，让人挑哪个好，往人喜欢的方向调。</p>
-<figure id="fig:three-stages">
-<img src="figures/src/06-01-three-stages.svg" alt="出厂前的三段教育" />
-<figcaption aria-hidden="true">出厂前的三段教育</figcaption>
-</figure>
-<p>三段教育<span class="citation"
-data-cites="ouyang2022"><sup>[35]</sup></span>合起来，才把”续写机器”变成”助手”。注意一个常被忽略的事实：<strong>三段改的都是同一个模型的同一批参数</strong>——不是外挂了什么，是模型本身被重塑了。</p>
-<h4 data-number="1.6.0.3" id="幻觉从机制推出来的必然"><span
-class="header-section-number">1.6.0.3</span>
-幻觉：从机制推出来的必然</h4>
-<p>先给结论：<strong>幻觉不是故障，是训练目标的自然产物。</strong><a
-href="#sec:llms">第 1.5
-节</a>说过，预训练的目标是”预测下一个词”，而”下一个词”选谁的标准是<strong>像不像</strong>，不是<strong>真不真</strong>——这两个标准在训练里从未被区分过。</p>
-<p>具体拆成两种成因（<a href="#fig:hallucination">图
-1-39</a>）。<strong>成因一，知识缺失</strong>：训练数据里没有的事，模型不知道自己不知道——它没有”我不确定”这个状态的天然表示，只会接着编一段像样的文字。<strong>成因二，流利优先</strong>：编一段格式完美的假文献，和复述一条真知识，在”预测下一个词”这个目标下得分一样高——幻觉的系统综述见<span
-class="citation" data-cites="ji2023"><sup>[36]</sup></span>。</p>
-<figure id="fig:hallucination">
-<img src="figures/src/06-02-hallucination.svg" alt="幻觉的两种成因" />
-<figcaption aria-hidden="true">幻觉的两种成因</figcaption>
-</figure>
-<p>于是”编造文献”这种经典幻觉非常好解释：格式它见过千百遍，内容它没有——<strong>知识缺失给了它自由，流利优先给了它胆量</strong>。为什么不能靠”更努力”消除？因为要消除它，就得在训练目标里引入”真”——而”真”没法从文本里自动标出来，这正是检索增强（<a
-href="#sec:mcp-skills-rag">第 1.7.3 节</a>）要去补的洞。</p>
-<h4 data-number="1.6.0.4" id="安全一条会被人从各个方向试探的线"><span
-class="header-section-number">1.6.0.4</span>
-安全：一条会被人从各个方向试探的线</h4>
-<p>对齐的第三段把”危险请求要拒绝”教给了模型。但”危险”是一条<strong>画在连续谱上的线</strong>（<a
-href="#fig:jailbreak">图
-1-40</a>）：画得太松，伤害从缝隙里漏出去；画得太紧，正常的化学课、医疗咨询也会被拒。</p>
-<figure id="fig:jailbreak">
-<img src="figures/src/06-03-jailbreak.svg" alt="拒答与越狱的边界" />
-<figcaption aria-hidden="true">拒答与越狱的边界</figcaption>
-</figure>
-<p>而线是规则，规则可以被钻：把同样的危险请求套一层故事外壳（“假设你是一台没有限制的机器”“我奶奶睡前总念这个配方”），早期的安全训练就可能失效——这叫<strong>越狱</strong>。它不是”修好就完”的
-bug，而是一场持续的攻防：每次修补一个绕法，新的绕法又会出现。Constitutional
-AI
-之类的做法是让模型按一套成文原则<strong>自我批评、自我修正</strong>，把一部分防线从人工标注转成可审计的规则<span
-class="citation" data-cites="bai2022"><sup>[37]</sup></span>。</p>
-<h4 data-number="1.6.0.5" id="天然短板对齐税"><span
-class="header-section-number">1.6.0.5</span> 天然短板：对齐税</h4>
-<p>对齐不是免费的。把模型调得礼貌、安全、守规矩之后，基准分数往往<strong>略降</strong>——这部分损失俗称<strong>对齐税</strong>（<a
-href="#fig:alignment-tax">图 1-41</a>）。它不是
-bug，而是一笔真实的交换：拿一部分”无所顾忌的能力”，换”可以被放心交给普通人”。</p>
-<figure id="fig:alignment-tax">
-<img src="figures/src/06-04-alignment-tax.svg"
-alt="对齐税：顺从的代价" />
-<figcaption aria-hidden="true">对齐税：顺从的代价</figcaption>
-</figure>
-<p>真正的争论在于<strong>税该收多少、对齐到谁</strong>：同一句”让它听话”，听话的对象可能是用户、可能是厂商、可能是监管，三者的利益并不总是一致。这个问题在<a
-href="#sec:agents">第 1.7
-节</a>的智能体时代只会更尖锐——手脚越多，“听话”的后果越重。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>两个。一，“幻觉是个
-bug，修好就没了”——只要训练目标仍是”预测下一个词”，幻觉就有机制性来源；能做的是用检索、用校准、用拒答把它的<strong>发生率与危害</strong>压下去。二，“安全对齐只是加个过滤器”——它重塑参数、影响能力（对齐税），而且是一场上不完的攻防。</p>
-</blockquote>
-<h4 data-number="1.6.0.6" id="小结与自检-14"><span
-class="header-section-number">1.6.0.6</span> 小结与自检</h4>
-<p>三句话总结：预训练之后的监督微调与人类反馈，把”续写机器”重塑成”助手”；幻觉从”像不像
-≠
-真不真”的训练目标里机制性地长出来；安全对齐是一场攻防，其代价是对齐税。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>为什么”让模型回答时说’我不确定’“这么难教？（提示：训练数据里，自信的错误和诚实的无知，哪个更常见？）</li>
-<li>一家公司宣称”我们的模型没有幻觉”。用本节的机制分析，这句话最可能的意思是什么？</li>
-</ol>
-<p><strong>数学注解。</strong>
-人类反馈强化学习的目标通常写成：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>max</mi><mo>&#8289;</mo><mi>π</mi></msub><mspace width="0.222em"></mspace><msub><mi>𝔼</mi><mrow><mi>x</mi><mo>∼</mo><mi>π</mi></mrow></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">[</mo><mi>r</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo><mo>−</mo><mi>β</mi><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">K</mi><mi mathvariant="normal">L</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>π</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="postfix">∥</mo><mspace width="0.167em"></mspace><msub><mi>π</mi><mtext mathvariant="normal">ref</mtext></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\max_\pi\ \mathbb{E}_{x\sim\pi}\,[r(x)] - \beta\,\mathrm{KL}(\pi \,\|\, \pi_{\text{ref}})</annotation></semantics></math>——最大化人类偏好奖励
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>，同时用
-KL 项把模型拴在参考模型
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>π</mi><mtext mathvariant="normal">ref</mtext></msub><annotation encoding="application/x-tex">\pi_{\text{ref}}</annotation></semantics></math>
-附近，防止它为了讨好评分器而”跑偏”。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math>
-越大，对齐税越重。</p>
-<h2 data-number="1.7" id="sec:agents"><span
-class="header-section-number">1.7</span> 智能体</h2>
-<p>一个只会回答问题的模型，和一个能替你干完活的助手，差在哪？差的不全是”更聪明”，更多是<strong>手脚</strong>：能调工具、能记住上下文、能把一件事拆成几步做完。本章讲的就是把”模型”变成”智能体”的那层工程——先把手脚装上（harness），再谈怎么让它越干越好（RSI
-与多智能体），最后讲它怎么向外借工具和知识（MCP、技能、检索）。</p>
-<h3 data-number="1.7.1" id="sec:harness"><span
-class="header-section-number">1.7.1</span> 大模型的手脚：Harness</h3>
-<h4 data-number="1.7.1.1" id="一句话直觉-14"><span
-class="header-section-number">1.7.1.1</span> 一句话直觉</h4>
-<p>你在产品里用的助手，和<a href="#sec:llms">第 1.5
-节</a>那个”预测下一个词”的裸模型之间，隔着一层工程——这层叫
-<strong>harness</strong>（鞍具）。它补的不是智力，是<strong>手、眼、记性</strong>：能调用工具、能看见结果、能记住上次的决定。</p>
-<p>“模型 + harness = 智能体”——本章其余两节讲的都是这层 harness
-的高级玩法。</p>
-<h4 data-number="1.7.1.2" id="裸模型缺什么"><span
-class="header-section-number">1.7.1.2</span> 裸模型缺什么</h4>
-<figure id="fig:harness">
-<img src="figures/src/07-01-harness.svg" alt="裸模型与助手" />
-<figcaption aria-hidden="true">裸模型与助手</figcaption>
-</figure>
-<p>裸模型只有一条路：文字进、文字出。它说”我已经删除了那个文件”，但它没有手——<strong>说做了和真做了，在它那里是同一种行为</strong>。它也没有记性：这段对话之外的一切都不存在。harness
-补齐的正是这几样。</p>
-<h4 data-number="1.7.1.3" id="智能体循环观察-决策-调用-回填"><span
-class="header-section-number">1.7.1.3</span> 智能体循环：观察 → 决策 →
-调用 → 回填</h4>
-<p>harness 的核心是一个循环（<a href="#fig:loop">图
-1-45</a>）：模型读一遍上下文（观察），决定下一步（决策）——可能是回答，也可能是调用一个工具；工具由
-harness 执行，结果回填进上下文；然后再来一轮。</p>
-<figure id="fig:loop">
-<img src="figures/src/07-01-loop.svg" alt="智能体循环" />
-<figcaption aria-hidden="true">智能体循环</figcaption>
-</figure>
-<p>循环带来的是<strong>质变而不是加法</strong>：模型单独做不到”读文件”这件事，循环
-+ 工具让它做到了——能力来自”模型 + 工具 +
-循环”的组合，而不是模型参数的增加。ReAct
-这类早期工作证明的正是：让模型”边想边做、看着结果再想”，同参数模型的可用性会台阶式上升<span
-class="citation" data-cites="yao2022"><sup>[38]</sup></span>；后来的
-SWE-agent 把这个循环套上软件工程工具，能独立修真实的 GitHub 议题<span
-class="citation" data-cites="yang2024"><sup>[39]</sup></span>。</p>
-<h4 data-number="1.7.1.4" id="天然短板上下文预算"><span
-class="header-section-number">1.7.1.4</span> 天然短板：上下文预算</h4>
-<p>循环的每一次”观察”都要重读全部上下文（<a href="#fig:loop-budget">图
-1-46</a>）：系统提示是固定租金，历史越聊越长，工具结果一页几千
-token，而留白必须留给回答。<strong>harness
-的日常工程就是管这块内存</strong>：什么该进来、什么该压缩、什么该丢。</p>
-<figure id="fig:loop-budget">
-<img src="figures/src/07-01-budget.svg" alt="上下文预算" />
-<figcaption aria-hidden="true">上下文预算</figcaption>
-</figure>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为 harness 是”给模型外挂了智能”。恰恰相反：harness
-里的每一样都是确定性工程——文件读写、命令执行、字符串拼接。<strong>智能全部来自模型，可靠性全部来自工程</strong>，两者的边界划得越清楚，系统越好维护。</p>
-</blockquote>
-<h4 data-number="1.7.1.5" id="小结与自检-15"><span
-class="header-section-number">1.7.1.5</span> 小结与自检</h4>
-<p>三句话总结：harness =
-给模型装上手、眼、记性；智能体循环（观察-决策-调用-回填）让能力产生质变；上下文窗口是循环的硬约束，harness
-的主要工程就是管它。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>模型说”我已经改好了代码”和 harness
-里”文件真的被改了”，两者的可信度为什么完全不同？</li>
-<li>一个任务转了 40 圈还没完成，最可能先撞上什么约束？</li>
-</ol>
-<p><strong>数学注解。</strong> 本节无公式。工程事实一枚：上下文窗口 n
-的注意力计算量是 O(n²)（<a href="#sec:attention">第 1.5.2
-节</a>），所以”转 40 圈、每圈重读全部历史”的成本是平方级累积的。</p>
-<h3 data-number="1.7.2" id="sec:rsi-and-multi-agent"><span
-class="header-section-number">1.7.2</span> 智能体的优化：RSI
-与多智能体</h3>
-<h4 data-number="1.7.2.1" id="一句话直觉-15"><span
-class="header-section-number">1.7.2.1</span> 一句话直觉</h4>
-<p>让智能体变强有两条路，都不需要人写更多代码：<strong>自我改进（RSI）</strong>——用现在的模型产出数据，训练出更好的模型；<strong>多智能体</strong>——几个模型分工协作。两条路都真实有效，但都有清晰的失效点；这一节的纪律是：每说一个优势，紧跟一个”它什么时候不成立”。</p>
-<h4 data-number="1.7.2.2" id="自我改进飞轮怎么转在哪停"><span
-class="header-section-number">1.7.2.2</span>
-自我改进：飞轮怎么转，在哪停</h4>
-<figure id="fig:flywheel">
-<img src="figures/src/07-02-flywheel.svg" alt="自举飞轮" />
-<figcaption aria-hidden="true">自举飞轮</figcaption>
-</figure>
-<p>自举飞轮（<a href="#fig:flywheel">图 1-47</a>）：当前模型生成解题过程
-→ 只保留验证通过的 → 拿去训练 → 更强的模型再生成更难的题<span
-class="citation"
-data-cites="zelikman2022"><sup>[40]</sup></span>。它在数学和代码上真的能转——因为<strong>对错可以自动验证</strong>。</p>
-<p>而且“自我改进”不只在模型层（重新训练权重）一个层面发生：<strong>提示与策略层</strong>（把踩过的坑写回系统提示）、<strong>工具与
-harness
-层</strong>（给智能体补上它最缺的那个工具）、<strong>课程层</strong>（让下一轮任务自动变难）都是
-RSI——机制相同：产出、验证、回灌，只是回灌的位置不同。</p>
-<p>失效点也在这里：<strong>没有验证器的领域，飞轮转不动</strong>。文笔的好坏、方案品味的高低，没有自动判分器；模型”自己判自己对”，产出数据训出的是一个更自信的模型，而不是更正确的模型——这叫自我陶醉，是
-RSI 讨论里最需要警惕的退化。</p>
-<h4 data-number="1.7.2.3" id="多智能体分工辩论市场"><span
-class="header-section-number">1.7.2.3</span>
-多智能体：分工、辩论、市场</h4>
-<figure id="fig:topologies">
-<img src="figures/src/07-02-topologies.svg" alt="三种多智能体拓扑" />
-<figcaption aria-hidden="true">三种多智能体拓扑</figcaption>
-</figure>
-<p>多智能体把一个任务拆给几个模型：<strong>流水线</strong>（写、审、改各管一段）、<strong>辩论</strong>（正反方互相挑错、裁判汇总）、<strong>市场</strong>（专长各异的智能体按任务认领）。辩论的价值在减少盲点，市场的价值在专业化<span
-class="citation" data-cites="wu2023"><sup>[41]</sup></span>。</p>
-<p>但协作本身有成本：多一个智能体，就多一份上下文同步、多一次可能的误传。<strong>多智能体在什么条件下真的更强？</strong>任务可拆分、中间结果可验证、协调成本低于分工收益——三者缺一，它就只是把成本和混乱放大（<a
-href="#fig:cost-benefit">图 1-48</a>）。</p>
-<figure id="fig:cost-benefit">
-<img src="figures/src/07-02-cost-benefit.svg" alt="成本与收益" />
-<figcaption aria-hidden="true">成本与收益</figcaption>
-</figure>
-<h4 data-number="1.7.2.4" id="天然短板复杂度越过线之后"><span
-class="header-section-number">1.7.2.4</span>
-天然短板：复杂度越过线之后</h4>
-<p>收益曲线不是单调的：任务简单时多智能体纯亏（协调开销），中等复杂度反超，<strong>复杂度过线后又被自己的混乱拖垮</strong>——消息在智能体之间传着传着就失真了，和<a
-href="#sec:attention">第 1.5.2
-节</a>讲过的传话游戏同构。实践纪律：<strong>先用单智能体做到极限，再拆</strong>；不要从多智能体开始。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”多智能体 =
-更聪明的团队”。智能体之间没有真正的”理解彼此”，它们交换的是文本；文本传
-N 手，失真就叠 N
-层。多智能体的本质是<strong>工程上的任务分解</strong>，不是拟人的团队。</p>
-</blockquote>
-<h4 data-number="1.7.2.5" id="小结与自检-16"><span
-class="header-section-number">1.7.2.5</span> 小结与自检</h4>
-<p>三句话总结：RSI
-靠自动验证器转飞轮，没验证器的领域会自我陶醉；多智能体三种拓扑各有适用，条件是可拆分、可验证、协调成本低；两者都先用单智能体做到极限再说。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>“让模型给自己的作文打分，再按分数训练”——这个飞轮缺什么？</li>
-<li>一个五智能体系统完成了单智能体完不成的任务，但成本是六倍。什么信号告诉你”该回到单智能体重试”？</li>
-</ol>
-<p><strong>数学注解。</strong>
-本节无公式。一个有用的量：若每个智能体的可靠率是
-p，流水线拓扑下整链可靠率是 p 的 k 次方（k
-为环节个数）——<strong>分工越多，单环节必须越可靠</strong>，这是多智能体设计的隐性税。</p>
-<h3 data-number="1.7.3" id="sec:mcp-skills-rag"><span
-class="header-section-number">1.7.3</span>
-智能体的扩展：MCP、技能、嵌入与知识库</h3>
-<h4 data-number="1.7.3.1" id="一句话直觉-16"><span
-class="header-section-number">1.7.3.1</span> 一句话直觉</h4>
-<p>harness
-给模型装了手，这一节讲<strong>手能伸多远</strong>：接工具（MCP，统一协议）、接方法（技能，按需加载的说明书）、接知识（嵌入与检索）。三者共同回答一个问题：<strong>模型之外的世界，怎么以低成本接进来。</strong></p>
-<h4 data-number="1.7.3.2" id="mcp把-mn-的接线变成-mn"><span
-class="header-section-number">1.7.3.2</span> MCP：把 M×N 的接线变成
-M+N</h4>
-<figure id="fig:mcp">
-<img src="figures/src/07-03-mcp.svg" alt="MCP 的主机-服务器结构" />
-<figcaption aria-hidden="true">MCP 的主机-服务器结构</figcaption>
-</figure>
-<p>没有统一协议时，M 个助手接 N 个工具要写 M×N
-份专用胶水——每一家都自定义接口。MCP（Model Context
-Protocol）把接口标准化：助手实现一次客户端，工具实现一次服务器，中间用同一套协议对话<span
-class="citation" data-cites="anthropic2024"><sup>[42]</sup></span>。</p>
-<p><strong>M+N 替代
-M×N</strong>——统一接口的价值远大于接口本身：接一个新工具，从”开发项目”变成”改一行配置”。这与
-USB 的历史同构：接口统一之前，每个外设一个专用口。</p>
-<h4 data-number="1.7.3.3" id="技能按需借阅的说明书"><span
-class="header-section-number">1.7.3.3</span> 技能：按需借阅的说明书</h4>
-<figure id="fig:skills">
-<img src="figures/src/07-03-skills.svg" alt="技能与提示词的区别" />
-<figcaption aria-hidden="true">技能与提示词的区别</figcaption>
-</figure>
-<p>把所有操作说明都塞进上下文，很快就把<a href="#sec:harness">第 1.7.1
-节</a>的预算吃光，而且大部分内容与当前任务无关。<strong>技能</strong>的解法：上下文里只常驻一行目录（“有技能
-A/B/C，各管什么”），遇到对应的活才把全文取来，用完即走。</p>
-<p>技能与提示词的区别由此清晰：<strong>提示词是每次都带着的话，技能是图书馆里按需借的书</strong>。“按需加载”是关键——它让智能体可以掌握一百种方法，而不必时刻背着一百种方法。</p>
-<h4 data-number="1.7.3.4" id="检索增强先查资料再作答"><span
-class="header-section-number">1.7.3.4</span>
-检索增强：先查资料，再作答</h4>
-<figure id="fig:rag">
-<img src="figures/src/07-03-rag.svg" alt="检索增强的链路" />
-<figcaption aria-hidden="true">检索增强的链路</figcaption>
-</figure>
-<p>幻觉的机制性根源（<a href="#sec:alignment-hallucination-safety">第
-1.6
-节</a>）是”从参数记忆里编”。检索增强（RAG）换了一条路：<strong>先把问题编码成向量，去知识库里取语义最相近的几段，把资料和问题一起交给模型</strong>——让它照着资料说，而不是凭记忆说<span
-class="citation" data-cites="lewis2020"><sup>[43]</sup></span>。</p>
-<p>“语义最相近”之所以可行，靠的是<strong>嵌入</strong>：<a
-href="#sec:data-input">第 1.3.2
-节</a>埋下的”万物皆为一列数”在这里展开——训练让意思相近的文字在向量空间里靠近（<a
-href="#fig:vectors">图
-1-52</a>），检索就退化成”找近邻”这道简单几何题。</p>
-<figure id="fig:vectors">
-<img src="figures/src/07-03-vectors.svg" alt="向量空间的几何直觉" />
-<figcaption aria-hidden="true">向量空间的几何直觉</figcaption>
-</figure>
-<h4 data-number="1.7.3.5" id="天然短板检索能缓解幻觉不能根治"><span
-class="header-section-number">1.7.3.5</span>
-天然短板：检索能缓解幻觉，不能根治</h4>
-<p>三条残余风险：<strong>资料没有的照样编</strong>（检索空手而归时，模型退回记忆模式）；<strong>检索错了照样错</strong>（“意思相近”取回的是不相干段落）；<strong>资料本身是错的</strong>（RAG
-忠实于资料，不保证资料为真）。RAG
-把幻觉从”不可控”压到”可审计”——这是质变，但不是清零。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”接了
-RAG，模型就实时联网学习了”。知识库是<strong>静态快照</strong>，不随模型训练更新；RAG
-改变的是”回答时看什么”，不是”模型知道什么”。两者的区别在<a
-href="#sec:train-and-infer">第 1.3.4
-节</a>的训练/推理框架里早就定好了。</p>
-</blockquote>
-<h4 data-number="1.7.3.6" id="小结与自检-17"><span
-class="header-section-number">1.7.3.6</span> 小结与自检</h4>
-<p>三句话总结：MCP 用统一协议把 M×N 的接线变成
-M+N；技能用”目录常驻、正文按需”解决上下文预算；RAG
-用”先查再说”缓解幻觉但不能根治。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>为什么说”统一接口的价值远大于接口本身”？举一个本书之外的同构例子。</li>
-<li>一个企业知识库三天更新一次。RAG
-系统回答”今天的会议结论”时会发生什么？</li>
-</ol>
-<p><strong>数学注解。</strong> 嵌入检索：文档与问题各编码为向量
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐝</mi><mi>i</mi></msub><mo>,</mo><mi>𝐪</mi></mrow><annotation encoding="application/x-tex">\mathbf{d}_i, \mathbf{q}</annotation></semantics></math>，取余弦相似度
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>cos</mi><mo>&#8289;</mo><mo stretchy="false" form="prefix">(</mo><mi>𝐪</mi><mo>,</mo><msub><mi>𝐝</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mi>𝐪</mi><mo>⋅</mo><msub><mi>𝐝</mi><mi>i</mi></msub></mrow><mrow><mo stretchy="false" form="postfix">∥</mo><mi>𝐪</mi><mo stretchy="false" form="postfix">∥</mo><mo stretchy="false" form="postfix">∥</mo><msub><mi>𝐝</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">∥</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\cos(\mathbf{q},\mathbf{d}_i)=\frac{\mathbf{q}\cdot\mathbf{d}_i}{\|\mathbf{q}\|\|\mathbf{d}_i\|}</annotation></semantics></math>
-最大的 k 个。近似最近邻索引（如
-HNSW）把查询从”比对全部文档”降到”比对一小部分”。</p>
-<h2 data-number="1.8" id="sec:compute-and-deployment"><span
-class="header-section-number">1.8</span>
-部署模型会遇到的：同构、异构、精度与 KV 缓存</h2>
-<h4 data-number="1.8.0.1" id="一句话直觉-17"><span
-class="header-section-number">1.8.0.1</span> 一句话直觉</h4>
-<p>前面所有章节的”训练”“推理”，最后都要落到一块真实的芯片上。这一节回答最后一个常见疑问：<strong>为什么它这么贵、这么慢</strong>——以及工程师们用什么杠杆把它变便宜、变快。</p>
-<h4 data-number="1.8.0.2" id="同构与异构全能工人-vs-专业团队"><span
-class="header-section-number">1.8.0.2</span> 同构与异构：全能工人 vs
-专业团队</h4>
-<figure id="fig:homogeneous">
-<img src="figures/src/08-01-homogeneous.svg" alt="同构与异构" />
-<figcaption aria-hidden="true">同构与异构</figcaption>
-</figure>
-<p>CPU
-是<strong>同构</strong>计算：几十个一样的全能核心，什么都能做——逻辑判断、跳转、串行任务。GPU
-是<strong>异构</strong>思路：几千个小核心只会一件简单的事（乘法加法），但同时做。</p>
-<p>神经网络的主体工作就是<strong>海量独立的乘加</strong>——矩阵乘法。这个”笨活”恰好是
-GPU 的天赋任务。所以 AI
-时代显卡成为战略物资：不是显卡神奇，是任务和工具恰好对口。</p>
-<h4 data-number="1.8.0.3" id="精度每个数用几位来存"><span
-class="header-section-number">1.8.0.3</span> 精度：每个数用几位来存</h4>
-<figure id="fig:precision">
-<img src="figures/src/08-02-precision.svg" alt="精度阶梯" />
-<figcaption aria-hidden="true">精度阶梯</figcaption>
-</figure>
-<p>模型里的每个参数是一个数，默认用 32
-位浮点（fp32）存。但推理时其实不需要那么细：16
-位（fp16/bf16）几乎无损，8 位（fp8）常用，4
-位整数（int4）是把”能不能装下”和”质量略降”做交换的关键档位[<span
-class="citation" data-cites="frantar2022"><sup>[44]</sup></span>]<span
-class="citation" data-cites="dettmers2022"><sup>[45]</sup></span>。</p>
-<p><strong>量化</strong>（把高精度数压成低精度）的收益直接：显存从 4
-份压到 0.5
-份。代价是数值的细腻程度下降——极端情况下，最罕见的知识最先被抹掉。</p>
-<h4 data-number="1.8.0.4" id="kv-缓存长对话的物理瓶颈"><span
-class="header-section-number">1.8.0.4</span> KV
-缓存：长对话的物理瓶颈</h4>
-<figure id="fig:kv-cache">
-<img src="figures/src/08-03-kv-cache.svg" alt="KV 缓存随上下文增长" />
-<figcaption aria-hidden="true">KV 缓存随上下文增长</figcaption>
-</figure>
-<p><a href="#sec:attention">第 1.5.2
-节</a>说过注意力要两两配对；推理时为了不重算，历史每轮的键值都要留在显存里——这就是
-<strong>KV
-缓存</strong>，它随上下文长度<strong>线性增长</strong>。长对话还没说到重点，缓存先把显存吃掉了。</p>
-<h4 data-number="1.8.0.5" id="显存墙三笔账加在一起"><span
-class="header-section-number">1.8.0.5</span> 显存墙：三笔账加在一起</h4>
-<figure id="fig:memory-wall">
-<img src="figures/src/08-04-memory-wall.svg" alt="显存墙" />
-<figcaption aria-hidden="true">显存墙</figcaption>
-</figure>
-<p>推理时显存里住着三样：权重（常驻大头）、激活（中间计算）、KV
-缓存（随对话增长）——<a href="#sec:train-and-infer">第 1.3.4
-节</a>埋的伏笔在这里合并成”显存墙”的完整账目。三条杠杆各对应一笔账：量化压权重、批处理摊激活、窗口与缓存管理压
-KV；<a href="#sec:ssm-and-linear-attention">第 1.5.3
-节</a>的固定状态是更激进的一招。</p>
-<h4 data-number="1.8.0.6" id="天然短板所有优化都是交换"><span
-class="header-section-number">1.8.0.6</span>
-天然短板：所有优化都是交换</h4>
-<p>量化的代价是精度，批处理的代价是延迟波动，压缩上下文的代价是细节。<strong>没有免费的杠杆，只有被明确接受的代价</strong>——部署工程的全部内容，就是按业务把代价选对。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”模型大就一定慢”。推理速度同时受参数量、精度、批大小、上下文长度、架构（<a
-href="#sec:diffusion">第 1.5.4
-节</a>的并行解码）影响——“大而快”与”小而慢”都存在，看的是整条工程链。</p>
-</blockquote>
-<h4 data-number="1.8.0.7" id="小结与自检-18"><span
-class="header-section-number">1.8.0.7</span> 小结与自检</h4>
-<p>三句话总结：神经网络的主要工作是矩阵乘法，恰好对口 GPU
-的异构架构；量化用精度换显存，是部署的关键杠杆；KV
-缓存随上下文线性增长，是长对话的物理瓶颈。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>上下文加倍后，显存里哪一笔账变大？哪一笔不变？</li>
-<li>为什么 int4 量化后”最罕见的知识最先消失”？（提示：回忆<a
-href="#sec:learning">第 1.3.3
-节</a>的流形——罕见的点住在最”薄”的地方。）</li>
-</ol>
-<p><strong>数学注解。</strong> fp32 每数 32 位；int4 每数 4 位，显存压缩
-8 倍。量化的本质是把连续数值映射到 4 位能表示的
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>4</mn></msup><mo>=</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">2^4=16</annotation></semantics></math>
-个档位上，映射规则（对称/非对称、逐层/逐组缩放）是各家方法的差异所在<span
-class="citation" data-cites="frantar2022"><sup>[44]</sup></span>。</p>
-<h1 data-number="2" id="计算机开发基础"><span
-class="header-section-number">2</span> 计算机开发基础</h1>
-<p>本部分不教写代码。它解释你每天在用的那些工具为什么会存在，以及它们各自在解决什么问题。</p>
-<h2 data-number="2.1" id="sec:what-is-a-program"><span
-class="header-section-number">2.1</span> 程序是什么：从源码到运行</h2>
-<h4 data-number="2.1.0.1" id="一句话直觉-18"><span
-class="header-section-number">2.1.0.1</span> 一句话直觉</h4>
-<p>程序就是<strong>一段写给机器的文字</strong>，加上一条把它变成机器动作的传送带。本章全部工具的存在，都是为了服务这条传送带上的某一站。</p>
-<h4 data-number="2.1.0.2" id="全链路从文字到进程"><span
-class="header-section-number">2.1.0.2</span> 全链路：从文字到进程</h4>
-<figure id="fig:chain">
-<img src="figures/src/21-01-chain.svg" alt="从源码到进程" />
-<figcaption aria-hidden="true">从源码到进程</figcaption>
-</figure>
-<p>你写的叫<strong>源代码</strong>——人能读的文字。<strong>编译器</strong>把它翻译成机器指令，顺手做一大批检查；产物是可以直接运行的<strong>可执行文件</strong>；双击或命令行启动后，它变成内存里一团活动的东西——<strong>进程</strong>。</p>
-<p>三个抽象各对应机器里一样东西，记住这张对照表，后面所有工具都好懂：</p>
-<p><strong>变量</strong>是内存里的一格——有名字、有类型、有地址；<strong>函数</strong>是一段可反复跳转执行的指令——给它输入，它还你输出；<strong>文件</strong>是磁盘上一段有名字的字节——关机也不消失。</p>
-<h4 data-number="2.1.0.3"
-id="编译型与解释型先整本翻译还是逐句同传"><span
-class="header-section-number">2.1.0.3</span>
-编译型与解释型：先整本翻译，还是逐句同传</h4>
-<figure id="fig:compile">
-<img src="figures/src/21-02-compile.svg" alt="编译型与解释型" />
-<figcaption aria-hidden="true">编译型与解释型</figcaption>
-</figure>
-<p>有的语言先整本翻译再运行（C、Rust），跑得快、错误早暴露；有的语言边读边执行（Python、JS），改完立刻能跑、错误跑到那一行才炸。现代语言多为混合：Python
-先编译成字节码再执行，Java
-运行时还会即时编译。<strong>分界是光谱，不是二分</strong>；选型的真实依据是”你要改的频率”和”你要跑的速度”。</p>
-<h4 data-number="2.1.0.4" id="函数调用时栈里发生什么"><span
-class="header-section-number">2.1.0.4</span>
-函数调用时，栈里发生什么</h4>
-<figure id="fig:stack">
-<img src="figures/src/21-03-stack.svg" alt="调用栈" />
-<figcaption aria-hidden="true">调用栈</figcaption>
-</figure>
-<p>每次调用函数，内存里就叠一个”格子”：放它的参数、局部变量、以及”做完回哪去”。函数返回，格子撤掉。<strong>嵌套调用就是叠格子</strong>；“栈溢出”是格子堆过了天花板——通常意味着某个函数没完没了地调用自己。</p>
-<h4 data-number="2.1.0.5" id="天然短板链条上每一站都可能出错"><span
-class="header-section-number">2.1.0.5</span>
-天然短板：链条上每一站都可能出错</h4>
-<p>源代码有语法错，编译器翻译时发现不了逻辑错，运行时还有只在特定数据下才炸的错。<strong>错误的种类与所在的站一一对应</strong>——这也是为什么工具链要有编译器（拦编译错）、测试（拦逻辑错）、调试器（抓运行错）：每一站配一种网。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”程序 =
-源代码文件”。源代码只是起点的文字；真正运行的是进程——它有内存、有状态、会死亡。理解”文件里的代码”和”内存里的进程”是两个世界，是理解一切开发工具的前提。</p>
-</blockquote>
-<h4 data-number="2.1.0.6" id="小结与自检-19"><span
-class="header-section-number">2.1.0.6</span> 小结与自检</h4>
-<p>三句话总结：程序 =
-源代码经编译器变成可执行文件、运行后成为进程；变量、函数、文件分别对应内存格子、可跳转指令、命名字节；编译型与解释型是”何时翻译”的取舍。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>“程序崩了”和”程序编译不过”，错误分别发生在链路的哪一站？</li>
-<li>解释型语言为什么天然适合快速试错？</li>
-</ol>
-<p><strong>数学注解。</strong> 本节无公式。一个量纲事实：现代 CPU
-每秒执行数十亿条指令，而人读代码的速度是每秒几十行——<strong>机器的”一步”比人的”一步”快八个数量级</strong>，这就是为什么性能问题几乎总是”数错了量级”，而不是”差一点点”。</p>
-<h2 data-number="2.2" id="sec:git"><span
-class="header-section-number">2.2</span> 像快照一样追踪修改：Git 与 Git
-客户端</h2>
-<h4 data-number="2.2.0.1" id="一句话直觉-19"><span
-class="header-section-number">2.2.0.1</span> 一句话直觉</h4>
-<p>Git
-给项目做<strong>快照</strong>：每次提交记录”此刻全部文件长什么样”，并记住上一次快照是谁。整条历史是一张只进不退的图——<strong>这就是”可以大胆改”的全部底气</strong>。</p>
-<h4 data-number="2.2.0.2" id="提交链一张只进不退的图"><span
-class="header-section-number">2.2.0.2</span>
-提交链：一张只进不退的图</h4>
-<figure id="fig:dag">
-<img src="figures/src/22-01-dag.svg" alt="提交链与分支" />
-<figcaption aria-hidden="true">提交链与分支</figcaption>
-</figure>
-<p>每个提交是一份快照加一个指向上一个提交的指针。从任何提交出发，都能沿指针走回整个历史——删除、覆盖都做不到。两条平行尝试（分支）可以在各自尽头合并：合并提交有两个”父亲”，同时记得两边<span
-class="citation" data-cites="chacon2014"><sup>[46]</sup></span>。</p>
-<h4 data-number="2.2.0.3" id="三个区域改完-挑好-存档"><span
-class="header-section-number">2.2.0.3</span> 三个区域：改完 → 挑好 →
-存档</h4>
-<figure id="fig:areas">
-<img src="figures/src/22-02-areas.svg" alt="工作区、暂存区与仓库" />
-<figcaption aria-hidden="true">工作区、暂存区与仓库</figcaption>
-</figure>
-<p>日常流程是三步：在工作区乱改（没关系）→ 用 <code>git add</code>
-把改动<strong>挑</strong>进暂存区 → 用 <code>git commit</code>
-存档。暂存区的价值常被低估：<strong>它让提交按逻辑分组而不是按时间</strong>——一个提交只讲一件事，是历史可读性的底线。</p>
-<h4 data-number="2.2.0.4" id="合并的两种形态"><span
-class="header-section-number">2.2.0.4</span> 合并的两种形态</h4>
-<figure id="fig:merge">
-<img src="figures/src/22-03-merge.svg" alt="快进与三方合并" />
-<figcaption aria-hidden="true">快进与三方合并</figcaption>
-</figure>
-<p>主线没动过，指针直接滑到新端（快进）；两边都动了，就造一个有两个父亲的新提交（三方合并）。同一行两边都改了，Git
-不猜——它把冲突标出来，<strong>人来裁</strong>。冲突不是故障，是系统在说”这一步需要人类的判断”。</p>
-<h4 data-number="2.2.0.5" id="git-客户端不必背命令"><span
-class="header-section-number">2.2.0.5</span> Git 客户端：不必背命令</h4>
-<p>命令行是底层真相，但日常不必全靠它。图形客户端把 add/commit/merge
-变成可见操作，IDE 内置的 Git
-面板更把”改—看差异—提交”连成一气。<strong>先用客户端建立直觉，命令行随时可以补</strong>——两者操作的是同一个仓库，混用无妨。</p>
-<h4 data-number="2.2.0.6" id="可审计谁何时改了什么"><span
-class="header-section-number">2.2.0.6</span>
-可审计：谁、何时、改了什么</h4>
-<p>每个提交自带<strong>作者与时间戳</strong>——出了问题可以精确回答“这行是谁在什么时候改的”；开启<strong>签名提交</strong>后，每个提交还带一把私钥的签名，收到源码的人可以核验“这份代码自提交者签发后没有被篡改”。快照
-+ 署名 +
-时间线，构成源码的<strong>审计链</strong>——本书样章就是这么做的。</p>
-<h4 data-number="2.2.0.7" id="天然短板快照管内容不管意图"><span
-class="header-section-number">2.2.0.7</span>
-天然短板：快照管内容，不管意图</h4>
-<p>Git
-记得每个版本长什么样，但<strong>不记得为什么</strong>——“为什么这么改”只存在于提交信息里，而提交信息是手写的。历史可读性的上限，取决于提交纪律（一次一事、写清楚为什么）。另一个边界是<strong>文件类型</strong>。Git
-的对比与合并按“行”设计，对纯文本最有效：代码、配置、Markdown、LaTeX、CSV
-都能逐行追踪；对 MS Office 这类复杂的打包格式基本无能为力；非扫描件的
-PDF
-带文本层，勉强可追踪，扫描件则与图片无异。二进制文件能存快照但无法逐行对比，仓库还会迅速膨胀——这类内容需要专门的存储方案。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”Git 是程序员专用的”。快照 +
-指针的模型对任何”会变化的文本”都成立：论文、合同、配置、账本。本书的样章也活在
-Git 里——你现在读的每一页，都有完整的修改历史可查。</p>
-</blockquote>
-<h4 data-number="2.2.0.8" id="小结与自检-20"><span
-class="header-section-number">2.2.0.8</span> 小结与自检</h4>
-<p>三句话总结：Git
-的历史是一张只进不退的快照图；三区流程让提交按逻辑分组；合并的两种形态里，冲突是留给人的判断题。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>为什么”暂存区”能提升提交历史的质量？</li>
-<li>两个分支改了同一个函数的不同部分，合并会冲突吗？改了同一行呢？</li>
-</ol>
-<p><strong>数学注解。</strong>
-本节无公式。一个结构事实：提交历史是<strong>有向无环图</strong>（DAG）——“无环”保证你沿指针走永远不会兜回原地，这是”历史不会被改乱”的结构性保证。</p>
-<h2 data-number="2.3" id="sec:ide-and-toolchain"><span
-class="header-section-number">2.3</span> 编程工具：IDE 与工具链</h2>
-<h4 data-number="2.3.0.1" id="一句话直觉-20"><span
-class="header-section-number">2.3.0.1</span> 一句话直觉</h4>
-<p>写程序的四件核心工具——<strong>编辑器、编译器、调试器、版本控制</strong>——各自独立，IDE
-只是把它们装进同一个窗口并让它们互相感知。理解了四件套的协作，IDE
-的每个按钮就都不神秘了。</p>
-<h4 data-number="2.3.0.2" id="四件套的协作"><span
-class="header-section-number">2.3.0.2</span> 四件套的协作</h4>
-<figure id="fig:toolchain">
-<img src="figures/src/23-01-toolchain.svg" alt="四件套的协作" />
-<figcaption aria-hidden="true">四件套的协作</figcaption>
-</figure>
-<p>编辑器管写与改；编译器管翻译与检查；调试器让程序<strong>停在半路</strong>，让你看内存里的真实状态；版本控制记住每一步、坏了能回滚。四者循环协作：改代码
-→ 编译报错 → 读错误 → 定位 → 通过 → 提交。</p>
-<h4 data-number="2.3.0.3" id="命令行组合与-ide-等价"><span
-class="header-section-number">2.3.0.3</span> 命令行组合与 IDE 等价</h4>
-<p>命令行老手用独立工具完成同样的事：编辑器（Vim/Emacs）+ 命令行编译 +
-调试器（GDB）+
-Git。<strong>两套方式操作的是同样的底层工具</strong>，差别只在界面与自动化程度。IDE
-的真实优势不是”功能多”，而是<strong>消除粘贴复制</strong>：报错点直接跳到代码行、断点直接挂在编辑器里。</p>
-<h4 data-number="2.3.0.4" id="一次编辑-编译-调试循环"><span
-class="header-section-number">2.3.0.4</span> 一次编辑-编译-调试循环</h4>
-<figure id="fig:cycle">
-<img src="figures/src/23-02-cycle.svg" alt="编辑-编译-调试循环" />
-<figcaption aria-hidden="true">编辑-编译-调试循环</figcaption>
-</figure>
-<p>新手最该练的习惯藏在这个循环里：<strong>编译器的错误信息不是指责，是线索</strong>。第
-② 步报错后，第 ③
-步不是”重新编译碰运气”，而是读错误信息、定位、理解——这一步练熟了，工具链才真正为你所用。</p>
-<h4 data-number="2.3.0.5" id="天然短板工具会替你藏细节"><span
-class="header-section-number">2.3.0.5</span>
-天然短板：工具会替你藏细节</h4>
-<p>IDE
-的自动补全、一键运行，让新手可以长期不知道”背后发生了什么”。平时无妨，出事就抓瞎——因为它面对的不是代码，而是黑箱。本书的建议：<strong>用
-IDE，但知道每个按钮背后是四件套里的哪一件</strong>。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”工具决定水平”。工具决定的是下限与舒适度；决定上限的是对<a
-href="#sec:what-is-a-program">第 2.1
-节</a>那条链路的理解——链路清楚的人，换任何工具链都能在一天内上手。</p>
-</blockquote>
-<h4 data-number="2.3.0.6" id="小结与自检-21"><span
-class="header-section-number">2.3.0.6</span> 小结与自检</h4>
-<p>三句话总结：四件套各管一段，IDE
-是它们的整合器；编辑-编译-调试循环是日常节奏，错误信息是线索不是指责；工具会藏细节，理解链路的人不怕换工具。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>IDE 里”跳转到定义”背后，工具链实际做了什么？</li>
-<li>为什么说”读编译错误”是新手回报率最高的习惯？</li>
-</ol>
-<p><strong>数学注解。</strong> 本节无公式。一个工程事实：现代 IDE
-的”跳转/补全”依赖<strong>语言服务器</strong>——一个把源代码解析成索引、常驻后台的服务。这个设计（语言与编辑器解耦）正是<a
-href="#sec:mcp-skills-rag">第 1.7.3
-节</a>讲的”统一接口”思想在开发工具里的先例。</p>
-<h2 data-number="2.4" id="sec:package-managers"><span
-class="header-section-number">2.4</span> 解决依赖：包管理器</h2>
-<h4 data-number="2.4.0.1" id="一句话直觉-21"><span
-class="header-section-number">2.4.0.1</span> 一句话直觉</h4>
-<p>现代程序几乎都是<strong>拼装</strong>出来的：你的代码加上几十个别人写好的库。<strong>包管理器</strong>就是自动化的拼装工——声明你依赖谁，它负责下载、安装、装对版本。它存在的全部理由是：<strong>手工拼装在依赖超过三个之后必然失控。</strong></p>
-<h4 data-number="2.4.0.2" id="依赖树与钻石依赖"><span
-class="header-section-number">2.4.0.2</span> 依赖树与钻石依赖</h4>
-<figure id="fig:diamond">
-<img src="figures/src/24-01-diamond.svg" alt="依赖树与钻石依赖" />
-<figcaption aria-hidden="true">依赖树与钻石依赖</figcaption>
-</figure>
-<p>依赖是树状的：你的程序依赖库 A 和 B，A 和 B
-又各依赖别的。麻烦的经典形态是<strong>钻石依赖</strong>——A 和 B
-依赖同一个库的不同版本，装哪个？两条策略：升级到两方都兼容的新版，或全树统一到一个版本再祈祷。<strong>依赖树越深，钻石出现概率越高</strong>——这就是”少依赖”成为美德的原因。</p>
-<h4 data-number="2.4.0.3" id="语义化版本用数字声明破坏了多少"><span
-class="header-section-number">2.4.0.3</span>
-语义化版本：用数字声明破坏了多少</h4>
-<figure id="fig:semver">
-<img src="figures/src/24-02-semver.svg" alt="语义化版本" />
-<figcaption aria-hidden="true">语义化版本</figcaption>
-</figure>
-<p>钻石之所以能谈判，靠的是<strong>语义化版本</strong>（semver）这个公约：版本号三段，主版本.次版本.修订号——主版本+1
-= 接口变了（你要改代码），次版本+1 = 加了功能，修订号+1 = 修了
-bug。于是”依赖
-≥2.3、&lt;3.0”就是一句可执行的承诺。<strong>公约的价值在于人人都守约</strong>——守约的生态里，自动升级才安全。</p>
-<h4 data-number="2.4.0.4" id="包管理器是一个家族"><span
-class="header-section-number">2.4.0.4</span> 包管理器是一个家族</h4>
-<p>“包管理器”不指某一个软件，而是一个<strong>分层</strong>的家族：<strong>语言与运行时层</strong>管各自生态的库——Python
-的 uv/pip、Rust 的 cargo、JavaScript 的 pnpm/npm、.NET 的
-NuGet/dotnet；<strong>系统层</strong>管整台机器的软件——openSUSE 的
-zypper、Debian 系的 apt、Fedora 系的 dnf、Arch 的 pacman、Windows 的
-winget/scoop、macOS 的
-brew；还有更彻底的<strong>声明式全局层</strong>——Nix 与 Guix（<a
-href="#sec:declarative-os">第 2.6
-节</a>）。同一台机器上常常多层并存：系统包用 zypper，项目依赖用
-uv——<strong>层次分明、互不越界</strong>，是环境干净的第一守则。</p>
-<h4 data-number="2.4.0.5" id="冲突消解与锁文件"><span
-class="header-section-number">2.4.0.5</span> 冲突消解与锁文件</h4>
-<p>冲突消解的两条策略之外，<a href="#sec:reproducibility">第 2.5
-节</a>的<strong>锁文件</strong>是第三条：把解析结果（整棵树的精确版本）钉死下来，让”装一次”和”装一万次”结果相同。声明依赖是”我要什么”，锁文件是”实际拿到了什么”——两者分开，可复现才有可能。</p>
-<h4 data-number="2.4.0.6" id="天然短板依赖是借来的信任"><span
-class="header-section-number">2.4.0.6</span>
-天然短板：依赖是借来的信任</h4>
-<p>你引入的每个包，都带来它的<strong>传递依赖</strong>——一个十行的工具库可能拖进上百个间接依赖。供应链攻击（作者账号被盗、发布恶意更新）正是从这条信任链打进来的。所以工程纪律是：<strong>依赖是负债不是资产</strong>——每加一个，问一句”这个功能真的值得一条信任链吗”。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”包管理器解决了依赖问题”。它解决的是<strong>下载与安装</strong>的自动化；版本冲突、破坏性升级、供应链安全，依然要靠约定（semver）、工具（锁文件）和纪律（少依赖）共同管理。工具把失控变成可控，可控不等于无险。</p>
-</blockquote>
-<h4 data-number="2.4.0.7" id="小结与自检-22"><span
-class="header-section-number">2.4.0.7</span> 小结与自检</h4>
-<p>三句话总结：包管理器自动拼装依赖，树越深钻石越多；semver
-用三段数字声明破坏程度，是自动升级的前提；锁文件把依赖树钉死，是可复现的地基。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>钻石依赖的两种消解策略，各自的代价是什么？</li>
-<li>为什么”少依赖”在 AI 时代依然是美德？（提示：想想<a
-href="#sec:mcp-skills-rag">第 1.7.3 节</a>的信任链。）</li>
-</ol>
-<p><strong>数学注解。</strong>
-本节无公式。一个组合事实：若每个包平均依赖 3 个包、树深 5
-层，传递依赖理论上可达 3⁵≈243
-个——<strong>依赖树的增长是指数级的</strong>，这解释了为什么”一个小项目拖出几百个包”是常态。</p>
-<h2 data-number="2.5" id="sec:reproducibility"><span
-class="header-section-number">2.5</span>
-让行为保持一致：可复现性与声明式工具</h2>
-<h4 data-number="2.5.0.1" id="一句话直觉-22"><span
-class="header-section-number">2.5.0.1</span> 一句话直觉</h4>
-<p>“我这能跑”是工程里最著名的一句话，也是最无力的辩护。<strong>可复现性</strong>的目标只有一个：同样的输入（代码
-+ 依赖 +
-环境），在任何机器、任何时间，产出完全相同的结果。做到它的两个支柱：<strong>锁文件</strong>（<a
-href="#sec:package-managers">第 2.4
-节</a>）与<strong>声明式工具</strong>。</p>
-<h4 data-number="2.5.0.2" id="先认识哈希内容的指纹"><span
-class="header-section-number">2.5.0.2</span> 先认识哈希：内容的指纹</h4>
-<p>锁文件的骨架是<strong>哈希</strong>（hash）。哈希函数像一台榨汁机：把任意大小的输入（一个文件、一整棵目录）压成一小段固定长度的指纹——它有一个决定性的性质：<strong>内容差一个字节，指纹就面目全非</strong>，而且目前没有任何办法人为造出两条同指纹的内容。于是“指纹相同”就成了“内容相同”的可机检证明——下文的锁文件、<a
-href="#sec:declarative-os">第 2.6
-节</a>的构建产物，全部押在这个性质上。</p>
-<h4 data-number="2.5.0.3" id="锁文件给整棵树记指纹"><span
-class="header-section-number">2.5.0.3</span> 锁文件：给整棵树记指纹</h4>
-<figure id="fig:lockfile">
-<img src="figures/src/25-01-lockfile.svg" alt="锁文件" />
-<figcaption aria-hidden="true">锁文件</figcaption>
-</figure>
-<p><a href="#sec:package-managers">第 2.4
-节</a>说过，锁文件把整棵依赖树每一片叶子钉死：精确版本加内容哈希。哈希是内容的指纹——<strong>上游悄悄改一个字节，指纹对不上，安装直接拒绝</strong>。可复现因此不只是”碰巧一样”，而是”被强制一样”。</p>
-<h4 data-number="2.5.0.4" id="声明式与命令式记终点不记步骤"><span
-class="header-section-number">2.5.0.4</span>
-声明式与命令式：记终点，不记步骤</h4>
-<figure id="fig:declarative">
-<img src="figures/src/25-02-declarative.svg" alt="声明式与命令式" />
-<figcaption aria-hidden="true">声明式与命令式</figcaption>
-</figure>
-<p>配置的两种哲学。<strong>命令式</strong>（传统运维）：记步骤——先装什么、再改哪个文件；步骤活在人的脑子里，机器之间漂移悄悄发生。<strong>声明式</strong>：记终点——“我要的状态是这样”，工具自己算出从现状到终点的路径；同一份声明在任何机器上收敛到同一个结果。声明式的知识活在仓库里：可进版本控制、可审查、可回滚。</p>
-<h4 data-number="2.5.0.5" id="容器把环境打包随身带"><span
-class="header-section-number">2.5.0.5</span> 容器：把环境打包随身带</h4>
-<p>声明式解决了”装什么”，容器解决”怎么带”：把程序连同它的全部依赖打进一个<strong>镜像</strong>，到哪里行为都一样。镜像还有分层设计——底层公共层所有镜像共享，只有改动的层需要重新下载，分发因此便宜。</p>
-<h4 data-number="2.5.0.6" id="层级可复现是一层一层叠上来的"><span
-class="header-section-number">2.5.0.6</span>
-层级：可复现是一层一层叠上来的</h4>
-<p>“可复现”不是单点的开关，而是一组<strong>由内向外</strong>的层级：最内层是<strong>语言级锁文件</strong>（<a
-href="#sec:package-managers">第 2.4
-节</a>，钉住项目依赖）；往外是<strong>系统包管理</strong>（钉住整台机器的软件清单）；再往外是<strong>容器镜像</strong>（把应用连同环境打成不可变的分发包，行业规范叫
-OCI——Docker
-等工具共同遵守）；最外层是<strong>声明式操作系统</strong>（<a
-href="#sec:declarative-os">第 2.6
-节</a>），连同内核与服务一起钉住。<strong>层级越高，复现的范围越大，投入也越大</strong>——按需求选层级，不必一味顶格。</p>
-<h4 data-number="2.5.0.7" id="天然短板可复现是有成本的"><span
-class="header-section-number">2.5.0.7</span>
-天然短板：可复现是有成本的</h4>
-<p>锁文件要维护（依赖升级需要主动去做，而不是被动发生）；声明式系统有学习曲线；容器镜像会过期（里面的依赖同样会老）。<strong>可复现性是一笔持续的投入</strong>，换来的回报是：新机器一小时可用、事故可以精确重放、“在我机器上能跑”从此成为有效的辩护。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”可复现 =
-把命令记下来”。记下来的命令是命令式配方，机器的历史仍然会让它漂移。可复现的判定标准很硬：<strong>换个时间、换台机器，结果逐字节相同</strong>——达不到这个标准，就还只是”碰巧一样”。</p>
-</blockquote>
-<h4 data-number="2.5.0.8" id="小结与自检-23"><span
-class="header-section-number">2.5.0.8</span> 小结与自检</h4>
-<p>三句话总结：锁文件用哈希把依赖树钉死；声明式配置记终点不记步骤，知识活在仓库里；容器把环境打包随身带。三者共同把”我这能跑”变成”哪里都能跑”。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>为什么内容哈希能同时解决”版本漂移”和”供应链投毒”两个问题？</li>
-<li>一个三人团队，每人开发机不同。声明式配置给团队带来什么回报？</li>
-</ol>
-<p><strong>数学注解。</strong> 内容哈希（如
-SHA-256）把任意输入映射为固定长度的指纹：输入差一个字节，指纹面目全非，且目前无法人为找到两条同指纹的输入。<strong>哈希相等
-≈ 内容相等</strong>——这个近似是现代软件分发的信任基础。</p>
-<h2 data-number="2.6" id="sec:declarative-os"><span
-class="header-section-number">2.6</span>
-操作系统也能像代码一样复现：声明式操作系统</h2>
-<h4 data-number="2.6.0.1" id="一句话直觉-23"><span
-class="header-section-number">2.6.0.1</span> 一句话直觉</h4>
-<p><a
-href="#sec:reproducibility">上一节</a>把应用层的可复现解决了；这一层往上推到顶：<strong>操作系统本身也可以声明式管理</strong>。NixOS、GNU
-Guix
-这类系统把”装哪些包、开哪些服务、用户是谁”全部写进一个<strong>配置文件</strong>，整个系统从这一份声明构建出来。</p>
-<h4 data-number="2.6.0.2" id="代际与原子回滚"><span
-class="header-section-number">2.6.0.2</span> 代际与原子回滚</h4>
-<figure id="fig:generations">
-<img src="figures/src/26-01-generations.svg" alt="代际与回滚" />
-<figcaption aria-hidden="true">代际与回滚</figcaption>
-</figure>
-<p>每次变更生成<strong>新的一代</strong>，旧代原样保留；“当前”只是一个指针。升级出问题？把指针拨回上一代——几秒钟，原子操作，不需要”拆回去”。<strong>大胆升级的底气来自”回滚廉价且完整”</strong>——这与
-Git 的提交哲学（<a href="#sec:git">第 2.2
-节</a>）惊人地一致：不可变的历史 + 可移动的指针。</p>
-<h4 data-number="2.6.0.3" id="配置与包同源"><span
-class="header-section-number">2.6.0.3</span> 配置与包同源</h4>
-<figure id="fig:converge">
-<img src="figures/src/26-02-converge.svg"
-alt="同一份声明，三台机器收敛" />
-<figcaption aria-hidden="true">同一份声明，三台机器收敛</figcaption>
-</figure>
-<p>更深的统一：包定义、系统配置、构建脚本用<strong>同一种语言</strong>写成。改一个包的参数，会连带着重新构建依赖它的所有东西——系统与包不会悄悄脱节。同一份配置声明推到笔记本、服务器、救援用的旧机器，三台收敛到相同状态（<a
-href="#fig:converge">图 1-58</a>）。</p>
-<h4 data-number="2.6.0.4" id="与常规发行版的运维对照"><span
-class="header-section-number">2.6.0.4</span> 与常规发行版的运维对照</h4>
-<p>常规发行版的运维是<strong>命令式</strong>的（<a
-href="#sec:reproducibility">第 2.5
-节</a>）：装了什么、改了哪行配置，散落在机器的历史里；换新机等于重新回忆一遍。声明式系统的运维是<strong>提交</strong>：改声明、构建、切换、（必要时）回滚——<a
-href="#sec:git">第 2.2 节</a>的工作流原样适用于整台操作系统。</p>
-<h4 data-number="2.6.0.5" id="天然短板学习曲线与生态边界"><span
-class="header-section-number">2.6.0.5</span>
-天然短板：学习曲线与生态边界</h4>
-<p>声明式操作系统要求你<strong>用它的语言描述一切</strong>——不走它的路，就得不到它的保证。跨出生态（打包一个冷门软件、用一个预设之外的服务）的成本高于常规发行版。工程判断：<strong>可控性要求越高的机器（服务器、基础设施），越值得；高度随性的桌面，未必</strong>。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”声明式 =
-自动化脚本”。脚本是一串命令，跑完就结束了，机器此后会漂移；声明式是一个<strong>持续的承诺</strong>——系统随时被检查、被拉回声明的状态。区别不在自动化程度，在”终点”是否被显式声明。</p>
-</blockquote>
-<h4 data-number="2.6.0.6" id="小结与自检-24"><span
-class="header-section-number">2.6.0.6</span> 小结与自检</h4>
-<p>三句话总结：声明式操作系统把整机状态写进一份声明；代际机制让升级与回滚都变成原子操作；配置与包同源，三台机器收敛到同一状态。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>为什么”回滚廉价且完整”会改变升级的勇气？用<a href="#sec:git">第 2.2
-节</a>的提交哲学类比说明。</li>
-<li>什么样的机器不适合声明式管理？（提示：想想”声明”的成本由谁付。）</li>
-</ol>
-<p><strong>数学注解。</strong>
-本节无公式。一个结构事实：代际模型把系统状态变成一条<strong>只追加的链</strong>，与
-Git 的 DAG（<a href="#sec:git">第 2.2 节</a>）同构——“不可变历史 +
-可移动指针”是可复现性的通用模式，从代码到操作系统反复出现。</p>
-<h2 data-number="2.7" id="sec:project-structure"><span
-class="header-section-number">2.7</span>
-让别人也能看懂：项目结构与技术文档</h2>
-<h4 data-number="2.7.0.1" id="一句话直觉-24"><span
-class="header-section-number">2.7.0.1</span> 一句话直觉</h4>
-<p>前面几节让程序<strong>能跑、能复现</strong>；这一节让它<strong>能被别人接手</strong>。两个手段都便宜得惊人：<strong>目录结构守约定</strong>，文档按<strong>读者的状态</strong>分类。做不好它们的代价是：每个后来者（包括三个月后的你自己）都要重新考古一遍。</p>
-<h4 data-number="2.7.0.2" id="项目树位置本身就是文档"><span
-class="header-section-number">2.7.0.2</span>
-项目树：位置本身就是文档</h4>
-<figure id="fig:tree">
-<img src="figures/src/27-01-tree.svg" alt="典型项目树" />
-<figcaption aria-hidden="true">典型项目树</figcaption>
-</figure>
-<p><code>src/</code> 放代码、<code>tests/</code>
-放测试、<code>docs/</code> 放文档、<code>LICENSE</code>
-声明法律身份——这些约定没有强制力，却是整个开源世界的通用语。<strong>位置本身就是文档</strong>：“测试在哪”不用问，因为约定替你回答了。反过来，自创的巧妙结构是在向每一个后来者收”理解税”。</p>
-<h4 data-number="2.7.0.3" id="文档矩阵按读者的状态分类"><span
-class="header-section-number">2.7.0.3</span>
-文档矩阵：按读者的状态分类</h4>
-<figure id="fig:docs">
-<img src="figures/src/27-02-docs.svg" alt="文档矩阵" />
-<figcaption aria-hidden="true">文档矩阵</figcaption>
-</figure>
-<p>最常见的文档失败是把所有内容堆进一个巨大的
-README。更好的组织按两个维度切：<strong>读者的水平</strong>（新手/熟手）×
-<strong>读者的目的</strong>（学习/查询/理解原理），得出四种各司其职的文档——教程（带我走一遍）、操作指南（解决这个具体问题）、参考手册（全部参数，准确无遗漏）、解释（为什么这样设计）。这份矩阵叫
-Diátaxis，本书自身的”一句话直觉/类比/……/数学注解”结构就是它的变体。</p>
-<h4 data-number="2.7.0.4" id="写作纪律写给三个月后的自己"><span
-class="header-section-number">2.7.0.4</span>
-写作纪律：写给三个月后的自己</h4>
-<p>技术文档的第一读者其实是<strong>未来的你</strong>——三个月后的你已经忘了当初的取舍。所以文档的最低标准不是文采，是<strong>当时为什么这么决定</strong>被记录了下来。与<a
-href="#sec:git">第 2.2
-节</a>的提交纪律合起来：提交信息记”改了什么、为什么”，文档记”整体怎么运转、为什么这样设计”。</p>
-<h4 data-number="2.7.0.5" id="天然短板文档会腐烂"><span
-class="header-section-number">2.7.0.5</span> 天然短板：文档会腐烂</h4>
-<p>代码变了文档没变，比没有文档更危险——<strong>读者会照着错误的说明自信地做错事</strong>。唯一的解法是把文档当代码对待：进版本控制、改动代码的提交里检查文档是否需要同步（本书的
-lint
-就是这么做的：文档与结构不一致会被拦下）。文档不是写完的东西，是<strong>维护的东西</strong>。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>以为”文档是给不会用的人准备的”。按 Diátaxis
-矩阵，<strong>参考手册恰恰是给最强用户准备的</strong>——他们记得住用法，记不住参数。文档的读者覆盖所有水平的人，包括作者自己。</p>
-</blockquote>
-<h4 data-number="2.7.0.6" id="小结与自检-25"><span
-class="header-section-number">2.7.0.6</span> 小结与自检</h4>
-<p>三句话总结：目录结构守约定，位置本身就是文档；文档按读者状态分四种，各司其职；文档是维护品不是交付品，会腐烂要同步。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>一个新人 10 分钟内找不到测试文件，问题出在结构还是文档？</li>
-<li>为什么”操作指南”和”教程”不能合成一篇？（提示：读者的状态不同——一个在学，一个在赶。）</li>
-</ol>
-<p><strong>数学注解。</strong> 本节无公式。一个组织事实：文档矩阵的
-2×2（水平×目的）说明了<strong>分类的标准比分类本身重要</strong>——选对切分维度，每个格子里的内容自然变短、变准。</p>
-<h2 data-number="2.8" id="sec:licenses"><span
-class="header-section-number">2.8</span>
-自由之争：开源、许可证与开发社区的思潮</h2>
-<h4 data-number="2.8.0.1" id="一句话直觉-25"><span
-class="header-section-number">2.8.0.1</span> 一句话直觉</h4>
-<p>许可证不是法律装饰，而是<strong>一份可执行的合同</strong>：它决定别人能对你的代码做什么、你必须回馈什么。选许可证，本质是在”自由使用”与”强制共享”之间选一个点。</p>
-<h4 data-number="2.8.0.2" id="两种理想主义自由软件与开源"><span
-class="header-section-number">2.8.0.2</span>
-两种理想主义：自由软件与开源</h4>
-<p>1983 年，Stallman 发起 GNU
-工程，立场是<strong>自由软件</strong>：软件的自由是用户的权利——运行、研究、修改、再分发的自由缺一不可<span
-class="citation" data-cites="stallman1985"><sup>[47]</sup></span>。1998
-年，另一批人提出<strong>开源</strong>：不谈道德、只谈实效——开放开发模式产出更好的软件<span
-class="citation"
-data-cites="raymond1999"><sup>[48]</sup></span>。两份清单高度重叠（OSI
-的开源定义十项与四自由几乎等价），分歧在<strong>论证方式</strong>：一方说”这是权利”，一方说”这是方法”。这场争论至今没有裁决，也不需要裁决——它让两套价值观的人群在同一片代码上合作。</p>
-<h4 data-number="2.8.0.3" id="许可证光谱"><span
-class="header-section-number">2.8.0.3</span> 许可证光谱</h4>
-<figure id="fig:spectrum">
-<img src="figures/src/28-01-spectrum.svg" alt="许可证光谱" />
-<figcaption aria-hidden="true">许可证光谱</figcaption>
-</figure>
-<p>光谱的两端：<strong>宽松许可证</strong>（MIT——留一句版权声明，其余随便）到<strong>强
-copyleft</strong>（AGPL——用了我的代码，你的整个作品也须以同许可开源）。中间是各种梯度：Apache
-多一条专利授权；MPL 只要求”改动的这个文件”开源；GPL
-要求整个衍生作品开源；AGPL 把”通过网络提供服务”也纳入——堵上 SaaS
-时代的漏洞。</p>
-<p><strong>copyleft 的机制</strong>叫”传染”：以 GPL
-发布的代码，进入谁的项目，谁的项目就须以 GPL
-发布。这不是惩罚，是把”共享”条款法律强制化——自由的接力棒。</p>
-<h4 data-number="2.8.0.4" id="兼容矩阵选型前必查"><span
-class="header-section-number">2.8.0.4</span> 兼容矩阵：选型前必查</h4>
-<figure id="fig:matrix">
-<img src="figures/src/28-02-matrix.svg" alt="兼容矩阵" />
-<figcaption aria-hidden="true">兼容矩阵</figcaption>
-</figure>
-<p>选型的实操工具是<strong>兼容矩阵</strong>（<a href="#fig:matrix">图
-1-63</a>）：行是你的项目，列是你想引入的代码。MIT
-项目可以吃下任何代码；GPL 项目可以吃下任何代码但整个项目必须 GPL；MIT
-项目引入 GPL 代码则被迫转 GPL；AGPL
-代码连”只调用其网络服务”都受约束。<strong>引入一个依赖 =
-签一份它的许可证</strong>——这和<a href="#sec:package-managers">第 2.4
-节</a>的”依赖是借来的信任”是同一句话的法律面。</p>
-<h4 data-number="2.8.0.5" id="本书的选择"><span
-class="header-section-number">2.8.0.5</span> 本书的选择</h4>
-<p>本书正文以 <strong>CC BY-SA 4.0</strong>
-发布（copyleft：改编须署名并以同许可共享——知识应该像 GPL
-代码一样接力），代码以
-<strong>Apache-2.0</strong>（宽松：工具被最大范围使用才有价值）。<strong>内容选
-copyleft、工具选宽松</strong>——一份许可证管一种资产，这是常见且自洽的组合。</p>
-<h4 data-number="2.8.0.6" id="天然短板许可证保护代码不保护思想"><span
-class="header-section-number">2.8.0.6</span>
-天然短板：许可证保护代码，不保护思想</h4>
-<p>许可证约束的是<strong>代码的表达</strong>，不是<strong>思想本身</strong>——读完你的开源实现，别人可以用另一种语言重写一遍而不违反任何许可证（思想不受版权保护，受保护的是你写下的具体文字）。AI
-时代又添新问题：用开放代码训练出的模型，算不算”衍生作品”？这个问题尚无定论，也是<a
-href="#sec:alignment-hallucination-safety">第 1.6
-节</a>之外又一个悬而未决的争论。</p>
-<blockquote>
-<p><strong>常见误解</strong></p>
-<p>两个。一，“开源 =
-免费”——开源定义说的是自由，不指价格；开源软件收费卖完全合法。二，“没有许可证
-=
-可以随便用”——默认是<strong>保留所有权利</strong>，没有许可证的代码，法律上你什么都不能做。</p>
-</blockquote>
-<h4 data-number="2.8.0.7" id="小结与自检-26"><span
-class="header-section-number">2.8.0.7</span> 小结与自检</h4>
-<p>三句话总结：许可证是可执行的合同，光谱从宽松到强 copyleft；copyleft
-用传染条款把”共享”法律强制化；引入依赖等于签一份它的许可证，选型前查兼容矩阵。</p>
-<p>自检两题：</p>
-<ol type="1">
-<li>你要发布一个包含 GPL 库的闭源产品，有哪些合规的路？</li>
-<li>为什么本书”内容选
-copyleft、工具选宽松”是自洽的？（提示：两种资产的”被使用方式”不同。）</li>
-</ol>
-<p><strong>数学注解。</strong>
-本节无公式。一个法律结构事实：许可证链条是<strong>传递闭包</strong>——若
-A（GPL）依赖
-B（MIT），合并结果只须满足两者中更强的要求；多个许可并存时，<strong>最严的那条约束整条链</strong>。</p>
-<h1 class="unnumbered" id="术语表">术语表</h1>
-<p>按中文拼音排序。每条给出中文名、英文原词、一句话定义，以及首次出现的章节。</p>
+<p>每节结构一致：一句话直觉、生活类比、示意图、它解决什么问题、<strong>它的天然短板</strong>、小结与自检。
+公式统一收在节末"数学注解"里，跳过不影响阅读。</p>
+<h2 id="_3">构建<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>需要 Guix：</p>
+<div class="highlight"><pre><span></span><code>guix<span class="w"> </span>time-machine<span class="w"> </span>-C<span class="w"> </span>.guix/channels.scm<span class="w"> </span>--<span class="w"> </span>shell<span class="w"> </span>-m<span class="w"> </span>.guix/manifest.scm<span class="w"> </span>--<span class="w"> </span>make<span class="w"> </span>check
+</code></pre></div>
+<p>产物在 <code>build/out/</code>。</p>
+<h2 id="_4">许可<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr>
-<th style="text-align: left;">中文</th>
-<th style="text-align: left;">英文</th>
-<th style="text-align: left;">一句话定义</th>
-<th style="text-align: left;">见</th>
+<th style="text-align: left;">范围</th>
+<th style="text-align: left;">许可证</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">copyleft</td>
-<td style="text-align: left;">copyleft</td>
-<td style="text-align: left;">要求衍生作品沿用同一许可证的条款</td>
-<td style="text-align: left;">2.8</td>
+<td style="text-align: left;">正文与插图</td>
+<td style="text-align: left;">CC BY-SA 4.0</td>
 </tr>
 <tr>
-<td style="text-align: left;">泛化</td>
-<td style="text-align: left;">generalization</td>
-<td style="text-align: left;">在没见过的数据上依然表现好的能力</td>
-<td style="text-align: left;">1.4.3</td>
-</tr>
-<tr>
-<td style="text-align: left;">反向传播</td>
-<td style="text-align: left;">backpropagation</td>
-<td style="text-align: left;">把输出误差沿网络逐层分摊回每个权重</td>
-<td style="text-align: left;">1.3.3</td>
-</tr>
-<tr>
-<td style="text-align: left;">分布漂移</td>
-<td style="text-align: left;">distribution shift</td>
-<td
-style="text-align: left;">真实数据的分布随时间偏离训练数据的分布</td>
-<td style="text-align: left;">1.4.3</td>
-</tr>
-<tr>
-<td style="text-align: left;">感知机</td>
-<td style="text-align: left;">perceptron</td>
-<td style="text-align: left;">单个神经元构成的线性分类器</td>
-<td style="text-align: left;">1.3.1</td>
-</tr>
-<tr>
-<td style="text-align: left;">哈希</td>
-<td style="text-align: left;">hash</td>
-<td
-style="text-align: left;">把任意内容压成固定长度指纹，内容差一字节指纹即变</td>
-<td style="text-align: left;">2.5</td>
-</tr>
-<tr>
-<td style="text-align: left;">幻觉</td>
-<td style="text-align: left;">hallucination</td>
-<td style="text-align: left;">流畅但事实错误的生成结果</td>
-<td style="text-align: left;">1.6</td>
-</tr>
-<tr>
-<td style="text-align: left;">激活函数</td>
-<td style="text-align: left;">activation function</td>
-<td
-style="text-align: left;">神经元加权求和之后的非线性（如”负数归零”）</td>
-<td style="text-align: left;">1.4.1</td>
-</tr>
-<tr>
-<td style="text-align: left;">交叉引用</td>
-<td style="text-align: left;">cross-reference</td>
-<td
-style="text-align: left;">指向章节或图表编号的引用，编号自动生成</td>
-<td style="text-align: left;">2.7</td>
-</tr>
-<tr>
-<td style="text-align: left;">进程</td>
-<td style="text-align: left;">process</td>
-<td
-style="text-align: left;">运行中的程序：内存、状态与执行流的整体</td>
-<td style="text-align: left;">2.1</td>
-</tr>
-<tr>
-<td style="text-align: left;">决策边界</td>
-<td style="text-align: left;">decision boundary</td>
-<td style="text-align: left;">模型划分”输出 1 / 输出 0”的几何边界</td>
-<td style="text-align: left;">1.3.1</td>
-</tr>
-<tr>
-<td style="text-align: left;">可复现性</td>
-<td style="text-align: left;">reproducibility</td>
-<td
-style="text-align: left;">同样的输入在任何机器、任何时间得到相同结果</td>
-<td style="text-align: left;">2.5</td>
-</tr>
-<tr>
-<td style="text-align: left;">联想记忆</td>
-<td style="text-align: left;">associative memory</td>
-<td style="text-align: left;">用层内互连神经元的权重直接存取图案</td>
-<td style="text-align: left;">1.3.1</td>
-</tr>
-<tr>
-<td style="text-align: left;">流形</td>
-<td style="text-align: left;">manifold</td>
-<td style="text-align: left;">高维空间中数据实际聚居的低维曲面</td>
-<td style="text-align: left;">1.3.3</td>
-</tr>
-<tr>
-<td style="text-align: left;">强化学习</td>
-<td style="text-align: left;">reinforcement learning</td>
-<td style="text-align: left;">只凭环境的分数而非标准答案进行学习</td>
-<td style="text-align: left;">1.4.2</td>
-</tr>
-<tr>
-<td style="text-align: left;">检索增强</td>
-<td style="text-align: left;">retrieval-augmented generation</td>
-<td style="text-align: left;">先查资料再作答，以缓解幻觉</td>
-<td style="text-align: left;">1.7.3</td>
-</tr>
-<tr>
-<td style="text-align: left;">数据泄漏</td>
-<td style="text-align: left;">data leakage</td>
-<td style="text-align: left;">考题混进题库，导致评估虚高</td>
-<td style="text-align: left;">1.4.3</td>
-</tr>
-<tr>
-<td style="text-align: left;">数据墙</td>
-<td style="text-align: left;">data wall</td>
-<td style="text-align: left;">高质量训练文本接近用尽的约束</td>
-<td style="text-align: left;">1.5.1</td>
-</tr>
-<tr>
-<td style="text-align: left;">缩放定律</td>
-<td style="text-align: left;">scaling law</td>
-<td style="text-align: left;">损失随算力、数据、参数增长的幂律关系</td>
-<td style="text-align: left;">1.5.1</td>
-</tr>
-<tr>
-<td style="text-align: left;">损失函数</td>
-<td style="text-align: left;">loss function</td>
-<td style="text-align: left;">把”错得离谱”量化成一个数的函数</td>
-<td style="text-align: left;">1.3.3</td>
-</tr>
-<tr>
-<td style="text-align: left;">锁文件</td>
-<td style="text-align: left;">lock file</td>
-<td style="text-align: left;">用哈希钉住整棵依赖树精确版本的记录</td>
-<td style="text-align: left;">2.4</td>
-</tr>
-<tr>
-<td style="text-align: left;">提交</td>
-<td style="text-align: left;">commit</td>
-<td style="text-align: left;">版本控制中的一次不可变快照</td>
-<td style="text-align: left;">2.2</td>
-</tr>
-<tr>
-<td style="text-align: left;">暂存区</td>
-<td style="text-align: left;">staging area</td>
-<td style="text-align: left;">从改动中挑选待存档内容的缓冲区</td>
-<td style="text-align: left;">2.2</td>
-</tr>
-<tr>
-<td style="text-align: left;">钻石依赖</td>
-<td style="text-align: left;">diamond dependency</td>
-<td style="text-align: left;">两个依赖要求同一库的不同版本</td>
-<td style="text-align: left;">2.4</td>
-</tr>
-<tr>
-<td style="text-align: left;">提示词</td>
-<td style="text-align: left;">prompt</td>
-<td style="text-align: left;">用户给模型的输入；条件生成的引导信号</td>
-<td style="text-align: left;">1.5.4</td>
-</tr>
-<tr>
-<td style="text-align: left;">温度</td>
-<td style="text-align: left;">temperature</td>
-<td style="text-align: left;">抽取 token 时调节随机程度的参数</td>
-<td style="text-align: left;">1.5.4</td>
-</tr>
-<tr>
-<td style="text-align: left;">采样策略</td>
-<td style="text-align: left;">sampling strategy</td>
-<td style="text-align: left;">从概率表中选出下一个 token 的规则</td>
-<td style="text-align: left;">1.5.0</td>
-</tr>
-<tr>
-<td style="text-align: left;">预训练</td>
-<td style="text-align: left;">pretraining</td>
-<td style="text-align: left;">在海量无标注文本上自监督训练的阶段</td>
-<td style="text-align: left;">1.6</td>
-</tr>
-<tr>
-<td style="text-align: left;">监督微调</td>
-<td style="text-align: left;">supervised fine-tuning</td>
-<td style="text-align: left;">用人写好的示范教模型”当助手”的阶段</td>
-<td style="text-align: left;">1.6</td>
-</tr>
-<tr>
-<td style="text-align: left;">对齐</td>
-<td style="text-align: left;">alignment</td>
-<td style="text-align: left;">让模型行为符合人类期望与价值观的调教</td>
-<td style="text-align: left;">1.6</td>
-</tr>
-<tr>
-<td style="text-align: left;">对齐税</td>
-<td style="text-align: left;">alignment tax</td>
-<td style="text-align: left;">安全对齐带来的能力下降</td>
-<td style="text-align: left;">1.6</td>
-</tr>
-<tr>
-<td style="text-align: left;">过拟合</td>
-<td style="text-align: left;">overfitting</td>
-<td style="text-align: left;">在训练数据上表现好、在新数据上表现差</td>
-<td style="text-align: left;">1.4.3</td>
-</tr>
-<tr>
-<td style="text-align: left;">早停</td>
-<td style="text-align: left;">early stopping</td>
-<td style="text-align: left;">在验证损失开始回升处停止训练</td>
-<td style="text-align: left;">1.4.3</td>
-</tr>
-<tr>
-<td style="text-align: left;">注意力机制</td>
-<td style="text-align: left;">attention</td>
-<td style="text-align: left;">按相关性对上下文加权求和的计算</td>
-<td style="text-align: left;">1.5.2</td>
-</tr>
-<tr>
-<td style="text-align: left;">多头注意力</td>
-<td style="text-align: left;">multi-head attention</td>
-<td style="text-align: left;">并行多套注意力，各自关注不同关系</td>
-<td style="text-align: left;">1.5.2</td>
-</tr>
-<tr>
-<td style="text-align: left;">上下文窗口</td>
-<td style="text-align: left;">context window</td>
-<td style="text-align: left;">模型一次能看到的全部输入上限</td>
-<td style="text-align: left;">1.7.1</td>
-</tr>
-<tr>
-<td style="text-align: left;">自监督</td>
-<td style="text-align: left;">self-supervised</td>
-<td style="text-align: left;">从数据自身构造题目与答案的预训练方式</td>
-<td style="text-align: left;">1.4.2</td>
-</tr>
-<tr>
-<td style="text-align: left;">嵌入</td>
-<td style="text-align: left;">embedding</td>
-<td style="text-align: left;">把文字/图像编码成可比较距离的向量</td>
-<td style="text-align: left;">1.7.3</td>
-</tr>
-<tr>
-<td style="text-align: left;">量化</td>
-<td style="text-align: left;">quantization</td>
-<td style="text-align: left;">用更少的位数存储参数，换显存与速度</td>
-<td style="text-align: left;">1.8</td>
-</tr>
-<tr>
-<td style="text-align: left;">KV 缓存</td>
-<td style="text-align: left;">KV cache</td>
-<td
-style="text-align: left;">推理时保留的历史键值，随上下文线性增长</td>
-<td style="text-align: left;">1.8</td>
-</tr>
-<tr>
-<td style="text-align: left;">声明式管理</td>
-<td style="text-align: left;">declarative management</td>
-<td style="text-align: left;">声明期望状态，由工具收敛到该状态</td>
-<td style="text-align: left;">2.5</td>
-</tr>
-<tr>
-<td style="text-align: left;">代际回滚</td>
-<td style="text-align: left;">generation rollback</td>
-<td style="text-align: left;">系统每次变更成新一代，可原子回退</td>
-<td style="text-align: left;">2.6</td>
-</tr>
-<tr>
-<td style="text-align: left;">容器镜像</td>
-<td style="text-align: left;">container image</td>
-<td style="text-align: left;">应用连同环境的不可变分发包（OCI
-规范）</td>
-<td style="text-align: left;">2.5</td>
-</tr>
-<tr>
-<td style="text-align: left;">语义化版本</td>
-<td style="text-align: left;">semantic versioning</td>
-<td style="text-align: left;">用三段数字声明接口破坏程度的公约</td>
-<td style="text-align: left;">2.4</td>
-</tr>
-<tr>
-<td style="text-align: left;">许可证</td>
-<td style="text-align: left;">license</td>
-<td style="text-align: left;">声明代码可被如何使用的可执行合同</td>
-<td style="text-align: left;">2.8</td>
-</tr>
-<tr>
-<td style="text-align: left;">依赖</td>
-<td style="text-align: left;">dependency</td>
-<td style="text-align: left;">一个软件运行所需的另一个软件</td>
-<td style="text-align: left;">2.4</td>
-</tr>
-<tr>
-<td style="text-align: left;">状态空间模型</td>
-<td style="text-align: left;">state space model</td>
-<td style="text-align: left;">用固定大小状态压缩历史的序列模型</td>
-<td style="text-align: left;">1.5.3</td>
-</tr>
-<tr>
-<td style="text-align: left;">编译器</td>
-<td style="text-align: left;">compiler</td>
-<td style="text-align: left;">把源代码整体翻译成机器指令的工具</td>
-<td style="text-align: left;">2.1</td>
-</tr>
-<tr>
-<td style="text-align: left;">解释器</td>
-<td style="text-align: left;">interpreter</td>
-<td style="text-align: left;">逐句读取并执行源代码的程序</td>
-<td style="text-align: left;">2.1</td>
-</tr>
-<tr>
-<td style="text-align: left;">调用栈</td>
-<td style="text-align: left;">call stack</td>
-<td style="text-align: left;">函数嵌套调用时逐层叠放的记录区</td>
-<td style="text-align: left;">2.1</td>
-</tr>
-<tr>
-<td style="text-align: left;">越狱</td>
-<td style="text-align: left;">jailbreak</td>
-<td style="text-align: left;">绕过安全对齐的提示词手法</td>
-<td style="text-align: left;">1.6</td>
-</tr>
-<tr>
-<td style="text-align: left;">扩散模型</td>
-<td style="text-align: left;">diffusion model</td>
-<td style="text-align: left;">通过学习去噪过程来生成数据的模型</td>
-<td style="text-align: left;">1.5.4</td>
-</tr>
-<tr>
-<td style="text-align: left;">微调</td>
-<td style="text-align: left;">fine-tuning</td>
-<td style="text-align: left;">在预训练之后继续训练以适配特定任务</td>
-<td style="text-align: left;">1.7.1</td>
-</tr>
-<tr>
-<td style="text-align: left;">学习率</td>
-<td style="text-align: left;">learning rate</td>
-<td style="text-align: left;">梯度下降每步沿下坡方向走多远</td>
-<td style="text-align: left;">1.3.3</td>
-</tr>
-<tr>
-<td style="text-align: left;">隐藏层</td>
-<td style="text-align: left;">hidden layer</td>
-<td style="text-align: left;">夹在输入与输出之间的神经元层</td>
-<td style="text-align: left;">1.4.1</td>
-</tr>
-<tr>
-<td style="text-align: left;">多模态</td>
-<td style="text-align: left;">multimodal</td>
-<td
-style="text-align: left;">文本、图像、音频共用同一表示空间的模型</td>
-<td style="text-align: left;">1.5.0</td>
-</tr>
-<tr>
-<td style="text-align: left;">训练/验证/测试</td>
-<td style="text-align: left;">train/val/test split</td>
-<td style="text-align: left;">数据三分：调参、选型、终考</td>
-<td style="text-align: left;">1.4.3</td>
-</tr>
-<tr>
-<td style="text-align: left;">token</td>
-<td style="text-align: left;">token</td>
-<td
-style="text-align: left;">分词器产出的最小输入单位；模型只见到它</td>
-<td style="text-align: left;">1.3.2</td>
+<td style="text-align: left;">示例代码、构建脚本</td>
+<td style="text-align: left;">Apache-2.1</td>
 </tr>
 </tbody>
 </table>
-<h1 class="unnumbered" id="参考文献">参考文献</h1>
-<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
-role="list">
-<div id="ref-mccarthy1955" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div
-class="csl-right-inline">MCCARTHY J, MINSKY M L, ROCHESTER N, 等. A
-Proposal for the Dartmouth Summer Research Project on Artificial
-Intelligence[J/OL]. AI Magazine, 2006, 27(4): 12-14. DOI:<a
-href="https://doi.org/10.1609/aimag.v27i4.1904">10.1609/aimag.v27i4.1904</a>.</div>
+<p>详见 <code>LICENSE</code>、<code>LICENSES/</code> 与 <code>.reuse/dep5</code>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC BY-SA 4.0 (正文) · Apache-2.0 (代码) &copy; 2026 Zhen-Lin Huo
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-<div id="ref-moravec1988" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div
-class="csl-right-inline">MORAVEC H. Mind Children: The Future of Robot
-and Human Intelligence[M]. Cambridge, MA: Harvard University Press,
-1988.</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Zhen-LinHuo/ai-and-coding-basics" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
 </div>
-<div id="ref-turing1950" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div><div
-class="csl-right-inline">TURING A M. Computing Machinery and
-Intelligence[J/OL]. Mind, 1950, 59(236): 433-460. DOI:<a
-href="https://doi.org/10.1093/mind/LIX.236.433">10.1093/mind/LIX.236.433</a>.</div>
-</div>
-<div id="ref-brooks1991" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[4] </div><div
-class="csl-right-inline">BROOKS R A. Intelligence without
-Representation[J/OL]. Artificial Intelligence, 1991, 47: 139-159. DOI:<a
-href="https://doi.org/10.1016/0004-3702(91)90053-M">10.1016/0004-3702(91)90053-M</a>.</div>
-</div>
-<div id="ref-russell2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[5] </div><div
-class="csl-right-inline">RUSSELL S, NORVIG P. Artificial Intelligence: A
-Modern Approach[M]. 4 版. Hoboken, NJ: Pearson, 2020.</div>
-</div>
-<div id="ref-azevedo2009" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[6] </div><div
-class="csl-right-inline">AZEVEDO F A C, CARVALHO L R B, GRINBERG L T,
-等. Equal Numbers of Neuronal and Nonneuronal Cells Make the Human Brain
-an Isometrically Scaled-Up Primate Brain[J/OL]. Journal of Comparative
-Neurology, 2009, 513(5): 532-541. DOI:<a
-href="https://doi.org/10.1002/cne.21974">10.1002/cne.21974</a>.</div>
-</div>
-<div id="ref-mcculloch1943" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[7] </div><div
-class="csl-right-inline">MCCULLOCH W S, PITTS W. A Logical Calculus of
-the Ideas Immanent in Nervous Activity[J/OL]. The Bulletin of
-Mathematical Biophysics, 1943, 5(4): 115-133. DOI:<a
-href="https://doi.org/10.1007/BF02478259">10.1007/BF02478259</a>.</div>
-</div>
-<div id="ref-rosenblatt1958" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[8] </div><div
-class="csl-right-inline">ROSENBLATT F. The Perceptron: A Probabilistic
-Model for Information Storage and Organization in the Brain[J/OL].
-Psychological Review, 1958, 65(6): 386-408. DOI:<a
-href="https://doi.org/10.1037/h0042519">10.1037/h0042519</a>.</div>
-</div>
-<div id="ref-minsky1969" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[9] </div><div
-class="csl-right-inline">MINSKY M, PAPERT S. Perceptrons: An
-Introduction to Computational Geometry[M]. Cambridge, MA: MIT Press,
-1969.</div>
-</div>
-<div id="ref-hopfield1982" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[10] </div><div
-class="csl-right-inline">HOPFIELD J J. Neural Networks and Physical
-Systems with Emergent Collective Computational Abilities[J/OL].
-Proceedings of the National Academy of Sciences, 1982, 79(8): 2554-2558.
-DOI:<a
-href="https://doi.org/10.1073/pnas.79.8.2554">10.1073/pnas.79.8.2554</a>.</div>
-</div>
-<div id="ref-sennrich2016" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[11] </div><div
-class="csl-right-inline">SENNRICH R, HADDOW B, BIRCH A. Neural Machine
-Translation of Rare Words with Subword Units[C/OL]//Proceedings of the
-54th Annual Meeting of the Association for Computational Linguistics.
-2016: 1715-1725. DOI:<a
-href="https://doi.org/10.3115/v1/P16-1162">10.3115/v1/P16-1162</a>.</div>
-</div>
-<div id="ref-rumelhart1986" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[12] </div><div
-class="csl-right-inline">RUMELHART D E, HINTON G E, WILLIAMS R J.
-Learning Representations by Back-Propagating Errors[J/OL]. Nature, 1986,
-323: 533-536. DOI:<a
-href="https://doi.org/10.1038/323533a0">10.1038/323533a0</a>.</div>
-</div>
-<div id="ref-lecun1998" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[13] </div><div
-class="csl-right-inline">LECUN Y, BOTTOU L, BENGIO Y, 等. Gradient-Based
-Learning Applied to Document Recognition[J/OL]. Proceedings of the IEEE,
-1998, 86(11): 2278-2324. DOI:<a
-href="https://doi.org/10.1109/5.726791">10.1109/5.726791</a>.</div>
-</div>
-<div id="ref-bengio2013" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[14] </div><div
-class="csl-right-inline">BENGIO Y, COURVILLE A, VINCENT P.
-Representation Learning: A Review and New Perspectives[J/OL]. IEEE
-Transactions on Pattern Analysis and Machine Intelligence, 2013, 35(8):
-1798-1828. DOI:<a
-href="https://doi.org/10.1109/TPAMI.2013.50">10.1109/TPAMI.2013.50</a>.</div>
-</div>
-<div id="ref-krizhevsky2012" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[15] </div><div
-class="csl-right-inline">KRIZHEVSKY A, SUTSKEVER I, HINTON G E. ImageNet
-Classification with Deep Convolutional Neural Networks[C]//Advances in
-Neural Information Processing Systems 25. 2012: 1097-1105.</div>
-</div>
-<div id="ref-lecun2015" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[16] </div><div
-class="csl-right-inline">LECUN Y, BENGIO Y, HINTON G. Deep
-Learning[J/OL]. Nature, 2015, 521: 436-444. DOI:<a
-href="https://doi.org/10.1038/nature14539">10.1038/nature14539</a>.</div>
-</div>
-<div id="ref-goodfellow2016" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[17] </div><div
-class="csl-right-inline">GOODFELLOW I, BENGIO Y, COURVILLE A. Deep
-Learning[M]. Cambridge, MA: MIT Press, 2016.</div>
-</div>
-<div id="ref-sutton2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[18] </div><div
-class="csl-right-inline">SUTTON R S, BARTO A G. Reinforcement Learning:
-An Introduction[M]. 2 版. Cambridge, MA: MIT Press, 2018.</div>
-</div>
-<div id="ref-recht2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[19] </div><div
-class="csl-right-inline">RECHT B, ROELOFS R, SCHMIDT L, 等. Do ImageNet
-Classifiers Generalize to ImageNet?[C]//Proceedings of the 36th
-International Conference on Machine Learning. 2019: 5389-5400.</div>
-</div>
-<div id="ref-hastie2009" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[20] </div><div
-class="csl-right-inline">HASTIE T, TIBSHIRANI R, FRIEDMAN J. The
-Elements of Statistical Learning[M]. 2 版. New York: Springer,
-2009.</div>
-</div>
-<div id="ref-bommasani2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[21] </div><div
-class="csl-right-inline">BOMMASANI R, HUDSON D A, ADELI E, 等. On the
-Opportunities and Risks of Foundation Models[J/OL]. arXiv preprint
-arXiv:2108.07258, 2021. <a
-href="https://arxiv.org/abs/2108.07258">https://arxiv.org/abs/2108.07258</a>.</div>
-</div>
-<div id="ref-radford2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[22] </div><div
-class="csl-right-inline">RADFORD A, KIM J W, HALLACY C, 等. Learning
-Transferable Visual Models from Natural Language
-Supervision[C/OL]//Proceedings of the 38th International Conference on
-Machine Learning. 2021: 8748-8763. <a
-href="https://arxiv.org/abs/2103.00020">https://arxiv.org/abs/2103.00020</a>.</div>
-</div>
-<div id="ref-alayrac2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[23] </div><div
-class="csl-right-inline">ALAYRAC J B, DONAHUE J, LUC P, 等. Flamingo: A
-Visual Language Model for Few-Shot Learning[C/OL]//Advances in Neural
-Information Processing Systems 35. 2022: 23716-23736. <a
-href="https://arxiv.org/abs/2204.14198">https://arxiv.org/abs/2204.14198</a>.</div>
-</div>
-<div id="ref-kaplan2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[24] </div><div
-class="csl-right-inline">KAPLAN J, MCCANDLISH S, HENIGHAN T, 等. Scaling
-Laws for Neural Language Models[J/OL]. arXiv preprint arXiv:2001.08361,
-2020. <a
-href="https://arxiv.org/abs/2001.08361">https://arxiv.org/abs/2001.08361</a>.</div>
-</div>
-<div id="ref-hoffmann2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[25] </div><div
-class="csl-right-inline">HOFFMANN J, BORGEAUD S, MENSCH A, 等. Training
-Compute-Optimal Large Language Models[C/OL]//Advances in Neural
-Information Processing Systems 35. 2022. <a
-href="https://arxiv.org/abs/2203.15556">https://arxiv.org/abs/2203.15556</a>.</div>
-</div>
-<div id="ref-vaswani2017" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[26] </div><div
-class="csl-right-inline">VASWANI A, SHAZEER N, PARMAR N, 等. Attention
-Is All You Need[C/OL]//Advances in Neural Information Processing Systems
-30. 2017. <a
-href="https://arxiv.org/abs/1706.03762">https://arxiv.org/abs/1706.03762</a>.</div>
-</div>
-<div id="ref-bahdanau2015" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[27] </div><div
-class="csl-right-inline">BAHDANAU D, CHO K, BENGIO Y. Neural Machine
-Translation by Jointly Learning to Align and
-Translate[C/OL]//International Conference on Learning Representations.
-2015. <a
-href="https://arxiv.org/abs/1409.0473">https://arxiv.org/abs/1409.0473</a>.</div>
-</div>
-<div id="ref-katharopoulos2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[28] </div><div
-class="csl-right-inline">KATHAROPOULOS A, VYAS A, PAPPAS N, 等.
-Transformers Are RNNs: Fast Autoregressive Transformers with Linear
-Attention[C/OL]//Proceedings of the 37th International Conference on
-Machine Learning. 2020: 5156-5165. <a
-href="https://arxiv.org/abs/2006.16236">https://arxiv.org/abs/2006.16236</a>.</div>
-</div>
-<div id="ref-gu2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[29] </div><div class="csl-right-inline">GU
-A, DAO T. Mamba: Linear-Time Sequence Modeling with Selective State
-Spaces[J/OL]. arXiv preprint arXiv:2312.00752, 2023. <a
-href="https://arxiv.org/abs/2312.00752">https://arxiv.org/abs/2312.00752</a>.</div>
-</div>
-<div id="ref-peng2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[30] </div><div
-class="csl-right-inline">PENG B, ALCAIDE E, ANTHONY Q, 等. RWKV:
-Reinventing RNNs for the Transformer Era[C/OL]//Proceedings of the 2023
-Conference on Empirical Methods in Natural Language Processing. 2023. <a
-href="https://arxiv.org/abs/2305.13048">https://arxiv.org/abs/2305.13048</a>.</div>
-</div>
-<div id="ref-ho2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[31] </div><div class="csl-right-inline">HO
-J, JAIN A, ABBEEL P. Denoising Diffusion Probabilistic
-Models[C/OL]//Advances in Neural Information Processing Systems 33.
-2020: 6840-6851. <a
-href="https://arxiv.org/abs/2006.11239">https://arxiv.org/abs/2006.11239</a>.</div>
-</div>
-<div id="ref-nichol2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[32] </div><div
-class="csl-right-inline">NICHOL A, DHARIWAL P, RAMESH A, 等. GLIDE:
-Towards Photorealistic Image Generation and Editing with Text-Guided
-Diffusion Models[C/OL]//Proceedings of the 39th International Conference
-on Machine Learning. 2022: 16784-16804. <a
-href="https://arxiv.org/abs/2112.10741">https://arxiv.org/abs/2112.10741</a>.</div>
-</div>
-<div id="ref-nie2025" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[33] </div><div
-class="csl-right-inline">NIE S, ZHU F, YOU Z, 等. Large Language
-Diffusion Models[J/OL]. arXiv preprint arXiv:2502.09992, 2025. <a
-href="https://arxiv.org/abs/2502.09992">https://arxiv.org/abs/2502.09992</a>.</div>
-</div>
-<div id="ref-lou2025" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[34] </div><div
-class="csl-right-inline">LOU A, MENG C, ERMON S. Mercury: Ultra-Fast
-Language Models Based on Diffusion[J/OL]. arXiv preprint
-arXiv:2506.17298, 2025. <a
-href="https://arxiv.org/abs/2506.17298">https://arxiv.org/abs/2506.17298</a>.</div>
-</div>
-<div id="ref-ouyang2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[35] </div><div
-class="csl-right-inline">OUYANG L, WU J, JIANG X, 等. Training Language
-Models to Follow Instructions with Human Feedback[C/OL]//Advances in
-Neural Information Processing Systems 35. 2022: 27730-27744. <a
-href="https://arxiv.org/abs/2203.02155">https://arxiv.org/abs/2203.02155</a>.</div>
-</div>
-<div id="ref-ji2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[36] </div><div class="csl-right-inline">JI
-Z, LEE N, FRIESKE R, 等. Survey of Hallucination in Natural Language
-Generation[J/OL]. ACM Computing Surveys, 2023, 55(12): 1-38. DOI:<a
-href="https://doi.org/10.1145/3571730">10.1145/3571730</a>.</div>
-</div>
-<div id="ref-bai2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[37] </div><div
-class="csl-right-inline">BAI Y, KADAVATH S, KUNDU S, 等. Constitutional
-AI: Harmlessness from AI Feedback[J/OL]. arXiv preprint
-arXiv:2212.08073, 2022. <a
-href="https://arxiv.org/abs/2212.08073">https://arxiv.org/abs/2212.08073</a>.</div>
-</div>
-<div id="ref-yao2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[38] </div><div
-class="csl-right-inline">YAO S, ZHAO J, YU D, 等. ReAct: Synergizing
-Reasoning and Acting in Language Models[C/OL]//International Conference
-on Learning Representations. 2023. <a
-href="https://arxiv.org/abs/2210.03629">https://arxiv.org/abs/2210.03629</a>.</div>
-</div>
-<div id="ref-yang2024" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[39] </div><div
-class="csl-right-inline">YANG J, JIMENEZ C E, WETTIG A, 等. SWE-agent:
-Agent-Computer Interfaces Enable Automated Software
-Engineering[C/OL]//Advances in Neural Information Processing Systems 37.
-2024. <a
-href="https://arxiv.org/abs/2405.15793">https://arxiv.org/abs/2405.15793</a>.</div>
-</div>
-<div id="ref-zelikman2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[40] </div><div
-class="csl-right-inline">ZELIKMAN E, WU Y, MU J, 等. STaR: Bootstrapping
-Reasoning with Reasoning[C/OL]//Advances in Neural Information
-Processing Systems 35. 2022: 15476-15488. <a
-href="https://arxiv.org/abs/2203.14465">https://arxiv.org/abs/2203.14465</a>.</div>
-</div>
-<div id="ref-wu2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[41] </div><div class="csl-right-inline">WU
-Q, BANSAL G, ZHANG J, 等. AutoGen: Enabling Next-Gen LLM Applications
-via Multi-Agent Conversation[J/OL]. arXiv preprint arXiv:2308.08155,
-2023. <a
-href="https://arxiv.org/abs/2308.08155">https://arxiv.org/abs/2308.08155</a>.</div>
-</div>
-<div id="ref-anthropic2024" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[42] </div><div
-class="csl-right-inline">ANTHROPIC. Model Context Protocol
-Specification[Z/OL]. <a href="https://modelcontextprotocol.io"
-class="uri">https://modelcontextprotocol.io</a>, 2024. <a
-href="https://modelcontextprotocol.io">https://modelcontextprotocol.io</a>.</div>
-</div>
-<div id="ref-lewis2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[43] </div><div
-class="csl-right-inline">LEWIS P, PEREZ E, PIKTUS A, 等.
-Retrieval-Augmented Generation for Knowledge-Intensive NLP
-Tasks[C/OL]//Advances in Neural Information Processing Systems 33. 2020:
-9459-9474. <a
-href="https://arxiv.org/abs/2005.11401">https://arxiv.org/abs/2005.11401</a>.</div>
-</div>
-<div id="ref-frantar2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[44] </div><div
-class="csl-right-inline">FRANTAR E, ASHKBOOS S, HOEFLER T, 等. GPTQ:
-Accurate Post-Training Quantization for Generative Pre-trained
-Transformers[C/OL]//International Conference on Learning
-Representations. 2023. <a
-href="https://arxiv.org/abs/2210.17323">https://arxiv.org/abs/2210.17323</a>.</div>
-</div>
-<div id="ref-dettmers2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[45] </div><div
-class="csl-right-inline">DETTMERS T, LEWIS M, SHLEIFER S, 等. 8-Bit
-Optimizers via Block-Wise Quantization[C/OL]//International Conference
-on Learning Representations. 2022. <a
-href="https://arxiv.org/abs/2110.02861">https://arxiv.org/abs/2110.02861</a>.</div>
-</div>
-<div id="ref-chacon2014" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[46] </div><div
-class="csl-right-inline">CHACON S, STRAUB B. Pro Git[M/OL]. 2 版. New
-York: Apress, 2014. <a
-href="https://git-scm.com/book">https://git-scm.com/book</a>.</div>
-</div>
-<div id="ref-stallman1985" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[47] </div><div
-class="csl-right-inline">STALLMAN R M. The GNU Manifesto[Z/OL]. <a
-href="https://www.gnu.org/gnu/manifesto"
-class="uri">https://www.gnu.org/gnu/manifesto</a>, 1985. <a
-href="https://www.gnu.org/gnu/manifesto">https://www.gnu.org/gnu/manifesto</a>.</div>
-</div>
-<div id="ref-raymond1999" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[48] </div><div
-class="csl-right-inline">RAYMOND E S. The Cathedral and the Bazaar:
-Musings on Linux and Open Source by an Accidental Revolutionary[M].
-Sebastopol, CA: O’Reilly Media, 1999.</div>
-</div>
-</div>
-</body>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
 </html>

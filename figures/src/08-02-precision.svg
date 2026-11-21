@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="440" viewBox="0 0 820 440">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">精度阶梯：每个数用几位来存</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="60" y="80" width="700" height="56" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<text x="410" y="114" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="bold">fp32（32 位）——训练的默认精度</text>
+<rect x="60" y="146" width="350" height="56" fill="#009E73" stroke="#000000" stroke-width="1.2"/>
+<text x="235" y="180" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="bold">fp16 / bf16（16 位）——训练常用</text>
+<rect x="60" y="212" width="175" height="56" fill="#E69F00" stroke="#000000" stroke-width="1.2"/>
+<text x="147" y="246" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="bold">fp8（8 位）</text>
+<rect x="60" y="278" width="88" height="56" fill="#D55E00" stroke="#000000" stroke-width="1.2"/>
+<text x="104" y="312" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="bold">int4</text>
+</g>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="60" y="368">显存占用从 4 份压到 0.5 份；量化到 int4 后，一张消费级显卡也能装下很大的模型。</text>
+<text x="60" y="394" fill="#D55E00">代价：数值的"细腻程度"下降——极端情况下，罕见知识最先被抹掉。</text>
+<text x="60" y="420" fill="#999999">实践中 int4 的质量损失通常很小，是"能跑起来"与"跑不起"之间的关键折中[@frantar2022][@dettmers2022]。</text>
+</g>
+</svg>

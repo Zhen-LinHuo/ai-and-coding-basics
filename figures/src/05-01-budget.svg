@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="320" viewBox="0 0 940 320">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">固定预算，怎么分给"大脑"和"课本"？</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="60" y="70" width="250" height="150" rx="10" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="185" y="102" text-anchor="middle" font-weight="bold" fill="#D55E00">偏科：大脑巨大</text>
+<text x="185" y="130" text-anchor="middle">参数 100 亿</text>
+<text x="185" y="154" text-anchor="middle">数据 20 亿词</text>
+<text x="185" y="186" text-anchor="middle" fill="#999999">脑子快，但没读过书：</text>
+<text x="185" y="210" text-anchor="middle" fill="#999999">容量浪费，学不透</text>
+<rect x="360" y="70" width="250" height="150" rx="10" fill="#ffffff" stroke="#009E73" stroke-width="2"/>
+<text x="485" y="102" text-anchor="middle" font-weight="bold" fill="#009E73">均衡：等比放大</text>
+<text x="485" y="130" text-anchor="middle">参数 40 亿</text>
+<text x="485" y="154" text-anchor="middle">数据 80 亿词</text>
+<text x="485" y="186" text-anchor="middle" fill="#999999">同样的总算力，</text>
+<text x="485" y="210" text-anchor="middle" fill="#999999">损失明显更低</text>
+<rect x="660" y="70" width="250" height="150" rx="10" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
+<text x="785" y="102" text-anchor="middle" font-weight="bold" fill="#E69F00">偏科：书堆成山</text>
+<text x="785" y="130" text-anchor="middle">参数 10 亿</text>
+<text x="785" y="154" text-anchor="middle">数据 200 亿词</text>
+<text x="785" y="186" text-anchor="middle" fill="#999999">读得多，但容量小：</text>
+<text x="785" y="210" text-anchor="middle" fill="#999999">记不住，白读了</text>
+</g>
+<path d="M 330 145 L 352 145" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M 630 145 L 652 145" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="60" y="262">Chinchilla 的结论：给定总算力，参数量与数据量应当等比放大——每个参数配约 20 个词。</text>
+<text x="60" y="288" fill="#999999">真实数字随时代与模型而变，但"两头都要投"的结论稳定。</text>
+</g>
+</svg>

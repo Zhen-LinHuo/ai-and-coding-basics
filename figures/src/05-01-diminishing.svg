@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">撞上数据墙之后，加算力不再按老曲线下降</text>
+<line x1="100" y1="360" x2="800" y2="360" stroke="#000000" stroke-width="1.3" marker-end="url(#arr)"/>
+<line x1="100" y1="360" x2="100" y2="70" stroke="#000000" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="806" y="364" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">投入（算力×数据）</text>
+<text x="46" y="66" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">损失</text>
+<polyline points="100,110 107,120 114,129 121,138 128,147 135,155 142,163 149,170 156,177 163,184 170,190 177,197 184,202 191,208 198,214 205,219 212,224 219,228 226,233 233,237 240,241 247,245 254,249 261,253 268,256 275,259 282,263 289,266 296,268 303,271 310,274 317,276 324,279 331,281 338,283 345,285 352,287 359,289 366,291 373,293 380,294 387,296 394,297 401,299 408,300 415,302 422,303 429,304 436,305 443,306 450,307 457,308 464,309 471,310 478,311 485,312 492,313 499,314" fill="none" stroke="#0072B2" stroke-width="3"/>
+<line x1="506" y1="90" x2="506" y2="360" stroke="#D55E00" stroke-width="2" stroke-dasharray="8 5"/>
+<polyline points="506,330 512,330 518,329 524,329 530,329 536,329 542,329 548,329 554,329 560,329 566,330 572,330 578,330 584,331 590,331 596,332 602,332 608,333 614,333 620,334 626,335 632,336 638,337 644,338 650,339 656,340 662,341 668,342 674,344 680,345 686,346 692,348 698,350 704,351 710,353 716,354 722,356 728,358 734,360 740,362" fill="none" stroke="#D55E00" stroke-width="2.5" stroke-dasharray="7 5"/>
+<g font-size="13" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="516" y="104" fill="#D55E00">数据墙：高质量公开文本用尽</text>
+<text x="516" y="126" fill="#D55E00">（新样例不再增加）</text>
+<text x="616" y="266" fill="#D55E00">没了新数据，加算力也</text>
+<text x="616" y="288" fill="#D55E00">换不回损失下降</text>
+<text x="130" y="128" fill="#0072B2">墙前：投入越多，损失越低</text>
+<text x="130" y="150" fill="#0072B2">（幂律仍有效）</text>
+</g>
+<text x="100" y="396" font-size="14" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">所以出路不是"再大一点"，而是：合成数据、更好的数据清洗、更省数据的架构与训练方法。</text>
+</svg>

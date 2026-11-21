@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="340" viewBox="0 0 940 340">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">命令式：记步骤。声明式：记终点。</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="70" width="400" height="200" rx="10" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="240" y="100" text-anchor="middle" font-weight="bold" fill="#D55E00">命令式（菜谱）</text>
+<text x="60" y="130">1. apt 安装 A-1.2</text>
+<text x="60" y="158">2. 手动改配置文件第 3 行</text>
+<text x="60" y="186">3. 下载并解压 B 到 /opt</text>
+<text x="60" y="214" fill="#999999">每台机器执行顺序与历史不同，</text>
+<text x="60" y="240" fill="#999999">漂移悄悄发生，没人知道差在哪。</text>
+<rect x="500" y="70" width="400" height="200" rx="10" fill="#ffffff" stroke="#009E73" stroke-width="2"/>
+<text x="700" y="100" text-anchor="middle" font-weight="bold" fill="#009E73">声明式（终点）</text>
+<text x="520" y="130">"我要的状态：A、B、配置 C。"</text>
+<text x="520" y="158">工具自己算出从现状到终点的路径。</text>
+<text x="520" y="186" fill="#999999">同一份声明，在任何机器上</text>
+<text x="520" y="214" fill="#999999">都收敛到同一个终点。</text>
+<text x="520" y="244" fill="#009E73">重装 = 重新声明，而不是重新回忆。</text>
+</g>
+<text x="40" y="310" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">命令式的知识活在人的脑子里和聊天记录里；声明式的知识活在仓库里，可以进版本控制、可以审查、可以回滚。</text>
+</svg>

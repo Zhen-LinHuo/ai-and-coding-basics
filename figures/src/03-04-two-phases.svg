@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">同一个网络，两种生活</text>
+<rect x="40" y="70" width="330" height="200" rx="10" fill="#56B4E9" fill-opacity="0.15" stroke="#0072B2" stroke-width="2"/>
+<text x="205" y="98" font-size="15" text-anchor="middle" fill="#0072B2" font-weight="bold" font-family="Noto Sans CJK SC, sans-serif">训练（一次，几周）</text>
+<text x="60" y="130" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">例题 → 预测 → 和答案相减 → 误差分账</text>
+<text x="60" y="158" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">→ 每个权重拧一点 → 换一批例题再来</text>
+<text x="60" y="196" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#D55E00">旋钮在动：变化是这里发生的</text>
+<text x="60" y="224" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#999999">反向传播 + 梯度下降 + 海量数据</text>
+<rect x="530" y="70" width="330" height="200" rx="10" fill="#ffffff" stroke="#000000" stroke-width="2"/>
+<text x="695" y="98" font-size="15" text-anchor="middle" fill="#000000" font-weight="bold" font-family="Noto Sans CJK SC, sans-serif">推理（几十亿次，毫秒级）</text>
+<text x="550" y="130" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">问题 → 正向算一遍 → 答案</text>
+<text x="550" y="158" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">例题不需要，答案不需要，梯度不需要</text>
+<text x="550" y="196" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#999999">旋钮不动：权重全部冻结</text>
+<text x="550" y="224" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#999999">只有算术，一次前向</text>
+<path d="M 380 170 L 520 170" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<text x="450" y="156" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">训练结束，权重定型</text>
+<text x="450" y="192" font-size="13" text-anchor="middle" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">（除非刻意微调，见第 1.4 节）</text>
+<text x="450" y="320" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">训练是"上课"，推理是"考试"：</text>
+<text x="450" y="346" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">考试时翻书不算犯规，但再也没有老师批改。</text>
+
+</svg>
