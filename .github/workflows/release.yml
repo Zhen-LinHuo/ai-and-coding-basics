@@ -1,0 +1,110 @@
+name: release
+
+# 发版产物由 CI 构建：双语 PDF + 双语单页 HTML。冷拉取约 5 GB
+# （大头是 pandoc 的 Haskell 闭包），只在打 tag 时跑一次。日常 push 不触发。
+# 发版说明取自 CHANGELOG.md 中对应版本小节（Keep a Changelog 格式）。
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      # 公开镜像，匿名拉取。它只提供 guix 二进制与基础 userland；
+      # 其余全部由 .guix/manifest.scm 解析。
+      image: ghcr.io/zhen-linhuo/reproducible-executors/executor-guixsd:v0.2.2
+      options: --privileged
+    steps:
+      - name: put the system profile on PATH (must precede checkout)
+        run: echo "/run/current-system/profile/bin" >> "$GITHUB_PATH"
+
+      - name: TLS trust and workspace ownership (must precede checkout)
+        run: |
+          {
+            echo "SSL_CERT_FILE=/run/current-system/profile/etc/ssl/certs/ca-certificates.crt"
+            echo "SSL_CERT_DIR=/run/current-system/profile/etc/ssl/certs"
+            echo "CURL_CA_BUNDLE=/run/current-system/profile/etc/ssl/certs/ca-certificates.crt"
+            echo "GIT_SSL_CAINFO=/run/current-system/profile/etc/ssl/certs/ca-certificates.crt"
+            echo "GIT_CONFIG_COUNT=1"
+            echo "GIT_CONFIG_KEY_0=safe.directory"
+            echo "GIT_CONFIG_VALUE_0=*"
+          } >> "$GITHUB_ENV"
+
+      - uses: actions/checkout@v4
+
+      - name: start guix-daemon
+        # 容器里没有 shepherd，socket 不会自己出现。就绪判据只用 socket + pid。
+        run: |
+          /run/current-system/profile/bin/guix-daemon \
+            --build-users-group=guixbuild \
+            --substitute-urls="https://bordeaux.guix.gnu.org https://ci.guix.gnu.org" \
+            </dev/null >/var/log/guix-daemon.log 2>&1 &
+          pid=$!
+          for _ in $(seq 1 60); do
+            kill -0 "$pid" 2>/dev/null || { echo "daemon died"; tail -40 /var/log/guix-daemon.log; exit 1; }
+            [ -S /var/guix/daemon-socket/socket ] && break
+            sleep 1
+          done
+          [ -S /var/guix/daemon-socket/socket ] || { echo "no socket"; tail -40 /var/log/guix-daemon.log; exit 1; }
+          echo "guix-daemon up (pid $pid)"
+
+      - name: build both editions
+        run: |
+          guix time-machine -C .guix/channels.scm -- \
+            shell -m .guix/manifest.scm -- make pdf pdf-en html html-en
+
+      - name: release notes from CHANGELOG
+        run: |
+          awk -v ver="${GITHUB_REF_NAME}" '
+            $0 ~ "^## \\[" ver "\\]" { flag = 1; next }
+            /^## \[/ && flag { exit }
+            flag { print }
+          ' CHANGELOG.md > RELEASE_NOTES.md
+          [ -s RELEASE_NOTES.md ] || { echo "no changelog section for ${GITHUB_REF_NAME}"; exit 1; }
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-assets
+          path: |
+            build/out/*.pdf
+            build/out/*.html
+            RELEASE_NOTES.md
+          if-no-files-found: error
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-assets
+          path: dist
+      - name: attach to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*
+          body_path: dist/RELEASE_NOTES.md
+          fail_on_unmatched_files: true
+      - name: read the assets back
+        # 不核对回读，等于不知道发出去的是什么。
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          gh release download "${GITHUB_REF_NAME}" --pattern '*' --dir /tmp/back
+          ok=1
+          for f in dist/*.pdf dist/*.html; do
+            local_sum=$(sha256sum "$f" | awk '{print $1}')
+            name=$(basename "$f")
+            remote_sum=$(sha256sum "/tmp/back/$name" | awk '{print $1}')
+            echo "$name"
+            echo "  local : $local_sum"
+            echo "  remote: $remote_sum"
+            [ "$local_sum" = "$remote_sum" ] || { echo "  asset mismatch!"; ok=0; }
+          done
+          [ "$ok" = 1 ] || exit 1
