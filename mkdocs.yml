@@ -26,6 +26,7 @@ theme:
     - navigation.sections
     - navigation.indexes
     - navigation.top
+    - navigation.footer
     - toc.follow
     - content.code.copy
 
@@ -43,7 +44,12 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
+
 extra:
+  alternate:
+    - name: English
+      link: /ai-and-coding-basics/en/
+      lang: en
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Zhen-LinHuo/ai-and-coding-basics

@@ -28,7 +28,7 @@ Sorted alphabetically. Each entry gives the English term, the Chinese term, a on
 | early stopping | 早停 | Halting training where the validation loss starts to rise again | 1.4.3 |
 | embedding | 嵌入 | Encoding text or images into vectors whose distances can be compared | 1.7.3 |
 | fine-tuning | 微调 | Continuing to train after pretraining to adapt to a particular task | 1.7.1 |
-| generalization | 泛化 | The ability to still perform well on data never seen before | 1.4.3 |
+| generalisation | 泛化 | The ability to still perform well on data never seen before | 1.4.3 |
 | generation rollback | 代际回滚 | Every system change becomes a new generation, which can be rolled back atomically | 2.6 |
 | hallucination | 幻觉 | Fluent output that is factually wrong | 1.6 |
 | hash | 哈希 | Squeezing arbitrary content into a fixed-length fingerprint that changes if even one byte differs | 2.5 |

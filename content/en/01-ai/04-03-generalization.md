@@ -1,4 +1,4 @@
-### Has it actually learned? Generalization, overfitting and evaluation {#sec:generalization}
+### Has it actually learned? Generalisation, overfitting and evaluation {#sec:generalization}
 
 #### The one-line intuition
 
@@ -54,11 +54,11 @@ Even with the process perfectly correct, the numbers are often dishonest. Three 
 
 ![Three common kinds of data leakage](figures/src/04-03-leakage.svg){#fig:leakage}
 
-#### Built-in limitations: a guarantee of generalization does not exist
+#### Built-in limitations: a guarantee of generalisation does not exist
 
 Geometrically you can think of it like this: the model "draws lines" between training points, and however smoothly it draws them, they are still only **guesses**; the real pattern may bend somewhere you hold no data. The manifold hypothesis ([Section 1.3.3](#sec:learning)) tells us the data lives on a low-dimensional sheet, but nobody guarantees that sheet stays smooth where you did not sample.
 
-**In other words: generalization is induction, and induction always needs assumptions.** All evaluation can do is expose where the assumptions fail; it cannot remove them. This is the bedrock of every discussion about "interpretability" and "trustworthy AI", and one of the roots of the hallucination problem in [Section 1.6](#sec:alignment-hallucination-safety).
+**In other words: generalisation is induction, and induction always needs assumptions.** All evaluation can do is expose where the assumptions fail; it cannot remove them. This is the bedrock of every discussion about "interpretability" and "trustworthy AI", and one of the roots of the hallucination problem in [Section 1.6](#sec:alignment-hallucination-safety).
 
 > **Common misconceptions**
 >
@@ -66,11 +66,11 @@ Geometrically you can think of it like this: the model "draws lines" between tra
 
 #### Summary and self-check
 
-In three sentences: a training score says nothing about skill, only unseen data does; overfitting is memorising the workbook, and there training score and real skill run in opposite directions; evaluation is fooled by leakage, drift and gameable metrics — a guarantee of generalization does not exist, so design can only expose failure.
+In three sentences: a training score says nothing about skill, only unseen data does; overfitting is memorising the workbook, and there training score and real skill run in opposite directions; evaluation is fooled by leakage, drift and gameable metrics — a guarantee of generalisation does not exist, so design can only expose failure.
 
 Two self-check questions:
 
 1. A model scores 99% on the training set, 62% on validation and 61% on test. Is the problem the model or the process? What do you look at first?
 2. Why is "random splitting" itself a form of data leakage in tasks like predicting share prices or disease risk?
 
-**Maths note.** Write the training loss as $L_{\text{train}}$ and the validation loss as $L_{\text{val}}$. In the overfitting region $L_{\text{train}}$ keeps falling while $L_{\text{val}}$ rises; early stopping takes the minimum of $L_{\text{val}}$. Generalization error decomposes roughly as $L_{\text{val}} \approx \text{bias}^2 + \text{variance} + \text{noise}$: underfitting is high bias, overfitting is high variance, and just right is the compromise [@hastie2009].
+**Maths note.** Write the training loss as $L_{\text{train}}$ and the validation loss as $L_{\text{val}}$. In the overfitting region $L_{\text{train}}$ keeps falling while $L_{\text{val}}$ rises; early stopping takes the minimum of $L_{\text{val}}$. Generalisation error decomposes roughly as $L_{\text{val}} \approx \text{bias}^2 + \text{variance} + \text{noise}$: underfitting is high bias, overfitting is high variance, and just right is the compromise [@hastie2009].
