@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">检索增强：先查资料，再作答</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="80" width="170" height="50" rx="8" fill="#56B4E9" stroke="#000000" stroke-width="1.3"/>
+<text x="125" y="110" text-anchor="middle">问题："我们公司</text>
+<text x="125" y="126" text-anchor="middle" font-size="12">年假怎么算？"</text>
+<rect x="300" y="80" width="150" height="50" rx="8" fill="#ffffff" stroke="#000000" stroke-width="1.3"/>
+<text x="375" y="110" text-anchor="middle">编码成向量</text>
+<rect x="540" y="60" width="200" height="90" rx="8" fill="#E69F00" fill-opacity="0.35" stroke="#000000" stroke-width="1.3"/>
+<text x="640" y="96" text-anchor="middle" font-weight="bold">知识库</text>
+<text x="640" y="120" text-anchor="middle" font-size="12" fill="#999999">公司文档，每段一个向量</text>
+<text x="640" y="140" text-anchor="middle" font-size="12" fill="#999999">（离线建好）</text>
+</g>
+<path d="M 212 105 L 298 105" stroke="#000000" stroke-width="1.8" marker-end="url(#arr)"/>
+<path d="M 452 105 L 538 105" stroke="#000000" stroke-width="1.8" marker-end="url(#arr)"/>
+<path d="M 640 152 L 640 200 L 375 200 L 375 176" stroke="#009E73" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+<text x="420" y="222" font-size="13" fill="#009E73" font-family="Noto Sans CJK SC, sans-serif">取语义最相近的几段（不是关键词匹配，是"意思相近"）</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="300" y="250" width="420" height="60" rx="8" fill="#009E73" fill-opacity="0.2" stroke="#000000" stroke-width="1.3"/>
+<text x="510" y="276" text-anchor="middle">把检索到的段落 + 原问题一起交给模型</text>
+<text x="510" y="298" text-anchor="middle" fill="#999999" font-size="12">模型照着资料回答，而不是凭参数里的记忆</text>
+</g>
+<text x="60" y="348" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">检索缓解幻觉的原理：把"从记忆里编"换成"照着给的资料说"。它不能根治——资料没有的照样编，资料 retrieval 错了照样错。</text>
+</svg>

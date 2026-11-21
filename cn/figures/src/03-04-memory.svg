@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="310" viewBox="0 0 880 310">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">推理时，显存里住着什么</text>
+<rect x="60" y="70" width="760" height="60" fill="#0072B2" stroke="#000000" stroke-width="1.5"/>
+<text x="440" y="108" font-size="14" text-anchor="middle" fill="#ffffff" font-family="Noto Sans CJK SC, sans-serif">网络权重（几百 GB 起步，常驻）</text>
+<rect x="60" y="140" width="300" height="60" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
+<text x="210" y="178" font-size="14" text-anchor="middle" fill="#ffffff" font-family="Noto Sans CJK SC, sans-serif">中间计算结果（每层暂存）</text>
+<rect x="370" y="140" width="300" height="60" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<text x="520" y="178" font-size="14" text-anchor="middle" fill="#ffffff" font-family="Noto Sans CJK SC, sans-serif">对话历史缓存（越长越大，见第 1.5 节）</text>
+<rect x="680" y="140" width="140" height="60" fill="#D55E00" stroke="#000000" stroke-width="1.5"/>
+<text x="750" y="178" font-size="13" text-anchor="middle" fill="#ffffff" font-family="Noto Sans CJK SC, sans-serif">其他开销</text>
+<text x="60" y="250" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">权重大头 + 缓存小头，决定了"能不能装下"和"能聊多长"——</text>
+<text x="60" y="278" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">这也是部署方常说的"显存墙"的第一堵，第 1.5 节和第 1.8 节会再砌两堵。</text>
+
+</svg>

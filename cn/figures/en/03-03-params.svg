@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0072B2"/></marker>
+<marker id="arrv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">How many"knobs" has a layer? (3-4-2 example)</text>
+<line x1="139" y1="150" x2="321" y2="110" stroke="#999999" stroke-width="0.9"/><line x1="139" y1="150" x2="321" y2="190" stroke="#999999" stroke-width="0.9"/><line x1="139" y1="150" x2="321" y2="270" stroke="#999999" stroke-width="0.9"/><line x1="139" y1="150" x2="321" y2="350" stroke="#999999" stroke-width="0.9"/><line x1="139" y1="230" x2="321" y2="110" stroke="#999999" stroke-width="0.9"/><line x1="139" y1="230" x2="321" y2="190" stroke="#999999" stroke-width="0.9"/><line x1="139" y1="230" x2="321" y2="270" stroke="#999999" stroke-width="0.9"/><line x1="139" y1="230" x2="321" y2="350" stroke="#999999" stroke-width="0.9"/><line x1="139" y1="310" x2="321" y2="110" stroke="#999999" stroke-width="0.9"/><line x1="139" y1="310" x2="321" y2="190" stroke="#999999" stroke-width="0.9"/><line x1="139" y1="310" x2="321" y2="270" stroke="#999999" stroke-width="0.9"/><line x1="139" y1="310" x2="321" y2="350" stroke="#999999" stroke-width="0.9"/><line x1="359" y1="110" x2="541" y2="190" stroke="#999999" stroke-width="0.9"/><line x1="359" y1="110" x2="541" y2="310" stroke="#999999" stroke-width="0.9"/><line x1="359" y1="190" x2="541" y2="190" stroke="#999999" stroke-width="0.9"/><line x1="359" y1="190" x2="541" y2="310" stroke="#999999" stroke-width="0.9"/><line x1="359" y1="270" x2="541" y2="190" stroke="#999999" stroke-width="0.9"/><line x1="359" y1="270" x2="541" y2="310" stroke="#999999" stroke-width="0.9"/><line x1="359" y1="350" x2="541" y2="190" stroke="#999999" stroke-width="0.9"/><line x1="359" y1="350" x2="541" y2="310" stroke="#999999" stroke-width="0.9"/><circle cx="120" cy="150" r="19" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><circle cx="120" cy="230" r="19" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><circle cx="120" cy="310" r="19" fill="#E69F00" stroke="#000000" stroke-width="1.5"/><circle cx="340" cy="110" r="19" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/><circle cx="340" cy="190" r="19" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/><circle cx="340" cy="270" r="19" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/><circle cx="340" cy="350" r="19" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/><circle cx="560" cy="190" r="19" fill="#009E73" stroke="#000000" stroke-width="1.5"/><circle cx="560" cy="310" r="19" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="120" y="356" text-anchor="middle">Input 3</text>
+<text x="340" y="386" text-anchor="middle">Hidden 4</text>
+<text x="560" y="346" text-anchor="middle">Output 2</text>
+</g>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="660" y="120" fill="#D55E00">Connections 3×4 + 4×2 = 20 ,</text>
+<text x="660" y="144" fill="#D55E00">one weight each;</text>
+<text x="660" y="184">plus a bias per neuron</text>
+<text x="660" y="208">4 + 2 = 6 .</text>
+<text x="660" y="248" fill="#0072B2">total 26  parameters.</text>
+<text x="660" y="292">Training turns these 26  knobs</text>
+<text x="660" y="316">to the right place.</text>
+<text x="660" y="360" fill="#999999">GPT -scale models do the same;</text>
+<text x="660" y="384" fill="#999999">just far more knobs.</text>
+</g>
+</svg>

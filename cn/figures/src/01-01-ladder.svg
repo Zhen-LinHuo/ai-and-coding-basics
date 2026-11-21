@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="420" viewBox="0 0 780 420">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">同一类任务，三种做法：判断一封邮件是不是垃圾邮件</text>
+<g font-family="Noto Sans CJK SC, sans-serif">
+<path d="M 180 140 L 180 164" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="60" y="70" width="240" height="64" rx="10" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="76" y="96" font-size="15" font-weight="bold" fill="#000000">第一级：人写规则</text>
+<text x="76" y="120" font-size="13" fill="#000000">如果含"中奖"就拦截。机器只是执行。</text>
+<path d="M 180 240 L 180 264" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="60" y="170" width="240" height="64" rx="10" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
+<text x="76" y="196" font-size="15" font-weight="bold" fill="#000000">第二级：机器学规则</text>
+<text x="76" y="220" font-size="13" fill="#000000">给它一万个已标注邮件，权重自己调。</text>
+<rect x="60" y="270" width="240" height="64" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
+<text x="76" y="296" font-size="15" font-weight="bold" fill="#000000">第三级：机器自己干</text>
+<text x="76" y="320" font-size="13" fill="#000000">没有任何标注，自己发现邮件的类别。</text>
+</g>
+
+
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="360" y="96" fill="#D55E00">规则系统：智能全在人写的规则里。</text>
+<text x="360" y="120" fill="#000000">规则穷不尽：换一种写法就漏拦。</text>
+<text x="360" y="196" fill="#E69F00">学习系统：智能从样例里长出来。</text>
+<text x="360" y="220" fill="#000000">人只给原料（数据）和判卷标准。</text>
+<text x="360" y="296" fill="#0072B2">生成式 AI 常住在这两级之上：</text>
+<text x="360" y="320" fill="#000000">它不但会判断，还会产出新东西。</text>
+<text x="360" y="368" fill="#000000">本书的"AI"主要指第二、三级。</text>
+<text x="360" y="392" fill="#000000">第一级是"自动化"，不是智能。</text>
+</g>
+
+</svg>

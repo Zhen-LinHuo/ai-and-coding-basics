@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="430" viewBox="0 0 820 430">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">自举飞轮：模型产出数据，数据训出更好的模型</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="120" y="90" width="200" height="60" rx="10" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/>
+<text x="220" y="126" text-anchor="middle" font-weight="bold">当前模型</text>
+<rect x="480" y="90" width="220" height="60" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<text x="590" y="126" text-anchor="middle" font-weight="bold">生成数据 / 解法</text>
+<rect x="480" y="240" width="220" height="60" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<text x="590" y="276" text-anchor="middle" font-weight="bold">筛选：只留对的</text>
+<rect x="120" y="240" width="200" height="60" rx="10" fill="#009E73" fill-opacity="0.4" stroke="#000000" stroke-width="1.5"/>
+<text x="220" y="276" text-anchor="middle" font-weight="bold">训练出更强的模型</text>
+</g>
+<path d="M 322 120 L 478 120" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M 700 152 C 760 160 760 260 702 268" stroke="#000000" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<path d="M 478 270 L 322 270" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M 120 240 C 60 220 60 130 118 122" stroke="#000000" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<text x="450" y="220" font-size="13" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">自动出题、自动验证（有验证器的任务才能转）</text>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="60" y="350" fill="#009E73">能转起来的前提：成果可以被**自动验证**（代码能跑、数学能验算）。</text>
+<text x="60" y="378" fill="#D55E00">失效点：没有验证器的领域（写作、品味），"自己判自己对"——飞轮退化成自我陶醉。</text>
+<text x="60" y="406" fill="#999999">STaR 的做法：模型生成解题过程，只保留得出正确答案的，拿去训练[@zelikman2022]。</text>
+</g>
+</svg>

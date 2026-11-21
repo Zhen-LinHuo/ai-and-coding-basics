@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="990" height="280" viewBox="0 0 990 280">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">一行文字怎么变成机器能执行的东西</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="80" width="180" height="70" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<text x="130" y="108" text-anchor="middle" font-weight="bold">源代码</text>
+<rect x="290" y="80" width="180" height="70" rx="10" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/>
+<text x="380" y="108" text-anchor="middle" font-weight="bold">编译器</text>
+<rect x="540" y="80" width="180" height="70" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<text x="630" y="108" text-anchor="middle" font-weight="bold">可执行文件</text>
+<rect x="790" y="80" width="160" height="70" rx="10" fill="#E69F00" fill-opacity="0.4" stroke="#000000" stroke-width="1.5"/>
+<text x="870" y="108" text-anchor="middle" font-weight="bold">进程</text>
+</g>
+<path d="M 222 115 L 288 115" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M 472 115 L 538 115" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M 722 115 L 788 115" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<text x="130" y="176" font-size="12" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">main.c</text>
+<text x="380" y="176" font-size="12" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">gcc</text>
+<text x="630" y="176" font-size="12" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">a.out</text>
+<text x="870" y="176" font-size="12" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">内存里的一团活动</text>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="40" y="230">变量 ≈ 内存里的一格（有名字、有类型、有地址）；函数 ≈ 一段可反复跳转执行的指令；</text>
+<text x="40" y="256">文件 ≈ 磁盘上一段有名字的字节。三个抽象各对应机器里一样东西——学工具链就是学这条链。</text>
+</g>
+</svg>

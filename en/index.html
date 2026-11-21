@@ -18,7 +18,7 @@
       
       
         
-          <link rel="alternate" href="/ai-and-coding-basics/" hreflang="zh">
+          <link rel="alternate" href="/ai-and-coding-basics/cn/" hreflang="zh">
         
       
       
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#ai-and-computing-from-first-principles" class="md-skip">
           Skip to content
         </a>
       
@@ -159,7 +159,7 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="/ai-and-coding-basics/" hreflang="zh" class="md-select__link">
+            <a href="/ai-and-coding-basics/cn/" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
@@ -490,10 +490,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#how-to-read-it" class="md-nav__link">
     <span class="md-ellipsis">
       
-        读这本书
+        How to read it
       
     </span>
   </a>
@@ -501,10 +501,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#building" class="md-nav__link">
     <span class="md-ellipsis">
       
-        构建
+        Building
       
     </span>
   </a>
@@ -512,10 +512,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#licence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        许可
+        Licence
       
     </span>
   </a>
@@ -2003,10 +2003,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#how-to-read-it" class="md-nav__link">
     <span class="md-ellipsis">
       
-        读这本书
+        How to read it
       
     </span>
   </a>
@@ -2014,10 +2014,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#building" class="md-nav__link">
     <span class="md-ellipsis">
       
-        构建
+        Building
       
     </span>
   </a>
@@ -2025,10 +2025,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#licence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        许可
+        Licence
       
     </span>
   </a>
@@ -2055,58 +2055,64 @@
   
 
 
-<h1 id="_1">人工智能和计算机开发基础<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>写给想真正理解 AI 与软件如何运转的读者。不预设背景，也不居高临下：不教写代码，也不教训模型，只求读完能判断：一条技术路线解决什么问题、
-为什么有效、什么时候会失效。</p>
-<p>全书两部分：</p>
+<h1 id="ai-and-computing-from-first-principles">AI and Computing, from First Principles<a class="headerlink" href="#ai-and-computing-from-first-principles" title="Permanent link">&para;</a></h1>
+<p>For readers who want to understand how AI and software actually work. No prior
+background assumed, and no talking down: it does not teach you to code, nor does
+it lecture models. The goal is that after reading you can judge what problem a
+technical approach solves, why it works, and when it stops working.</p>
+<p>The book has two parts:</p>
 <ul>
-<li><strong>人工智能基础</strong>：从神经元讲到智能体，含三条大模型架构路线的定性对照。</li>
-<li><strong>计算机开发基础</strong>：从"程序是什么"讲到许可证政治，含可复现性与声明式系统。</li>
+<li><strong>Foundations of artificial intelligence</strong>: from a single neuron to agents,
+  with a qualitative comparison of three LLM architecture routes.</li>
+<li><strong>Foundations of computing and development</strong>: from "what is a program" to
+  licence politics, including reproducibility and declarative systems.</li>
 </ul>
-<h2 id="_2">读这本书<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="how-to-read-it">How to read it<a class="headerlink" href="#how-to-read-it" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">只想搞懂 AI</th>
-<th style="text-align: left;">只想搞懂开发工具</th>
-<th style="text-align: left;">想建立完整图景</th>
+<th style="text-align: left;">Just want AI</th>
+<th style="text-align: left;">Just want dev tools</th>
+<th style="text-align: left;">Want the full picture</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">第 1 部分</td>
-<td style="text-align: left;">第 2 部分（2.1 起）</td>
-<td style="text-align: left;">按顺序</td>
+<td style="text-align: left;">Part 1</td>
+<td style="text-align: left;">Part 2 (from 2.1)</td>
+<td style="text-align: left;">In order</td>
 </tr>
 </tbody>
 </table>
-<p>每节结构一致：一句话直觉、生活类比、示意图、它解决什么问题、<strong>它的天然短板</strong>、小结与自检。
-公式统一收在节末"数学注解"里，跳过不影响阅读。</p>
-<h2 id="_3">构建<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>需要 Guix：</p>
+<p>Every section follows the same shape: a one-line intuition, an everyday analogy,
+a diagram, the problem it solves, <strong>its built-in limitations</strong>, and a summary
+with self-check questions. Formulas live in a "Maths note" at the end of each
+section; skipping them never breaks the argument.</p>
+<h2 id="building">Building<a class="headerlink" href="#building" title="Permanent link">&para;</a></h2>
+<p>Guix is required:</p>
 <div class="highlight"><pre><span></span><code>guix<span class="w"> </span>time-machine<span class="w"> </span>-C<span class="w"> </span>.guix/channels.scm<span class="w"> </span>--<span class="w"> </span>shell<span class="w"> </span>-m<span class="w"> </span>.guix/manifest.scm<span class="w"> </span>--<span class="w"> </span>make<span class="w"> </span>check
 </code></pre></div>
-<p>产物在 <code>build/out/</code>。</p>
-<h2 id="_4">许可<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Outputs land in <code>build/out/</code>.</p>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">范围</th>
-<th style="text-align: left;">许可证</th>
+<th style="text-align: left;">Scope</th>
+<th style="text-align: left;">Licence</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">正文与插图</td>
+<td style="text-align: left;">Text and figures</td>
 <td style="text-align: left;">CC BY-SA 4.0</td>
 </tr>
 <tr>
-<td style="text-align: left;">示例代码、构建脚本</td>
-<td style="text-align: left;">Apache-2.1</td>
+<td style="text-align: left;">Sample code, build scripts</td>
+<td style="text-align: left;">Apache-2.0</td>
 </tr>
 </tbody>
 </table>
-<p>详见 <code>LICENSE</code>、<code>LICENSES/</code> 与 <code>.reuse/dep5</code>。</p>
+<p>See <code>LICENSE</code>, <code>LICENSES/</code> and <code>REUSE.toml</code>.</p>
 
 
 

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="450" viewBox="0 0 860 450">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">对齐税：顺从是有价钱的</text>
+<line x1="110" y1="330" x2="800" y2="330" stroke="#000000" stroke-width="1.3" marker-end="url(#arr)"/>
+<line x1="110" y1="330" x2="110" y2="70" stroke="#000000" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="806" y="334" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">顺从程度（安全、礼貌、守规矩）</text>
+<text x="46" y="66" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">能力（基准分数）</text>
+<circle cx="620" cy="110" r="10" fill="#0072B2"/><text x="620" y="92" text-anchor="middle" font-size="13" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">预训练模型</text>
+<circle cx="380" cy="150" r="10" fill="#009E73"/><text x="380" y="132" text-anchor="middle" font-size="13" fill="#009E73" font-family="Noto Sans CJK SC, sans-serif">对齐后</text>
+<path d="M 640 130 C 560 140 470 146 402 148" stroke="#999999" stroke-width="1.5" stroke-dasharray="6 4" fill="none" marker-end="url(#arr)"/>
+<text x="470" y="120" font-size="13" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">移动轨迹：往左下走</text>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="140" y="372">对齐让模型更好用、更安全，但基准分数往往略降——这部分损失俗称"对齐税"。</text>
+<text x="140" y="398" fill="#D55E00">它不是 bug，而是一笔真实的交换：拿一部分"无所顾忌的能力"，换"可以被放心交给普通人"。</text>
+<text x="140" y="424" fill="#999999">争论在于税该收多少——这也是"对齐到谁"之争的一部分。</text>
+</g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="350" viewBox="0 0 900 350">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">条件：每一步都抬头看一眼提示词</text>
+<rect x="60" y="90" width="220" height="70" rx="10" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/>
+<text x="170" y="118" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">提示词</text>
+<text x="170" y="142" font-size="13" text-anchor="middle" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">"一只橘猫在窗台上"</text>
+<path d="M 285 125 L 360 125" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<text x="322" y="112" font-size="12" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">编码成向量</text>
+<rect x="365" y="90" width="200" height="70" rx="10" fill="#E69F00" fill-opacity="0.4" stroke="#000000" stroke-width="1.5"/>
+<text x="465" y="118" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">去噪网络</text>
+<text x="465" y="142" font-size="12" text-anchor="middle" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">每一步都接收提示</text>
+<path d="M 570 125 L 640 125" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="645" y="90" width="200" height="70" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<text x="745" y="118" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">去掉的噪声</text>
+<text x="745" y="142" font-size="12" text-anchor="middle" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">这一步该减掉什么</text>
+<path d="M 745 168 C 745 230 200 230 170 168" stroke="#999999" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<text x="470" y="252" font-size="13" text-anchor="middle" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">循环几十步</text>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="60" y="300">同一个去噪网络，换个提示词就换一幅画——"画什么"由提示词决定，"画得细不细"由网络决定。</text>
+<text x="60" y="328" fill="#0072B2">这种做法叫文本引导（classifier-free guidance）：训练时随机把提示词置空，让网络同时学会"无条件画"和"按条件画"。</text>
+</g>
+</svg>

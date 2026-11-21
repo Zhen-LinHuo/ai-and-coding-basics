@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="440" viewBox="0 0 820 440">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">循环网络与注意力：传话游戏 vs 圆桌会议</text>
+<text x="60" y="80" font-size="15" font-weight="bold" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">循环网络（RNN）：逐词传话</text>
+<circle cx="60" cy="120" r="18" fill="#ffffff" stroke="#D55E00" stroke-width="1.8"/>
+<path d="M 79 120 L 130 120" stroke="#D55E00" stroke-width="2" marker-end="url(#arr)"/>
+<circle cx="150" cy="120" r="18" fill="#ffffff" stroke="#D55E00" stroke-width="1.8"/>
+<path d="M 169 120 L 220 120" stroke="#D55E00" stroke-width="2" marker-end="url(#arr)"/>
+<circle cx="240" cy="120" r="18" fill="#ffffff" stroke="#D55E00" stroke-width="1.8"/>
+<path d="M 259 120 L 310 120" stroke="#D55E00" stroke-width="2" marker-end="url(#arr)"/>
+<circle cx="330" cy="120" r="18" fill="#ffffff" stroke="#D55E00" stroke-width="1.8"/>
+<path d="M 349 120 L 400 120" stroke="#D55E00" stroke-width="2" marker-end="url(#arr)"/>
+<circle cx="420" cy="120" r="18" fill="#ffffff" stroke="#D55E00" stroke-width="1.8"/>
+<path d="M 439 120 L 490 120" stroke="#D55E00" stroke-width="2" marker-end="url(#arr)"/>
+<circle cx="510" cy="120" r="18" fill="#ffffff" stroke="#D55E00" stroke-width="1.8"/>
+<path d="M 529 120 L 580 120" stroke="#D55E00" stroke-width="2" marker-end="url(#arr)"/>
+<circle cx="600" cy="120" r="18" fill="#ffffff" stroke="#D55E00" stroke-width="1.8"/>
+<path d="M 619 120 L 670 120" stroke="#D55E00" stroke-width="2" marker-end="url(#arr)"/>
+<circle cx="690" cy="120" r="18" fill="#ffffff" stroke="#D55E00" stroke-width="1.8"/>
+
+<text x="60" y="170" font-size="14" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">每个词只拿到上一词压缩出的"摘要"；隔得越远，早期信息磨损越重。</text>
+<text x="60" y="240" font-size="15" font-weight="bold" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">注意力：任意两词直达</text>
+<circle cx="60" cy="280" r="18" fill="#ffffff" stroke="#0072B2" stroke-width="1.8"/>
+<circle cx="150" cy="280" r="18" fill="#ffffff" stroke="#0072B2" stroke-width="1.8"/>
+<circle cx="240" cy="280" r="18" fill="#ffffff" stroke="#0072B2" stroke-width="1.8"/>
+<circle cx="330" cy="280" r="18" fill="#ffffff" stroke="#0072B2" stroke-width="1.8"/>
+<circle cx="420" cy="280" r="18" fill="#ffffff" stroke="#0072B2" stroke-width="1.8"/>
+<circle cx="510" cy="280" r="18" fill="#ffffff" stroke="#0072B2" stroke-width="1.8"/>
+<circle cx="600" cy="280" r="18" fill="#ffffff" stroke="#0072B2" stroke-width="1.8"/>
+<circle cx="690" cy="280" r="18" fill="#ffffff" stroke="#0072B2" stroke-width="1.8"/>
+<line x1="60" y1="261" x2="150" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="60" y1="261" x2="240" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="60" y1="261" x2="330" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="60" y1="261" x2="420" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="60" y1="261" x2="510" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="60" y1="261" x2="600" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="60" y1="261" x2="690" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="150" y1="261" x2="240" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="150" y1="261" x2="330" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="150" y1="261" x2="420" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="150" y1="261" x2="510" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="150" y1="261" x2="600" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="150" y1="261" x2="690" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="240" y1="261" x2="330" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="240" y1="261" x2="420" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="240" y1="261" x2="510" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="240" y1="261" x2="600" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="240" y1="261" x2="690" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="330" y1="261" x2="420" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="330" y1="261" x2="510" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="330" y1="261" x2="600" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="330" y1="261" x2="690" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="420" y1="261" x2="510" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="420" y1="261" x2="600" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="420" y1="261" x2="690" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="510" y1="261" x2="600" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="510" y1="261" x2="690" y2="261" stroke="#999999" stroke-width="0.6"/>
+<line x1="600" y1="261" x2="690" y2="261" stroke="#999999" stroke-width="0.6"/>
+
+<text x="60" y="330" font-size="14" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">第 1 个词与第 100 个词直接相连：距离不再磨损信息。</text>
+<text x="60" y="370" font-size="14" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">并行性：RNN 必须按顺序算 100 步；注意力可以一次算完所有配对——GPU 最擅长这种。</text>
+<text x="60" y="404" font-size="14" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">代价：100 个词要算 100×100 对关系——平方增长，这就是长上下文贵的根源（第 1.8 节）。</text>
+</svg>

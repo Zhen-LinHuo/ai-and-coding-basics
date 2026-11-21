@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="380" viewBox="0 0 960 380">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Bare model vs Assistant: the layer in between is engineering, not intelligence</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="70" width="380" height="150" rx="10" fill="#ffffff" stroke="#999999" stroke-width="2"/>
+<text x="230" y="100" text-anchor="middle" font-weight="bold" fill="#999999">Bare model</text>
+<text x="60" y="130">You speak → model → it keeps talking</text>
+<text x="60" y="158" fill="#999999">No memory, no tools, no ability to ""do"; "and when it gets something wrong it can only </text>
+<text x="60" y="182" fill="#999999">take it back in words.</text>
+<rect x="500" y="70" width="430" height="290" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
+<text x="715" y="100" text-anchor="middle" font-weight="bold" fill="#0072B2">Assistant (model  + harness+ harness)</text>
+<text x="520" y="130">The same model, wrapped in a layer of engineering:</text>
+<text x="520" y="158">· Memory: conversation history, files, previous decisions</text>
+<text x="520" y="186" font-size="13.0">· Tools: read files, run commands, browse the web, send requests</text>
+<text x="520" y="214">· Loop: do a step, see the result, decide the next one</text>
+<text x="520" y="242">· Rules: when to stop, what must not be done</text>
+<text x="520" y="278" fill="#0072B2" font-size="13.5">The model is still the model; ——harness what the harness adds </text>
+<text x="520" y="302" fill="#0072B2">is ""hands, eyes and memory", "not ""brains"".</text>
+</g>
+<path d="M 422 145 L 498 145" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<text x="460" y="130" font-size="13" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Wrapper</text>
+</svg>

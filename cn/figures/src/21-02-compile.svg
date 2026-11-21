@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="300" viewBox="0 0 940 300">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">编译型与解释型：先整本翻译，还是逐句同传</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="70" width="400" height="170" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
+<text x="240" y="100" text-anchor="middle" font-weight="bold" fill="#0072B2">编译型（C、Rust、Go）</text>
+<text x="60" y="130">先整本翻译成机器指令，再运行。</text>
+<text x="60" y="158" fill="#009E73">跑得快（指令是本地的）</text>
+<text x="60" y="186" fill="#D55E00">改一行就要重新编译</text>
+<text x="60" y="214" fill="#999999">错误在编译期被拦下一大批</text>
+<rect x="500" y="70" width="400" height="170" rx="10" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
+<text x="700" y="100" text-anchor="middle" font-weight="bold" fill="#E69F00">解释型（Python、JS）</text>
+<text x="520" y="130">带一个"同传"，读一句执行一句。</text>
+<text x="520" y="158" fill="#009E73">改完立刻能跑，试错飞快</text>
+<text x="520" y="186" fill="#D55E00">跑得慢（边翻译边执行）</text>
+<text x="520" y="214" fill="#999999">错误往往跑到那一行才炸</text>
+</g>
+<text x="40" y="276" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">现代语言多为混合：Python 先编译成字节码再由解释器执行；Java 编译成字节码、运行时再即时编译成机器码。分界是光谱，不是二分。</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="990" height="600" viewBox="0 0 990 600">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0072B2"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">多模态：不同的感官，同一个表示空间</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="80" width="200" height="120" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
+<text x="140" y="112" text-anchor="middle" font-weight="bold">文本</text>
+<text x="140" y="140" text-anchor="middle">切成 token</text>
+<text x="140" y="164" text-anchor="middle" fill="#999999">"今天天气很好"</text>
+<rect x="40" y="250" width="200" height="120" rx="10" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
+<text x="140" y="282" text-anchor="middle" font-weight="bold">图像</text>
+<text x="140" y="310" text-anchor="middle">切成小方块</text>
+<text x="140" y="334" text-anchor="middle" fill="#999999">16×16 像素一块</text>
+<rect x="40" y="420" width="200" height="110" rx="10" fill="#ffffff" stroke="#009E73" stroke-width="2"/>
+<text x="140" y="452" text-anchor="middle" font-weight="bold">音频</text>
+<text x="140" y="480" text-anchor="middle">切成短帧</text>
+<text x="140" y="504" text-anchor="middle" fill="#999999">每帧 20 毫秒</text>
+</g>
+<path d="M 240 140 C 330 140 380 220 430 260" stroke="#0072B2" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<path d="M 240 310 L 430 290" stroke="#E69F00" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<path d="M 240 475 C 330 470 380 380 430 330" stroke="#009E73" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<text x="450" y="200" fill="#999999">各自过一道</text>
+<text x="450" y="224" fill="#999999">"编码器"（也是</text>
+<text x="450" y="248" fill="#999999">神经网络）</text>
+<rect x="460" y="270" width="240" height="110" rx="12" fill="#56B4E9" fill-opacity="0.25" stroke="#000000" stroke-width="1.5"/>
+<text x="580" y="316" text-anchor="middle" font-weight="bold">同一个表示空间</text>
+<text x="580" y="344" text-anchor="middle" fill="#999999">万物皆为一列数</text>
+<circle cx="500" cy="340" r="6" fill="#0072B2"/><circle cx="540" cy="360" r="6" fill="#E69F00"/><circle cx="620" cy="330" r="6" fill="#009E73"/><circle cx="660" cy="352" r="6" fill="#0072B2"/>
+</g>
+<path d="M 700 325 L 780 325" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="782" y="270" width="180" height="110" rx="12" fill="#ffffff" stroke="#000000" stroke-width="2"/>
+<text x="872" y="316" text-anchor="middle" font-weight="bold" font-size="15">大语言模型</text>
+<text x="872" y="344" text-anchor="middle" fill="#999999" font-size="13">不区分输入来自哪种感官</text>
+<text x="40" y="570" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">关键不在"能读图"，而在对齐：训练时把成对的"图和它的文字描述"拉近，模型才学会两张地图用同一套地名。</text>
+</svg>

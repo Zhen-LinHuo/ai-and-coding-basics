@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="300" viewBox="0 0 720 300">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">依赖树与钻石依赖</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<circle cx="150" cy="80" r="26" fill="#56B4E9" stroke="#000000" stroke-width="1.4"/><text x="150" y="85" text-anchor="middle" font-size="12">你的程序</text>
+<circle cx="90" cy="170" r="26" fill="#ffffff" stroke="#000000" stroke-width="1.4"/><text x="90" y="175" text-anchor="middle" font-size="12">库 A</text>
+<circle cx="230" cy="170" r="26" fill="#ffffff" stroke="#000000" stroke-width="1.4"/><text x="230" y="175" text-anchor="middle" font-size="12">库 B</text>
+<circle cx="90" cy="260" r="26" fill="#E69F00" fill-opacity="0.5" stroke="#000000" stroke-width="1.4"/><text x="90" y="265" text-anchor="middle" font-size="12">日志 1.0</text>
+<circle cx="230" cy="260" r="26" fill="#E69F00" fill-opacity="0.5" stroke="#000000" stroke-width="1.4"/><text x="230" y="265" text-anchor="middle" font-size="12">日志 2.0</text>
+</g>
+<path d="M 128 96 L 104 146" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 176 98 L 216 148" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 90 198 L 90 232" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 230 198 L 230 232" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="320" y="90" fill="#D55E00" font-weight="bold">钻石依赖：A 要日志 1.0，B 要日志 2.0——装哪个？</text>
+<text x="320" y="120">两条策略：升级到并存的新版（少数生态支持），或全树统一到一个版本</text>
+<text x="320" y="148">（然后祈祷 A 和 B 都兼容）。</text>
+<text x="320" y="190" fill="#999999">依赖树越深，钻石出现的概率越高——这就是"少依赖"的美德。</text>
+</g>
+</svg>

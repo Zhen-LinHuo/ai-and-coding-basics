@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="340" viewBox="0 0 900 340">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">向量空间里，"意思相近"就是"离得近"</text>
+<circle cx="330" cy="190" r="150" fill="#56B4E9" fill-opacity="0.15" stroke="#999999" stroke-width="1"/>
+<circle cx="250" cy="150" r="7" fill="#0072B2"/><text x="250" y="132" text-anchor="middle" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">年假天数</text>
+<circle cx="290" cy="170" r="7" fill="#0072B2"/><text x="290" y="192" text-anchor="middle" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">年假如何申请</text>
+<circle cx="270" cy="120" r="7" fill="#0072B2"/><text x="270" y="104" text-anchor="middle" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">年假与病假</text>
+<circle cx="420" cy="240" r="7" fill="#D55E00"/><text x="420" y="264" text-anchor="middle" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">报销流程</text>
+<circle cx="460" cy="260" r="7" fill="#D55E00"/><text x="460" y="284" text-anchor="middle" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">差旅报销</text>
+<text x="140" y="260" font-size="13" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">问题："年假怎么算？"</text>
+<path d="M 262 246 L 268 182" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="560" y="140">嵌入把每段文字变成空间里的一个点。</text>
+<text x="560" y="168">训练目标让"意思相近"的点互相靠近：</text>
+<text x="560" y="196" fill="#0072B2">年假的三段文档聚成一簇，</text>
+<text x="560" y="224" fill="#D55E00">报销的两段聚成另一簇。</text>
+<text x="560" y="260">检索 = 画一个问题点，</text>
+<text x="560" y="288">取它最近的 k 个邻居。</text>
+<text x="560" y="324" fill="#999999">"语义检索"的全部魔法，就是这张图。</text>
+</g>
+</svg>
