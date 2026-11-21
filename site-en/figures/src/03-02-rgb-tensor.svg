@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">A colour photo becomes three number arrays before it enters</text><rect x="70" y="120" width="42" height="42" fill="#D55E00" fill-opacity="0.9" stroke="#000000" stroke-width="1"/><rect x="116" y="120" width="42" height="42" fill="#D55E00" fill-opacity="0.2" stroke="#000000" stroke-width="1"/><rect x="162" y="120" width="42" height="42" fill="#D55E00" fill-opacity="0.9" stroke="#000000" stroke-width="1"/><rect x="208" y="120" width="42" height="42" fill="#D55E00" fill-opacity="0.55" stroke="#000000" stroke-width="1"/><rect x="70" y="166" width="42" height="42" fill="#D55E00" fill-opacity="0.75" stroke="#000000" stroke-width="1"/><rect x="116" y="166" width="42" height="42" fill="#D55E00" fill-opacity="0.3" stroke="#000000" stroke-width="1"/><rect x="162" y="166" width="42" height="42" fill="#D55E00" fill-opacity="0.5" stroke="#000000" stroke-width="1"/><rect x="208" y="166" width="42" height="42" fill="#D55E00" fill-opacity="0.85" stroke="#000000" stroke-width="1"/><rect x="70" y="212" width="42" height="42" fill="#D55E00" fill-opacity="0.25" stroke="#000000" stroke-width="1"/><rect x="116" y="212" width="42" height="42" fill="#D55E00" fill-opacity="0.6" stroke="#000000" stroke-width="1"/><rect x="162" y="212" width="42" height="42" fill="#D55E00" fill-opacity="0.95" stroke="#000000" stroke-width="1"/><rect x="208" y="212" width="42" height="42" fill="#D55E00" fill-opacity="0.4" stroke="#000000" stroke-width="1"/><rect x="70" y="258" width="42" height="42" fill="#D55E00" fill-opacity="0.3" stroke="#000000" stroke-width="1"/><rect x="116" y="258" width="42" height="42" fill="#D55E00" fill-opacity="0.7" stroke="#000000" stroke-width="1"/><rect x="162" y="258" width="42" height="42" fill="#D55E00" fill-opacity="0.15" stroke="#000000" stroke-width="1"/><rect x="208" y="258" width="42" height="42" fill="#D55E00" fill-opacity="0.8" stroke="#000000" stroke-width="1"/>
+<text x="206" y="106" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">R  channel (red)</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<text x="70" y="330">One number per cell: 0 (no red) to  255 (red maxed).</text>
+<text x="70" y="354">Green and blue likewise; stacked, the three are a tensor.</text>
+<text x="70" y="386">This 4×4  thumbnail = 4×4×3 = 48  numbers.</text>
+<text x="70" y="410">A 4000×3000  photo = 36 million numbers.</text>
+</g>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<text x="480" y="120" fill="#999999">No "red", no "cat ears",</text>
+<text x="480" y="144" fill="#999999">just cell after cell of numbers.</text>
+<text x="480" y="188">So "AI looking at a picture" is really:</text>
+<text x="480" y="212">AI it reads a number table and answers.</text>
+<text x="480" y="256">It meets the picture as an accountant</text>
+<text x="480" y="280">meets a company——: only through reports.</text>
+</g>
+</svg>

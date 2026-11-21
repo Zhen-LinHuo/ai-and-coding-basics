@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="440" viewBox="0 0 940 440">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+<marker id="arrv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">One customer-service scenario, three ways to ask</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="60" width="860" height="70" rx="8" fill="#56B4E9" fill-opacity="0.15" stroke="#0072B2" stroke-width="1.5"/>
+<text x="60" y="88" font-weight="bold">Scenario</text><text x="140" y="88">Ten thousand user conversations you want to automate</text>
+<text x="140" y="112" fill="#999999">Three ways of asking give three different products and bills</text>
+<rect x="40" y="150" width="860" height="66" rx="8" fill="#ffffff" stroke="#0072B2" stroke-width="1.5"/>
+<text x="60" y="178" font-weight="bold" fill="#0072B2">Supervised</text>
+<text x="150" y="178">Label "which flow each message should take", and train a triage model</text>
+<text x="150" y="202" fill="#999999">Humans must label; new flows need fresh labels; accurate, but only inside flows it has seen</text>
+<rect x="40" y="232" width="860" height="66" rx="8" fill="#ffffff" stroke="#E69F00" stroke-width="1.5"/>
+<text x="60" y="260" font-weight="bold" fill="#E69F00">Unsupervised</text>
+<text x="150" y="260">No labels; let the machine cluster the conversations on its own</text>
+<text x="150" y="284" fill="#999999">No labelling cost; but the clusters may come out by "greeting length" rather than by "problem type"</text>
+<rect x="40" y="314" width="860" height="66" rx="8" fill="#ffffff" stroke="#009E73" stroke-width="1.5"/>
+<text x="60" y="342" font-weight="bold" fill="#009E73">Reinforcement</text>
+<text x="150" y="342">Let the bot answer live, with "satisfied user/handoff" as the score</text>
+<text x="150" y="366" fill="#999999">No labels, straight for the objective; but live trial and error really does offend users</text>
+</g>
+<text x="40" y="420" font-size="9.0" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">And there is a further branch: self-supervision——the data supplies its own answers (predict the next word from what came before). It belongs to the unsupervised family but is the most powerful of them - see 1.5 1.5.</text>
+</svg>

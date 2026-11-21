@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="350" viewBox="0 0 900 350">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Conditioning: look up at the prompt at every step</text>
+<rect x="60" y="90" width="220" height="70" rx="10" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/>
+<text x="170" y="118" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">prompt</text>
+<text x="170" y="142" font-size="13" text-anchor="middle" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">"an orange cat on the windowsill"</text>
+<path d="M 285 125 L 360 125" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<text x="322" y="112" font-size="12" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">encoded as a vector</text>
+<rect x="365" y="90" width="200" height="70" rx="10" fill="#E69F00" fill-opacity="0.4" stroke="#000000" stroke-width="1.5"/>
+<text x="465" y="118" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">denoising network</text>
+<text x="465" y="142" font-size="12" text-anchor="middle" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">receives the prompt at every step</text>
+<path d="M 570 125 L 640 125" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="645" y="90" width="200" height="70" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+<text x="745" y="118" font-size="14" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">the noise to remove</text>
+<text x="745" y="142" font-size="12" text-anchor="middle" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">what to subtract at this step</text>
+<path d="M 745 168 C 745 230 200 230 170 168" stroke="#999999" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+<text x="470" y="252" font-size="13" text-anchor="middle" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">loop for dozens of steps</text>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="60" y="300" font-size="11.6">one denoising network, a new prompt means a new picture——"what to draw"is set by the prompt;"how finely it is drawn"is set by the network.</text>
+<text x="60" y="328" fill="#0072B2" font-size="9.5">This is called text guidance (classifier-free guidance): training randomly blanks the prompt, so the network learns both"unconditional drawing"and"conditional drawing".</text>
+</g>
+</svg>
