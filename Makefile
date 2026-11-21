@@ -48,7 +48,7 @@ html: $(HTML)
 
 $(HTML): $(SRC) bib/refs.bib $(BUILD)/metadata.yaml
 	@mkdir -p $(OUT)
-	$(PANDOC) $(SRC) --standalone --toc --toc-depth=3 --number-sections \
+	$(PANDOC) $(SRC) --standalone --toc --toc-depth=3 --number-sections --mathml \
 	  --citeproc --bibliography=bib/refs.bib --csl=$(BUILD)/gb-t-7714-2015-numeric.csl \
 	  --metadata-file=$(BUILD)/metadata.yaml \
 	  --lua-filter=$(BUILD)/xref.lua \
