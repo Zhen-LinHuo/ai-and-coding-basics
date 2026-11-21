@@ -1,0 +1,98 @@
+site_name: 人工智能和计算机开发基础
+site_description: 写给想真正理解它如何运转的读者
+site_url: https://zhen-linhuo.github.io/ai-and-coding-basics/
+repo_url: https://github.com/Zhen-LinHuo/ai-and-coding-basics
+edit_uri: blob/main/content/
+docs_dir: site-src
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换暗色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换亮色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Zhen-LinHuo/ai-and-coding-basics
+
+copyright: >
+  CC BY-SA 4.0 (正文) · Apache-2.0 (代码) &copy; 2026 Zhen-Lin Huo
+
+nav:
+  - 首页: index.md
+  - 前言: 00-front/preface.md
+  - 如何读这本书: 00-front/how-to-read.md
+  - 第一部分 · 人工智能基础:
+    - 01-ai/00-chapter.md
+    - 1.1 人工智能是什么: 01-ai/01-what-is-ai.md
+    - 1.2 三大流派: 01-ai/02-three-schools.md
+    - 1.3 神经网络:
+      - 01-ai/03-00-neural-networks.md
+      - 1.3.1 从神经元开始: 01-ai/03-01-neuron.md
+      - 1.3.2 数据输入: 01-ai/03-02-data-input.md
+      - 1.3.3 学习: 01-ai/03-03-learning.md
+      - 1.3.4 训练与推理: 01-ai/03-04-train-and-infer.md
+    - 1.4 机器学习:
+      - 01-ai/04-00-machine-learning.md
+      - 1.4.1 多层感知机与深度学习: 01-ai/04-01-mlp-and-deep-learning.md
+      - 1.4.2 三种学习范式: 01-ai/04-02-paradigms.md
+      - 1.4.3 泛化与评估: 01-ai/04-03-generalization.md
+    - 1.5 大语言模型:
+      - 01-ai/05-00-llms.md
+      - 1.5.1 缩放定律: 01-ai/05-01-scaling-laws.md
+      - 1.5.2 注意力机制: 01-ai/05-02-attention.md
+      - 1.5.3 线性注意力与 SSM: 01-ai/05-03-ssm-and-linear-attention.md
+      - 1.5.4 扩散模型: 01-ai/05-04-diffusion.md
+    - 1.6 对齐、幻觉与安全: 01-ai/06-alignment-hallucination-safety.md
+    - 1.7 智能体:
+      - 01-ai/07-00-agents.md
+      - 1.7.1 Harness: 01-ai/07-01-harness.md
+      - 1.7.2 RSI 与多智能体: 01-ai/07-02-rsi-and-multi-agent.md
+      - 1.7.3 MCP、技能、嵌入与知识库: 01-ai/07-03-mcp-skills-rag.md
+    - 1.8 部署: 01-ai/08-compute-and-deployment.md
+  - 第二部分 · 计算机开发基础:
+    - 02-dev/00-chapter.md
+    - 2.1 程序是什么: 02-dev/01-what-is-a-program.md
+    - 2.2 Git: 02-dev/02-git.md
+    - 2.3 IDE 与工具链: 02-dev/03-ide-and-toolchain.md
+    - 2.4 包管理器: 02-dev/04-package-managers.md
+    - 2.5 可复现性: 02-dev/05-reproducibility.md
+    - 2.6 声明式操作系统: 02-dev/06-declarative-os.md
+    - 2.7 项目结构与文档: 02-dev/07-project-structure.md
+    - 2.8 开源与许可证: 02-dev/08-licenses.md
+  - 附录:
+    - 术语表: 90-back/glossary.md
+    - 参考文献: 90-back/references.md

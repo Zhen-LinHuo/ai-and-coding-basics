@@ -46,6 +46,13 @@ $(PDF): $(SRC) $(FIGS) bib/refs.bib $(BUILD)/metadata.yaml $(BUILD)/book-style.s
 
 html: $(HTML)
 
+site:
+	python3 scripts/build-site.py
+	mkdocs build --strict
+
+site-deploy: site
+	mkdocs gh-deploy --force
+
 $(HTML): $(SRC) bib/refs.bib $(BUILD)/metadata.yaml
 	@mkdir -p $(OUT)
 	$(PANDOC) $(SRC) --standalone --toc --toc-depth=3 --number-sections --mathml \
