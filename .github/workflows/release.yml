@@ -37,6 +37,20 @@ jobs:
 
       - uses: actions/checkout@v4
 
+      - name: restore the Guix store across runs
+        # 容器是一次性的：/gnu/store 每次都是空的。把整个 store 和
+        # 数据库持久化在 actions/cache 里（键 = 工具链清单的哈希），
+        # 替代品下载从 ~5 GB 降到接近零。
+        uses: actions/cache@v4
+        with:
+          path: |
+            /gnu/store
+            /var/guix
+            /root/.cache/guix/checkouts
+          key: guix-store-${{ hashFiles('.guix/channels.scm', '.guix/manifest.scm') }}
+          restore-keys: |
+            guix-store-
+
       - name: start guix-daemon
         # 容器里没有 shepherd，socket 不会自己出现。就绪判据只用 socket + pid。
         run: |
