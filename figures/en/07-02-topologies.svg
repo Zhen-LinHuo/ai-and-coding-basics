@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="370" viewBox="0 0 960 370">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Three multi-agent topologies: pipeline, debate, market</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="70" width="270" height="200" rx="10" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
+<text x="175" y="98" text-anchor="middle" font-weight="bold" fill="#0072B2">Pipeline</text>
+<rect x="70" y="120" width="60" height="40" fill="#56B4E9" stroke="#000000"/><text x="100" y="145" text-anchor="middle" font-size="12">Write</text>
+<rect x="150" y="120" width="60" height="40" fill="#56B4E9" stroke="#000000"/><text x="180" y="145" text-anchor="middle" font-size="12">Review</text>
+<rect x="230" y="120" width="60" height="40" fill="#56B4E9" stroke="#000000"/><text x="260" y="145" text-anchor="middle" font-size="12">Revise</text>
+<path d="M 130 140 L 148 140" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 210 140 L 228 140" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="56" y="200" fill="#999999">Each owns a stage, like factory stations.</text>
+<text x="56" y="224" fill="#999999">Fits tasks with "clear steps"; </text>
+<text x="56" y="248" fill="#999999">errors from an earlier stage flow downstream.</text>
+<rect x="345" y="70" width="270" height="200" rx="10" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
+<text x="480" y="98" text-anchor="middle" font-weight="bold" fill="#E69F00">Debate</text>
+<circle cx="420" cy="140" r="24" fill="#56B4E9" stroke="#000000"/><text x="420" y="145" text-anchor="middle" font-size="12">Pro</text>
+<circle cx="540" cy="140" r="24" fill="#56B4E9" stroke="#000000"/><text x="540" y="145" text-anchor="middle" font-size="12">Con</text>
+<circle cx="480" cy="210" r="24" fill="#ffffff" stroke="#000000"/><text x="480" y="215" text-anchor="middle" font-size="12">Judge</text>
+<path d="M 444 148 L 460 194" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M 516 148 L 500 194" stroke="#000000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="361" y="248" fill="#999999">Cross-checking reduces blind spots; </text>
+<text x="361" y="264" fill="#999999">but they can argue their way into a shared mistake.</text>
+<rect x="650" y="70" width="270" height="200" rx="10" fill="#ffffff" stroke="#009E73" stroke-width="2"/>
+<text x="785" y="98" text-anchor="middle" font-weight="bold" fill="#009E73">Market</text>
+<circle cx="700" cy="140" r="20" fill="#56B4E9" stroke="#000000"/><circle cx="750" cy="170" r="20" fill="#56B4E9" stroke="#000000"/><circle cx="700" cy="205" r="20" fill="#56B4E9" stroke="#000000"/><circle cx="755" cy="230" r="20" fill="#56B4E9" stroke="#000000"/>
+<text x="785" y="168" font-size="9.3" fill="#999999">Agents with different specialities </text>
+<text x="666" y="256" fill="#999999">claim tasks and compete on quality.</text>
+<text x="666" y="248" fill="#999999"> </text>
+</g>
+<text x="40" y="312" font-size="10.3" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">Multi-agent beats single-agent only if: the task splits up, intermediate results are verifiable, and coordination costs less than the division of labour. Miss any one and </text>
+<text x="40" y="338" font-size="13.2" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">multi-agent just amplifies cost and chaos — ——AutoGen frameworks like AutoGen are valuable because they make "trying" cheap[@wu2023].</text>
+</svg>

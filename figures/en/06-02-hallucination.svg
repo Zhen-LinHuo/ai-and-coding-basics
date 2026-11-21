@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Two causes of hallucination: never learned it, and""most likely""is not""most true""</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="40" y="60" width="420" height="200" rx="10" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="60" y="90" font-weight="bold" fill="#D55E00">Cause 1: missing knowledge</text>
+<text x="60" y="118">the topic is almost absent from the training data -——</text>
+<text x="60" y="142">an obscure company, a very recent fact.</text>
+<text x="60" y="176" fill="#999999">The model does not know""I don't know"",</text>
+<text x="60" y="200" fill="#999999">so it simply invents a plausible passage.</text>
+<rect x="500" y="60" width="420" height="200" rx="10" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="520" y="90" font-weight="bold" fill="#D55E00">Cause 2: fluency first</text>
+<text x="520" y="118" font-size="12.1">The training objective only asks""does it look like the next word",",</text>
+<text x="520" y="142">never""is it true"".</text>
+<text x="520" y="176" fill="#999999">Inventing a fluent fake citation</text>
+<text x="520" y="200" fill="#999999">scores as high as restating a real fact.</text>
+</g>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<text x="60" y="300" font-weight="bold">Example:""list the papers published by Zhang San""</text>
+<text x="60" y="330">Zhang San is a real but obscure scholar. The model never learned his papers,</text>
+<text x="60" y="356">but""list papers""is a format it has seen many times——so it invents, in the usual format,</text>
+<text x="60" y="382">five titles, journals and years: every one plausible, every one fabricated.</text>
+<text x="60" y="416" fill="#D55E00">Both causes are usually present at once: missing knowledge gives it freedom, fluency first gives it nerve.</text>
+</g>
+</svg>

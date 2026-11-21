@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="320" viewBox="0 0 940 320">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
+</defs>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">A fixed budget: how to split it between"brain"and"textbooks"?</text>
+<g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
+<rect x="60" y="70" width="250" height="150" rx="10" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
+<text x="185" y="102" text-anchor="middle" font-weight="bold" fill="#D55E00">lopsided: huge brain</text>
+<text x="185" y="130" text-anchor="middle">parameters 100 B</text>
+<text x="185" y="154" text-anchor="middle">data 20 B words</text>
+<text x="185" y="186" text-anchor="middle" fill="#999999">fast brain, never read a book:</text>
+<text x="185" y="210" text-anchor="middle" fill="#999999">wasted capacity, learns nothing deeply</text>
+<rect x="360" y="70" width="250" height="150" rx="10" fill="#ffffff" stroke="#009E73" stroke-width="2"/>
+<text x="485" y="102" text-anchor="middle" font-weight="bold" fill="#009E73">balanced: scale up in proportion</text>
+<text x="485" y="130" text-anchor="middle">parameters 40 B</text>
+<text x="485" y="154" text-anchor="middle">data 80 B words</text>
+<text x="485" y="186" text-anchor="middle" fill="#999999">same total compute,</text>
+<text x="485" y="210" text-anchor="middle" fill="#999999">clearly lower loss</text>
+<rect x="660" y="70" width="250" height="150" rx="10" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
+<text x="785" y="102" text-anchor="middle" font-weight="bold" fill="#E69F00">lopsided: a mountain of books</text>
+<text x="785" y="130" text-anchor="middle">parameters 10 B</text>
+<text x="785" y="154" text-anchor="middle">data 200 B words</text>
+<text x="785" y="186" text-anchor="middle" fill="#999999">read a lot, little capacity:</text>
+<text x="785" y="210" text-anchor="middle" fill="#999999">forgets it all, wasted reading</text>
+</g>
+<path d="M 330 145 L 352 145" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M 630 145 L 652 145" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
+<g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
+<text x="60" y="262" font-size="13.9">Chinchilla conclusion: given fixed compute, parameters and data should scale in proportion——about 20 words per parameter.</text>
+<text x="60" y="288" fill="#999999">Real numbers shift with era and model, but"invest on both sides"holds.</text>
+</g>
+</svg>
