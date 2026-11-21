@@ -11,3 +11,6 @@ __pycache__/
 
 site-src/
 site/
+site-en/
+site-src-en/
+build/en-stage/
