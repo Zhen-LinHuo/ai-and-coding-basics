@@ -20,7 +20,7 @@
 <text x="450" y="220" font-size="13" text-anchor="middle" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Auto-generated problems, auto-verified (only tasks with a verifier can spin)</text>
 <g font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">
 <text x="60" y="350" fill="#009E73">Prerequisite for spinning: the output can be **auto-verified** (code runs, maths checks out).</text>
-<text x="60" y="378" fill="#D55E00" font-size="11.4">Failure point: fields without a verifier (writing, taste) — ""judging itself right""——the flywheel decays into self-admiration.</text>
+<text x="60" y="378" fill="#D55E00" font-size="11.4">Failure point: fields without a verifier (writing, taste) — "judging itself right"—the flywheel decays into self-admiration.</text>
 <text x="60" y="406" fill="#999999" font-size="11.6">STaR 's approach: the model generates solutions, only those reaching the correct answer are kept for training[@zelikman2022].</text>
 </g>
 </svg>

@@ -9,10 +9,10 @@
 <rect x="60" y="140" width="300" height="60" fill="#009E73" stroke="#000000" stroke-width="1.5"/>
 <text x="210" y="178" font-size="14" text-anchor="middle" fill="#ffffff" font-family="Noto Sans CJK SC, sans-serif">中间计算结果（每层暂存）</text>
 <rect x="370" y="140" width="300" height="60" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
-<text x="520" y="178" font-size="14" text-anchor="middle" fill="#ffffff" font-family="Noto Sans CJK SC, sans-serif">对话历史缓存（越长越大，见第 1.5 节）</text>
+<text x="520" y="178" font-size="14" text-anchor="middle" fill="#ffffff" font-family="Noto Sans CJK SC, sans-serif">对话历史缓存（越长越大，见后文）</text>
 <rect x="680" y="140" width="140" height="60" fill="#D55E00" stroke="#000000" stroke-width="1.5"/>
 <text x="750" y="178" font-size="13" text-anchor="middle" fill="#ffffff" font-family="Noto Sans CJK SC, sans-serif">其他开销</text>
 <text x="60" y="250" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">权重大头 + 缓存小头，决定了"能不能装下"和"能聊多长"——</text>
-<text x="60" y="278" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">这也是部署方常说的"显存墙"的第一堵，第 1.5 节和第 1.8 节会再砌两堵。</text>
+<text x="60" y="278" font-size="14" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">这也是部署方常说的"显存墙"的第一堵，后文还会再砌两堵。</text>
 
 </svg>

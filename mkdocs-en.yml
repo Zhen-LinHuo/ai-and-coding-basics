@@ -49,7 +49,7 @@ extra_javascript:
 extra:
   alternate:
     - name: 中文
-      link: /ai-and-coding-basics/
+      link: /ai-and-coding-basics/cn/
       lang: zh
   social:
     - icon: fontawesome/brands/github

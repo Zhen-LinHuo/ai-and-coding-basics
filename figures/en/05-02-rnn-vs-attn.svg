@@ -61,5 +61,5 @@
 
 <text x="60" y="330" font-size="14" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">the 1 th word and the 100 th word are directly linked: distance no longer wears away information.</text>
 <text x="60" y="370" font-size="12.6" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">Parallelism:RNN must run in order for 100 steps; attention computes all pairs at once, which——GPU GPUs are best at.</text>
-<text x="60" y="404" font-size="14" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">Cost:100 words need 100×100 pairs—— quadratically, the root of expensive long contexts (Section 1.8 )</text>
+<text x="60" y="404" font-size="14" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">Cost:100 words need 100×100 pairs—— quadratically, the root of expensive long contexts (see later)</text>
 </svg>

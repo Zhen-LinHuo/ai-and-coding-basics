@@ -97,7 +97,7 @@ site:
 	mkdocs build --strict
 
 site-deploy: site
-	mkdocs gh-deploy --force
+	./scripts/deploy-site.sh
 
 $(HTML): $(SRC) bib/refs.bib $(BUILD)/metadata.yaml
 	@mkdir -p $(OUT)

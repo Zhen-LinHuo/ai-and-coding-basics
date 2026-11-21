@@ -121,8 +121,10 @@ def main():
         lines.append(f"{i}. {a} *{t}* ({y})")
     (DOCS / "90-back" / "references.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
-    # 首页
-    index = (ROOT / "README.md").read_text(encoding="utf-8")
+    # 首页：README 以 <!-- en --> 分隔，中文站取前半，英文站取后半（单一语言）
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    zh_part, _, en_part = readme.partition("<!-- en -->")
+    index = en_part if LANG == "en" else zh_part
     (DOCS / "index.md").write_text(renumber(index), encoding="utf-8")
 
     # 图：保持 figures/src/... 相对路径

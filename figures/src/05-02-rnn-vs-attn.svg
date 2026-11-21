@@ -61,5 +61,5 @@
 
 <text x="60" y="330" font-size="14" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">第 1 个词与第 100 个词直接相连：距离不再磨损信息。</text>
 <text x="60" y="370" font-size="14" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">并行性：RNN 必须按顺序算 100 步；注意力可以一次算完所有配对——GPU 最擅长这种。</text>
-<text x="60" y="404" font-size="14" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">代价：100 个词要算 100×100 对关系——平方增长，这就是长上下文贵的根源（第 1.8 节）。</text>
+<text x="60" y="404" font-size="14" fill="#D55E00" font-family="Noto Sans CJK SC, sans-serif">代价：100 个词要算 100×100 对关系——平方增长，这就是长上下文贵的根源（后文细说）。</text>
 </svg>

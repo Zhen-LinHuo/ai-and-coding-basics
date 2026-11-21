@@ -44,6 +44,12 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     incomplete, shrunk_n, written = [], 0, 0
     for svg in sorted(SRC.glob("*.svg")):
+        out = OUT / svg.name
+        # figures/en is authoritative once it exists: hand-edited fixes (e.g. the
+        # cross-reference sweep) must not be reverted by a map regeneration.
+        if out.exists() and out.stat().st_mtime >= max(svg.stat().st_mtime,
+                (MAPS / f"{svg.stem}.json").stat().st_mtime if (MAPS / f"{svg.stem}.json").exists() else 0):
+            continue
         mp = MAPS / f"{svg.stem}.json"
         if not mp.exists():
             incomplete.append((svg.name, "no translation map")); continue

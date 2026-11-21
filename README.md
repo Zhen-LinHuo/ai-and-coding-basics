@@ -32,6 +32,52 @@ guix time-machine -C .guix/channels.scm -- shell -m .guix/manifest.scm -- make c
 | 范围 | 许可证 |
 |:--|:--|
 | 正文与插图 | CC BY-SA 4.0 |
-| 示例代码、构建脚本 | Apache-2.1 |
+| 示例代码、构建脚本 | Apache-2.0 |
 
-详见 `LICENSE`、`LICENSES/` 与 `.reuse/dep5`。
+详见 `LICENSE`、`LICENSES/` 与 `REUSE.toml`。
+
+<!-- en -->
+
+# AI and Computing, from First Principles
+
+For readers who want to understand how AI and software actually work. No prior
+background assumed, and no talking down: it does not teach you to code, nor does
+it lecture models. The goal is that after reading you can judge what problem a
+technical approach solves, why it works, and when it stops working.
+
+The book has two parts:
+
+- **Foundations of artificial intelligence**: from a single neuron to agents,
+  with a qualitative comparison of three LLM architecture routes.
+- **Foundations of computing and development**: from "what is a program" to
+  licence politics, including reproducibility and declarative systems.
+
+## How to read it
+
+| Just want AI | Just want dev tools | Want the full picture |
+|:--|:--|:--|
+| Part 1 | Part 2 (from 2.1) | In order |
+
+Every section follows the same shape: a one-line intuition, an everyday analogy,
+a diagram, the problem it solves, **its built-in limitations**, and a summary
+with self-check questions. Formulas live in a "Maths note" at the end of each
+section; skipping them never breaks the argument.
+
+## Building
+
+Guix is required:
+
+```sh
+guix time-machine -C .guix/channels.scm -- shell -m .guix/manifest.scm -- make check
+```
+
+Outputs land in `build/out/`.
+
+## Licence
+
+| Scope | Licence |
+|:--|:--|
+| Text and figures | CC BY-SA 4.0 |
+| Sample code, build scripts | Apache-2.0 |
+
+See `LICENSE`, `LICENSES/` and `REUSE.toml`.

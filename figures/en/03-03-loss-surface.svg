@@ -14,6 +14,6 @@
 <text x="120" y="150" fill="#000000">Vertical: loss (higher = more wrong)</text>
 <text x="120" y="176" fill="#000000">Bowl's two axes: two parameters</text>
 <text x="60" y="466" fill="#0072B2">Gradient descent = the ball rolls down to the floor; every point has a loss value,</text>
-<text x="60" y="492" fill="#0072B2">the ball feels"which way is downhill"—— — that sense is backpropagation (next figure).</text>
+<text x="60" y="492" fill="#0072B2">the ball feels "which way is downhill" — that sense is backpropagation (next figure).</text>
 </g>
 </svg>

@@ -5,15 +5,25 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-mkdocs build --strict                      # -> site/
+mkdocs build --strict                      # -> site/cn
 mkdocs build --strict -f mkdocs-en.yml     # -> site/en
 
 WT=$(mktemp -d)
-git worktree add --detach "$WT" gh-pages >/dev/null 2>&1 || {
+git fetch origin gh-pages -q
+git worktree add --detach "$WT" origin/gh-pages >/dev/null 2>&1 || {
   echo "worktree add failed"; exit 1; }
 trap 'git worktree remove --force "$WT" >/dev/null 2>&1' EXIT
 
-rsync -a --delete --exclude .git site/ "$WT"/
+# root: language landing page (redirect to the Chinese edition)
+cat > "$WT/index.html" <<'HTML'
+<!doctype html><meta charset="utf-8">
+<title>AI and Computing, from First Principles</title>
+<meta http-equiv="refresh" content="0; url=cn/">
+<p><a href="cn/">中文</a> · <a href="en/">English</a></p>
+HTML
+rsync -a --delete --exclude .git site/cn/ "$WT/cn"/
+mkdir -p "$WT/en"
+rsync -a --delete site/en/ "$WT/en"/
 cd "$WT"
 if [[ -n $(git status --porcelain) ]]; then
   git add -A

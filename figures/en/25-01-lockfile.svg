@@ -6,16 +6,16 @@
 <g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
 <rect x="40" y="70" width="380" height="180" rx="10" fill="#ffffff" stroke="#D55E00" stroke-width="2"/>
 <text x="230" y="100" text-anchor="middle" font-weight="bold" fill="#D55E00">No lock file</text>
-<text x="60" y="130">""I depend on library  A"——" — install takes the latest  A  at install time.</text>
-<text x="60" y="158">Installed today it is  1.2, next month  2.0 (interface changed).</text>
-<text x="60" y="186" fill="#999999">Two machines install two different worlds; </text>
-<text x="60" y="214" fill="#999999">""it runs on my machine"" becomes an unsolvable mystery.</text>
+<text x="60" y="130" font-size="12.5">"I depend on library A" — install takes the latest version.</text>
+<text x="60" y="158" font-size="12.5">Installed today: 1.2. Next month: 2.0 (interface changed).</text>
+<text x="60" y="186" fill="#999999" font-size="12.5">Two machines install two different worlds;</text>
+<text x="60" y="214" fill="#999999" font-size="12.5">"it runs on my machine" becomes an unsolvable mystery.</text>
 <rect x="480" y="70" width="380" height="180" rx="10" fill="#ffffff" stroke="#009E73" stroke-width="2"/>
 <text x="670" y="100" text-anchor="middle" font-weight="bold" fill="#009E73">With a lock file</text>
-<text x="500" y="130">Every leaf records: exact version  +  content hash.</text>
-<text x="500" y="158" font-size="12.6">The hash is verified at install —— — mismatch means refusal.</text>
-<text x="500" y="186" fill="#999999">Any machine, any time, the same tree.</text>
-<text x="500" y="214" fill="#999999" font-size="10.4">The hash also guards against tampering: a compromised upstream is caught.</text>
+<text x="500" y="130" font-size="12.5">Every leaf records: exact version + content hash.</text>
+<text x="500" y="158" font-size="12.5">The hash is checked at install — a mismatch is refused.</text>
+<text x="500" y="186" fill="#999999" font-size="12.5">Any machine, any time: the same tree.</text>
+<text x="500" y="214" fill="#999999" font-size="11.5">It also blocks tampering: a compromised upstream is caught.</text>
 </g>
-<text x="40" y="290" font-size="9.0" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">The lock file turns "reproducibility" from a wish into a check—— — the essential difference from a "requirements requirements list": a list records names; a lock file records fingerprints.</text>
+<text x="40" y="290" font-size="9.0" font-family="Noto Sans CJK SC, sans-serif" fill="#000000">The lock file turns "reproducibility" from a wish into a check — the real difference from a "requirements list": a list records names; a lock file records fingerprints.</text>
 </svg>

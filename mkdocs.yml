@@ -1,9 +1,10 @@
 site_name: 人工智能和计算机开发基础
 site_description: 写给想真正理解它如何运转的读者
-site_url: https://zhen-linhuo.github.io/ai-and-coding-basics/
+site_url: https://zhen-linhuo.github.io/ai-and-coding-basics/cn/
 repo_url: https://github.com/Zhen-LinHuo/ai-and-coding-basics
 edit_uri: blob/main/content/
 docs_dir: site-src
+site_dir: site/cn
 
 theme:
   name: material

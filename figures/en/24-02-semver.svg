@@ -9,11 +9,11 @@
 <g font-size="14" fill="#000000">
 <rect x="250" y="70" width="180" height="40" rx="6" fill="#D55E00" fill-opacity="0.7"/><text x="340" y="96" text-anchor="middle" fill="#ffffff">Major+1: interface changed</text>
 <rect x="450" y="70" width="180" height="40" rx="6" fill="#E69F00" fill-opacity="0.7"/><text x="540" y="96" text-anchor="middle" fill="#ffffff">Minor+1: feature added</text>
-<rect x="650" y="70" width="180" height="40" rx="6" fill="#009E73" fill-opacity="0.7"/><text x="740" y="96" text-anchor="middle" fill="#ffffff">Patch+1: bug fixed bug</text>
+<rect x="650" y="70" width="180" height="40" rx="6" fill="#009E73" fill-opacity="0.7"/><text x="740" y="96" text-anchor="middle" fill="#ffffff">Patch+1: bug fixed</text>
 </g>
 <g font-size="14" fill="#000000">
-<text x="60" y="180">So ""I depend on  ≥2.3, &lt;3.0"" is a promise: minors upgrade freely; I change code only when the major moves.</text>
-<text x="60" y="210" fill="#D55E00" font-size="13.1">Provided everyone keeps the promise——sneak an interface change into a patch and your dependency tree explodes at midnight.</text>
+<text x="60" y="180">So "I depend on ≥2.3, &lt;3.0" is a promise: minors upgrade freely; I change code only when the major moves.</text>
+<text x="60" y="210" fill="#D55E00" font-size="13.1">Provided everyone keeps the promise — sneak an interface change into a patch and your dependency tree explodes at midnight.</text>
 </g>
 </g>
 </svg>

@@ -3,23 +3,24 @@
 <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/></marker>
 <marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0072B2"/></marker>
 </defs>
-<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">One forward pass: from prompt ...to one character of the answer</text>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">One forward pass: from prompt to one character of the answer</text>
 <g font-family="Noto Sans CJK SC, sans-serif" font-size="14" fill="#000000">
 <rect x="40" y="90" width="150" height="120" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
 <text x="115" y="118" text-anchor="middle" font-weight="bold">your input</text>
 <text x="115" y="146" text-anchor="middle">"write a poem about</text>
 <text x="115" y="170" text-anchor="middle">spring"</text>
-<text x="115" y="198" text-anchor="middle" fill="#999999">split into N tokens token</text>
+<text x="115" y="198" text-anchor="middle" fill="#999999">split into N tokens</text>
 <rect x="260" y="90" width="180" height="120" rx="10" fill="#56B4E9" fill-opacity="0.2" stroke="#0072B2" stroke-width="2"/>
 <text x="350" y="118" text-anchor="middle" font-weight="bold">neural network</text>
 <text x="350" y="146" text-anchor="middle">dozens to hundreds of layers, each:</text>
 <text x="350" y="172" text-anchor="middle">attention + small network</text>
 <text x="350" y="198" text-anchor="middle" fill="#999999">all parameters frozen (inference)</text>
 <rect x="510" y="90" width="170" height="120" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
-<text x="595" y="118" text-anchor="middle" font-weight="bold">next token probability table</text>
-<text x="595" y="150" text-anchor="middle">"spring" 62%·"breeze" 8%</text>
-<text x="595" y="174" text-anchor="middle">"flowers" 5%·……</text>
-<text x="595" y="198" text-anchor="middle" fill="#999999">draw one by strategy</text>
+<text x="595" y="112" text-anchor="middle" font-weight="bold">next-token</text>
+<text x="595" y="130" text-anchor="middle" font-weight="bold">probability table</text>
+<text x="595" y="158" text-anchor="middle" font-size="12">"spring" 62% · "breeze" 8%</text>
+<text x="595" y="180" text-anchor="middle" font-size="12">"flowers" 5% · ...</text>
+<text x="595" y="202" text-anchor="middle" fill="#999999">draw one by strategy</text>
 </g>
 <path d="M 192 150 L 258 150" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>
 <path d="M 442 150 L 508 150" stroke="#000000" stroke-width="2" marker-end="url(#arr)"/>

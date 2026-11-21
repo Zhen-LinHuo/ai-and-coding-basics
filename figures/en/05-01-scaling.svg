@@ -5,11 +5,11 @@
 <text x="20" y="30" font-size="16" font-weight="bold" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">On log-log axes it is a straight line</text>
 <line x1="80" y1="340" x2="790" y2="340" stroke="#000000" stroke-width="1.3" marker-end="url(#arr)"/>
 <line x1="80" y1="340" x2="80" y2="70" stroke="#000000" stroke-width="1.3" marker-end="url(#arr)"/>
-<text x="796" y="344" font-size="9.0" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">compute (log scale)</text>
+<text x="780" y="360" font-size="9.0" text-anchor="end" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">compute (log scale)</text>
 <text x="30" y="66" font-size="13" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">loss (log scale)</text>
 <polyline points="80,140 88,142 96,144 105,147 113,149 121,151 129,153 137,155 146,158 154,160 162,162 170,164 178,166 187,169 195,171 203,173 211,175 219,177 228,180 236,182 244,184 252,186 260,188 269,191 277,193 285,195 293,197 301,199 310,202 318,204 326,206 334,208 342,210 351,213 359,215 367,217 375,219 383,221 392,224 400,226 408,228 416,230 424,232 433,235 441,237 449,239 457,241 465,243 474,246 482,248 490,250 498,252 506,254 515,257 523,259 531,261 539,263 547,265 556,268 564,270 572,272 580,274 588,276 597,279 605,281 613,283 621,285 629,287 638,290 646,292 654,294 662,296 670,298 679,301 687,303 695,305 703,307 711,309 720,312 728,314 736,316 744,318 752,320 761,323" fill="none" stroke="#0072B2" stroke-width="3"/>
 <text x="430" y="170" font-size="13" fill="#0072B2" font-family="Noto Sans CJK SC, sans-serif">measured points fall almost on a straight line</text>
-<text x="430" y="194" font-size="10.0" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">each doubling on the x-axis 10 drops the y-axis by a fixed number of steps</text>
+<text x="430" y="194" font-size="10.0" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">each doubling on the x-axis drops the y-axis by a fixed number of steps</text>
 <text x="430" y="218" font-size="13" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">——that is all"power law"means</text>
 <text x="100" y="376" font-size="13.7" fill="#000000" font-family="Noto Sans CJK SC, sans-serif">Switch to ordinary axes and it is an ever-flatter curve: loss still falls, but each step costs more.</text>
 <text x="100" y="402" font-size="12.8" fill="#999999" font-family="Noto Sans CJK SC, sans-serif">What log-log axes do is"straighten"an exponential relation into a line, for easy extrapolation and pricing.</text>
