@@ -15,7 +15,7 @@ SPDX-FileCopyrightText = "2026 Zhen-Lin Huo"
 SPDX-License-Identifier = "Apache-2.0"
 
 [[annotations]]
-path = "build/ieee.csl"
+path = "build/harvard-cite-them-right.csl"
 precedence = "override"
 SPDX-FileCopyrightText = "2019-2026 Citation Style Language contributors"
 SPDX-License-Identifier = "CC-BY-SA-3.0"
