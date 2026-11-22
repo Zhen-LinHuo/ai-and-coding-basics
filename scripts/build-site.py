@@ -5,7 +5,7 @@
 - 引用 [@key] 转成数字编号 [n]，并生成"参考文献"页（按首次出现排序）
 - 表格/图片/标题属性原样保留（attr_list 兼容 MkDocs）
 """
-import re, shutil, sys
+import re, shutil, subprocess, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -120,6 +120,14 @@ def main():
         t, a, y = entries.get(key, (("(missing entry)" if LANG == "en" else "缺失条目"), "", ""))
         lines.append(f"{i}. {a} *{t}* ({y})")
     (DOCS / "90-back" / "references.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    # 页脚版本号：与 release tag 一致（部署脚本核对并显示）
+    try:
+        ver = subprocess.run(["git", "describe", "--tags", "--abbrev=0"],
+                             capture_output=True, text=True, cwd=str(ROOT)).stdout.strip()
+    except Exception:
+        ver = ""
+    (DOCS / "version.txt").write_text(ver + "\n", encoding="utf-8")
 
     # 首页：README 以 <!-- en --> 分隔，中文站取前半，英文站取后半（单一语言）
     readme = (ROOT / "README.md").read_text(encoding="utf-8")

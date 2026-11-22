@@ -53,7 +53,8 @@ EN_STAGE := $(BUILD)/en-stage
 PDF_EN   := $(OUT)/$(BOOK)-en.pdf
 HTML_EN  := $(OUT)/$(BOOK)-en.html
 PFLAGS_EN := $(PFLAGS) --metadata-file=$(BUILD)/metadata-en.yaml \
-  --include-in-header=$(BUILD)/floats-en.tex -V toc-title="Contents"
+  --include-in-header=$(BUILD)/floats-en.tex -V toc-title="Contents" \
+  --csl=$(BUILD)/ieee.csl
 
 .PHONY: figures-en pdf-en html-en site-en lint-en
 

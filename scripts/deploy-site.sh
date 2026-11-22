@@ -7,11 +7,16 @@ cd "$(dirname "$0")/.."
 
 python3 scripts/build-site.py              # refresh site-src (content + figures)
 python3 scripts/build-site.py --lang en    # refresh site-src-en
+VERSION="$(cat site-src/version.txt 2>/dev/null || git describe --tags --abbrev=0)"
+echo "deploying site at $VERSION"
+sed -i "s/__SITE_VERSION__/$VERSION/" mkdocs.yml mkdocs-en.yml
 mkdocs build --strict                      # -> site/cn
 mkdocs build --strict -f mkdocs-en.yml     # -> site/en
+grep -rq "$VERSION" site/cn/index.html || { echo "version marker missing from built site"; exit 1; }
+git checkout -- mkdocs.yml mkdocs-en.yml
 
 WT=$(mktemp -d)
-git fetch origin gh-pages -q
+git fetch origin gh-pages -q || { sleep 8; https_proxy="${https_proxy:-${HTTPS_PROXY:-}}"; git fetch origin gh-pages -q; }
 git worktree add --detach "$WT" origin/gh-pages >/dev/null 2>&1 || {
   echo "worktree add failed"; exit 1; }
 trap 'git worktree remove --force "$WT" >/dev/null 2>&1' EXIT

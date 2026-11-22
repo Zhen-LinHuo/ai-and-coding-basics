@@ -13,11 +13,10 @@ set -euo pipefail
 VERSION="${1:-}"
 REPO="Zhen-LinHuo/ai-and-coding-basics"
 OUT="build/out"
+# 只发 PDF：网页版由 GitHub Pages 承载，单文件 HTML 不构成有意义的交付
 ASSETS=(
   "$OUT/ai-and-coding-basics.pdf"
   "$OUT/ai-and-coding-basics-en.pdf"
-  "$OUT/index.html"
-  "$OUT/ai-and-coding-basics-en.html"
 )
 
 fail() { echo "release: $*" >&2; exit 1; }
@@ -55,6 +54,13 @@ awk -v ver="$VERSION" '
   flag { print }
 ' CHANGELOG.md > "$NOTES"
 [[ -s "$NOTES" ]] || fail "CHANGELOG.md 里没有 $VERSION 小节"
+# GitHub 把单个换行渲染成硬换行——段内折行合并回一行（条目行与空行保留）
+sed -E 's/[[:space:]]+$//' "$NOTES" | awk '
+  /^- |^#|^$/ { if (buf != "") print buf; buf = ""; print; next }
+  { buf = buf (buf == "" ? "" : " ") $0 }
+  END { if (buf != "") print buf }
+' > "$NOTES.joined"
+mv "$NOTES.joined" "$NOTES"
 
 # 6. 上传
 echo "== 上传 Release =="
