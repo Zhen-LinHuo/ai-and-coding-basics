@@ -56,7 +56,7 @@ extra:
       link: https://github.com/Zhen-LinHuo/ai-and-coding-basics
 
 copyright: >
-  CC BY-SA 4.0 (text) · Apache-2.0 (code) &copy; 2026 Zhen-Lin Huo
+  CC BY-SA 4.0 (text) · Apache-2.0 (code) © 2026 Zhen-Lin Huo · __SITE_VERSION__
 
 nav:
   - Home: index.md
