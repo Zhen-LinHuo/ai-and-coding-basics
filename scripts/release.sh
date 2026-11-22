@@ -54,12 +54,14 @@ awk -v ver="$VERSION" '
   flag { print }
 ' CHANGELOG.md > "$NOTES"
 [[ -s "$NOTES" ]] || fail "CHANGELOG.md 里没有 $VERSION 小节"
-# GitHub 把单个换行渲染成硬换行——段内折行合并回一行（条目行与空行保留）
+# GitHub 把单个换行和行尾双空格都渲染成硬换行——段内折行合并回一行，
+# 并剥掉行首空白（条目行与空行保留）
 sed -E 's/[[:space:]]+$//' "$NOTES" | awk '
+  { sub(/^[[:space:]]+/, "") }
   /^- |^#|^$/ { if (buf != "") print buf; buf = ""; print; next }
   { buf = buf (buf == "" ? "" : " ") $0 }
   END { if (buf != "") print buf }
-' > "$NOTES.joined"
+' ＞ "$NOTES.joined"
 mv "$NOTES.joined" "$NOTES"
 
 # 6. 上传
