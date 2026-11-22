@@ -6,7 +6,6 @@
 
 | 事项 | 真源 |
 |:--|:--|
-| 章节结构、每节三问、页数预算、图清单 | `OUTLINE.md` |
 | 构建环境 | `.guix/channels.scm` + `.guix/manifest.scm` |
 | 参考文献 | `bib/refs.bib` |
 | 版式与过滤器 | `build/`（vendored 快照，见 `build/VENDOR.md`） |
@@ -72,8 +71,8 @@ guix time-machine -C .guix/channels.scm -- shell -m .guix/manifest.scm -- \
 
 ## 变更
 
-- 增删章节、改动编号：先改 `OUTLINE.md`，再动 `content/`。两者不一致时以 `OUTLINE.md` 为准。
-- `OUTLINE.md`、`.guix/`、`build/book-style.sty` 属于受保护文件，修改前须所有者批准。
+- 增删章节、改动编号：章节规格由维护者内部持有（不入库）；`content/` 内各节的锚点与互引是唯一入库事实。
+- `.guix/`、`build/book-style.sty` 属于受保护文件，修改前须所有者批准。
 - 提交信息用中文，标题写"做了什么"，不写"改了哪几个文件"。
 
 ## Git
