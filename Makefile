@@ -21,7 +21,6 @@ PFLAGS := \
   --toc --toc-depth=3 \
   --citeproc \
   --bibliography=bib/refs.bib \
-  --csl=$(BUILD)/gb-t-7714-2015-numeric.csl \
   --lua-filter=$(BUILD)/xref.lua \
   --lua-filter=$(BUILD)/admonitions.lua \
   --lua-filter=$(BUILD)/inline-code-bg.lua \
@@ -41,7 +40,7 @@ FIGS := $(wildcard figures/src/*.svg)
 
 $(PDF): $(SRC) $(FIGS) bib/refs.bib $(BUILD)/metadata.yaml $(BUILD)/book-style.sty $(BUILD)/xref.lua $(BUILD)/floats.tex
 	@mkdir -p $(OUT)
-	$(PANDOC) $(SRC) $(PFLAGS) -V toc-title="目录" -o $@
+	$(PANDOC) $(SRC) $(PFLAGS) --csl=$(BUILD)/gb-t-7714-2015-numeric.csl -V toc-title="目录" -o $@
 	@printf '%s: %s pages\n' "$@" "$$(pdfinfo $@ 2>/dev/null | awk '/^Pages:/{print $$2}')"
 
 html: $(HTML)
